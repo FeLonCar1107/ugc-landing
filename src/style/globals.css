@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Beckan-Personal-Use";
+  src: url(../../public/fonts/Beckan-Personal-Use.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: Neue Haas Grotesk, sans-serif;
+}
+
+.primary-title {
+  font-family: "Beckan-Personal-Use", sans-serif;
+  font-size: 335px;
+  color: #fff;
+  margin-block-start: 0px;
+  margin-block-end: -50px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  display: flex;
+  overflow: hidden;
+}
+
+.secondary-title {
+  font-family: "Beckan-Personal-Use", sans-serif;
+  font-size: 335px;
+  color: transparent;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  display: flex;
+  overflow: hidden;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

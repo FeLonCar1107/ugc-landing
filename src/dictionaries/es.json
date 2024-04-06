@@ -1,0 +1,92 @@
+{
+  "navigation": {
+    "home": {
+      "title": "Inicio",
+      "url": "/"
+    },
+    "about": {
+      "title": "Sobre mi",
+      "url": "/about"
+    },
+    "portafolio": {
+      "title": "Portafolio",
+      "url": "/portafolio"
+    },
+    "contact": {
+      "title": "Contacto",
+      "url": "/contact"
+    },
+    "courses": {
+      "title": "Cursos",
+      "url": "/courses"
+    },
+    "what_is_ugc": {
+      "title": "¿Qué es UGC?",
+      "url": "/what-is-ugc"
+    },
+    "nav_options": [
+      {
+        "id": 1,
+        "title": "Inicio",
+        "href": "/"
+      },
+      {
+        "id": 2,
+        "title": "Sobre mi",
+        "href": "/about"
+      },
+      {
+        "id": 3,
+        "title": "Portafolio",
+        "href": "/portafolio"
+      },
+      {
+        "id": 4,
+        "title": "Contacto",
+        "href": "/contact"
+      },
+      {
+        "id": 5,
+        "title": "Cursos",
+        "href": "/courses"
+      },
+      {
+        "id": 6,
+        "title": "¿Qué es UGC?",
+        "href": "/what-is-ugc"
+      }
+    ],
+    "languages": [
+      {
+        "id": 1,
+        "title": "Ingles",
+        "value": "en",
+        "flag": "us"
+      },
+      {
+        "id": 2,
+        "title": "Español",
+        "value": "es",
+        "flag": "co"
+      }
+    ]
+  },
+  "page": {
+    "home": {
+      "title": "Bienvenido a la página de inicio",
+      "content": "Este es el contenido de la página de inicio"
+    },
+    "about": {
+      "title": "Acerca de nosotros",
+      "content": "Este es el contenido de la página acerca de nosotros"
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "content": "Este es el contenido de la página de contacto"
+    },
+    "courses": {
+      "title": "Cursos",
+      "content": "Este es el contenido de la página de cursos"
+    }
+  }
+}
