@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import { Locale, i18n } from "@/i18n/config";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import "@/style/globals.css";
+import "../../styles/globals.css";
+import "../../styles/tailwind.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

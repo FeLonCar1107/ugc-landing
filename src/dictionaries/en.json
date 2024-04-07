@@ -75,7 +75,16 @@
   "page": {
     "home": {
       "title": "Welcome to the home page",
-      "content": "This is the home page content"
+      "content": {
+        "name": "Isabella",
+        "fullName": "Isabella Lizarralde Arias",
+        "skills": [
+          "Creadora de contenido",
+          "Desarrolladora web",
+          "Diseñadora gráfica",
+          "Influencer"
+        ]
+      }
     },
     "about": {
       "title": "About us",

@@ -1,23 +1,32 @@
 import Image from "next/image";
 import Isabella from "../../public/isabella.png";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import { HomeProps } from "@/types/home";
 
-export default function Home() {
+export default function Home(props: HomeProps) {
+  const { content } = props.data;
   return (
-    <div id="home" className="w-screen h-screen relative">
+    <section id="home" className="w-screen h-screen">
+      <div className="bg-chartTruth w-full h-12"></div>
       <AnimatedBackground />
-      <div className="absolute bottom-0 w-full flex flex-col items-center justify-center">
-        <h1 className="primary-title font-BeckanPersonal">Isabella</h1>
-        <h1 className="secondary-title font-BeckanPersonal">Isabella</h1>
+      <div className="absolute bottom-0 w-full h-auto flex flex-col items-center justify-center z-10 bg-red-700">
+        <h1 className="title primary-title font-BeckanPersonal">
+          {content?.name}
+        </h1>
+        <h1 className="title secondary-title font-BeckanPersonal">
+          {content?.name}
+        </h1>
       </div>
-      <Image
-        src={Isabella}
-        alt="Isabella"
-        width={600}
-        height={500}
-        quality={100}
-        className="absolute bottom-0 right-[50%] transform translate-x-1/2 filter grayscale"
-      />
-    </div>
+      <div className="absolute bottom-0 z-20">
+        <Image
+          src={Isabella}
+          alt="Isabella"
+          width={600}
+          height={500}
+          quality={100}
+          className="filter grayscale"
+        />
+      </div>
+    </section>
   );
 }

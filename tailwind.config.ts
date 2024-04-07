@@ -8,16 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        black: "#141414",
+        chartTruth: "#EAFC88",
+        coolWhip: "#FFFEEC",
+        laughyTaffy: "#EDB5F7",
+        lavenDuhi: "#BDB4FF",
+        peachyKeen: "#FFB985",
+        white: "#FFFFFF",
+      },
       fontFamily: {
         BeckanPersonal: ["Beckan-Personal-Use", "sans-serif"],
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("postcss-import"),
+    require("tailwindcss"),
+    require("autoprefixer"),
+  ],
 };
 export default config;
