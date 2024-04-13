@@ -36,10 +36,12 @@ export default function LanguagesList({
         onClick={() => setShowLanguages(!showLanguages)}
       >
         <div className="flex items-center justify-start gap-[5px]">
-          <LanguageSvg color="#ffff" size={18} />
-          <span className="text-lg">{currentLanguage}</span>
+          <LanguageSvg color="#ffff" size={20} />
+          <span className="hidden lg:flex text-lg">{currentLanguage}</span>
         </div>
-        <CaretDownSvg color="#ffff" size={20} />
+        <div className="hidden md:flex">
+          <CaretDownSvg color="#ffff" size={20} />
+        </div>
       </button>
       {showLanguages && (
         <div

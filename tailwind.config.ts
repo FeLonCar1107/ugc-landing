@@ -9,23 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        black: "#141414",
-        chartTruth: "#EAFC88",
-        coolWhip: "#FFFEEC",
-        laughyTaffy: "#EDB5F7",
-        lavenDuhi: "#BDB4FF",
-        peachyKeen: "#FFB985",
-        white: "#FFFFFF",
+        xBlack: "#141414",
+        xChartTruth: "#EAFC88",
+        xCoolWhip: "#FFFEEC",
+        xLaughyTaffy: "#EDB5F7",
+        xLavenDuhi: "#BDB4FF",
+        xPeachyKeen: "#FFB985",
+        xWhite: "#FFFFFF",
       },
       fontFamily: {
         BeckanPersonal: ["Beckan-Personal-Use", "sans-serif"],
       },
     },
   },
-  plugins: [
-    require("postcss-import"),
-    require("tailwindcss"),
-    require("autoprefixer"),
-  ],
+  plugins: [],
 };
 export default config;

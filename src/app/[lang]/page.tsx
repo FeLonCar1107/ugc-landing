@@ -1,8 +1,8 @@
 import { Locale } from "@/i18n/config";
 import { getDictionary } from "@/lib/dictionary";
-import Home from "@/views/Home";
-import About from "@/views/About";
-import Portafolio from "@/views/Portafolio";
+import Home from "@/components/views/Home";
+import About from "@/components/views/About";
+import Portafolio from "@/components/views/Portafolio";
 
 export default async function Page({
   params: { lang },

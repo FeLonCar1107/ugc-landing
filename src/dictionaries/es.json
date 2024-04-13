@@ -21,39 +21,34 @@
       "url": "/courses"
     },
     "what_is_ugc": {
-      "title": "¿Qué es UGC?",
-      "url": "/what-is-ugc"
+      "title": "UGC",
+      "url": "/ugc"
     },
     "nav_options": [
       {
         "id": 1,
-        "title": "Inicio",
-        "href": "/"
-      },
-      {
-        "id": 2,
         "title": "Sobre mi",
         "href": "/about"
       },
       {
-        "id": 3,
+        "id": 2,
         "title": "Portafolio",
         "href": "/portafolio"
       },
       {
-        "id": 4,
+        "id": 3,
         "title": "Contacto",
         "href": "/contact"
       },
       {
-        "id": 5,
+        "id": 4,
         "title": "Cursos",
         "href": "/courses"
       },
       {
-        "id": 6,
-        "title": "¿Qué es UGC?",
-        "href": "/what-is-ugc"
+        "id": 5,
+        "title": "UGC",
+        "href": "/ugc"
       }
     ],
     "languages": [
@@ -77,12 +72,8 @@
       "content": {
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
-        "skills": [
-          "Creadora de contenido",
-          "Desarrolladora web",
-          "Diseñadora gráfica",
-          "Influencer"
-        ]
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "skills": ["Creadora", "Diseñadora", "Desarrolladora", "Influencer"]
       }
     },
     "about": {

@@ -29,19 +29,38 @@ body {
   font-family: Neue Haas Grotesk, sans-serif;
 }
 
-.title {
-  font-family: "Beckan-Personal-Use", sans-serif;
-  font-size: 335px;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
-.primary-title {
-  color: #fff;
-}
-
-.secondary-title {
-  color: transparent;
+.tw-secondary-title {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: #fff;
+}
+
+.menu {
+  width: 50px;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+  width: 50px;
+  height: 5px;
+  background-color: #000;
+  margin: 3px 0px;
+  transition: 0.5s ease-out;
+}
+
+.change .line-1 {
+  position: absolute;
+  transform: rotate(-45deg) translate(-3px, 2px);
+}
+
+.change .line-2 {
+  position: absolute;
+  opacity: 0;
+}
+
+.change .line-3 {
+  position: absolute;
+  transform: rotate(45deg) translate(-6px, -7px);
 }
