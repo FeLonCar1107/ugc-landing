@@ -64,3 +64,30 @@ body {
   position: absolute;
   transform: rotate(45deg) translate(-6px, -7px);
 }
+
+.main-image {
+  filter: grayscale(100%);
+}
+
+.videos {
+  width: 100%;
+  height: auto;
+}
+
+.videos-slider {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.videos-slider div {
+  width: 230px;
+  height: 400px;
+  background-color: #000;
+  scroll-snap-align: center;
+}

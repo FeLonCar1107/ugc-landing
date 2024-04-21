@@ -73,12 +73,261 @@
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
         "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "skills": ["Creadora", "Diseñadora", "Desarrolladora", "Influencer"]
+        "skills": ["Modelo", "Influencer", "Creadora UGC"]
       }
     },
     "about": {
-      "title": "Acerca de nosotros",
-      "content": "Este es el contenido de la página acerca de nosotros"
+      "title": "Sobre mi",
+      "content": {
+        "languages": ["es", "en"],
+        "hello": "¡Hola! soy Isa.",
+        "image": {
+          "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+          "alt": "Isabella Lizarralde Arias"
+        },
+        "description": "Mi nombre es Isabella, tengo 24 años y vivo en Manizales, Colombia. Estudié psicología y NEUROPSICOPEDAGOGÍA. \n Idiomas que hablo: español e inglés.\n Tengo experiencia generando contenido DE VALOR para algunas marcas nacionales.\n Me especializo en crear contenido orgánico y auténtico que refleja la esencia de cada marca, contando por medio de vídeos e  imágenes una historia que conecte con tu audiencia."
+      }
+    },
+    "portafolio": {
+      "title": "Portafolio",
+      "content": {
+        "categories": [
+          {
+            "id": 1,
+            "title": "Belleza",
+            "description": "Este es el proyecto de belleza",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Unboxing - problema / solución",
+                "description": "Este es el proyecto 1 de belleza",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 2 de belleza",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Testimonio experiencia",
+                "description": "Este es el proyecto 3 de belleza",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Moda",
+            "description": "Este es el proyecto de moda",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Problema / solución",
+                "description": "Este es el proyecto 1 de moda",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Unboxing / uso de producto",
+                "description": "Este es el proyecto 2 de moda",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 3 de moda",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Foodie",
+            "description": "Este es el proyecto de foodie",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Problema / solución",
+                "description": "Este es el proyecto 1 de foodie",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Unboxing / uso de producto",
+                "description": "Este es el proyecto 2 de foodie",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 3 de foodie",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Skin care",
+            "description": "Este es el proyecto de skin care",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Problema / solución",
+                "description": "Este es el proyecto 1 de skin care",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Unboxing / uso de producto",
+                "description": "Este es el proyecto 2 de skin care",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 3 de skin care",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "Accesorios",
+            "description": "Este es el proyecto de accesorios",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Problema / solución",
+                "description": "Este es el proyecto 1 de accesorios",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Unboxing / uso de producto",
+                "description": "Este es el proyecto 2 de accesorios",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 3 de accesorios",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Experiencias",
+            "description": "Este es el proyecto de Experiencias",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Problema / solución",
+                "description": "Este es el proyecto 1 de Experiencias",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Unboxing / uso de producto",
+                "description": "Este es el proyecto 2 de Experiencias",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 3 de Experiencias",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "title": "Otros",
+            "description": "Este es el proyecto de otros",
+            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "projects": [
+              {
+                "id": 1,
+                "title": "Problema / solución",
+                "description": "Este es el proyecto 1 de otros",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 2,
+                "title": "Unboxing / uso de producto",
+                "description": "Este es el proyecto 2 de otros",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              },
+              {
+                "id": 3,
+                "title": "Uso de producto",
+                "description": "Este es el proyecto 3 de otros",
+                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+              }
+            ]
+          }
+        ],
+        "pictires": [
+          {
+            "id": 1,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 2,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 3,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 4,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 5,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 6,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 7,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 8,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 9,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          },
+          {
+            "id": 10,
+            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+            "alt": "Isabella Lizarralde Arias"
+          }
+        ]
+      }
     },
     "contact": {
       "title": "Contáctenos",

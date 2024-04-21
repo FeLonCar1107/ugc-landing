@@ -8,11 +8,12 @@ export default async function Page({
   params: { lang },
 }: Readonly<{ params: { lang: Locale } }>) {
   const { page } = await getDictionary(lang);
+  const { home, about } = page;
 
   return (
     <main className="w-screen h-auto">
-      <Home data={page.home} />
-      <About />
+      <Home data={home} />
+
       <Portafolio />
     </main>
   );

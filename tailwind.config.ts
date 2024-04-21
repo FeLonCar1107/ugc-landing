@@ -20,6 +20,13 @@ const config: Config = {
       fontFamily: {
         BeckanPersonal: ["Beckan-Personal-Use", "sans-serif"],
       },
+      padding: {
+        micro: "0.125rem",
+        small: "0.25rem",
+        medium: "0.5rem",
+        large: "1rem",
+        xLarge: "60px",
+      },
     },
   },
   plugins: [],
