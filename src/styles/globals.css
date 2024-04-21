@@ -67,27 +67,47 @@ body {
 
 .main-image {
   filter: grayscale(100%);
-}
-
-.videos {
-  width: 100%;
-  height: auto;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 7%
+  );
+  mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 1) 7%);
 }
 
 .videos-slider {
-  width: 100%;
-  height: auto;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
 }
 
-.videos-slider div {
-  width: 230px;
+.videos-slider-track {
+  display: flex;
+  gap: 20px;
+  width: calc(250px * 18);
+  animation: scroll 80s linear infinite;
+}
+
+.videos-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.video {
+  width: 250px;
   height: 400px;
-  background-color: #000;
-  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
 }

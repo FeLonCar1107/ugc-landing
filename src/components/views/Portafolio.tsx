@@ -1,3 +1,7 @@
+import Image from "next/image";
+import LeftArrowIcon from "@/components/svg/LeftArrow";
+import RightArrowIcon from "@/components/svg/RightArrow";
+
 export default function Portafolio() {
   const videos = [
     {
@@ -101,21 +105,42 @@ export default function Portafolio() {
       url: "https://www.youtube.com/embed/20",
     },
   ];
+
+  const imageUrl = "/images/hero.jpg";
   return (
-    <section id="portafolio" className="w-screen h-screen bg-xWhite">
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="bg-xCoolWhip w-[87%] h-[80%]">
-          <div className="projects">
-            <div className="bg-xBlack text-center">
-              <h2 className="text-white text-4xl">
-                <strong>PORTAFOLIO</strong>
-                VIDEOS
-              </h2>
+    <section id="portafolio" className="w-screen h-screen bg-xWhite relative">
+      <div className="bg-xChartTruth w-full h-[40%] relative">
+        <Image
+          src={imageUrl}
+          alt="random-image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          quality={100}
+          className="filter grayscale"
+        ></Image>
+      </div>
+      <div className="w-[60%] h-[60%] max-w-[1200px] absolute bottom-[10%] left-1/2 transform -translate-x-1/2">
+        <div className="w-full h-full relative">
+          <div className="bg-xBlack absolute top-0 w-full h-[50%] text-[60px] text-white text-center flex justify-center gap-3 pt-[2%]">
+            <h2>
+              <strong>ÚLTIMOS</strong>
+            </h2>
+            <h2>VIDEOS</h2>
+          </div>
+          <div className="w-full h-[75%] absolute bottom-0 flex items-center justify-between">
+            <div className="arrow-left">
+              <LeftArrowIcon color="#000000" size="50" />
             </div>
             <div className="videos-slider">
-              {videos.map((video) => (
-                <div key={video.id}></div>
-              ))}
+              <div className="videos-slider-track">
+                {videos.map((video) => (
+                  <div key={video.id} className="video bg-xLaughyTaffy"></div>
+                ))}
+              </div>
+            </div>
+            <div className="arrow-right">
+              <RightArrowIcon color="#000000" size="50" />
             </div>
           </div>
         </div>
