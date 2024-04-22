@@ -82,17 +82,22 @@ body {
   display: grid;
   place-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .videos-slider-track {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   width: calc(250px * 18);
-  animation: scroll 80s linear infinite;
+  animation: videos-scroll 80s linear infinite;
 }
 
-.videos-slider-track:hover {
+.w-full:hover .videos-slider-track {
   animation-play-state: paused;
+}
+
+.w-full:not(:hover) .videos-slider-track {
+  animation-play-state: running;
 }
 
 .video {
@@ -103,11 +108,96 @@ body {
   cursor: pointer;
 }
 
-@keyframes scroll {
+@keyframes videos-scroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(calc(-250px * 9));
   }
+}
+
+.collaborations-slider {
+  margin: auto;
+  width: 80%;
+  height: 250px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.collaborations-slider::before,
+.collaborations-slider::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 2;
+}
+
+.collaborations-slider::before {
+  left: 0;
+  top: 0;
+}
+
+.collaborations-slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.collaborations-slider-track {
+  display: flex;
+  gap: 30px;
+  width: calc(150px * 18);
+  animation: collaborations-scroll 30s linear infinite;
+}
+
+.collaborations-slider-brand {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@keyframes collaborations-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 9));
+  }
+}
+
+.pictures-slider {
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pictures-slider-track {
+  display: flex;
+  gap: 10px;
+  width: calc(250px * 18);
+}
+
+.picture {
+  width: 250px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }

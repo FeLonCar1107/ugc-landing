@@ -1,4 +1,4 @@
-export interface HomeProps {
+export interface IHomeProps {
   data: {
     title: string;
     content: {

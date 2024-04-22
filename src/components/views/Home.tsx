@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Isabella from "../../../public/isabella.png";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import { HomeProps } from "@/types/home";
+import { IHomeProps } from "@/types/home";
 
-export default function Home(props: HomeProps) {
+export default function Home(props: IHomeProps) {
   const { content } = props.data;
   return (
     <section id="home" className="w-screen min-h-screen h-screen bg-xLavenDuhi">

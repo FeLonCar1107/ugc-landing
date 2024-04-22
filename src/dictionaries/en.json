@@ -83,6 +83,7 @@
     },
     "about": {
       "title": "About me",
+      "subtitle": "Sobre mi",
       "content": {
         "languages": ["es", "en"],
         "hello": "Hello! I'm Isa.",

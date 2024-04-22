@@ -77,7 +77,8 @@
       }
     },
     "about": {
-      "title": "Sobre mi",
+      "title": "Un poco",
+      "subtitle": "Sobre mi",
       "content": {
         "languages": ["es", "en"],
         "hello": "¡Hola! soy Isa.",
@@ -88,8 +89,8 @@
         "description": "Mi nombre es Isabella, tengo 24 años y vivo en Manizales, Colombia. Estudié psicología y NEUROPSICOPEDAGOGÍA. \n Idiomas que hablo: español e inglés.\n Tengo experiencia generando contenido DE VALOR para algunas marcas nacionales.\n Me especializo en crear contenido orgánico y auténtico que refleja la esencia de cada marca, contando por medio de vídeos e  imágenes una historia que conecte con tu audiencia."
       }
     },
-    "portafolio": {
-      "title": "Portafolio",
+    "videos": {
+      "title": "Últimos videos",
       "content": {
         "categories": [
           {
@@ -274,7 +275,59 @@
               }
             ]
           }
-        ],
+        ]
+      }
+    },
+    "collaborations": {
+      "title": "Colaboraciones",
+      "content": {
+        "brands": [
+          {
+            "id": 1,
+            "name": "Marca 1",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 2,
+            "name": "Marca 2",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 3,
+            "name": "Marca 3",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 4,
+            "name": "Marca 4",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 5,
+            "name": "Marca 5",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 6,
+            "name": "Marca 6",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 7,
+            "name": "Marca 7",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          },
+          {
+            "id": 8,
+            "name": "Marca 8",
+            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+          }
+        ]
+      }
+    },
+    "portafolio": {
+      "title": "Portafolio",
+      "content": {
         "pictires": [
           {
             "id": 1,
