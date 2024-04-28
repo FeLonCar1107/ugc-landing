@@ -11,9 +11,8 @@ export default async function Navbar({ lang }: { lang: Locale }) {
   return (
     <header>
       <nav className="w-full h-14 lg:h-16 flex items-center justify-between px-4 text-white fixed top-0 left-0 right-0 border-b-[0.5px] md:border-none border-opacity-20 z-[1001]">
-        {" "}
         <HamburgerMenu navigation={navigation} />
-        <Link href="/" className="font-bold text-2xl">
+        <Link href="/" className="font-bold font-BeckanPersonal tracking-widest text-2xl">
           ILA
         </Link>
         <NavOptions options={navigation.nav_options} />
