@@ -1,7 +1,9 @@
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
-
+import { useVideoCarousel } from "@/hooks/useVideoCarousel";
 export default function Videos() {
   const videos = [
     {
@@ -107,6 +109,11 @@ export default function Videos() {
   ];
 
   const imageUrl = "/images/hero.jpg";
+
+  useEffect(() => {
+    useVideoCarousel();
+  }, []);
+
   return (
     <section id="videos" className="bg-white w-screen h-screen relative">
       <div className="bg-xChartTruth w-full h-[40%] relative">
@@ -130,17 +137,21 @@ export default function Videos() {
               <h2>VIDEOS</h2>
             </div>
             <div className="w-full h-[75%] absolute bottom-0 flex items-center justify-between">
-              <div className="arrow-left">
+              <div id="left" className="video-arrow">
                 <LeftArrowIcon color="#000000" size="50" />
               </div>
-              <div className="videos-slider">
-                <div className="videos-slider-track">
-                  {videos.map((video) => (
-                    <div key={video.id} className="video bg-xLaughyTaffy"></div>
-                  ))}
+              <div className="w-[90%] h-auto flex items-center justify-center">
+                <div className="video-wrapper">
+                  <ul className="video-carousel">
+                    {videos.map((video) => (
+                      <li key={video.id} className="video-card">
+                        <div className="video bg-xLaughyTaffy"></div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-              <div className="arrow-right">
+              <div id="right" className="video-arrow">
                 <RightArrowIcon color="#000000" size="50" />
               </div>
             </div>

@@ -75,7 +75,7 @@ body {
   mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 1) 7%);
 }
 
-.videos-slider {
+/* .videos-slider {
   margin: auto;
   width: 90%;
   height: 100%;
@@ -106,6 +106,33 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+} */
+.video-wrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.video-wrapper .video-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 10px);
+  gap: 10px;
+  overflow-x: hidden;
+}
+
+.video-carousel .video-card {
+  list-style: none;
+  cursor: pointer;
+}
+
+.video-carousel .dragging .video-card {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.video-card .video {
+  width: 250px;
+  height: 400px;
 }
 
 @keyframes videos-scroll {

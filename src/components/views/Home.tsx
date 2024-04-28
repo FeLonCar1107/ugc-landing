@@ -33,16 +33,19 @@ export default function Home(props: IHomeProps) {
           {content?.name.toUpperCase()}
         </h1>
       </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20">
-        <Image
-          src={Isabella}
-          alt="Isabella"
-          priority={true}
-          width={315}
-          height={265}
-          quality={100}
-          className="main-image"
-        />
+      <div className="absolute px-1 bottom-0 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="w-[17vw] h-[40vw] relative">
+          <Image
+            src={Isabella}
+            alt="Isabella"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            priority={true}
+            quality={100}
+            className="main-image"
+          />
+        </div>
       </div>
     </section>
   );
