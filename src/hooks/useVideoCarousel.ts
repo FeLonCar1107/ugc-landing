@@ -1,17 +1,18 @@
 export const useVideoCarousel = () => {
   const carousel = document.querySelector(".video-carousel");
   const arrowButtons = document.querySelectorAll(".video-arrow");
-  const firstVideoWidth = carousel?.querySelector(".video")?.offsetWidth;
+  const firstVideoWidth = (carousel?.querySelector(".video") as HTMLElement)?.offsetWidth;
 
   let isDragging: boolean = false,
     startX: number,
     startScrollLeft: number;
 
   arrowButtons?.forEach((button) => {
+    console.log("🚀 ~ useVideoCarousel ~ button", button.id)
     button.addEventListener("click", () => {
       if (carousel) {
         carousel.scrollLeft +=
-          button.id === "left" ? -firstVideoWidth : firstVideoWidth;
+          button.id === "left" ? -firstVideoWidth! : firstVideoWidth!;
       }
     });
   });

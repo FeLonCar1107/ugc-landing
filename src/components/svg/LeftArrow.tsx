@@ -7,7 +7,7 @@ interface LeftArrowIconProps {
 
 const LeftArrowIcon: React.FC<LeftArrowIconProps> = ({
   color = "#000000",
-  size = "75.803",
+  size = "100%",
 }) => {
   return (
     <div className="cursor-pointer hover:opacity-70">

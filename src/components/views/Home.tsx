@@ -34,7 +34,7 @@ export default function Home(props: IHomeProps) {
         </h1>
       </div>
       <div className="absolute px-1 bottom-0 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="w-[17vw] h-[40vw] relative">
+        <div className="w-[23vw] h-[45vw] relative">
           <Image
             src={Isabella}
             alt="Isabella"

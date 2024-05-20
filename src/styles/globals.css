@@ -107,6 +107,7 @@ body {
   align-items: center;
   cursor: pointer;
 } */
+
 .video-wrapper {
   width: 100%;
   max-width: 1000px;
@@ -115,9 +116,9 @@ body {
 .video-wrapper .video-carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 4) - 10px);
+  grid-auto-columns: calc((100% / 4) - 12px);
   gap: 10px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .video-carousel .video-card {

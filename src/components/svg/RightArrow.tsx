@@ -1,6 +1,6 @@
 import React from "react";
 
-const RightArrowIcon = ({ color = "#000000", size = "75.804" }) => {
+const RightArrowIcon = ({ color = "#000000", size = "100%" }) => {
   return (
     <div className="cursor-pointer hover:opacity-70">
       <svg
