@@ -1,3 +1,6 @@
+"use client";
+import { useEffect } from "react";
+
 export default function Collaborations() {
   const brands = [
     {
@@ -62,16 +65,21 @@ export default function Collaborations() {
     },
   ];
 
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--total-brands", (brands.length * 2).toString());
+  }, [brands.length]);
+
   return (
     <section id="collaborations" className="w-screen h-auto pb-20">
       <div className="w-full h-[170px] flex items-end justify-center">
-        <p className="text-[60px]">
+        <p className="text-[9vw] sm:text-[7vw] lg:text-[5vw] 2xl:text-[4vw]">
           <strong>COLABORACIONES</strong> CON:
         </p>
       </div>
       <div className="collaborations-slider">
         <div className="collaborations-slider-track">
-          {brands.map((brand) => (
+          {brands.concat(brands).map((brand) => (
             <div key={brand.id} className="collaborations-slider-brand"></div>
           ))}
         </div>

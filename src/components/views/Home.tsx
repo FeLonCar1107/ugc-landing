@@ -25,22 +25,20 @@ export default function Home(props: IHomeProps) {
           </p>
         </div>
       </div>
-      <div className="absolute top-56 sm:bottom-12 w-full h-auto flex flex-col items-center justify-end z-10 overflow-hidden">
-        <h1 className="text-white text-[80px] sm:text-[140px] md:text-[180px] lg:text-[250px] font-BeckanPersonal leading-[70px] sm:leading-[120px] md:leading-[150px] lg:md:leading-[200px] overflow-hidden">
+      <div className="absolute top-56 sm:bottom-12 w-full h-auto flex flex-col items-center justify-end z-10 overflow-hidden space-y-[-3.7vw]">
+        <h1 className="text-white font-BeckanPersonal leading-none text-[15vw] sm:text-[18vw] lg:text-[13vw] overflow-hidden">
           {content?.name.toUpperCase()}
         </h1>
-        <h1 className="tw-secondary-title text-transparent text-[80px] sm:text-[140px] md:text-[180px] lg:text-[250px] font-BeckanPersonal leading-[70px] sm:leading-[120px] md:leading-[150px] lg:md:leading-[210px] overflow-hidden">
+        <h1 className="tw-secondary-title font-BeckanPersonal text-transparent text-[15vw] sm:text-[18vw] lg:text-[13vw] leading-none overflow-hidden">
           {content?.name.toUpperCase()}
         </h1>
       </div>
-      <div className="absolute px-1 bottom-0 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="w-[23vw] h-[45vw] relative">
+      <div className="absolute w-auto h-screen px-1 bottom-0 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="w-[18vw] h-full relative">
           <Image
             src={Isabella}
             alt="Isabella"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
             priority={true}
             quality={100}
             className="main-image"

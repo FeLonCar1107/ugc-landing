@@ -75,79 +75,75 @@ body {
   mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 1) 7%);
 }
 
-/* .videos-slider {
-  margin: auto;
-  width: 90%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.videos-slider-track {
-  display: flex;
-  gap: 10px;
-  width: calc(250px * 18);
-  animation: videos-scroll 80s linear infinite;
-}
-
-.w-full:hover .videos-slider-track {
-  animation-play-state: paused;
-}
-
-.w-full:not(:hover) .videos-slider-track {
-  animation-play-state: running;
-}
-
-.video {
-  width: 250px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-} */
-
-.video-wrapper {
+.videos-wrapper {
   width: 100%;
-  max-width: 1000px;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.video-wrapper .video-carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 4) - 12px);
-  gap: 10px;
+.videos-wrapper .videos-carousel {
+  width: 90%;
+  height: auto;
+  display: flex;
+  white-space: nowrap;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.video-carousel .video-card {
-  list-style: none;
+.videos-carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.videos-carousel.dragging .video {
+  pointer-events: none;
+}
+
+.videos-wrapper .video-arrow {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.video-carousel .dragging .video-card {
-  cursor: grabbing;
-  user-select: none;
+.videos-wrapper .video-arrow:first-child {
+  left: 10px;
+  display: none;
 }
 
-.video-card .video {
-  width: 250px;
-  height: 400px;
+.videos-wrapper .video-arrow:last-child {
+  right: 10px;
 }
 
-@keyframes videos-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 9));
-  }
+.videos-carousel .video {
+  width: calc(100% / 4);
+  height: 385px;
+  margin-left: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.videos-carousel .video .video-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.videos-carousel .video:first-child {
+  margin-left: 0px;
 }
 
 .collaborations-slider {
   margin: auto;
   width: 80%;
+  max-width: 1220px;
   height: 250px;
   display: grid;
   place-items: center;
@@ -194,7 +190,7 @@ body {
   background-color: #dfdfdf;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  flex-shrink: 0;
 }
 
 @keyframes collaborations-scroll {
@@ -202,30 +198,71 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-150px * 9));
+    transform: translateX(calc(-150px * var(--total-brands)));
   }
 }
 
-.pictures-slider {
-  margin: auto;
-  width: 90%;
-  height: 100%;
-  display: grid;
-  place-items: center;
+.pictures-wrapper {
+  width: 100%;
+  height: auto;
   position: relative;
-  overflow: hidden;
-}
-
-.pictures-slider-track {
   display: flex;
-  gap: 10px;
-  width: calc(250px * 18);
-}
-
-.picture {
-  width: 250px;
-  height: 400px;
-  display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.pictures-wrapper .pictures-carousel {
+  width: 90%;
+  height: auto;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.pictures-carousel.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.pictures-carousel.dragging .picture {
+  pointer-events: none;
+}
+
+.pictures-wrapper .picture-arrow {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pictures-wrapper .picture-arrow:first-child {
+  left: 0px;
+  display: none;
+}
+
+.pictures-wrapper .picture-arrow:last-child {
+  right: 0px;
+}
+
+.pictures-carousel .picture {
+  width: calc(100% / 3);
+  height: 475px;
+  margin-left: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.pictures-carousel .picture .picture-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pictures-carousel .picture:first-child {
+  margin-left: 0px;
 }

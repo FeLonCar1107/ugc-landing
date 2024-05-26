@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
-export const useVideoCarousel = () => {
+export const usePictureCarousel = () => {
   useEffect(() => {
-    const carousel = document.querySelector(".videos-carousel");
-    const firstImage = carousel?.querySelectorAll(".video")[0];
+    const carousel = document.querySelector(".pictures-carousel");
+    const firstImage = carousel?.querySelectorAll(".picture")[0];
     const arrowButtons =
-      document.querySelectorAll<HTMLButtonElement>(".video-arrow");
+      document.querySelectorAll<HTMLButtonElement>(".picture-arrow");
 
     let isDragStart = false;
     let isDragging = false;
@@ -27,7 +27,7 @@ export const useVideoCarousel = () => {
       let firstImageWidth = firstImage?.clientWidth ?? 0 + 10;
       button.addEventListener("click", () => {
         if (carousel) {
-          if (button.id === "left-video-arrow") {
+          if (button.id === "left-picture-arrow") {
             carousel.scrollLeft -= firstImageWidth;
           } else {
             carousel.scrollLeft += firstImageWidth;

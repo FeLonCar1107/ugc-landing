@@ -1,44 +1,36 @@
 "use client";
+import Image from "next/image";
 import { IVideo } from "@/types/videos";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
+import { useVideoCarousel } from "@/hooks/useVideoCarousel";
 
 export default function VideosCarousel({ data }: { data: IVideo[] }) {
+  useVideoCarousel();
+
   return (
-    <div className="w-full h-full relative">
-      <div className="video-wrapper">
-        <ul className="video-carousel">
-          {data.map((video) => (
-            <li key={video.id} className="video-card">
-              <div className="video bg-xLaughyTaffy"></div>
-            </li>
+    <div className="w-full h-full flex items-center justify-between">
+      <div className="videos-wrapper">
+        <div id="left-video-arrow" className="video-arrow">
+          <LeftArrowIcon color="#000000" />
+        </div>
+        <div className="videos-carousel">
+          {data.concat(data).map((video: IVideo, index: number) => (
+            <div key={`${video.id}-${index}`} className="video">
+              <Image
+                src={video.src}
+                alt={video.title}
+                fill
+                quality={100}
+                className="video-image"
+              />
+            </div>
           ))}
-        </ul>
+        </div>
+        <div id="right-video-arrow" className="video-arrow">
+          <RightArrowIcon color="#000000" />
+        </div>
       </div>
     </div>
   );
 }
-
-const LeftArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <div
-      onClick={onClick}
-      className="w-[3vw] h-[3vw] absolute top-1/2 transform -translate-y-1/2 left-0 z-40"
-    >
-      <LeftArrowIcon />
-    </div>
-  );
-};
-
-const RightArrow = (props: any) => {
-  const { onClick } = props;
-  return (
-    <div
-      onClick={onClick}
-      className="w-[3vw] h-[3vw] absolute top-1/2 transform -translate-y-1/2 right-0 z-50"
-    >
-      <RightArrowIcon />
-    </div>
-  );
-};
