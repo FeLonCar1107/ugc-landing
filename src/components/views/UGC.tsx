@@ -95,7 +95,7 @@ export default function UGC(props: IUserCreatorContentProps) {
           </div>
         </div>
         {selectedImage && (
-          <p className="w-[60%] max-w-[800px] min-h-20 text-center text-jazzberry-jam-800 fade-in">
+          <p className="w-[60%] max-w-[800px] min-h-24 text-center text-jazzberry-jam-800 fade-in">
             {selectedImage.description}
           </p>
         )}

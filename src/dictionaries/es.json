@@ -389,32 +389,40 @@
               "icon": "user",
               "label": "¿Cuál es tu nombre?",
               "type": "text",
+              "value": "name",
               "placeholder": "Isabella Lizarralde Arias",
-              "required": true
+              "required": true,
+              "pattern": "[a-zA-Z]{3,}"
             },
             {
               "id": 2,
               "icon": "mail",
               "label": "¿Cuál es tu correo?",
               "type": "email",
+              "value": "email",
               "placeholder": "example@gmail.com",
-              "required": true
+              "required": true,
+              "pattern": "[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
             },
             {
               "id": 3,
               "icon": "subject",
               "label": "Asunto del mensaje",
               "type": "text",
+              "value": "subject",
               "placeholder": "Colaboración con Isabella",
-              "required": true
+              "required": true,
+              "pattern": "[a-zA-Z]{3,}"
             },
             {
               "id": 4,
               "icon": "message",
               "label": "¿Cuál es tu mensaje?",
               "type": "textarea",
+              "value": "message",
               "placeholder": "Hola Isabella, me gustaría colaborar contigo en un proyecto...",
-              "required": true
+              "required": true,
+              "pattern": "[a-zA-Z]{4,}"
             }
           ],
           "button": {
@@ -441,6 +449,10 @@
         "facebook": {
           "name": "Facebook",
           "url": "https://www.facebook.com/Isabella.ugc11?mibextid=LQQJ4d"
+        },
+        "whatsApp": {
+          "name": "WhatsApp",
+          "url": "https://wa.me/573217696546"
         }
       }
     }

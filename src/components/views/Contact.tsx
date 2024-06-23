@@ -22,13 +22,13 @@ export default function Contact(props: IContactProps) {
     <section
       id="contact"
       data-scroll-section
-      className="bg-jazzberry-jam-700 w-screen min-h-screen h-auto flex items-center justify-center lg:py-10"
+      className="bg-jazzberry-jam-700 w-screen min-h-screen h-auto flex items-center justify-center"
     >
       <DividerBottom />
       <DividerTop />
-      <div className="w-[68%] max-w-[1300px] h-[65%] flex flex-col md:flex-row gap-7 pt-[130px] md:pt-3">
-        <div className="w-full md:w-[50%] h-auto md:h-full flex flex-col items-start justify-start text-jazzberry-jam-50">
-          <div className="w-full h-full flex flex-col items-start justify-start">
+      <div className="w-[68%] max-w-[1300px] h-auto flex flex-col md:flex-row gap-7 pt-[100px]">
+        <div className="w-full md:w-[50%] h-auto flex flex-col items-start justify-start text-jazzberry-jam-50">
+          <div className="w-full flex flex-col items-start justify-start">
             <div className="w-full flex gap-3 items-center justify-start">
               <div className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-full relative shadow-md">
                 <Image
@@ -48,7 +48,7 @@ export default function Contact(props: IContactProps) {
             </p>
           </div>
           <div className="hidden md:flex w-full flex-col gap-3 items-start justify-start">
-            <div className="min-w-[40px] min-h-[40px] w-[2vw] h-[2vw] my-7">
+            <div className="min-w-[40px] min-h-[40px] w-[2vw] h-[2vw] my-2">
               <ArrowContact color="#fde6f3" />
             </div>
             {content.details.map((detail) => (
@@ -73,7 +73,7 @@ export default function Contact(props: IContactProps) {
             ))}
           </div>
         </div>
-        <div className="w-full md:w-[50%] h-auto md:h-full flex flex-col items-center justify-center pb-14 md:pb-0">
+        <div className="w-full md:w-[50%] h-auto flex flex-col items-center justify-center pb-14 md:pb-0">
           <ContactForm
             title={content.form.title}
             fields={content.form.fields}
