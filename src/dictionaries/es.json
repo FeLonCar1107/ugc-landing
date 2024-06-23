@@ -27,28 +27,38 @@
     "nav_options": [
       {
         "id": 1,
-        "title": "Sobre mi",
-        "href": "/about"
+        "title": "Videos",
+        "href": "#videos"
       },
       {
         "id": 2,
-        "title": "Portafolio",
-        "href": "/portafolio"
+        "title": "Collabs",
+        "href": "#collaborations"
       },
       {
         "id": 3,
-        "title": "Contacto",
-        "href": "/contact"
+        "title": "Portafolio",
+        "href": "#portafolio"
       },
       {
         "id": 4,
-        "title": "Cursos",
-        "href": "/courses"
+        "title": "Sobre mi",
+        "href": "#about"
       },
       {
         "id": 5,
+        "title": "Insta",
+        "href": "#instafeed"
+      },
+      {
+        "id": 6,
         "title": "UGC",
-        "href": "/ugc"
+        "href": "#ugc"
+      },
+      {
+        "id": 7,
+        "title": "Contacto",
+        "href": "#contact"
       }
     ],
     "languages": [
@@ -72,323 +82,367 @@
       "content": {
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
-        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "skills": ["Modelo", "Influencer", "Creadora UGC"]
-      }
-    },
-    "about": {
-      "title": "Un poco",
-      "subtitle": "Sobre mi",
-      "content": {
-        "languages": ["es", "en"],
-        "hello": "¡Hola! soy Isa.",
-        "image": {
-          "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-          "alt": "Isabella Lizarralde Arias"
-        },
-        "description": "Mi nombre es Isabella, tengo 24 años y vivo en Manizales, Colombia. Estudié psicología y NEUROPSICOPEDAGOGÍA. \n Idiomas que hablo: español e inglés.\n Tengo experiencia generando contenido DE VALOR para algunas marcas nacionales.\n Me especializo en crear contenido orgánico y auténtico que refleja la esencia de cada marca, contando por medio de vídeos e  imágenes una historia que conecte con tu audiencia."
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nuncs. Lorem opsum dolor sit amet.",
+        "skills": ["Modelo", "Creadora UGC", "Creadora de contenido"]
       }
     },
     "videos": {
       "title": "Últimos videos",
+      "splitTitle": ["Últimos", "videos"],
       "content": {
-        "categories": [
+        "videos": [
           {
             "id": 1,
-            "title": "Belleza",
-            "description": "Este es el proyecto de belleza",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Unboxing - problema / solución",
-                "description": "Este es el proyecto 1 de belleza",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 2 de belleza",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Testimonio experiencia",
-                "description": "Este es el proyecto 3 de belleza",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Unboxing - problema / solución",
+            "description": "Este es el proyecto 1 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=1"
           },
           {
             "id": 2,
-            "title": "Moda",
-            "description": "Este es el proyecto de moda",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Problema / solución",
-                "description": "Este es el proyecto 1 de moda",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Unboxing / uso de producto",
-                "description": "Este es el proyecto 2 de moda",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 3 de moda",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Uso de producto",
+            "description": "Este es el proyecto 2 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=2"
           },
           {
             "id": 3,
-            "title": "Foodie",
-            "description": "Este es el proyecto de foodie",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Problema / solución",
-                "description": "Este es el proyecto 1 de foodie",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Unboxing / uso de producto",
-                "description": "Este es el proyecto 2 de foodie",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 3 de foodie",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Testimonio experiencia",
+            "description": "Este es el proyecto 3 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=3"
           },
           {
             "id": 4,
-            "title": "Skin care",
-            "description": "Este es el proyecto de skin care",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Problema / solución",
-                "description": "Este es el proyecto 1 de skin care",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Unboxing / uso de producto",
-                "description": "Este es el proyecto 2 de skin care",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 3 de skin care",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Unboxing - problema / solución",
+            "description": "Este es el proyecto 4 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=4"
           },
           {
             "id": 5,
-            "title": "Accesorios",
-            "description": "Este es el proyecto de accesorios",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Problema / solución",
-                "description": "Este es el proyecto 1 de accesorios",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Unboxing / uso de producto",
-                "description": "Este es el proyecto 2 de accesorios",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 3 de accesorios",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Unboxing - problema / solución",
+            "description": "Este es el proyecto 5 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=5"
           },
           {
             "id": 6,
-            "title": "Experiencias",
-            "description": "Este es el proyecto de Experiencias",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Problema / solución",
-                "description": "Este es el proyecto 1 de Experiencias",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Unboxing / uso de producto",
-                "description": "Este es el proyecto 2 de Experiencias",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 3 de Experiencias",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Unboxing - problema / solución",
+            "description": "Este es el proyecto 6 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=6"
           },
           {
             "id": 7,
-            "title": "Otros",
-            "description": "Este es el proyecto de otros",
-            "image": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "projects": [
-              {
-                "id": 1,
-                "title": "Problema / solución",
-                "description": "Este es el proyecto 1 de otros",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 2,
-                "title": "Unboxing / uso de producto",
-                "description": "Este es el proyecto 2 de otros",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              },
-              {
-                "id": 3,
-                "title": "Uso de producto",
-                "description": "Este es el proyecto 3 de otros",
-                "video": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
-              }
-            ]
+            "title": "Unboxing - problema / solución",
+            "description": "Este es el proyecto 7 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=7"
+          },
+          {
+            "id": 8,
+            "title": "Unboxing - problema / solución",
+            "description": "Este es el proyecto 8 de belleza",
+            "src": "https://source.unsplash.com/random/200x370?sig=8"
           }
         ]
       }
     },
     "collaborations": {
       "title": "Colaboraciones",
+      "splitTitle": ["Colaboraciones", "con"],
       "content": {
         "brands": [
           {
             "id": 1,
-            "name": "Marca 1",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 1",
+            "logo": "https://source.unsplash.com/random/200x370?sig=1"
           },
           {
             "id": 2,
-            "name": "Marca 2",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 2",
+            "logo": "https://source.unsplash.com/random/200x370?sig=2"
           },
           {
             "id": 3,
-            "name": "Marca 3",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 3",
+            "logo": "https://source.unsplash.com/random/200x370?sig=3"
           },
           {
             "id": 4,
-            "name": "Marca 4",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 4",
+            "logo": "https://source.unsplash.com/random/200x370?sig=4"
           },
           {
             "id": 5,
-            "name": "Marca 5",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 5",
+            "logo": "https://source.unsplash.com/random/200x370?sig=5"
           },
           {
             "id": 6,
-            "name": "Marca 6",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 6",
+            "logo": "https://source.unsplash.com/random/200x370?sig=6"
           },
           {
             "id": 7,
-            "name": "Marca 7",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 7",
+            "logo": "https://source.unsplash.com/random/200x370?sig=7"
           },
           {
             "id": 8,
-            "name": "Marca 8",
-            "logo": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg"
+            "alt": "Marca 8",
+            "logo": "https://source.unsplash.com/random/200x370?sig=8"
           }
         ]
       }
     },
     "portafolio": {
       "title": "Portafolio",
+      "splitTitle": ["Porta", "folio"],
       "content": {
-        "pictires": [
+        "pictures": [
           {
             "id": 1,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-1",
+            "src": "https://source.unsplash.com/random/200x370?sig=1"
           },
           {
             "id": 2,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-2",
+            "src": "https://source.unsplash.com/random/200x370?sig=2"
           },
           {
             "id": 3,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-3",
+            "src": "https://source.unsplash.com/random/200x370?sig=3"
           },
           {
             "id": 4,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-4",
+            "src": "https://source.unsplash.com/random/200x370?sig=4"
           },
           {
             "id": 5,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-5",
+            "src": "https://source.unsplash.com/random/200x370?sig=5"
           },
           {
             "id": 6,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-6",
+            "src": "https://source.unsplash.com/random/200x370?sig=6"
           },
           {
             "id": 7,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-7",
+            "src": "https://source.unsplash.com/random/200x370?sig=7"
           },
           {
             "id": 8,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-8",
+            "src": "https://source.unsplash.com/random/200x370?sig=8"
           },
           {
             "id": 9,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-9",
+            "src": "https://source.unsplash.com/random/200x370?sig=9"
           },
           {
             "id": 10,
-            "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
-            "alt": "Isabella Lizarralde Arias"
+            "alt": "isabella-lizarralde-arias-10",
+            "src": "https://source.unsplash.com/random/200x370?sig=10"
+          },
+          {
+            "id": 11,
+            "alt": "isabella-lizarralde-arias-11",
+            "src": "https://source.unsplash.com/random/200x370?sig=11"
+          },
+          {
+            "id": 12,
+            "alt": "isabella-lizarralde-arias-12",
+            "src": "https://source.unsplash.com/random/200x370?sig=12"
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "Un poco",
+      "subtitle": "Sobre mi",
+      "content": {
+        "hello": "¡Hola! soy Isa.",
+        "image": {
+          "src": "https://source.unsplash.com/random/200x370?sig=3",
+          "alt": "Isabella Lizarralde Arias"
+        },
+        "description": {
+          "paragraph1": "¡Hola! Soy Isabella, tengo 25 años, soy apasionada de la creatividad y la moda. Vivo actualmente en Colombia en la linda ciudad de Manizales.  Desde mis primeros días, siempre supe que mi destino estaba en crear cosas hermosas y significativas. Mi viaje comenzó vendiendo dulces para financiar mi primera cámara profesional, un paso crucial que encendió mi pasión por la fotografía.",
+          "paragraph2": "Pronto, mi amor por la moda se entrelazó con mi creatividad, empezando con la pintura de camisetas en el colegio, evolucionando hacia el lanzamiento de mi propia marca de ropa. Durante años, me dediqué al manejo integral de redes sociales, diseño y atención al cliente, perfeccionando cada detalle con pasión y dedicación. Pero fue una oportunidad esperada la que cambió mi vida por completo: el contenido UGC (User Generated Content).",
+          "paragraph3": "En este fascinante mundo. He tenido el privilegio de colaborar con más de 40 marcas tanto a nivel nacional como internacional, creando historias visuales que conectan e inspiran. Con formación en Psicología, tengo el complemento perfecto para entender y conectar con la comunidad. Mi objetivo es no solo capturar la atención, sino también ganarme el corazón de quienes me siguen, ofreciéndoles experiencias únicas, de aprendizaje y mucho entretenimiento."
+        },
+        "birth": {
+          "name": "Isabella",
+          "lastName": "Lizarralde Arias",
+          "prefix": "Nació el",
+          "day": 11,
+          "month": "Febrero",
+          "year": 1999
+        },
+        "button": {
+          "title": "Sígueme",
+          "url": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+        }
+      }
+    },
+    "instafeed": {},
+    "ugc": {
+      "title": "UGC",
+      "content": {
+        "cards": [
+          {
+            "id": "card-1",
+            "title": "¿Qué es UGC?",
+            "description": "Contenido generado por el usuario. auténtico y orgánico. El 79% de las personas confía más en un video o foto UGC que en publicidad hecha por la marca.",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80",
+              "alt": "ugc-picture-1"
+            }
+          },
+          {
+            "id": "card-2",
+            "title": "Beneficios de UGC",
+            "description": "Construirás la credibilidad y confianza de tus servicios. Tendrás un mayor alcance y más ventas. Ahorrarás tiempo y recursos en tu marca.",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+              "alt": "ugc-picture-2"
+            }
+          },
+          {
+            "id": "card-3",
+            "title": "¿Cómo implementar UGC?",
+            "description": "Puedes hacerlo a través de hashtags, concursos, encuestas, testimonios, reseñas, comentarios, etc.",
+            "image": {
+              "src": "https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+              "alt": "ugc-picture-3"
+            }
           }
         ]
       }
     },
     "contact": {
-      "title": "Contáctenos",
-      "content": "Este es el contenido de la página de contacto"
+      "title": ["Comencemos", "un proyecto juntos!"],
+      "content": {
+        "image": {
+          "src": "https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+          "alt": "Isabella Lizarralde Arias"
+        },
+        "details": [
+          {
+            "id": 1,
+            "title": "Detalles de contacto",
+            "items": [
+              {
+                "id": 1,
+                "type": "email",
+                "value": "isabella.ugc11@gmail.com"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Detalles del negocio",
+            "items": [
+              {
+                "id": 1,
+                "type": "style",
+                "value": "Moda - belleza - lifestyle"
+              },
+              {
+                "id": 2,
+                "type": "location",
+                "value": "Manizales, Colombia"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Redes sociales",
+            "items": [
+              {
+                "id": 1,
+                "type": "social",
+                "title": "Instagram",
+                "value": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr "
+              },
+              {
+                "id": 2,
+                "type": "social",
+                "title": "TikTok",
+                "value": "https://www.tiktok.com/@isabella.ugc11?_t=8nDuAFf4tGw&_r=1"
+              },
+              {
+                "id": 3,
+                "type": "social",
+                "title": "Facebook",
+                "value": "https://www.facebook.com/Isabella.ugc11?mibextid=LQQJ4d"
+              }
+            ]
+          }
+        ],
+        "form": {
+          "title": "Envíame un mensaje",
+          "fields": [
+            {
+              "id": 1,
+              "icon": "user",
+              "label": "¿Cuál es tu nombre?",
+              "type": "text",
+              "placeholder": "Isabella Lizarralde Arias",
+              "required": true
+            },
+            {
+              "id": 2,
+              "icon": "mail",
+              "label": "¿Cuál es tu correo?",
+              "type": "email",
+              "placeholder": "example@gmail.com",
+              "required": true
+            },
+            {
+              "id": 3,
+              "icon": "subject",
+              "label": "Asunto del mensaje",
+              "type": "text",
+              "placeholder": "Colaboración con Isabella",
+              "required": true
+            },
+            {
+              "id": 4,
+              "icon": "message",
+              "label": "¿Cuál es tu mensaje?",
+              "type": "textarea",
+              "placeholder": "Hola Isabella, me gustaría colaborar contigo en un proyecto...",
+              "required": true
+            }
+          ],
+          "button": {
+            "title": "Enviar mensaje"
+          }
+        }
+      }
     },
     "courses": {
       "title": "Cursos",
       "content": "Este es el contenido de la página de cursos"
+    },
+    "social": {
+      "title": "Redes sociales",
+      "content": {
+        "instagram": {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+        },
+        "tikTok": {
+          "name": "TikTok",
+          "url": "https://www.tiktok.com/@isabella.ugc11?_t=8nDuAFf4tGw&_r=1"
+        },
+        "facebook": {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/Isabella.ugc11?mibextid=LQQJ4d"
+        }
+      }
     }
   }
 }

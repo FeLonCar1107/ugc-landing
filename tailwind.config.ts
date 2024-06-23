@@ -9,13 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        xBlack: "#141414",
+        xBlack: "#141517",
         xChartTruth: "#EAFC88",
         xCoolWhip: "#FFFEEC",
         xLaughyTaffy: "#EDB5F7",
         xLavenDuhi: "#BDB4FF",
         xPeachyKeen: "#FFB985",
         xWhite: "#FFFFFF",
+        "jazzberry-jam": {
+          "50": "#fdf2f8",
+          "100": "#fde6f3",
+          "200": "#fdcde9",
+          "300": "#fca5d5",
+          "400": "#f96db8",
+          "500": "#f3419c",
+          "600": "#e22079",
+          "700": "#c5115f",
+          "800": "#9c114b",
+          "900": "#871444",
+          "950": "#530424",
+        },
       },
       fontFamily: {
         BeckanPersonal: ["Beckan-Personal-Use", "sans-serif"],

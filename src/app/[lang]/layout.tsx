@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Locale, i18n } from "@/i18n/config";
-import Navbar from "@/components/ui/Navbar";
-import Footer from "@/components/ui/Footer";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import "../../styles/globals.css";
 import "../../styles/tailwind.css";
 
@@ -26,11 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
-        <Navbar lang={params.lang} />
-        {children}
-        <Footer />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

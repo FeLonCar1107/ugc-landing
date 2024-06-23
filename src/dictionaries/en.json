@@ -72,26 +72,25 @@
       "content": {
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
-        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.",
-        "skills": [
-          "Model",
-          "Influencer",
-          "UGC Creator",
-          "Influencer"
-        ]
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Lorem ipsum dolor sit amet.",
+        "skills": ["Model", "Influencer", "UGC Creator", "Influencer"]
       }
     },
     "about": {
-      "title": "About me",
-      "subtitle": "Sobre mi",
+      "title": "A little bit",
+      "subtitle": "About me",
       "content": {
         "languages": ["es", "en"],
         "hello": "Hello! I'm Isa.",
         "image": {
-          "src": "https://i.ibb.co/7bQJ2Lw/Isabella-Lizarralde-Arias.jpg",
+          "src": "https://source.unsplash.com/random/200x370?sig=2",
           "alt": "Isabella's picture"
         },
-        "description": "My name is Isabella, I'm 24 years old and I live in Manizales, Colombia. I studied psychology and NEUROPSYCHOPEDAGOGY. \n Languages I speak: Spanish and English.\n I have experience generating VALUABLE content for some national brands.\n I specialize in creating organic and authentic content that reflects the essence of each brand, telling a story through videos and images that connect with your audience."
+        "description": "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem nunc venenatis, gravida hac hendrerit sociosqu fusce taciti risus feugiat. Mauris magna maecenas litora fermentum aptent penatibus vel, etiam ante in laoreet dignissim habitant, aliquet erat duis suspendisse nam aliquam. Turpis urna donec sem neque eu vestibulum, suspendisse luctus morbi pharetra class, velit parturient inceptos massa nulla. <br> <br> Suscipit est gravida felis phasellus nostra fermentum vestibulum habitasse odio rutrum class litora ac velit, venenatis viverra molestie lacus at sagittis diam sodales mollis mus porta commodo. Nam mollis ac vel vulputate cras nostra, luctus orci est tortor egestas laoreet, vehicula donec sollicitudin sociosqu class. Neque nibh lacus ultricies massa conubia viverra luctus, id integer nostra faucibus class fames pulvinar auctor, sapien ante lacinia accumsan donec aliquam.</p>",
+        "button": {
+          "title": "Follow me",
+          "url": "#instafeed"
+        }
       }
     },
     "contact": {

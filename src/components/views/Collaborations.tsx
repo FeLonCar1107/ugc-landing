@@ -1,86 +1,64 @@
-"use client";
 import { useEffect } from "react";
+import Image from "next/image";
+import { ICollaborationsProps } from "@/types/collaborations";
+import mariposas from "../../../public/borboletas-butterflies.gif";
+import mariposas2 from "../../../public/borboletas-butterflies2.gif";
 
-export default function Collaborations() {
-  const brands = [
-    {
-      id: 1,
-      name: "Brand 1",
-      logo: "/brand1.png",
-    },
-    {
-      id: 2,
-      name: "Brand 2",
-      logo: "/brand2.png",
-    },
-    {
-      id: 3,
-      name: "Brand 3",
-      logo: "/brand3.png",
-    },
-    {
-      id: 4,
-      name: "Brand 4",
-      logo: "/brand4.png",
-    },
-    {
-      id: 5,
-      name: "Brand 5",
-      logo: "/brand5.png",
-    },
-    {
-      id: 6,
-      name: "Brand 6",
-      logo: "/brand6.png",
-    },
-    {
-      id: 7,
-      name: "Brand 7",
-      logo: "/brand7.png",
-    },
-    {
-      id: 8,
-      name: "Brand 8",
-      logo: "/brand8.png",
-    },
-    {
-      id: 9,
-      name: "Brand 9",
-      logo: "/brand9.png",
-    },
-    {
-      id: 10,
-      name: "Brand 10",
-      logo: "/brand10.png",
-    },
-    {
-      id: 11,
-      name: "Brand 11",
-      logo: "/brand11.png",
-    },
-    {
-      id: 12,
-      name: "Brand 12",
-      logo: "/brand12.png",
-    },
-  ];
+export default function Collaborations(props: ICollaborationsProps) {
+  const { splitTitle, content } = props.data;
 
   useEffect(() => {
     const root = document.documentElement;
-    root.style.setProperty("--total-brands", (brands.length * 2).toString());
-  }, [brands.length]);
+    root.style.setProperty("--total-brands", content.brands.length.toString());
+  }, [content.brands.length]);
 
   return (
-    <section id="collaborations" className="w-screen h-auto pb-20">
-      <div className="w-full h-[170px] flex items-end justify-center">
-        <p className="text-[9vw] sm:text-[7vw] lg:text-[5vw] 2xl:text-[4vw]">
-          <strong>COLABORACIONES</strong> CON:
+    <section
+      data-scroll-section
+      id="collaborations"
+      className="w-screen h-auto relative bg-transparent"
+    >
+      <div className="w-full h-auto flex items-end justify-center">
+        <div
+          data-scroll
+          data-scroll-speed="-1.5"
+          className="relative w-[15vw] h-[15vw] max-w-[250px] max-h-[250px]"
+        >
+          <Image
+            src={mariposas2}
+            alt="Mariposas"
+            fill
+            sizes="100vw"
+            quality={100}
+            className="mariposas transform scale-x-[-1]"
+          />
+        </div>
+        <p className="flex gap-3 text-[25px] md:text-[40px] xl:text-[50px] uppercase text-jazzberry-jam-600">
+          <strong>{splitTitle[0]}</strong> <span className="hidden md:flex">{splitTitle[1]}</span>
         </p>
+        <div
+          data-scroll
+          data-scroll-speed="3"
+          className="relative w-[15vw] h-[15vw] max-w-[250px] max-h-[250px]"
+        >
+          <Image
+            src={mariposas}
+            alt="Mariposas"
+            fill
+            sizes="100vw"
+            quality={100}
+            className="mariposas"
+          />
+        </div>
       </div>
-      <div className="collaborations-slider">
+      <div className="collaborations-slider z-30">
         <div className="collaborations-slider-track">
-          {brands.concat(brands).map((brand) => (
-            <div key={brand.id} className="collaborations-slider-brand"></div>
+          {content.brands.concat(content.brands).map((brand, index) => (
+            <div key={index} className="collaborations-slider-brand">
+              <div className="brand relative">
+                {/* <Image src={brand.logo} alt={brand.alt} fill sizes="100vw" /> */}
+              </div>
+            </div>
           ))}
         </div>
       </div>

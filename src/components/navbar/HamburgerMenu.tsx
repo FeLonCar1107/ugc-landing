@@ -17,7 +17,7 @@ export default function HamburgerMenu(props: any) {
       <Hamburger
         rounded
         size={25}
-        color="#FFFF"
+        color="#530424"
         distance="sm"
         direction="right"
         onToggle={handleClick}
@@ -38,7 +38,7 @@ function Menu(props: any) {
   return (
     <div
       id="menu"
-      className="fixed top-0 right-0 z-50 bg-xLaughyTaffy w-screen h-screen opacity-10"
+      className="fixed top-14 right-0 z-50 bg-jazzberry-jam-300 w-screen h-[94vh]"
     >
       <ul className="w-full h-auto flex flex-col px-8 absolute bottom-10">
         <li>

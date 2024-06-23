@@ -1,7 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="bg-black p-4">
-      <div className="container mx-auto text-center text-white">
+    <footer
+      data-scroll-section
+      className="bg-jazzberry-jam-700 w-screen h-auto z-50"
+    >
+      <div className="mx-auto text-center text-white">
         <p> 2021 My Blog</p>
       </div>
     </footer>

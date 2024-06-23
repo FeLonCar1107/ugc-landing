@@ -24,13 +24,23 @@ export const useVideoCarousel = () => {
     };
 
     arrowButtons?.forEach((button) => {
-      let firstImageWidth = firstImage?.clientWidth ?? 0 + 10;
+      let carouselWidth = carousel?.clientWidth ?? 0;
+      let imagesToShow =
+        window.innerWidth <= 640
+          ? 1
+          : window.innerWidth <= 800
+          ? 2
+          : window.innerWidth <= 1200
+          ? 3
+          : 4;
+      let slideWidth = carouselWidth / imagesToShow;
       button.addEventListener("click", () => {
+        console.log("🚀 ~ arrowButtons?.forEach ~ slideWidth:", slideWidth)
         if (carousel) {
           if (button.id === "left-video-arrow") {
-            carousel.scrollLeft -= firstImageWidth;
+            carousel.scrollLeft -= slideWidth;
           } else {
-            carousel.scrollLeft += firstImageWidth;
+            carousel.scrollLeft += slideWidth;
           }
         }
         setTimeout(() => showHideArrows(), 60);
@@ -45,10 +55,20 @@ export const useVideoCarousel = () => {
         return;
 
       positionDiff = Math.abs(positionDiff);
-      let firstImageWidth = firstImage?.clientWidth ?? 0 + 10;
-      let valDifference = firstImageWidth - positionDiff;
+      let carouselWidth = carousel?.clientWidth ?? 0;
+      let imagesToShow =
+        window.innerWidth <= 640
+          ? 1
+          : window.innerWidth <= 800
+          ? 2
+          : window.innerWidth <= 1200
+          ? 3
+          : 4;
+      let slideWidth = carouselWidth / (imagesToShow + 1);
+      console.log("🚀 ~ autoSlide ~ slideWidth:", slideWidth)
+      let valDifference = slideWidth - positionDiff;
       if (carousel) {
-        if (positionDiff > firstImageWidth / 3) {
+        if (positionDiff > slideWidth / 3) {
           carousel.scrollLeft += valDifference;
         } else {
           carousel.scrollLeft -= positionDiff;
@@ -89,7 +109,7 @@ export const useVideoCarousel = () => {
     carousel?.addEventListener("touchmove", dragging);
 
     carousel?.addEventListener("mouseup", dragStop);
-    carousel?.addEventListener("mouseup", dragStop);
+    carousel?.addEventListener("mouseleave", dragStop);
     carousel?.addEventListener("touchend", dragStop);
 
     return () => {
