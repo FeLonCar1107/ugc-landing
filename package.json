@@ -15,7 +15,8 @@
     "negotiator": "^0.6.3",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "resend": "^3.3.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.3",
