@@ -14,6 +14,10 @@ export interface ISocialMediaProps {
         name: string;
         url: string;
       };
+      whatsApp: {
+        name: string;
+        url: string;
+      };
     };
   };
 }
