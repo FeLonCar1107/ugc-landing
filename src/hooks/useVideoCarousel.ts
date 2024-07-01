@@ -35,7 +35,6 @@ export const useVideoCarousel = () => {
           : 4;
       let slideWidth = carouselWidth / imagesToShow;
       button.addEventListener("click", () => {
-        console.log("🚀 ~ arrowButtons?.forEach ~ slideWidth:", slideWidth)
         if (carousel) {
           if (button.id === "left-video-arrow") {
             carousel.scrollLeft -= slideWidth;
@@ -65,7 +64,6 @@ export const useVideoCarousel = () => {
           ? 3
           : 4;
       let slideWidth = carouselWidth / (imagesToShow + 1);
-      console.log("🚀 ~ autoSlide ~ slideWidth:", slideWidth)
       let valDifference = slideWidth - positionDiff;
       if (carousel) {
         if (positionDiff > slideWidth / 3) {
