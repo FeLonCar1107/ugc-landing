@@ -49,7 +49,9 @@ export default function LanguagesList({
       >
         <div className="flex items-center justify-start gap-[5px]">
           <LanguageSvg color="#530424" size={23} />
-          <span className="text-jazzberry-jam-950 hidden lg:flex text-[18px]">{currentLanguage}</span>
+          <span className="text-jazzberry-jam-950 hidden lg:flex text-[18px]">
+            {currentLanguage}
+          </span>
         </div>
         <div className="hidden md:flex">
           <CaretDownSvg color="#530424" size={23} />

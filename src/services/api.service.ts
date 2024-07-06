@@ -14,7 +14,7 @@ const apiService = () => {
       return result.data;
     } catch (error) {
       console.error(error);
-      return null;
+      throw new Error(`Error fetching data: ${error}`);
     }
   };
 
@@ -26,7 +26,7 @@ const apiService = () => {
       return result.data;
     } catch (error) {
       console.error(error);
-      return null;
+      throw new Error(`Error fetching data: ${error}`);
     }
   };
 

@@ -50,7 +50,7 @@ export default function About(props: IAboutProps) {
             data-scroll-speed={isDesktop ? "1" : "3"}
             className="w-full h-[550px] flex flex-col relative mt-8 lg:mt-32"
           >
-            <div className="bg-gray-400 w-[320px] h-[450px] rotate-[7deg] absolute right-[-10px] z-10">
+            <div className="bg-gray-400 w-[320px] h-[450px] rotate-[7deg] absolute right-[-10px] z-10 shadow-md">
               {/* <Image
             src={content.image.src}
             alt={content.image.alt}

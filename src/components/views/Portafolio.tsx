@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LeftArrowIcon from "../svg/LeftArrow";
-import RightArrowIcon from "../svg/RightArrow";
+import LeftArrowIcon from "@/components/svg/LeftArrow";
+import RightArrowIcon from "@/components/svg/RightArrow";
 import { IPortafolioProps } from "@/types/portafolio";
 import { usePictureCarousel } from "@/hooks/usePictureCarousel";
 

@@ -32,6 +32,18 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "firebasestorage.googleapis.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "instagram.feoh3-1.fna.fbcdn.net",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

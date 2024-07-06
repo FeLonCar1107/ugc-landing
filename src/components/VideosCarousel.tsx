@@ -9,6 +9,25 @@ export default function VideosCarousel({ data }: { data: IVideo[] }) {
   useVideoCarousel();
   const [showInfo, setShowInfo] = useState<number | null>(null);
 
+  const handleMouseEnter = (
+    event: React.MouseEvent<HTMLVideoElement, MouseEvent>,
+    index: number,
+  ) => {
+    setShowInfo(index);
+    const videoElement = event.currentTarget;
+    videoElement.play();
+  };
+
+  const handleMouseLeave = (index: number) => {
+    setShowInfo(null);
+    const videoElement = document.getElementById(
+      `video-${index}`,
+    ) as HTMLVideoElement;
+    if (videoElement) {
+      videoElement.pause();
+    }
+  };
+
   return (
     <div className="w-full h-full flex items-center justify-between">
       <div className="videos-wrapper">
@@ -23,21 +42,21 @@ export default function VideosCarousel({ data }: { data: IVideo[] }) {
               key={`${video.id}-${index}`}
               className="video"
             >
-              <div className="relative w-full h-[80%]">
-                <Image
-                  src={video.src}
-                  alt={video.title}
-                  fill
-                  sizes="100vw"
-                  quality={100}
-                  className="video-image"
-                />
-              </div>
-              <div className="w-full h-[20%] text-jazzberry-jam-950 relative">
+              <video
+                id={`video-${index}`}
+                src={video.src}
+                loop
+                playsInline
+                onMouseEnter={(event) => handleMouseEnter(event, index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              />
+              <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
                 {showInfo === index && (
-                  <div className="fade-in-top w-full h-full text-center p-2">
-                    <h3 className="font-bold text-base">{video.title}</h3>
-                    <p className="text-sm">{video.description}</p>
+                  <div className="fade-in-top w-full h-full text-center flex flex-col items-center justify-center">
+                    <h3 className="font-bold text-sm md:text-base">
+                      {video.title}
+                    </h3>
+                    <p className="text-xs md:text-sm">{video.description}</p>
                   </div>
                 )}
               </div>

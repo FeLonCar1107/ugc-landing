@@ -1,16 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { IBrand } from "@/types/brand";
 import { ICollaborationsProps } from "@/types/collaborations";
+import apiService from "@/services/api.service";
 import mariposas from "../../../public/borboletas-butterflies.gif";
 import mariposas2 from "../../../public/borboletas-butterflies2.gif";
 
 export default function Collaborations(props: ICollaborationsProps) {
   const { splitTitle, content } = props.data;
+  const [brands, setBrands] = useState<IBrand[]>([]);
 
   useEffect(() => {
     const root = document.documentElement;
     root.style.setProperty("--total-brands", content.brands.length.toString());
   }, [content.brands.length]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await apiService.GET("get-brands");
+        setBrands(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section
@@ -26,15 +42,16 @@ export default function Collaborations(props: ICollaborationsProps) {
         >
           <Image
             src={mariposas2}
-            alt="Mariposas"
+            alt="Mariposa volando"
             fill
-            sizes="100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
             quality={100}
             className="mariposas transform scale-x-[-1]"
           />
         </div>
         <p className="flex gap-3 text-[25px] md:text-[40px] xl:text-[50px] uppercase text-jazzberry-jam-600">
-          <strong>{splitTitle[0]}</strong> <span className="hidden md:flex">{splitTitle[1]}</span>
+          <strong>{splitTitle[0]}</strong>{" "}
+          <span className="hidden md:flex">{splitTitle[1]}</span>
         </p>
         <div
           data-scroll
@@ -43,9 +60,9 @@ export default function Collaborations(props: ICollaborationsProps) {
         >
           <Image
             src={mariposas}
-            alt="Mariposas"
+            alt="Mariposa volando"
             fill
-            sizes="100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
             quality={100}
             className="mariposas"
           />
@@ -53,10 +70,16 @@ export default function Collaborations(props: ICollaborationsProps) {
       </div>
       <div className="collaborations-slider z-30">
         <div className="collaborations-slider-track">
-          {content.brands.concat(content.brands).map((brand, index) => (
+          {brands?.map((brand, index) => (
             <div key={index} className="collaborations-slider-brand">
               <div className="brand relative">
-                {/* <Image src={brand.logo} alt={brand.alt} fill sizes="100vw" /> */}
+                <Image
+                  src={brand.logo}
+                  alt={brand.alt}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  quality={100}
+                />
               </div>
             </div>
           ))}

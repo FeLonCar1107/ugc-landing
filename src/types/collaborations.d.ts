@@ -1,8 +1,4 @@
-interface IBrand {
-  id: number;
-  alt: string;
-  logo: string;
-}
+import { IBrand } from "./brand";
 
 export interface ICollaborationsProps {
   data: {

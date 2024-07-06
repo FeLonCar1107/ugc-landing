@@ -198,8 +198,6 @@ textarea:focus {
 
 .videos-carousel .video {
   width: calc(100% / 4 - 10px);
-  height: 35vw;
-  max-height: 600px;
   margin-left: 10px;
   flex-shrink: 0;
   cursor: pointer;
@@ -208,13 +206,6 @@ textarea:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.videos-carousel .video .video-image {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .videos-carousel .video:first-child {
@@ -229,7 +220,6 @@ textarea:focus {
 
   .videos-carousel .video {
     width: 100%;
-    height: 120vw;
     margin-left: 0px;
   }
 
@@ -260,7 +250,6 @@ textarea:focus {
 
   .videos-carousel .video {
     width: calc(100% / 2 - 5px);
-    height: 110vw;
     margin-left: 5px;
   }
 }
@@ -273,7 +262,6 @@ textarea:focus {
 
   .videos-carousel .video {
     width: calc(100% / 3);
-    height: 120vw;
   }
 }
 
@@ -282,7 +270,7 @@ textarea:focus {
 
 .collaborations-slider {
   margin: auto;
-  width: 90%;
+  width: 80%;
   max-width: 1500px;
   height: 250px;
   display: grid;
@@ -338,13 +326,13 @@ textarea:focus {
 .collaborations-slider-track {
   display: flex;
   gap: 30px;
-  width: calc(150px * var(--total-brands) * 2);
-  animation: collaborations-scroll 30s linear infinite;
+  width: calc(140px * var(--total-brands) * 2);
+  animation: collaborations-scroll 60s linear infinite;
 }
 
 .collaborations-slider-brand {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background-color: #dfdfdf;
   display: flex;
@@ -364,7 +352,7 @@ textarea:focus {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-150px * var(--total-brands)));
+    transform: translateX(calc(-140px * var(--total-brands)));
   }
 }
 
@@ -695,6 +683,69 @@ textarea:focus {
   }
 }
 
+.slide-fwd-center {
+  -webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 /* DIVIDERS
 ================================================== */
 
@@ -737,4 +788,75 @@ textarea:focus {
 
 .custom-shape-divider-top-1718565044 .shape-fill {
   fill: #fde6f3;
+}
+
+/* LOADERS
+================================================== */
+
+.media-loader {
+  width: 65px;
+  height: 65px;
+  position: relative;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.media-loader:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg) translate(30%, 40%);
+  background: #fca5d5;
+  box-shadow: 32px -34px 0 5px #e22079;
+  animation: slide 2s infinite ease-in-out alternate;
+}
+
+.media-loader:after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e22079;
+  transform: rotate(0deg);
+  transform-origin: 35px 145px;
+  animation: rotate 2s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    bottom: -35px;
+  }
+
+  25%,
+  75% {
+    bottom: -2px;
+  }
+
+  20%,
+  80% {
+    bottom: 2px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  25%,
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(25deg);
+  }
 }

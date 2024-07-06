@@ -25,7 +25,7 @@ export default function NavOptions(props: any) {
         <a
           onClick={() => scrollTo(option.href)}
           key={option.id}
-          className="text-jazzberry-jam-800 rounded-3xl hover:text-jazzberry-jam-500 py-2 px-5 flex-grow text-[11px] lg:text-[14px] 2xl:text-[20px] text-center font-normal cursor-pointer transition-all duration-300 ease-in-out nav-option"
+          className="text-jazzberry-jam-800 rounded-3xl hover:text-jazzberry-jam-500 py-2 px-5 flex-grow text-[11px] lg:text-[14px] 2xl:text-[20px] text-center font-medium cursor-pointer transition-all duration-300 ease-in-out nav-option"
         >
           {option.title}
         </a>

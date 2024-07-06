@@ -1,4 +1,4 @@
-"use client";
+import React, { use, useEffect } from "react";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,8 @@ export default function HamburgerMenu(props: any) {
   };
 
   return (
-    <div className="md:hidden">
+    <React.Fragment>
+      {isOpen && <Menu data={props} />}
       <Hamburger
         rounded
         size={25}
@@ -22,23 +23,26 @@ export default function HamburgerMenu(props: any) {
         direction="right"
         onToggle={handleClick}
       />
-      {isOpen && <Menu data={props} />}
-    </div>
+    </React.Fragment>
   );
 }
 
 function Menu(props: any) {
   const router = useRouter();
   const pathname = usePathname();
-  const { navigation } = props.data;
+  const { navigation, currentLanguage } = props.data;
+
+  useEffect(() => {
+    // isLinkActive();
+  }, [pathname]);
 
   const linkClass = `block text-white text-[52px] leading-[60px] sm:text-7xl hover:text-black font-BeckanPersonal overflow-hidden ${
-    pathname === "/" ? "text-black" : ""
+    pathname === "/" ? "text-jazzberry-jam-300" : ""
   }`;
   return (
     <div
       id="menu"
-      className="fixed top-14 right-0 z-50 bg-jazzberry-jam-300 w-screen h-[94vh]"
+      className="fixed top-0 right-0 bg-jazzberry-jam-300 w-screen h-screen"
     >
       <ul className="w-full h-auto flex flex-col px-8 absolute bottom-10">
         <li>
@@ -50,8 +54,7 @@ function Menu(props: any) {
           <li key={option.id}>
             <Link
               href={option.href}
-              onClick={() => router.push(`es${option.href}`)}
-              // onClick={() => console.log(`es${option.href}`)}
+              onClick={() => router.push(`${currentLanguage}${option.href}`)}
               className={linkClass}
             >
               {option.title.toUpperCase()}
