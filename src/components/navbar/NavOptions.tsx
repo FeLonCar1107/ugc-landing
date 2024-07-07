@@ -20,7 +20,7 @@ export default function NavOptions(props: any) {
   };
 
   return (
-    <div className="hidden md:flex mx-auto justify-center items-center gap-2 2xl:gap-8 nav-options">
+    <div className="hidden md:flex mx-auto justify-center items-center gap-2 2xl:gap-8 nav-options animated fadeIn">
       {props.options.map((option: any) => (
         <a
           onClick={() => scrollTo(option.href)}

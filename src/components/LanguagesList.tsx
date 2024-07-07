@@ -39,12 +39,12 @@ export default function LanguagesList({
   };
 
   return (
-    <div>
+    <>
       <button
         id="dropdown-languages-button"
         data-dropdown-toggle="dropdown-languages"
         data-dropdown-placement="bottom"
-        className="w-fit flex items-center justify-between gap-2 py-2 px-3 rounded-lg hover:opacity-80"
+        className="w-fit flex items-center justify-between gap-2 py-2 px-3 rounded-lg hover:opacity-80 animated fadeIn"
         onClick={() => setShowLanguages(!showLanguages)}
       >
         <div className="flex items-center justify-start gap-[5px]">
@@ -83,6 +83,6 @@ export default function LanguagesList({
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 }

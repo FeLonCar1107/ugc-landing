@@ -44,7 +44,11 @@ export default function Navbar({
 
   return (
     <nav
-      className={`w-full h-14 lg:h-16 flex items-center justify-between px-4 text-white fixed top-0 left-0 right-0 border-jazzberry-jam-500 md:border-none border-opacity-20 z-[1001] transition-transform duration-500 ease-out fade-in-top`}
+      className={`w-full h-14 lg:h-16 flex items-center justify-between px-4 text-white fixed top-0 left-0 z-[1000] transition-transform duration-500 ease-out animated fadeIn ${
+        showNavOptions
+          ? "border-[1px] border-jazzberry-jam-500 md:border-none border-opacity-20"
+          : ""
+      }`}
     >
       <div className="lg:hidden">
         <HamburgerMenu navigation={navigation} currentLanguage={lang} />
@@ -53,7 +57,7 @@ export default function Navbar({
         <>
           <a
             onClick={goToHome}
-            className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[25px] cursor-pointer"
+            className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[25px] cursor-pointer animated fadeIn"
           >
             ILA
           </a>
@@ -65,8 +69,13 @@ export default function Navbar({
         </>
       )}
       {!showNavOptions && (
-        <div className="hidden lg:block">
-          <HamburgerMenu navigation={navigation} currentLanguage={lang} />
+        <div className="hidden lg:block bg-jazzberry-jam-600 rounded-full">
+          <HamburgerMenu
+            size={20}
+            color="#ffff"
+            currentLanguage={lang}
+            navigation={navigation}
+          />
         </div>
       )}
     </nav>
