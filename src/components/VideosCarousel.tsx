@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { IVideo } from "@/types/videos";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";

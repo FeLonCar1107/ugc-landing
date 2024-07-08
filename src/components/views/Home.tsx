@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Skills from "@/components/Skills";
 import { IHomeProps } from "@/types/home";
-import Flower from "../../../public/flower-home.png";
 
 export default function Home(props: IHomeProps) {
   const { content } = props.data;
@@ -39,9 +38,7 @@ export default function Home(props: IHomeProps) {
           className="w-full h-full relative"
         >
           <Image
-            src={
-              "https://static.wixstatic.com/media/655690_5dd66d343eb44673bc4adc780c08e558~mv2.png"
-            }
+            src={content?.image}
             alt="Isabella"
             fill
             sizes="(max-width: 600px) 100vw, 600px"
@@ -63,7 +60,7 @@ export default function Home(props: IHomeProps) {
           className="w-[57vw] sm:w-[40vw] md:w-[25vw] h-[67vw] sm:h-[50vw] md:h-[30vw] relative"
         >
           <Image
-            src={Flower}
+            src={content?.flower}
             alt="flower"
             fill
             sizes="(max-width: 600px) 100vw, 600px"
@@ -78,7 +75,7 @@ export default function Home(props: IHomeProps) {
           className="w-[57vw] sm:w-[40vw] md:w-[25vw] h-[67vw] sm:h-[50vw] md:h-[30vw] relative"
         >
           <Image
-            src={Flower}
+            src={content?.flower}
             alt="flower"
             fill
             sizes="(max-width: 600px) 100vw, 600px"

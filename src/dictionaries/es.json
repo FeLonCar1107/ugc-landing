@@ -28,37 +28,44 @@
       {
         "id": 1,
         "title": "Videos",
-        "href": "#videos"
+        "href": "#videos",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449862696_2121698384870511_6495772675542692860_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=sCiuuyN9S_oQ7kNvgGMkHOk&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCfWwMoEsVSyr9f1XMzPEj9YcaQEIRsdX4rp8-UBq4M1A&oe=6690CAC9"
       },
       {
         "id": 2,
         "title": "Collabs",
-        "href": "#collaborations"
+        "href": "#collaborations",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450367816_2302485350345329_3797717077683477378_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=OaRGUr245n4Q7kNvgEt4bOU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAY8kLQHtiLAmf3_7ODgXdqHXqV8B1HzR4YRUWWeyCatw&oe=6690C8C3"
       },
       {
         "id": 3,
         "title": "Portafolio",
-        "href": "#portafolio"
+        "href": "#portafolio",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449861877_783490363981777_8452274963786244354_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=hSX0m6Ywn80Q7kNvgHfqDAm&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCe6A_s1ZK51BMYuZacoMqK82y8GA6vWy0_As8nIhJXfQ&oe=6690F65C"
       },
       {
         "id": 4,
         "title": "Sobre mi",
-        "href": "#about"
+        "href": "#about",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450154159_1168513504387840_2238661326427644879_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=SYe5RmOL9e4Q7kNvgEL08Bp&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBuv1x3LpHbVlUBY1XAhBauYg37X-n9rdUXkOXFj9Kf4Q&oe=6690CDDC"
       },
       {
         "id": 5,
         "title": "Insta",
-        "href": "#instafeed"
+        "href": "#instafeed",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450318670_402443608884441_319672528907517253_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=01wdwXdwIGkQ7kNvgHJgLYC&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCFlnECojpSNjzNciK5S_n8xXTAaOJjCMZ7-oP_rLO5LA&oe=6690CB50"
       },
       {
         "id": 6,
         "title": "UGC",
-        "href": "#ugc"
+        "href": "#ugc",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449861131_997295678416904_679692178594472059_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=ATHMPMTR7gUQ7kNvgE1eXib&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBxq0gOVIPOp4Lpb85KGxJHnK3isY2Ec7ZVeHHZLEs4bw&oe=6690F396"
       },
       {
         "id": 7,
         "title": "Contacto",
-        "href": "#contact"
+        "href": "#contact",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449862696_2121698384870511_6495772675542692860_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=sCiuuyN9S_oQ7kNvgGMkHOk&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCfWwMoEsVSyr9f1XMzPEj9YcaQEIRsdX4rp8-UBq4M1A&oe=6690CAC9"
       }
     ],
     "languages": [
@@ -83,7 +90,9 @@
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
         "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nuncs. Lorem opsum dolor sit amet.",
-        "skills": ["Modelo", "Creadora UGC", "Creadora de contenido"]
+        "skills": ["Modelo", "Creadora UGC", "Creadora de contenido"],
+        "image": "https://static.wixstatic.com/media/655690_74ce8f138f3e4a42ab59547aeafc628c~mv2.webp",
+        "flower": "https://static.wixstatic.com/media/655690_0ccf1e76087f4d63a5fa8458572340d0~mv2.webp"
       }
     },
     "videos": {
@@ -93,51 +102,51 @@
         "videos": [
           {
             "id": 1,
-            "title": "Unboxing - problema / solución",
-            "description": "Este es el proyecto 1 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m86/6841836138B538A21EE55D3D5424D4A6_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=110&vs=3869355893351452_3070392361&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC82ODQxODM2MTM4QjUzOEEyMUVFNTVEM0Q1NDI0RDRBNl92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dPUE4wQm9tRzQxTVpLVUJBRVFxNWJMeUxCa1VicV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJry6oNDjnJdBFQIoAkMzLBdAIu6XjU%2FfOxgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYCnsK7xwRUywXcD2OOQi5BHCubE0mfm2V2hBTopAgjwQA&oe=668A86BD&_nc_sid=1d576d"
+            "title": "Experiencia",
+            "description": "Feria de Manizales",
+            "src": "https://video.wixstatic.com/video/655690_52198ae607004988afaa95344758acc7/720p/mp4/file.mp4"
           },
           {
             "id": 2,
-            "title": "Uso de producto",
-            "description": "Este es el proyecto 2 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m86/E048426DA9A340DD4EA343213D1340A9_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=109&vs=2233301330341858_95985814&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9FMDQ4NDI2REE5QTM0MERENEVBMzQzMjEzRDEzNDBBOV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dMNkR0eHBIMnc1VjJ2RUNBR3dacnJEMmd0b0JicV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJvbMztiJx%2F0%2FFQIoAkMzLBdAQBmZmZmZmhgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYAeqQbHMeM8EVoIZIO5Vj0K6p2VfTKeLXq0g9cyXo4qkg&oe=668A7912&_nc_sid=1d576d"
+            "title": "Festival",
+            "description": "Tienda de ropa",
+            "src": "https://video.wixstatic.com/video/655690_0c83a1fe109f478084643d7d6c811314/720p/mp4/file.mp4"
           },
           {
             "id": 3,
-            "title": "Testimonio experiencia",
-            "description": "Este es el proyecto 3 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m86/88494CB64518AA7C375AE0DBCD8612B5_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=101&vs=1534354864163785_2971971208&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC84ODQ5NENCNjQ1MThBQTdDMzc1QUUwREJDRDg2MTJCNV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dNSkJ4Qm80WHp0R25ETUVBQU5odTRSR1E3OW1icV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJo6t6ufK74ZAFQIoAkMzLBdAKgAAAAAAABgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYAvp-VvhQ0nAe6ZMFOpQ6_wZ-LDY8bwggn2e03hIRRdEQ&oe=668A79F7&_nc_sid=1d576d"
+            "title": "Uso de producto",
+            "description": "Accesorios",
+            "src": "https://video.wixstatic.com/video/655690_d7ed9d8b61124b7c93667a1dd643e567/1080p/mp4/file.mp4"
           },
           {
             "id": 4,
-            "title": "Unboxing - problema / solución",
-            "description": "Este es el proyecto 4 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m86/4A4EDB5226070C5A8FEA4D1103107BAF_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=111&vs=1138258034058964_1353889979&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80QTRFREI1MjI2MDcwQzVBOEZFQTREMTEwMzEwN0JBRl92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dDNmp1QnJzVy1HYWMxSUZBRm12YlBnSFp5SV9icV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJq7Nt%2Fmg2otAFQIoAkMzLBdAQTvGp%2B%2BdshgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYBVqzlaK0IPfROXcxY10rjLshaWIrOFxz_vJWWqGoI5DA&oe=668A819B&_nc_sid=1d576d"
+            "title": "Reseña",
+            "description": "Local de postres",
+            "src": "https://video.wixstatic.com/video/655690_49ecfc1f8e154c92892aadceeb6648bf/720p/mp4/file.mp4"
           },
           {
             "id": 5,
-            "title": "Unboxing - problema / solución",
-            "description": "Este es el proyecto 5 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m86/164400A1A2C926C37A4CE4938F13ED96_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=103&vs=990212519042741_1295429904&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xNjQ0MDBBMUEyQzkyNkMzN0E0Q0U0OTM4RjEzRUQ5Nl92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dPVGZ2aHJael95VEdPTUNBTXJKNHhRUEJMWmticV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJoLex4eig88%2FFQIoAkMzLBdAUjmZmZmZmhgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYCsgTP8hB1RlKK148baJMWcd2C-YHm24_wKZRVBWMd9jA&oe=668A6B49&_nc_sid=1d576d"
+            "title": "Bienestar",
+            "description": "Suplemento alimenticio",
+            "src": "https://video.wixstatic.com/video/655690_710f7bfbdb804391b920c3d0313b7785/1080p/mp4/file.mp4"
           },
           {
             "id": 6,
-            "title": "Unboxing - problema / solución",
-            "description": "Este es el proyecto 6 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m82/4C45945A87813660D7279FEEE2925BA6_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=102&vs=931651438630338_104699567&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC80QzQ1OTQ1QTg3ODEzNjYwRDcyNzlGRUVFMjkyNUJBNl92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dOZGJ2eG93MVdVZjR0NE1BRF9kcGFtSFFiMWlicV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJvrll4mPiIdAFQIoAkMzLBdANtU%2FfO2RaBgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYBy4AzuO5NPWKSh2zyq6jCqvGLdbs8HY2CX7FC1w9Mtag&oe=668A7F79&_nc_sid=1d576d"
+            "title": "Problema / Solución",
+            "description": "Tapones para el ruido",
+            "src": "https://video.wixstatic.com/video/655690_e9a081cddaf14fd0a295bcc09c21101c/1080p/mp4/file.mp4"
           },
           {
             "id": 7,
-            "title": "Unboxing - problema / solución",
-            "description": "Este es el proyecto 7 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m82/89405372874E017099CE9FD00E709FB7_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=107&vs=351499621300713_3894676056&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC84OTQwNTM3Mjg3NEUwMTcwOTlDRTlGRDAwRTcwOUZCN192aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dBbWJ2Um9ITzBqd0tvNERBTFNQTjJXc3hsUnpicV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJprIiL6bsIRAFQIoAkMzLBdAQOIMSbpeNRgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYA2CBGGZRECNVsVmOvThA5qUsIVkwPWIdgvHS4tR96qBQ&oe=668A8DE1&_nc_sid=1d576d"
+            "title": "Trend",
+            "description": "Skincare",
+            "src": "https://video.wixstatic.com/video/655690_ecf420120cbd441c9909a2341ef05912/1080p/mp4/file.mp4"
           },
           {
             "id": 8,
-            "title": "Unboxing - problema / solución",
-            "description": "Este es el proyecto 8 de belleza",
-            "src": "https://scontent.cdninstagram.com/o1/v/t16/f1/m82/23482D36002BA75D1A32C5B9593C9287_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLmNsaXBzLnVua25vd24tQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&vs=8190715044286248_1539958606&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC8yMzQ4MkQzNjAwMkJBNzVEMUEzMkM1Qjk1OTNDOTI4N192aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dDY1h2eHEwenhETjVYZ0ZBT0VnRXp5TFdia2xicV9FQUFBRhUCAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJriP1YCQoLw%2FFQIoAkMzLBdAUJEGJN0vGxgSZGFzaF9iYXNlbGluZV8xX3YxEQB1AAA%3D&ccb=9-4&oh=00_AYD_4InZQ9hZrfPGN7t0f84jbGtNzdBEB1ZEauVUxPXhHQ&oe=668AA055&_nc_sid=1d576d"
+            "title": "Unboxing",
+            "description": "Pijama party",
+            "src": "https://video.wixstatic.com/video/655690_f3e42b9e8248434b98fa48fe6c29b275/1080p/mp4/file.mp4"
           }
         ]
       }
@@ -378,62 +387,32 @@
           {
             "id": 1,
             "alt": "isabella-lizarralde-arias-1",
-            "src": "https://source.unsplash.com/random/200x370?sig=1"
+            "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp"
           },
           {
             "id": 2,
             "alt": "isabella-lizarralde-arias-2",
-            "src": "https://source.unsplash.com/random/200x370?sig=2"
+            "src": "https://static.wixstatic.com/media/655690_feb134ff630243ce930f1cd47962e35b~mv2.webp"
           },
           {
             "id": 3,
             "alt": "isabella-lizarralde-arias-3",
-            "src": "https://source.unsplash.com/random/200x370?sig=3"
+            "src": "https://static.wixstatic.com/media/655690_58bfb99f86c94a938aa6a856fe64d909~mv2.webp"
           },
           {
             "id": 4,
             "alt": "isabella-lizarralde-arias-4",
-            "src": "https://source.unsplash.com/random/200x370?sig=4"
+            "src": "https://static.wixstatic.com/media/655690_5080e0e5d462420ba1cb38a743808e20~mv2.webp"
           },
           {
             "id": 5,
             "alt": "isabella-lizarralde-arias-5",
-            "src": "https://source.unsplash.com/random/200x370?sig=5"
+            "src": "https://static.wixstatic.com/media/655690_c4e0b0edfb454f8eb7baae44926f5848~mv2.webp"
           },
           {
             "id": 6,
             "alt": "isabella-lizarralde-arias-6",
-            "src": "https://source.unsplash.com/random/200x370?sig=6"
-          },
-          {
-            "id": 7,
-            "alt": "isabella-lizarralde-arias-7",
-            "src": "https://source.unsplash.com/random/200x370?sig=7"
-          },
-          {
-            "id": 8,
-            "alt": "isabella-lizarralde-arias-8",
-            "src": "https://source.unsplash.com/random/200x370?sig=8"
-          },
-          {
-            "id": 9,
-            "alt": "isabella-lizarralde-arias-9",
-            "src": "https://source.unsplash.com/random/200x370?sig=9"
-          },
-          {
-            "id": 10,
-            "alt": "isabella-lizarralde-arias-10",
-            "src": "https://source.unsplash.com/random/200x370?sig=10"
-          },
-          {
-            "id": 11,
-            "alt": "isabella-lizarralde-arias-11",
-            "src": "https://source.unsplash.com/random/200x370?sig=11"
-          },
-          {
-            "id": 12,
-            "alt": "isabella-lizarralde-arias-12",
-            "src": "https://source.unsplash.com/random/200x370?sig=12"
+            "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp"
           }
         ]
       }
@@ -444,7 +423,7 @@
       "content": {
         "hello": "¡Hola! soy Isa.",
         "image": {
-          "src": "https://source.unsplash.com/random/200x370?sig=3",
+          "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp",
           "alt": "Isabella Lizarralde Arias"
         },
         "description": {
@@ -476,7 +455,7 @@
             "title": "¿Qué es UGC?",
             "description": "Contenido generado por el usuario. auténtico y orgánico. El 79% de las personas confía más en un video o foto UGC que en publicidad hecha por la marca.",
             "image": {
-              "src": "https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80",
+              "src": "https://static.wixstatic.com/media/655690_58bfb99f86c94a938aa6a856fe64d909~mv2.webp",
               "alt": "ugc-picture-1"
             }
           },
@@ -485,7 +464,7 @@
             "title": "Beneficios de UGC",
             "description": "Construirás la credibilidad y confianza de tus servicios. Tendrás un mayor alcance y más ventas. Ahorrarás tiempo y recursos en tu marca.",
             "image": {
-              "src": "https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+              "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp",
               "alt": "ugc-picture-2"
             }
           },
@@ -494,7 +473,7 @@
             "title": "¿Cómo implementar UGC?",
             "description": "Puedes hacerlo a través de hashtags, concursos, encuestas, testimonios, reseñas, comentarios, etc.",
             "image": {
-              "src": "https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60",
+              "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp",
               "alt": "ugc-picture-3"
             }
           }
@@ -505,7 +484,7 @@
       "title": ["Comencemos", "un proyecto juntos!"],
       "content": {
         "image": {
-          "src": "https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+          "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp",
           "alt": "Isabella Lizarralde Arias"
         },
         "details": [

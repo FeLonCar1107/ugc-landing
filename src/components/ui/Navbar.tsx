@@ -19,7 +19,7 @@ export default function Navbar({
     const controlNavbar = () => {
       if (typeof window !== "undefined") {
         locomotiveScroll?.on("scroll", (event) => {
-          setShowNavOptions(event.scroll.y <= 1);
+          setShowNavOptions(event.scroll.y <= 5);
         });
       }
     };

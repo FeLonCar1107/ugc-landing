@@ -120,7 +120,7 @@ textarea:focus {
 }
 
 .link {
-  height: 3vw;
+  height: 3.5vw;
   align-items: center;
   color: #ffffff;
   text-decoration: none;
@@ -130,7 +130,7 @@ textarea:focus {
 .mask {
   position: relative;
   padding: 0;
-  height: 2.5vw;
+  height: 3vw;
 
   overflow: hidden;
 }
@@ -141,9 +141,9 @@ textarea:focus {
 
 .title {
   display: block;
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-weight: 700;
-  line-height: 2.5vw;
+  line-height: 3vw;
 
   transition: transform 0.4s ease;
 }
@@ -158,7 +158,7 @@ textarea:focus {
 }
 
 .link:hover .link-container {
-  transform: translateY(-2.5vw);
+  transform: translateY(-3vw);
 }
 
 .link:hover .link-title1 {
@@ -369,7 +369,12 @@ textarea:focus {
 
 @media screen and (max-width: 640px) {
   .collaborations-slider {
-    width: 70%;
+    width: 65%;
+  }
+
+  .collaborations-slider::before,
+  .collaborations-slider::after {
+    display: none;
   }
 }
 

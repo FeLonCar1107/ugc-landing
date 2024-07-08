@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Spin as Hamburger } from "hamburger-react";
 
@@ -30,20 +29,32 @@ export default function HamburgerMenu(props: any) {
 function Menu(props: any) {
   const router = useRouter();
   const { navigation, currentLanguage } = props.data;
+  const [currentImage, setCurrentImage] = useState(
+    "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3",
+  );
+
+  const handleMouseEnter = (imageUrl: string) => {
+    setCurrentImage(imageUrl);
+  };
+
+  const handleMouseLeave = () => {
+    setCurrentImage(
+      "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3",
+    );
+  };
 
   return (
     <div
       id="menu"
       className="fixed top-0 right-0 bg-jazzberry-jam-200 w-screen h-screen flex justify-around items-center tilt-out-fwd-tl"
     >
-      <div className="hidden lg:block relative w-[20%] h-0 pb-[25%] shadow-lg">
+      <div className="hidden lg:block relative w-[25%] h-0 pb-[30%] shadow-lg">
         <Image
-          src={
-            "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3"
-          }
+          src={currentImage}
           alt="ILA Logo"
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
+          className="animated fadeIn"
         />
       </div>
       <ul className="w-auto h-full lg:h-full flex flex-col lg:justify-center lg:items-center px-8 absolute lg:relative uppercase">
@@ -62,7 +73,11 @@ function Menu(props: any) {
           </Link>
         </li>
         {navigation.nav_options.map((option: any) => (
-          <li key={option.id}>
+          <li
+            key={option.id}
+            onMouseEnter={() => handleMouseEnter(option.image)}
+            onMouseLeave={handleMouseLeave}
+          >
             <Link
               href={option.href}
               onClick={() => router.push(`${currentLanguage}${option.href}`)}
@@ -80,14 +95,13 @@ function Menu(props: any) {
           </li>
         ))}
       </ul>
-      <div className="hidden lg:block relative w-[20%] h-0 pb-[25%] shadow-lg">
+      <div className="hidden lg:block relative w-[25%] h-0 pb-[30%] shadow-lg">
         <Image
-          src={
-            "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3"
-          }
+          src={currentImage}
           alt="ILA Logo"
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
+          className="animated fadeIn"
         />
       </div>
     </div>

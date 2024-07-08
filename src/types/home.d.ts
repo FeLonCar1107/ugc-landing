@@ -6,6 +6,8 @@ export interface IHomeProps {
       fullName: string;
       shortDescription: string;
       skills: string[];
+      image: string;
+      flower: string;
     };
   };
 }
