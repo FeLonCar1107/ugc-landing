@@ -23,13 +23,14 @@ export default function Main(props: any) {
   const { navigation, page } = props.data;
   const {
     home,
-    about,
-    social,
+    videos,
     collaborations,
     portafolio,
+    about,
+    social,
     ugc,
-    videos,
     contact,
+    footer,
   } = page;
   const [lang, setLang] = useState<Locale>("es");
 
@@ -53,10 +54,9 @@ export default function Main(props: any) {
         <UGC data={ugc} />
         {/* <FeedBack /> */}
         <Contact data={contact} />
-        <Footer />
+        <Footer data={footer} />
         <SocialFixed data={social} />
       </main>
-      <Footer />
     </LocomotiveScrollContext.Provider>
   );
 }

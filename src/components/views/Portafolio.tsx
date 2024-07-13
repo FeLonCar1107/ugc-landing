@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
@@ -7,6 +8,19 @@ import { usePictureCarousel } from "@/hooks/usePictureCarousel";
 export default function Portafolio(props: IPortafolioProps) {
   usePictureCarousel();
   const { splitTitle, content } = props.data;
+  const [imageLoadingStates, setImageLoadingStates] = useState<boolean[]>([]);
+
+  useEffect(() => {
+    setImageLoadingStates(new Array(content.pictures.length).fill(true));
+  }, [content.pictures.length]);
+
+  const handleImageLoad = (index: number) => {
+    setImageLoadingStates((prevStates) => {
+      const newStates = [...prevStates];
+      newStates[index] = false;
+      return newStates;
+    });
+  };
 
   return (
     <section
@@ -26,15 +40,23 @@ export default function Portafolio(props: IPortafolioProps) {
             <LeftArrowIcon color="#871444" />
           </div>
           <div className="pictures-carousel">
-            {content.pictures.map((picture) => (
+            {content.pictures.map((picture, index) => (
               <div key={picture.id} className="picture">
+                {imageLoadingStates[index] && (
+                  <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                    <div className="media-loader"></div>
+                  </div>
+                )}
                 <Image
                   src={picture.src}
                   alt={picture.alt}
                   fill
                   sizes="(max-width: 600px) 100vw, 600px"
                   quality={100}
-                  className="picture-image"
+                  className={`picture-image ${
+                    imageLoadingStates[index] ? "opacity-0" : "opacity-100"
+                  }`}
+                  onLoad={() => handleImageLoad(index)}
                 />
               </div>
             ))}

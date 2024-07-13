@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import apiService from "@/services/api.service";
 import ReelIcon from "@/components/svg/instagram/ReelIcon";
 import CarouselIcon from "@/components/svg/instagram/CarouselIcon";
@@ -7,14 +7,19 @@ import CloseIcon from "@/components/svg/instagram/CloseIcon";
 import Instagram from "@/components/svg/social-media/Instagram";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
+import LoaderInsta from "@/components/buttons/LoaderInsta";
 
 export default function InstaFeed() {
   const [user, setUser] = useState<any>({});
   const [content, setContent] = useState<any>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [visibleRows, setVisibleRows] = useState(1);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [visibleRows, setVisibleRows] = useState<number>(1);
   const [currentPostIndex, setCurrentPostIndex] = useState<number>(0);
+  const [mediaLoadingStates, setMediaLoadingStates] = useState<boolean[]>([]);
+
+  const itemsPerRow = isMobile ? 2 : 3;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,8 +28,11 @@ export default function InstaFeed() {
         setUser(user);
         const data = await apiService.POST("content-media", { limit: 12 });
         setContent(data);
+        setMediaLoadingStates(new Array(data.data.length).fill(true));
       } catch (error) {
         console.error(error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -42,10 +50,10 @@ export default function InstaFeed() {
   }, []);
 
   const handleLoadMore = () => {
+    setIsLoading(true);
     setVisibleRows((prev) => prev + 1);
+    setIsLoading(false);
   };
-
-  const itemsPerRow = isMobile ? 2 : 3;
 
   const openModal = (index: number) => {
     setCurrentPostIndex(index);
@@ -77,6 +85,16 @@ export default function InstaFeed() {
     }).format(newDate);
   };
 
+  const handleMediaLoad = (index: number) => {
+    setIsLoading(true);
+    setMediaLoadingStates((prevStates) => {
+      const newStates = [...prevStates];
+      newStates[index] = false;
+      return newStates;
+    });
+    setIsLoading(false);
+  };
+
   return (
     <section
       data-scroll-section
@@ -87,7 +105,7 @@ export default function InstaFeed() {
         <h2 className="font-bold">@{user?.username}</h2>
         <h2>en insta</h2>
       </div>
-      <div className="w-[70%] max-w-[1000px] flex flex-wrap gap-1 justify-center items-center">
+      <div className="w-[75%] max-w-[1000px] flex flex-wrap gap-1 justify-center items-center">
         {content ? (
           content.data
             .slice(0, visibleRows * itemsPerRow)
@@ -105,9 +123,17 @@ export default function InstaFeed() {
                   }
                   alt={post.caption}
                   fill
-                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
+                    mediaLoadingStates[index] ? "opacity-0" : "opacity-100"
+                  }`}
                   sizes="(min-width: 768px) 50vw, 100vw"
+                  onLoad={() => handleMediaLoad(index)}
                 />
+                {mediaLoadingStates[index] && (
+                  <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                    <div className="media-loader"></div>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
                   <p className="text-[10px] md:text-base text-white text-center overflow-hidden whitespace-pre-wrap text-ellipsis w-[80%] max-h-[75%]">
                     {post.caption}
@@ -125,26 +151,26 @@ export default function InstaFeed() {
               </div>
             ))
         ) : (
-          <div className="w-[70%] max-w-[1000px] flex flex-wrap gap-1 justify-center items-center">
+          <>
             {[...Array(itemsPerRow)].map((_, index) => (
               <div
                 key={index}
-                className="w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] bg-jazzberry-jam-200 animate-pulse relative"
+                className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
               >
-                <div className="w-full h-full absolute flex justify-center items-center">
+                <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
                   <div className="media-loader"></div>
                 </div>
               </div>
             ))}
-          </div>
+          </>
         )}
       </div>
       {content && visibleRows * itemsPerRow < content.data.length && (
         <button
           onClick={handleLoadMore}
-          className="mt-3 px-5 py-2 bg-jazzberry-jam-500 text-white rounded"
+          className="mt-3 w-40 h-11 bg-jazzberry-jam-500 text-white rounded"
         >
-          Cargar más
+          {isLoading ? <LoaderInsta /> : "Cargar más"}
         </button>
       )}
 
@@ -179,6 +205,7 @@ export default function InstaFeed() {
                   fill
                   className="absolute top-0 left-0 w-full h-full object-cover"
                   sizes="(min-width: 768px) 50vw, 100vw"
+                  onLoad={() => handleMediaLoad(currentPostIndex)}
                 />
               )}
             </div>

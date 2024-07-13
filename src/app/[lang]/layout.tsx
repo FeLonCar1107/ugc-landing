@@ -4,6 +4,7 @@ import { Locale, i18n } from "@/i18n/config";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "../../styles/globals.css";
 import "../../styles/tailwind.css";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

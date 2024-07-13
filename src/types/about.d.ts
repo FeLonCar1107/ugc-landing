@@ -5,6 +5,10 @@ export interface IAboutProps {
     content: {
       languages: string[];
       hello: string;
+      illustration: {
+        src: string;
+        alt: string;
+      };
       image: {
         src: string;
         alt: string;
@@ -13,6 +17,7 @@ export interface IAboutProps {
         paragraph1: string;
         paragraph2: string;
         paragraph3: string;
+        paragraph4: string;
       };
       birth: {
         name: string;

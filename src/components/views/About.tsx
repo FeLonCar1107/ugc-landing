@@ -2,14 +2,21 @@ import Image from "next/image";
 import useHoverEffects from "@/hooks/useHoverEffects";
 import { IAboutProps } from "@/types/about";
 import { useEffect, useState } from "react";
+import CameraBackground from "@/components/svg/CameraBackground";
 
 export default function About(props: IAboutProps) {
   useHoverEffects();
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+  const [totalBrands, setTotalBrands] = useState<string>("0");
   const { title, subtitle, content } = props.data;
 
   useEffect(() => {
     setIsDesktop(window.innerWidth > 1024);
+    setTotalBrands(
+      window
+        .getComputedStyle(document.documentElement)
+        .getPropertyValue("--total-brands"),
+    );
   }, []);
 
   return (
@@ -19,7 +26,24 @@ export default function About(props: IAboutProps) {
       className="w-screen h-auto min-h-screen flex items-center justify-center"
     >
       <div className="w-full h-full max-w-[1300px] flex flex-col lg:flex-row items-center justify-center gap-3">
-        <div className="w-full lg:w-[40%] h-full flex flex-col items-center justify-center bg-slate-400"></div>
+        <div className="w-full lg:w-[40%] h-full flex flex-col items-center justify-center">
+          <div
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed={isDesktop ? "-1" : "-3.5"}
+            className="hidden lg:block"
+          >
+            <CameraBackground color="#fdcde9">
+              <Image
+                src={content.illustration.src}
+                alt={content.illustration.alt}
+                width={800}
+                height={800}
+                className="camera-picture rotate-[-7deg] drop-shadow-md"
+              />
+            </CameraBackground>
+          </div>
+        </div>
         <div className="w-full lg:w-[60%] h-full flex flex-col lg:flex-row items-center justify-center gap-3">
           <div className="w-[75%] lg:w-full flex flex-col gap-3 lg:z-30">
             <div className="w-full h-auto flex flex-col lg:flex-row text-jazzberry-jam-600 text-[25px] md:text-[40px] xl:text-[50px] uppercase space-y-[-3vw] md:space-y-[-1vw] lg:space-y-0">
@@ -39,7 +63,8 @@ export default function About(props: IAboutProps) {
               </div>
               <div className="hidden lg:flex w-full h-auto justify-start items-start">
                 <p className="w-[85%] h-full">
-                  {content.description.paragraph3}
+                  {content.description.paragraph3} {totalBrands}{" "}
+                  {content.description.paragraph4}
                 </p>
               </div>
             </div>
@@ -47,22 +72,23 @@ export default function About(props: IAboutProps) {
           <div
             data-scroll
             data-scroll-direction="horizontal"
-            data-scroll-speed={isDesktop ? "1" : "3"}
-            className="w-full h-[550px] flex flex-col relative mt-8 lg:mt-32"
+            data-scroll-speed={isDesktop ? "1" : "3.5"}
+            className="w-full h-[550px] flex flex-col relative"
           >
-            <div className="bg-gray-400 w-[320px] h-[450px] rotate-[7deg] absolute right-[-10px] z-10 shadow-md">
+            <div className="w-[320px] h-[450px] rotate-[8deg] absolute right-[3vw] z-10">
               <Image
                 src={content.image.src}
                 alt={content.image.alt}
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
+                width={400}
+                height={800}
+                className="show-image grayscale"
               />
             </div>
             <div
               data-scroll
               data-scroll-direction="horizontal"
-              data-scroll-speed={isDesktop ? "1" : "3"}
-              className="w-full h-auto flex flex-col items-center justify-center font-semibold text-[30px] text-center text-white uppercase leading-none absolute bottom-0 z-50"
+              data-scroll-speed={isDesktop ? "1" : "3.5"}
+              className="w-full h-auto flex flex-col items-center justify-center font-semibold text-[30px] text-center text-white uppercase leading-none absolute bottom-0 z-50 drop-shadow-md"
             >
               {content.birth.name}
               <br />

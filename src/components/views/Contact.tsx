@@ -4,6 +4,7 @@ import DividerBottom from "@/components/svg/DividerBottom";
 import DividerTop from "@/components/svg/DividerTop";
 import ContactForm from "@/components/ContactForm";
 import { IContactProps } from "@/types/contact";
+import Toaster from "react-hot-toast";
 
 type ActionFunction = (value: string) => void;
 
@@ -28,24 +29,20 @@ export default function Contact(props: IContactProps) {
       <DividerTop />
       <div className="w-[68%] max-w-[1300px] h-auto flex flex-col md:flex-row gap-7 pt-[100px]">
         <div className="w-full md:w-[50%] h-auto flex flex-col items-start justify-start text-jazzberry-jam-50">
-          <div className="w-full flex flex-col items-start justify-start">
-            <div className="w-full flex gap-3 items-center justify-start">
-              <div className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-full relative shadow-md">
-                <Image
-                  src={content.image.src}
-                  alt={content.image.alt}
-                  fill
-                  sizes="100vw"
-                  className="rounded-full"
-                />
-              </div>
-              <p className="text-[8vw] md:text-[3vw] 2xl:md:text-[2vw]">
-                {title[0]}
-              </p>
+          <div className="w-full flex gap-3 items-center justify-start">
+            <div className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-full relative shadow-md">
+              <Image
+                src={content.image.src}
+                alt={content.image.alt}
+                fill
+                sizes="(max-width: 600px) 100vw, 600px"
+                className="rounded-full"
+              />
             </div>
-            <p className="text-[8vw] md:text-[3vw] 2xl:md:text-[2vw]">
-              {title[1]}
-            </p>
+            <div className="w-[70%] flex flex-col items-start justify-start text-[4.5vw] md:text-[2vw] 2xl:md:text-[1vw]">
+              <p>{title[0]}</p>
+              <p>{title[1]}</p>
+            </div>
           </div>
           <div className="hidden md:flex w-full flex-col gap-3 items-start justify-start">
             <div className="min-w-[40px] min-h-[40px] w-[2vw] h-[2vw] my-2">

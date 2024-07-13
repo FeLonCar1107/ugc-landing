@@ -20,7 +20,7 @@ const SvgArrow: React.FC<SvgArrowProps> = ({
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 330 330"
-      className={`cursor-pointer hover:opacity-70 ${
+      className={`cursor-pointer hover:opacity-80 hover:scale-110 transition-all duration-300 ease-in-out ${
         position === "left" ? "transform rotate-180" : ""
       } ${position === "up" ? "transform rotate-90" : ""} ${
         position === "down" ? "transform rotate-90" : ""

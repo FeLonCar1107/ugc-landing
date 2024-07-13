@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import SvgArrow from "@/components/svg/Arrow";
 import { IUserCreatorContentProps } from "@/types/ugc";
@@ -12,6 +12,17 @@ const classMap: { [key: string]: string } = {
 export default function UGC(props: IUserCreatorContentProps) {
   const { content } = props.data;
   const [selected, setSelected] = useState("card-1");
+  const [imageLoadingStates, setImageLoadingStates] = useState<
+    Record<string, boolean>
+  >({});
+
+  useEffect(() => {
+    const initialStates = content.cards.reduce((acc, card) => {
+      acc[card.id] = true;
+      return acc;
+    }, {} as Record<string, boolean>);
+    setImageLoadingStates(initialStates);
+  }, [content.cards]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelected(event.target.id);
@@ -27,6 +38,13 @@ export default function UGC(props: IUserCreatorContentProps) {
     setSelected((prev) =>
       prev === "card-1" ? "card-3" : `card-${parseInt(prev.split("-")[1]) - 1}`,
     );
+  };
+
+  const handleImageLoad = (id: string) => {
+    setImageLoadingStates((prevStates) => ({
+      ...prevStates,
+      [id]: false,
+    }));
   };
 
   const selectedImage = content.cards.find((card) => card.id === selected);
@@ -61,11 +79,20 @@ export default function UGC(props: IUserCreatorContentProps) {
             >
               <div className="w-full h-full flex flex-col text-jazzberry-jam-200">
                 <div className="w-full h-[80%] relative">
+                  {imageLoadingStates[card.id] && (
+                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200 rounded-sm">
+                      <div className="media-loader"></div>
+                    </div>
+                  )}
                   <Image
                     src={card.image.src}
                     alt={card.image.alt}
                     fill
                     sizes="100vw"
+                    className={`picture-image rounded-sm ${
+                      imageLoadingStates[card.id] ? "opacity-0" : "opacity-100"
+                    }`}
+                    onLoad={() => handleImageLoad(card.id)}
                   />
                 </div>
                 <div className="w-full h-[20%] flex items-center justify-center">

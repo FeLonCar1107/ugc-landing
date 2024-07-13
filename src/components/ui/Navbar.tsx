@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { Locale } from "@/i18n/config";
-import LanguagesList from "@/components/LanguagesList";
-import NavOptions from "@/components/navbar/NavOptions";
-import HamburgerMenu from "@/components/navbar/HamburgerMenu";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
+import { Locale } from "@/i18n/config";
+import NavOptions from "@/components/navbar/NavOptions";
+import LangSwitcher from "@/components/navbar/LangSwitcher";
+import HamburgerMenu from "@/components/navbar/HamburgerMenu";
 
 export default function Navbar({
   lang,
@@ -51,7 +51,11 @@ export default function Navbar({
       }`}
     >
       <div className="lg:hidden">
-        <HamburgerMenu navigation={navigation} currentLanguage={lang} />
+        <HamburgerMenu
+          color="#530424"
+          navigation={navigation}
+          currentLanguage={lang}
+        />
       </div>
       {showNavOptions && (
         <>
@@ -62,10 +66,7 @@ export default function Navbar({
             ILA
           </a>
           <NavOptions options={navigation.nav_options} currentLanguage={lang} />
-          <LanguagesList
-            currentLanguage={lang}
-            languages={navigation.languages}
-          />
+          <LangSwitcher currentLanguage={lang} />
         </>
       )}
       {!showNavOptions && (

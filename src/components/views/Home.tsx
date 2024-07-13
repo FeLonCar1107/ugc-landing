@@ -42,7 +42,6 @@ export default function Home(props: IHomeProps) {
             alt="Isabella"
             fill
             sizes="(max-width: 600px) 100vw, 600px"
-            priority={true}
             quality={100}
             className="main-image"
           />
@@ -64,7 +63,6 @@ export default function Home(props: IHomeProps) {
             alt="flower"
             fill
             sizes="(max-width: 600px) 100vw, 600px"
-            priority={true}
             className="rotate-[-30deg] md:ml-8 lg:ml-14 2x:ml-20"
           />
         </div>
@@ -79,7 +77,6 @@ export default function Home(props: IHomeProps) {
             alt="flower"
             fill
             sizes="(max-width: 600px) 100vw, 600px"
-            priority={true}
           />
         </div>
       </div>

@@ -3,8 +3,6 @@ import Image from "next/image";
 import { IBrand } from "@/types/brand";
 import { ICollaborationsProps } from "@/types/collaborations";
 import apiService from "@/services/api.service";
-import mariposas from "../../../public/borboletas-butterflies.gif";
-import mariposas2 from "../../../public/borboletas-butterflies2.gif";
 
 export default function Collaborations(props: ICollaborationsProps) {
   const { splitTitle, content } = props.data;
@@ -41,8 +39,8 @@ export default function Collaborations(props: ICollaborationsProps) {
           className="relative w-[15vw] h-[15vw] max-w-[250px] max-h-[250px]"
         >
           <Image
-            src={mariposas2}
-            alt="Mariposa volando"
+            src={content.butterfly.rose}
+            alt={content.butterfly.alt}
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             quality={100}
@@ -59,11 +57,11 @@ export default function Collaborations(props: ICollaborationsProps) {
           className="relative w-[15vw] h-[15vw] max-w-[250px] max-h-[250px]"
         >
           <Image
-            src={mariposas}
-            alt="Mariposa volando"
+            src={content.butterfly.gold}
+            alt={content.butterfly.alt}
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
-            quality={100}
+            unoptimized={true}
             className="mariposas"
           />
         </div>
@@ -78,7 +76,7 @@ export default function Collaborations(props: ICollaborationsProps) {
                   alt={brand.alt}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  quality={100}
+                  unoptimized={true}
                 />
               </div>
             </div>

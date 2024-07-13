@@ -17,7 +17,7 @@ export default function HamburgerMenu(props: any) {
       <Hamburger
         rounded
         size={props?.size || 25}
-        color={props?.color || "#530424"}
+        color={isOpen ? "#530424" : props?.color}
         distance="sm"
         direction="right"
         onToggle={handleClick}
@@ -53,19 +53,19 @@ function Menu(props: any) {
           src={currentImage}
           alt="ILA Logo"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(max-width: 600px) 100vw, 600px"
           className="animated fadeIn"
         />
       </div>
-      <ul className="w-auto h-full lg:h-full flex flex-col lg:justify-center lg:items-center px-8 absolute lg:relative uppercase">
+      <ul className="w-full lg:w-auto h-full flex flex-col justify-center items-start lg:items-center gap-3 lg:gap-0 px-8 relative uppercase">
         <li>
           <Link href="/" className="link">
             <span className="mask">
               <div className="link-container">
-                <span className="link-title1 title">
+                <span className="link-title-one title">
                   {navigation.home.title}
                 </span>
-                <span className="link-title2 title font-BeckanPersonal tracking-[0.3rem] text-jazzberry-jam-600">
+                <span className="link-title-two title font-BeckanPersonal tracking-[0.3rem] text-jazzberry-jam-600">
                   {navigation.home.title}
                 </span>
               </div>
@@ -85,8 +85,8 @@ function Menu(props: any) {
             >
               <span className="mask">
                 <div className="link-container">
-                  <span className="link-title1 title">{option.title}</span>
-                  <span className="link-title2 title font-BeckanPersonal tracking-[0.3rem] text-jazzberry-jam-600">
+                  <span className="link-title-one title">{option.title}</span>
+                  <span className="link-title-two title font-BeckanPersonal tracking-[0.3rem] text-jazzberry-jam-600">
                     {option.title}
                   </span>
                 </div>
@@ -100,10 +100,17 @@ function Menu(props: any) {
           src={currentImage}
           alt="ILA Logo"
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(max-width: 600px) 100vw, 600px"
           className="animated fadeIn"
         />
       </div>
+      {/* <Image
+        src={flower}
+        alt="flower"
+        width={200}
+        height={200}
+        className="lg:hidden absolute -bottom-10 -right-10 -rotate-45"
+      /> */}
     </div>
   );
 }

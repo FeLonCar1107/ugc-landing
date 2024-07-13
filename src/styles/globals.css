@@ -148,11 +148,11 @@ textarea:focus {
   transition: transform 0.4s ease;
 }
 
-.link-title1 {
+.link-title-one {
   transform-origin: right center;
 }
 
-.link-title2 {
+.link-title-two {
   transform-origin: left center;
   transform: rotate(20deg);
 }
@@ -161,12 +161,35 @@ textarea:focus {
   transform: translateY(-3vw);
 }
 
-.link:hover .link-title1 {
+.link:hover .link-title-one {
   transform: rotate(20deg);
 }
 
-.link:hover .link-title2 {
+.link:hover .link-title-two {
   transform: rotate(0);
+}
+
+@media screen and (max-width: 640px) {
+  .link {
+    height: 10vw;
+  }
+
+  .mask {
+    height: 10vw;
+  }
+
+  .title {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+
+  .link-title-two {
+    transform: rotate(30deg);
+  }
+
+  .link:hover .link-container {
+    transform: translateY(-10vw);
+  }
 }
 
 /* HOME SECTION
@@ -639,6 +662,10 @@ textarea:focus {
 /* ABOUT SECTION
 ================================================== */
 
+.show-image {
+  mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 1) 10%);
+}
+
 /* ANIMATIONS
 ================================================== */
 
@@ -1031,5 +1058,84 @@ textarea:focus {
 
   100% {
     transform: rotate(25deg);
+  }
+}
+
+.insta-loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fca5d5;
+  animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #000;
+  }
+}
+
+.email-loader {
+  position: relative;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 20px 28px 20px 25px;
+  border-color: #e22079 #fde6f3 #fde6f3 #fca5d5;
+  animation: envFloating 1s ease-in infinite alternate;
+}
+
+.email-loader:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: -25px;
+  height: 40px;
+  width: 40px;
+  background-image: linear-gradient(#fff 45px, transparent 0),
+    linear-gradient(#fdf2f8 30px, transparent 0),
+    linear-gradient(#fdf2f8 30px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 30px 4px;
+  background-position: 0px 11px, 8px 35px, 0px 60px;
+  animation: envDropping 0.75s linear infinite;
+}
+
+@keyframes envFloating {
+  0% {
+    transform: translate(-2px, -5px);
+  }
+  100% {
+    transform: translate(0, 5px);
+  }
+}
+
+@keyframes envDropping {
+  0% {
+    background-position: 100px 11px, 115px 35px, 105px 60px;
+    opacity: 1;
+  }
+  50% {
+    background-position: 0px 11px, 20px 35px, 5px 60px;
+  }
+  60% {
+    background-position: -30px 11px, 0px 35px, -10px 60px;
+  }
+  75%,
+  100% {
+    background-position: -30px 11px, -30px 35px, -30px 60px;
+    opacity: 0;
   }
 }

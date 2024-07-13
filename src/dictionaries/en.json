@@ -5,12 +5,12 @@
       "url": "/"
     },
     "about": {
-      "title": "About me",
+      "title": "About Me",
       "url": "/about"
     },
-    "portafolio": {
-      "title": "Portafolio",
-      "url": "/portafolio"
+    "portfolio": {
+      "title": "Portfolio",
+      "url": "/portfolio"
     },
     "contact": {
       "title": "Contact",
@@ -27,28 +27,45 @@
     "nav_options": [
       {
         "id": 1,
-        "title": "About me",
-        "href": "/about"
+        "title": "Videos",
+        "href": "#videos",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449862696_2121698384870511_6495772675542692860_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=sCiuuyN9S_oQ7kNvgGMkHOk&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCfWwMoEsVSyr9f1XMzPEj9YcaQEIRsdX4rp8-UBq4M1A&oe=6690CAC9"
       },
       {
         "id": 2,
-        "title": "Portafolio",
-        "href": "/portafolio"
+        "title": "Collabs",
+        "href": "#collaborations",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450367816_2302485350345329_3797717077683477378_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=OaRGUr245n4Q7kNvgEt4bOU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAY8kLQHtiLAmf3_7ODgXdqHXqV8B1HzR4YRUWWeyCatw&oe=6690C8C3"
       },
       {
         "id": 3,
-        "title": "Contact",
-        "href": "/contact"
+        "title": "Portfolio",
+        "href": "#portafolio",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449861877_783490363981777_8452274963786244354_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=hSX0m6Ywn80Q7kNvgHfqDAm&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCe6A_s1ZK51BMYuZacoMqK82y8GA6vWy0_As8nIhJXfQ&oe=6690F65C"
       },
       {
         "id": 4,
-        "title": "Courses",
-        "href": "/courses"
+        "title": "About Me",
+        "href": "#about",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450154159_1168513504387840_2238661326427644879_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=18de74&_nc_ohc=SYe5RmOL9e4Q7kNvgEL08Bp&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBuv1x3LpHbVlUBY1XAhBauYg37X-n9rdUXkOXFj9Kf4Q&oe=6690CDDC"
       },
       {
         "id": 5,
+        "title": "Insta",
+        "href": "#insta-feed",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450318670_402443608884441_319672528907517253_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=01wdwXdwIGkQ7kNvgHJgLYC&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCFlnECojpSNjzNciK5S_n8xXTAaOJjCMZ7-oP_rLO5LA&oe=6690CB50"
+      },
+      {
+        "id": 6,
         "title": "UGC",
-        "href": "/ugc"
+        "href": "#ugc",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449861131_997295678416904_679692178594472059_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=ATHMPMTR7gUQ7kNvgE1eXib&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBxq0gOVIPOp4Lpb85KGxJHnK3isY2Ec7ZVeHHZLEs4bw&oe=6690F396"
+      },
+      {
+        "id": 7,
+        "title": "Contact",
+        "href": "#contact",
+        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449862696_2121698384870511_6495772675542692860_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=sCiuuyN9S_oQ7kNvgGMkHOk&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCfWwMoEsVSyr9f1XMzPEj9YcaQEIRsdX4rp8-UBq4M1A&oe=6690CAC9"
       }
     ],
     "languages": [
@@ -68,38 +85,542 @@
   },
   "page": {
     "home": {
-      "title": "Welcome to the home page",
+      "title": "Welcome to the homepage",
       "content": {
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
-        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Lorem ipsum dolor sit amet.",
-        "skills": ["Model", "Influencer", "UGC Creator", "Influencer"]
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nuncs. Lorem opsum dolor sit amet.",
+        "skills": ["Model", "UGC Creator", "Content Creator"],
+        "image": "https://static.wixstatic.com/media/655690_74ce8f138f3e4a42ab59547aeafc628c~mv2.webp",
+        "flower": "https://static.wixstatic.com/media/655690_0ccf1e76087f4d63a5fa8458572340d0~mv2.webp"
       }
     },
-    "about": {
-      "title": "A little bit",
-      "subtitle": "About me",
+    "videos": {
+      "title": "Latest Videos",
+      "splitTitle": ["Latest", "Videos"],
       "content": {
-        "languages": ["es", "en"],
-        "hello": "Hello! I'm Isa.",
-        "image": {
-          "src": "https://source.unsplash.com/random/200x370?sig=2",
-          "alt": "Isabella's picture"
-        },
-        "description": "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit sem nunc venenatis, gravida hac hendrerit sociosqu fusce taciti risus feugiat. Mauris magna maecenas litora fermentum aptent penatibus vel, etiam ante in laoreet dignissim habitant, aliquet erat duis suspendisse nam aliquam. Turpis urna donec sem neque eu vestibulum, suspendisse luctus morbi pharetra class, velit parturient inceptos massa nulla. <br> <br> Suscipit est gravida felis phasellus nostra fermentum vestibulum habitasse odio rutrum class litora ac velit, venenatis viverra molestie lacus at sagittis diam sodales mollis mus porta commodo. Nam mollis ac vel vulputate cras nostra, luctus orci est tortor egestas laoreet, vehicula donec sollicitudin sociosqu class. Neque nibh lacus ultricies massa conubia viverra luctus, id integer nostra faucibus class fames pulvinar auctor, sapien ante lacinia accumsan donec aliquam.</p>",
-        "button": {
-          "title": "Follow me",
-          "url": "#instafeed"
+        "videos": [
+          {
+            "id": 1,
+            "title": "Experience",
+            "description": "Manizales Fair",
+            "src": "https://video.wixstatic.com/video/655690_52198ae607004988afaa95344758acc7/720p/mp4/file.mp4"
+          },
+          {
+            "id": 2,
+            "title": "Festival",
+            "description": "Clothing Store",
+            "src": "https://video.wixstatic.com/video/655690_0c83a1fe109f478084643d7d6c811314/720p/mp4/file.mp4"
+          },
+          {
+            "id": 3,
+            "title": "Product Usage",
+            "description": "Accessories",
+            "src": "https://video.wixstatic.com/video/655690_d7ed9d8b61124b7c93667a1dd643e567/1080p/mp4/file.mp4"
+          },
+          {
+            "id": 4,
+            "title": "Review",
+            "description": "Dessert Shop",
+            "src": "https://video.wixstatic.com/video/655690_49ecfc1f8e154c92892aadceeb6648bf/720p/mp4/file.mp4"
+          },
+          {
+            "id": 5,
+            "title": "Well-being",
+            "description": "Nutritional Supplement",
+            "src": "https://video.wixstatic.com/video/655690_710f7bfbdb804391b920c3d0313b7785/1080p/mp4/file.mp4"
+          },
+          {
+            "id": 6,
+            "title": "Problem / Solution",
+            "description": "Noise Stoppers",
+            "src": "https://video.wixstatic.com/video/655690_2027aa4ff02e4a90a9e8a870d0f3eaf6/1080p/mp4/file.mp4"
+          }
+        ]
+      }
+    },
+    "collaborations": {
+      "title": "Collaborations",
+      "splitTitle": ["Collaborations", "with"],
+      "content": {
+        "brands": [
+          {
+            "id": 1,
+            "alt": "Abril",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/abril-brand.png?alt=media&token=fe34a7e4-2ab2-40f9-b3c2-1b0214244f26"
+          },
+          {
+            "id": 2,
+            "alt": "Acaitería",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/acai-brand.png?alt=media&token=1566350d-e8d0-48e7-a42f-df4a032eb31e"
+          },
+          {
+            "id": 3,
+            "alt": "Almalu",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/almalu-brand.png?alt=media&token=f60ba2cb-48e6-4c8a-adb7-3b6773ca82d5"
+          },
+          {
+            "id": 4,
+            "alt": "Arena Shop",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/arenashop-brand.png?alt=media&token=4a781b35-0831-4f60-a051-5a4b1ee0acae"
+          },
+          {
+            "id": 5,
+            "alt": "Artesanamar",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/artesanamar-brand.png?alt=media&token=c46c497a-5561-4c19-b75d-3b63b2605739"
+          },
+          {
+            "id": 6,
+            "alt": "Breyli",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/breyli-brand.png?alt=media&token=e78e6aa2-89f8-4ea9-943e-29c1d879c2c4"
+          },
+          {
+            "id": 7,
+            "alt": "Chocobella",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/chocobella-brand.png?alt=media&token=4e72632c-6035-41c8-b32a-b31435d99668"
+          },
+          {
+            "id": 8,
+            "alt": "Cleo",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cleo-brand.png?alt=media&token=b75ce5b5-79a8-4e9e-828e-04c0a4803c78"
+          },
+          {
+            "id": 9,
+            "alt": "Conectividad Emocional",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/conectividademocional-brand.png?alt=media&token=6993cc4a-7309-4823-b919-ceb71b50c8e8"
+          },
+          {
+            "id": 10,
+            "alt": "Cruz Verde",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cruzverde-brand.png?alt=media&token=3a9630a1-90ee-49d1-b4fd-9f51a6266a2b"
+          },
+          {
+            "id": 11,
+            "alt": "Delicias M&M",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/deliciasmym-brand.png?alt=media&token=f240ef6c-b226-4fcc-9464-d2efc6b4b245"
+          },
+          {
+            "id": 12,
+            "alt": "Garrudos",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/garrudos-brand.png?alt=media&token=bd06b544-9b38-4dd2-999a-5729fed36f21"
+          },
+          {
+            "id": 13,
+            "alt": "Glamboutique",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/glamboutique-brand.png?alt=media&token=674d0495-f080-4073-9156-1368c18648b1"
+          },
+          {
+            "id": 14,
+            "alt": "Globus Arte",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/globusarte-brand.png?alt=media&token=8818bb28-42d8-4177-9942-9dfcf9f3f97a"
+          },
+          {
+            "id": 15,
+            "alt": "Harika",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/harika-brand.png?alt=media&token=e18af56a-73bf-43c7-8a94-4d55761d794e"
+          },
+          {
+            "id": 16,
+            "alt": "Hibeauty",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hibeauty-brand.png?alt=media&token=53154798-221e-4d72-892e-869cc932550d"
+          },
+          {
+            "id": 17,
+            "alt": "Hip Universo Estampado",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hipuniversoestampado-brand.png?alt=media&token=a2d0c0ae-114d-4046-baf1-043a8376e061"
+          },
+          {
+            "id": 18,
+            "alt": "I Love Pinch",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ilovepinch-brand.png?alt=media&token=045dec5e-a2f3-47fc-a4d6-23795d4e452b"
+          },
+          {
+            "id": 19,
+            "alt": "Karen's Cosmetics",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/karenscosmetics-brand.png?alt=media&token=dd46d298-d9f2-4454-a526-4f08fbf0c1ee"
+          },
+          {
+            "id": 20,
+            "alt": "Leavid",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/leavid-brand.png?alt=media&token=3eaa3cc2-fdfd-4987-9f05-638e86909f1e"
+          },
+          {
+            "id": 21,
+            "alt": "Lemon Sweet",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/lemonsweet-brand.png?alt=media&token=5aa82d03-95d9-447f-88bf-262ecbce38c0"
+          },
+          {
+            "id": 22,
+            "alt": "Mageia",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mageia-brand.png?alt=media&token=a91c1dc2-4454-4c65-af8a-0edbd40b44ae"
+          },
+          {
+            "id": 23,
+            "alt": "Magie",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/magie-brand.png?alt=media&token=1f30292c-b078-43fe-882c-c9c0c479024d"
+          },
+          {
+            "id": 24,
+            "alt": "María Ortiz SPA",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mariaortiz-bland.png?alt=media&token=78c5b013-fdb6-4225-ad49-6539dd7821e2"
+          },
+          {
+            "id": 25,
+            "alt": "Mg Polania",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mgpolania-brand.png?alt=media&token=fa0a633a-8855-4c7b-9dd1-8daaab728de9"
+          },
+          {
+            "id": 26,
+            "alt": "Mila",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mila-brand.png?alt=media&token=d27ca2d6-afa2-44ef-8645-de2c8d249b9f"
+          },
+          {
+            "id": 27,
+            "alt": "Notco",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/notco-brand.png?alt=media&token=b45fe2c5-e27d-4dd1-a62a-1bcc459880cd"
+          },
+          {
+            "id": 28,
+            "alt": "Nutriyogo",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/nutriyogo-brand.png?alt=media&token=1554d626-bca3-46d2-b46c-12ef9923d30d"
+          },
+          {
+            "id": 29,
+            "alt": "Oh lala",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ohlala-brand.png?alt=media&token=122e5962-650c-4b18-adeb-bfef58b2ee32"
+          },
+          {
+            "id": 30,
+            "alt": "Planet Cocteils",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/planetcocteils-brand.png?alt=media&token=eae9bbe5-2ae6-4e7a-a0e4-a9560bd7358e"
+          },
+          {
+            "id": 31,
+            "alt": "Puerta Negra",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/puertanegra-brand.png?alt=media&token=e46e4794-2185-4a1a-b110-5a90b6caf7b5"
+          },
+          {
+            "id": 32,
+            "alt": "Quohotel",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/quohotel-brand.png?alt=media&token=2cd862c1-a777-47fb-a499-b7ca201edddd"
+          },
+          {
+            "id": 33,
+            "alt": "Qura",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/qura-brand.png?alt=media&token=855b931b-26b7-4024-a991-107bbbfe15a3"
+          },
+          {
+            "id": 34,
+            "alt": "Renewal",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/renewal-brand.png?alt=media&token=45678db0-6b92-4d68-be2e-17fb1385a5c3"
+          },
+          {
+            "id": 35,
+            "alt": "Ruby Rose",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/rubyrose-brand.png?alt=media&token=9265cf2b-e8f9-42ec-b9ce-20b1791b3916"
+          },
+          {
+            "id": 36,
+            "alt": "Small Cakes",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/smallcakes-brand.png?alt=media&token=d89bd404-1c5e-4fb3-9856-e1f681425f07"
+          },
+          {
+            "id": 37,
+            "alt": "Smart Gym",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/smartgym-brand.png?alt=media&token=6faed36b-4e45-4713-9290-61843397f3a6"
+          },
+          {
+            "id": 38,
+            "alt": "Tiaras",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/tiaras-brand.png?alt=media&token=bf22f95c-9770-42b8-b386-c619ffddea7b"
+          },
+          {
+            "id": 39,
+            "alt": "Tibusand",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/tibusand-brand.png?alt=media&token=2b871ff2-5d2c-4130-a833-96a554dc715d"
+          },
+          {
+            "id": 40,
+            "alt": "Valen Brown",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/valenbrown-brand.png?alt=media&token=29740da7-bd6e-4208-af92-949cb678403a"
+          },
+          {
+            "id": 41,
+            "alt": "Vera Accesorios",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/veraaccesorios-brand.png?alt=media&token=ef34f257-4684-49a8-a47a-89dd96768fdf"
+          },
+          {
+            "id": 42,
+            "alt": "Vikinitos",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/vikinitos-brand.png?alt=media&token=e2acacca-e8c5-4995-9236-4f5479c563ba"
+          },
+          {
+            "id": 43,
+            "alt": "With Love",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/withlove-brand.png?alt=media&token=aa3100bb-1754-481e-ad52-997389e0a492"
+          },
+          {
+            "id": 44,
+            "alt": "Zenplug",
+            "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/zenplug-brand.png?alt=media&token=da25d39b-4257-4706-9307-bdc22e12fd26"
+          }
+        ],
+        "butterfly": {
+          "gold": "https://static.wixstatic.com/media/655690_2d020694ff0e4e5caced8ea5579aa79b~mv2.gif",
+          "rose": "https://static.wixstatic.com/media/655690_e6fac945386c41c4a7d4b0a6290b3cb3~mv2.gif",
+          "alt": "Butterfly flying"
         }
       }
     },
-    "contact": {
-      "title": "Contact us",
-      "content": "This is the contact page content"
+    "portafolio": {
+      "title": "Portafolio",
+      "splitTitle": ["Porta", "folio"],
+      "content": {
+        "pictures": [
+          {
+            "id": 1,
+            "alt": "isabella-lizarralde-arias-1",
+            "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp"
+          },
+          {
+            "id": 2,
+            "alt": "isabella-lizarralde-arias-2",
+            "src": "https://static.wixstatic.com/media/655690_feb134ff630243ce930f1cd47962e35b~mv2.webp"
+          },
+          {
+            "id": 3,
+            "alt": "isabella-lizarralde-arias-3",
+            "src": "https://static.wixstatic.com/media/655690_58bfb99f86c94a938aa6a856fe64d909~mv2.webp"
+          },
+          {
+            "id": 4,
+            "alt": "isabella-lizarralde-arias-4",
+            "src": "https://static.wixstatic.com/media/655690_5080e0e5d462420ba1cb38a743808e20~mv2.webp"
+          },
+          {
+            "id": 5,
+            "alt": "isabella-lizarralde-arias-5",
+            "src": "https://static.wixstatic.com/media/655690_c4e0b0edfb454f8eb7baae44926f5848~mv2.webp"
+          },
+          {
+            "id": 6,
+            "alt": "isabella-lizarralde-arias-6",
+            "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp"
+          }
+        ]
+      }
     },
-    "courses": {
-      "title": "Courses",
-      "content": "This is the courses page content"
+    "about": {
+      "title": "A little",
+      "subtitle": "About me",
+      "content": {
+        "hello": "Hello! I'm Isabella",
+        "illustration": {
+          "src": "https://static.wixstatic.com/media/655690_fcd065f159914abfb6d074fd53576d6a~mv2.webp",
+          "alt": "Camera illustration"
+        },
+        "image": {
+          "src": "https://static.wixstatic.com/media/655690_74ce8f138f3e4a42ab59547aeafc628c~mv2.webp",
+          "alt": "Isabella Lizarralde Arias"
+        },
+        "description": {
+          "paragraph1": "Hello! I'm Isabella, I'm 25 years old, passionate about creativity and fashion. I currently live in Colombia in the beautiful city of Manizales. From a very young age, I always knew that my destiny was to create beautiful and meaningful things. My journey began by selling candies to finance my first professional camera, a crucial step that ignited my passion for photography.",
+          "paragraph2": "Soon, my love for fashion intertwined with my creativity, starting with painting t-shirts in school, evolving towards launching my own clothing brand. For years, I dedicated myself to the comprehensive management of social networks, design, and customer service, perfecting every detail with passion and dedication.",
+          "paragraph3": "In this fascinating world, I have had the privilege of collaborating with more than",
+          "paragraph4": "brands both nationally and internationally. With training in Psychology, I have the perfect complement to understand and connect with the community. My goal is not only to capture attention but also to win the hearts of those who follow me, offering them unique experiences, learning opportunities, and lots of entertainment."
+        },
+        "birth": {
+          "name": "Isabella",
+          "lastName": "Lizarralde Arias",
+          "prefix": "Born on",
+          "day": 11,
+          "month": "February",
+          "year": 1999
+        },
+        "button": {
+          "title": "Follow me",
+          "url": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+        }
+      }
+    },
+    "instaFeed": {
+      "title": "Instagram",
+      "subtitle": "on insta"
+    },
+    "ugc": {
+      "title": "UGC",
+      "content": {
+        "cards": [
+          {
+            "id": "card-1",
+            "title": "What is UGC?",
+            "description": "User-generated content. Authentic and organic. 79% of people trust a UGC video or photo more than brand-made advertising.",
+            "image": {
+              "src": "https://static.wixstatic.com/media/655690_58bfb99f86c94a938aa6a856fe64d909~mv2.webp",
+              "alt": "ugc-picture-1"
+            }
+          },
+          {
+            "id": "card-2",
+            "title": "Benefits of UGC",
+            "description": "You will build the credibility and trust of your services. You will have greater reach and more sales. You will save time and resources in your brand.",
+            "image": {
+              "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp",
+              "alt": "ugc-picture-2"
+            }
+          },
+          {
+            "id": "card-3",
+            "title": "How to implement UGC?",
+            "description": "You can do it through hashtags, contests, surveys, testimonials, reviews, comments, etc.",
+            "image": {
+              "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp",
+              "alt": "ugc-picture-3"
+            }
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": ["Let's start", "a project together!"],
+      "splitTitle": ["Contact", "me"],
+      "content": {
+        "image": {
+          "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp",
+          "alt": "Isabella Lizarralde Arias"
+        },
+        "details": [
+          {
+            "id": 1,
+            "title": "Contact Details",
+            "items": [
+              {
+                "id": 1,
+                "type": "email",
+                "value": "isabella.ugc11@gmail.com"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Business Details",
+            "items": [
+              {
+                "id": 1,
+                "type": "style",
+                "value": "Fashion - beauty - lifestyle"
+              },
+              {
+                "id": 2,
+                "type": "location",
+                "value": "Manizales, Colombia"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Social Media",
+            "items": [
+              {
+                "id": 1,
+                "type": "social",
+                "title": "Instagram",
+                "value": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+              },
+              {
+                "id": 2,
+                "type": "social",
+                "title": "TikTok",
+                "value": "https://www.tiktok.com/@isabella.ugc11?_t=8nDuAFf4tGw&_r=1"
+              },
+              {
+                "id": 3,
+                "type": "social",
+                "title": "Facebook",
+                "value": "https://www.facebook.com/Isabella.ugc11?mibextid=LQQJ4d"
+              }
+            ]
+          }
+        ],
+        "form": {
+          "title": "Send me a message",
+          "fields": [
+            {
+              "id": 1,
+              "icon": "user",
+              "label": "What's your name?",
+              "type": "text",
+              "value": "name",
+              "placeholder": "Isabella Lizarralde Arias",
+              "required": true,
+              "pattern": "[a-zA-Z]{3,}"
+            },
+            {
+              "id": 2,
+              "icon": "mail",
+              "label": "What's your email?",
+              "type": "email",
+              "value": "email",
+              "placeholder": "example@gmail.com",
+              "required": true,
+              "pattern": "[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
+            },
+            {
+              "id": 3,
+              "icon": "subject",
+              "label": "Subject of the message",
+              "type": "text",
+              "value": "subject",
+              "placeholder": "Collaboration with Isabella",
+              "required": true,
+              "pattern": "[a-zA-Z]{3,}"
+            },
+            {
+              "id": 4,
+              "icon": "message",
+              "label": "What's your message?",
+              "type": "textarea",
+              "value": "message",
+              "placeholder": "Hello Isabella, I would like to collaborate with you on a project...",
+              "required": true,
+              "pattern": "[a-zA-Z]{4,}"
+            }
+          ],
+          "button": {
+            "title": "Send message"
+          }
+        }
+      }
+    },
+    "social": {
+      "title": "Social media",
+      "content": {
+        "instagram": {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+        },
+        "tikTok": {
+          "name": "TikTok",
+          "url": "https://www.tiktok.com/@isabella.ugc11?_t=8nDuAFf4tGw&_r=1"
+        },
+        "facebook": {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/Isabella.ugc11?mibextid=LQQJ4d"
+        },
+        "whatsApp": {
+          "name": "WhatsApp",
+          "url": "https://wa.me/573217696546"
+        }
+      }
+    },
+    "footer": {
+      "content": {
+        "rights": "Al rights reserved",
+        "madeWith": "Made with",
+        "by": "by",
+        "author": "Felipe Londoño Cardona",
+        "authorLink": "https://www.linkedin.com/in/felipelondo%C3%B1ocardona/"
+      }
     }
   }
 }

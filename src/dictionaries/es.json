@@ -52,7 +52,7 @@
       {
         "id": 5,
         "title": "Insta",
-        "href": "#instafeed",
+        "href": "#insta-feed",
         "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450318670_402443608884441_319672528907517253_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=18de74&_nc_ohc=01wdwXdwIGkQ7kNvgHJgLYC&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCFlnECojpSNjzNciK5S_n8xXTAaOJjCMZ7-oP_rLO5LA&oe=6690CB50"
       },
       {
@@ -376,7 +376,12 @@
             "alt": "Zenplug",
             "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/zenplug-brand.png?alt=media&token=da25d39b-4257-4706-9307-bdc22e12fd26"
           }
-        ]
+        ],
+        "butterfly": {
+          "gold": "https://static.wixstatic.com/media/655690_2d020694ff0e4e5caced8ea5579aa79b~mv2.gif",
+          "rose": "https://static.wixstatic.com/media/655690_e6fac945386c41c4a7d4b0a6290b3cb3~mv2.gif",
+          "alt": "Mariposa volando"
+        }
       }
     },
     "portafolio": {
@@ -422,14 +427,19 @@
       "subtitle": "Sobre mi",
       "content": {
         "hello": "¡Hola! soy Isa.",
+        "illustration": {
+          "src": "https://static.wixstatic.com/media/655690_fcd065f159914abfb6d074fd53576d6a~mv2.webp",
+          "alt": "Cámara de fotos"
+        },
         "image": {
-          "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp",
+          "src": "https://static.wixstatic.com/media/655690_74ce8f138f3e4a42ab59547aeafc628c~mv2.webp",
           "alt": "Isabella Lizarralde Arias"
         },
         "description": {
-          "paragraph1": "¡Hola! Soy Isabella, tengo 25 años, soy apasionada de la creatividad y la moda. Vivo actualmente en Colombia en la linda ciudad de Manizales.  Desde mis primeros días, siempre supe que mi destino estaba en crear cosas hermosas y significativas. Mi viaje comenzó vendiendo dulces para financiar mi primera cámara profesional, un paso crucial que encendió mi pasión por la fotografía.",
-          "paragraph2": "Pronto, mi amor por la moda se entrelazó con mi creatividad, empezando con la pintura de camisetas en el colegio, evolucionando hacia el lanzamiento de mi propia marca de ropa. Durante años, me dediqué al manejo integral de redes sociales, diseño y atención al cliente, perfeccionando cada detalle con pasión y dedicación. Pero fue una oportunidad esperada la que cambió mi vida por completo: el contenido UGC (User Generated Content).",
-          "paragraph3": "En este fascinante mundo. He tenido el privilegio de colaborar con más de 40 marcas tanto a nivel nacional como internacional, creando historias visuales que conectan e inspiran. Con formación en Psicología, tengo el complemento perfecto para entender y conectar con la comunidad. Mi objetivo es no solo capturar la atención, sino también ganarme el corazón de quienes me siguen, ofreciéndoles experiencias únicas, de aprendizaje y mucho entretenimiento."
+          "paragraph1": "¡Hola! Soy Isabella, tengo 25 años, apasionada por la creatividad y la moda. Vivo actualmente en Colombia en la linda ciudad de Manizales. Desde muy niña siempre supe que mi destino estaba en crear cosas hermosas y significativas. Mi viaje comenzó vendiendo dulces para financiar mi primera cámara profesional, un paso crucial que encendió mi pasión por la fotografía.",
+          "paragraph2": "Pronto, mi amor por la moda se entrelazó con mi creatividad, empezando con la pintura de camisetas en el colegio, evolucionando hacia el lanzamiento de mi propia marca de ropa. Durante años, me dediqué al manejo integral de redes sociales, diseño y atención al cliente, perfeccionando cada detalle con pasión y dedicación.",
+          "paragraph3": "En este fascinante mundo. He tenido el privilegio de colaborar con más de",
+          "paragraph4": "marcas tanto a nivel nacional como internacional. Con formación en Psicología, tengo el complemento perfecto para entender y conectar con la comunidad. Mi objetivo es no solo capturar la atención, sino también ganarme el corazón de quienes me siguen, ofreciéndoles experiencias únicas, de aprendizaje y mucho entretenimiento."
         },
         "birth": {
           "name": "Isabella",
@@ -445,7 +455,10 @@
         }
       }
     },
-    "instafeed": {},
+    "instaFeed": {
+      "title": "Instagram",
+      "subtitle": "en insta"
+    },
     "ugc": {
       "title": "UGC",
       "content": {
@@ -590,10 +603,6 @@
         }
       }
     },
-    "courses": {
-      "title": "Cursos",
-      "content": "Este es el contenido de la página de cursos"
-    },
     "social": {
       "title": "Redes sociales",
       "content": {
@@ -613,6 +622,15 @@
           "name": "WhatsApp",
           "url": "https://wa.me/573217696546"
         }
+      }
+    },
+    "footer": {
+      "content": {
+        "rights": "Todos los derechos reservados",
+        "madeWith": "Hecho con",
+        "by": "por",
+        "author": "Felipe Londoño Cardona",
+        "authorLink": "https://www.linkedin.com/in/felipelondo%C3%B1ocardona/"
       }
     }
   }

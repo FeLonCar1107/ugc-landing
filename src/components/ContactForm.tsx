@@ -1,7 +1,11 @@
+import Notify from "@/enums/notify.enum";
 import UserSvg from "@/components/svg/form/UserSvg";
 import MailSvg from "@/components/svg/form/MailSvg";
+import LoaderEmail from "@/components/buttons/LoaderEmail";
 import SubjectSvg from "@/components/svg/form/SubjectSvg";
 import MessageSvg from "@/components/svg/form/MessageSvg";
+import notify from "@/services/notify.service";
+import apiService from "@/services/api.service";
 import { IContactFormProps } from "@/types/contact-form";
 import { useState } from "react";
 
@@ -14,6 +18,7 @@ const SVGIcons: { [key: string]: JSX.Element } = {
 
 export default function ContactForm(props: IContactFormProps) {
   const { fields, button } = props;
+  const [loading, setLoading] = useState<boolean>(false);
   const [form, setForm] = useState<{ [key: string]: string }>({});
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
@@ -44,40 +49,41 @@ export default function ContactForm(props: IContactFormProps) {
     return "";
   };
 
-  const sendMail = (event: React.FormEvent<HTMLFormElement>) => {
+  const sendMail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+    setLoading(true);
     let formIsValid = true;
     let newErrors: { [key: string]: string } = {};
-    fields.forEach((field) => {
-      const value = form[`input-${field.value}`];
-      const errorMessage = validateField(value, field);
-      if (errorMessage) {
-        formIsValid = false;
+
+    try {
+      fields.forEach((field) => {
+        const value = form[`input-${field.value}`];
+        const errorMessage = validateField(value, field);
+        if (errorMessage) {
+          formIsValid = false;
+        }
+        newErrors[`input-${field.value}`] = errorMessage;
+      });
+
+      if (!formIsValid) {
+        setErrors(newErrors);
+        return;
       }
-      newErrors[`input-${field.value}`] = errorMessage;
-    });
 
-    if (!formIsValid) {
-      setErrors(newErrors);
-      return;
-    }
-
-    fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+      const payload = {
         name: form["input-name"],
         email: form["input-email"],
         subject: form["input-subject"],
         message: form["input-message"],
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
+      };
+
+      const data = await apiService.POST("send-email", payload);
+      if (data) notify("Se envió el mensaje correctamente", Notify.SUCCESS);
+    } catch (error) {
+      notify("No se pudo enviar el mensaje", Notify.ERROR);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -119,12 +125,14 @@ export default function ContactForm(props: IContactFormProps) {
           </div>
         </div>
       ))}
-      <button
-        type="submit"
-        className="bg-jazzberry-jam-900 text-white text-base font-medium rounded-md w-full h-12 mt-4"
-      >
-        {button.title}
-      </button>
+      <div className="w-full h-auto flex items-center justify-end">
+        <button
+          type="submit"
+          className="bg-jazzberry-jam-900 text-white text-sm font-medium w-full h-20 mt-3 md:mt-0 md:w-40 md:h-40 rounded-md md:rounded-full flex items-center justify-center hover:bg-jazzberry-jam-800 transition-all duration-300 ease-in-out"
+        >
+          {loading ? <LoaderEmail /> : button.title}
+        </button>
+      </div>
     </form>
   );
 }
