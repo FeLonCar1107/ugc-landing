@@ -1,9 +1,8 @@
-"use client";
 import { useEffect, useRef, useState } from "react";
 
 export default function Skills({ words }: { words: string[] }) {
   const refs = useRef<(HTMLSpanElement | null)[]>([]);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentWordIndex, setCurrentWordIndex] = useState<number>(0);
 
   useEffect(() => {
     let index = 0;

@@ -1,6 +1,7 @@
+import Languages from "@/enums/languages.enum";
 export const i18n = {
-  defaultLocale: "es",
-  locales: ["en", "es"],
+  defaultLocale: Languages.ES,
+  locales: [Languages.EN, Languages.ES],
 } as const;
 
 export type Locale = (typeof i18n.locales)[number];

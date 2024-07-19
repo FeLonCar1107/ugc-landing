@@ -1,25 +1,23 @@
+import Image from "next/image";
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import { ILangSwitcherProps } from "@/types/props/lang-switcher";
+import Languages from "@/enums/languages.enum";
 import ColombianFlag from "../../../public/flags/co.svg";
 import AmericanFlag from "../../../public/flags/us.svg";
-import Image from "next/image";
 
-interface LangSwitcherProps {
-  currentLanguage: string;
-}
-
-export default function LangSwitcher({ currentLanguage }: LangSwitcherProps) {
+export default function LangSwitcher({ currentLanguage }: ILangSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [isColombianFlag, setIsColombianFlag] = useState<boolean>(
-    currentLanguage === "es",
+    currentLanguage === Languages.ES,
   );
 
   const handleLanguageChange = () => {
-    const newLang = isColombianFlag ? "en" : "es";
+    const newLang = isColombianFlag ? Languages.EN : Languages.ES;
     const newPathname = pathname.replace(`/${currentLanguage}`, `/${newLang}`);
     router.push(newPathname);
-    setIsColombianFlag(newLang === "es");
+    setIsColombianFlag(newLang === Languages.ES);
   };
 
   return (

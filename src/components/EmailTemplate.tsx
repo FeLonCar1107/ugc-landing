@@ -1,12 +1,6 @@
-import React from "react";
+import { IEmailTemplateProps } from "@/types/props/email-template";
 
-interface EmailTemplateProps {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export default function EmailTemplate(props: EmailTemplateProps) {
+export default function EmailTemplate(props: IEmailTemplateProps) {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <div className="w-full h-full max-w-[1000px] flex flex-col justify-start p-4 bg-white">

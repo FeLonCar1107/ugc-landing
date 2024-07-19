@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import { Locale } from "@/i18n/config";
 import { IMainProps } from "@/types/props/main";
+import Languages from "@/enums/languages.enum";
 import useLocomotiveScroll from "@/hooks/useLocomotiveScroll";
 import useCustomCursor from "@/hooks/useCustomCursor";
 import Home from "@/components/views/Home";
@@ -22,7 +23,7 @@ export default function Main(props: IMainProps) {
   useCustomCursor();
   const { navigation, page } = props;
   const locomotiveScroll = useLocomotiveScroll();
-  const [lang, setLang] = useState<Locale>("es");
+  const [lang, setLang] = useState<Locale>(Languages.ES);
   const {
     home,
     videos,

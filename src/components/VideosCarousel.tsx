@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { IVideo } from "@/types/video";
+import { useVideoCarousel } from "@/hooks/useVideoCarousel";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
-import { useVideoCarousel } from "@/hooks/useVideoCarousel";
-import { useState } from "react";
 
 export default function VideosCarousel({ data }: { data: IVideo[] }) {
   useVideoCarousel();
