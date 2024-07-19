@@ -2,11 +2,10 @@ import Instagram from "@/components/svg/social-media/Instagram";
 import Facebook from "@/components/svg/social-media/Facebook";
 import TikTok from "@/components/svg/social-media/TikTok";
 import WhatsApp from "@/components/svg/social-media/WhatsApp";
-import { ISocialMediaProps } from "@/types/social-media";
+import { ISocialMediaProps } from "@/types/props/social-media";
 
 export default function SocialFixed(props: ISocialMediaProps) {
-  const { content } = props.data;
-
+  const { content } = props;
   return (
     <div className="bg-transparent w-fit h-screen fixed right-0 top-0 flex flex-col items-center justify-center gap-3 pr-3 md:pr-5 z-50">
       <Instagram url={content.instagram.url} color="#530424" size={20} />

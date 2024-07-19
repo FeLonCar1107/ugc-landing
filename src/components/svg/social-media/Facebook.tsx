@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ISocialProps } from "@/types/social";
+import { ISocialProps } from "@/types/props/social";
 
 const Facebook = ({ url, size, color, ...props }: ISocialProps) => {
   return (

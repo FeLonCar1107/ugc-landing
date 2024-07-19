@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Skills from "@/components/Skills";
-import { IHomeProps } from "@/types/home";
+import { IHomeProps } from "@/types/props/home";
 
 export default function Home(props: IHomeProps) {
-  const { content } = props.data;
-
+  const { content } = props;
   return (
     <section
       id="home"

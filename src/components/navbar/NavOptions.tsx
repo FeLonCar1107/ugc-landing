@@ -1,7 +1,9 @@
 import { useContext, useEffect } from "react";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
+import { INavOption } from "@/types/nav-option";
+import { NavOptionsProps } from "@/types/props/nav-options";
 
-export default function NavOptions(props: any) {
+export default function NavOptions({ options }: NavOptionsProps) {
   const locomotiveScroll = useContext(LocomotiveScrollContext);
 
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function NavOptions(props: any) {
 
   return (
     <div className="hidden md:flex mx-auto justify-center items-center gap-2 2xl:gap-8 nav-options animated fadeIn">
-      {props.options.map((option: any) => (
+      {options.map((option: INavOption) => (
         <a
           onClick={() => scrollTo(option.href)}
           key={option.id}

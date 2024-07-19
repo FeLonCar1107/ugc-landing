@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { IBrand } from "@/types/brand";
-import { ICollaborationsProps } from "@/types/collaborations";
+import { ICollaborationsProps } from "@/types/props/collaborations";
 import apiService from "@/services/api.service";
 
 export default function Collaborations(props: ICollaborationsProps) {
-  const { splitTitle, content } = props.data;
+  const { splitTitle, content } = props;
   const [brands, setBrands] = useState<IBrand[]>([]);
 
   useEffect(() => {
@@ -16,8 +16,7 @@ export default function Collaborations(props: ICollaborationsProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await apiService.GET("get-brands");
-        setBrands(data);
+        setBrands(await apiService.GET("get-brands"));
       } catch (error) {
         console.error(error);
       }

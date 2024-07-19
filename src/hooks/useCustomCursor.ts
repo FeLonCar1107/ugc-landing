@@ -2,8 +2,8 @@ import { useEffect } from "react";
 
 const useCustomCursor = () => {
   useEffect(() => {
-    const cursorDot = document.getElementById("cursor1");
-    const cursorOutline = document.getElementById("cursor2");
+    const cursorDot = document.getElementById("cursor-one");
+    const cursorOutline = document.getElementById("cursor-two");
 
     const handleMouseMove = (
       event: MouseEvent | { clientX: number; clientY: number },

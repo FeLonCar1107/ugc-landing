@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
-import { IPortafolioProps } from "@/types/portafolio";
+import { IPicture } from "@/types/picture";
+import { IPortafolioProps } from "@/types/props/portafolio";
 import { usePictureCarousel } from "@/hooks/usePictureCarousel";
 
 export default function Portafolio(props: IPortafolioProps) {
   usePictureCarousel();
-  const { splitTitle, content } = props.data;
+  const { splitTitle, content } = props;
   const [imageLoadingStates, setImageLoadingStates] = useState<boolean[]>([]);
 
   useEffect(() => {
@@ -40,7 +41,7 @@ export default function Portafolio(props: IPortafolioProps) {
             <LeftArrowIcon color="#871444" />
           </div>
           <div className="pictures-carousel">
-            {content.pictures.map((picture, index) => (
+            {content.pictures.map((picture: IPicture, index: number) => (
               <div key={picture.id} className="picture">
                 {imageLoadingStates[index] && (
                   <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">

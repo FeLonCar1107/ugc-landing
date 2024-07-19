@@ -2,8 +2,8 @@ import { useEffect } from "react";
 
 const useCustomCursor = () => {
   useEffect(() => {
-    const cursorSecondaryElement = document.getElementById("cursor2");
-    const cursorTertiaryElement = document.getElementById("cursor3");
+    const cursorSecondaryElement = document.getElementById("cursor-two");
+    const cursorTertiaryElement = document.getElementById("cursor-tree");
 
     const handleMouseEnter = () => {
       cursorSecondaryElement?.classList.add("hover", "hover-2");

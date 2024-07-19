@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import apiService from "@/services/api.service";
 import ReelIcon from "@/components/svg/instagram/ReelIcon";
@@ -8,8 +8,12 @@ import Instagram from "@/components/svg/social-media/Instagram";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
 import LoaderInsta from "@/components/buttons/LoaderInsta";
+import { IInstaFeedProps } from "@/types/props/insta-feed";
+import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 
-export default function InstaFeed() {
+const LIMIT = 12;
+
+export default function InstaFeed(props: IInstaFeedProps) {
   const [user, setUser] = useState<any>({});
   const [content, setContent] = useState<any>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -18,17 +22,16 @@ export default function InstaFeed() {
   const [visibleRows, setVisibleRows] = useState<number>(1);
   const [currentPostIndex, setCurrentPostIndex] = useState<number>(0);
   const [mediaLoadingStates, setMediaLoadingStates] = useState<boolean[]>([]);
-
+  const locomotiveScroll = useContext(LocomotiveScrollContext);
   const itemsPerRow = isMobile ? 2 : 3;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const user = await apiService.GET("get-user");
-        setUser(user);
-        const data = await apiService.POST("content-media", { limit: 12 });
-        setContent(data);
-        setMediaLoadingStates(new Array(data.data.length).fill(true));
+        setIsLoading(true);
+        setUser(await apiService.GET("get-user"));
+        setMediaLoadingStates(new Array(LIMIT).fill(true));
+        setContent(await apiService.POST("content-media", { limit: LIMIT }));
       } catch (error) {
         console.error(error);
       } finally {
@@ -48,6 +51,10 @@ export default function InstaFeed() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (locomotiveScroll) locomotiveScroll.update();
+  }, [visibleRows, locomotiveScroll]);
 
   const handleLoadMore = () => {
     setIsLoading(true);
@@ -103,7 +110,7 @@ export default function InstaFeed() {
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-3 text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase">
         <h2 className="font-bold">@{user?.username}</h2>
-        <h2>en insta</h2>
+        <h2>{props.subtitle}</h2>
       </div>
       <div className="w-[75%] max-w-[1000px] flex flex-wrap gap-1 justify-center items-center">
         {content ? (

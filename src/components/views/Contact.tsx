@@ -3,14 +3,12 @@ import ArrowContact from "@/components/svg/ArrowContact";
 import DividerBottom from "@/components/svg/DividerBottom";
 import DividerTop from "@/components/svg/DividerTop";
 import ContactForm from "@/components/ContactForm";
-import { IContactProps } from "@/types/contact";
-import Toaster from "react-hot-toast";
+import { IContactProps } from "@/types/props/contact";
 
 type ActionFunction = (value: string) => void;
 
 export default function Contact(props: IContactProps) {
-  const { title, content } = props.data;
-
+  const { title, content } = props;
   const ACTIONS: { [key: string]: ActionFunction } = {
     email: (value: string) => (window.location.href = `mailto:${value}`),
     location: (value: string) =>

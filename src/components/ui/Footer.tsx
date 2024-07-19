@@ -1,8 +1,7 @@
-import { IFooterProps } from "@/types/footer";
+import { IFooterProps } from "@/types/props/footer";
 
 export default function Footer(props: IFooterProps) {
-  const { content } = props.data;
-
+  const { content } = props;
   return (
     <footer
       data-scroll-section

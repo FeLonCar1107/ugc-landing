@@ -1,9 +1,8 @@
 import VideosCarousel from "@/components/VideosCarousel";
-import { IVideosProps } from "@/types/videos";
+import { IVideosProps } from "@/types/props/videos";
 
 export default function Videos(props: IVideosProps) {
-  const { splitTitle, content } = props.data;
-
+  const { splitTitle, content } = props;
   return (
     <section
       data-scroll-section

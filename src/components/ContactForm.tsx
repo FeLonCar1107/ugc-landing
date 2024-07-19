@@ -6,7 +6,8 @@ import SubjectSvg from "@/components/svg/form/SubjectSvg";
 import MessageSvg from "@/components/svg/form/MessageSvg";
 import notify from "@/services/notify.service";
 import apiService from "@/services/api.service";
-import { IContactFormProps } from "@/types/contact-form";
+import { IFieldForm } from "@/types/field-form";
+import { IContactFormProps } from "@/types/props/contact-form";
 import { useState } from "react";
 
 const SVGIcons: { [key: string]: JSX.Element } = {
@@ -41,7 +42,7 @@ export default function ContactForm(props: IContactFormProps) {
     }
   };
 
-  const validateField = (value: string, field: any): string => {
+  const validateField = (value: string, field: IFieldForm): string => {
     if (field.required && !value) return "Este campo es obligatorio.";
     if (field.pattern && !new RegExp(field.pattern).test(value)) {
       return "El valor ingresado no es válido.";

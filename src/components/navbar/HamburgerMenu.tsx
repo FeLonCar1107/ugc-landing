@@ -3,9 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Spin as Hamburger } from "hamburger-react";
+import { IMenuProps } from "@/types/props/menu";
+import { INavOption } from "@/types/nav-option";
 
-export default function HamburgerMenu(props: any) {
-  const [isOpen, setOpen] = useState(false);
+export default function HamburgerMenu(props: IMenuProps) {
+  const [isOpen, setOpen] = useState<boolean>(false);
 
   const handleClick = () => {
     setOpen(!isOpen);
@@ -13,7 +15,7 @@ export default function HamburgerMenu(props: any) {
 
   return (
     <React.Fragment>
-      {isOpen && <Menu data={props} />}
+      {isOpen && <Menu {...props} />}
       <Hamburger
         rounded
         size={props?.size || 25}
@@ -26,11 +28,11 @@ export default function HamburgerMenu(props: any) {
   );
 }
 
-function Menu(props: any) {
+function Menu(props: IMenuProps) {
   const router = useRouter();
-  const { navigation, currentLanguage } = props.data;
-  const [currentImage, setCurrentImage] = useState(
-    "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3",
+  const { navigation, currentLanguage } = props;
+  const [currentImage, setCurrentImage] = useState<string>(
+    navigation.menu.image,
   );
 
   const handleMouseEnter = (imageUrl: string) => {
@@ -38,9 +40,7 @@ function Menu(props: any) {
   };
 
   const handleMouseLeave = () => {
-    setCurrentImage(
-      "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3",
-    );
+    setCurrentImage(navigation.menu.image);
   };
 
   return (
@@ -72,7 +72,7 @@ function Menu(props: any) {
             </span>
           </Link>
         </li>
-        {navigation.nav_options.map((option: any) => (
+        {navigation.nav_options.map((option: INavOption) => (
           <li
             key={option.id}
             onMouseEnter={() => handleMouseEnter(option.image)}

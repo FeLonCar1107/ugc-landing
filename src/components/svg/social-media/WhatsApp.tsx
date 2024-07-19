@@ -1,5 +1,5 @@
 import React from "react";
-import { ISocialProps } from "@/types/social";
+import { ISocialProps } from "@/types/props/social";
 
 const WhatsApp: React.FC<ISocialProps> = ({
   url,

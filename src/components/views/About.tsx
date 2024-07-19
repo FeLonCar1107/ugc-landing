@@ -1,6 +1,6 @@
 import Image from "next/image";
 import useHoverEffects from "@/hooks/useHoverEffects";
-import { IAboutProps } from "@/types/about";
+import { IAboutProps } from "@/types/props/about";
 import { useEffect, useState } from "react";
 import CameraBackground from "@/components/svg/CameraBackground";
 
@@ -8,7 +8,7 @@ export default function About(props: IAboutProps) {
   useHoverEffects();
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const [totalBrands, setTotalBrands] = useState<string>("0");
-  const { title, subtitle, content } = props.data;
+  const { title, subtitle, content } = props;
 
   useEffect(() => {
     setIsDesktop(window.innerWidth > 1024);

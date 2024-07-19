@@ -1,4 +1,4 @@
-import { IVideo } from "@/types/videos";
+import { IVideo } from "@/types/video";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
 import { useVideoCarousel } from "@/hooks/useVideoCarousel";

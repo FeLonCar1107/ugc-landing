@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import { Locale } from "@/i18n/config";
+import { INavigationProps } from "@/types/props/navigation";
+import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import NavOptions from "@/components/navbar/NavOptions";
 import LangSwitcher from "@/components/navbar/LangSwitcher";
 import HamburgerMenu from "@/components/navbar/HamburgerMenu";
@@ -10,9 +11,9 @@ export default function Navbar({
   navigation,
 }: {
   lang: Locale;
-  navigation: any;
+  navigation: INavigationProps;
 }) {
-  const [showNavOptions, setShowNavOptions] = useState(true);
+  const [showNavOptions, setShowNavOptions] = useState<boolean>(true);
   const locomotiveScroll = useContext(LocomotiveScrollContext);
 
   useEffect(() => {
@@ -65,7 +66,7 @@ export default function Navbar({
           >
             ILA
           </a>
-          <NavOptions options={navigation.nav_options} currentLanguage={lang} />
+          <NavOptions options={navigation.nav_options} />
           <LangSwitcher currentLanguage={lang} />
         </>
       )}

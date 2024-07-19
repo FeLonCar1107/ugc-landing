@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import SvgArrow from "@/components/svg/Arrow";
-import { IUserCreatorContentProps } from "@/types/ugc";
+import { IUserCreatorContentProps } from "@/types/props/ugc";
 
 const classMap: { [key: string]: string } = {
   "card-1": "ugc-1",
@@ -10,7 +10,7 @@ const classMap: { [key: string]: string } = {
 };
 
 export default function UGC(props: IUserCreatorContentProps) {
-  const { content } = props.data;
+  const { content } = props;
   const [selected, setSelected] = useState("card-1");
   const [imageLoadingStates, setImageLoadingStates] = useState<
     Record<string, boolean>
