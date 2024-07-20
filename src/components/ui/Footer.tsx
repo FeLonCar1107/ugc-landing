@@ -19,7 +19,7 @@ export default function Footer(props: IFooterProps) {
               href={content.authorLink}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-jazzberry-jam-100 hover:scale-110"
+              className="hover:text-jazzberry-jam-100 hover:scale-110 hover:border-b transition-all duration-300 ease-in-out"
             >
               {content.author}
             </a>

@@ -106,12 +106,6 @@ textarea:focus {
 /* NAVIGATION
 ================================================== */
 
-.menu {
-  width: 50px;
-  cursor: pointer;
-  transition: 0.5s ease-out;
-}
-
 .nav-options:hover .nav-option {
   opacity: 0.4;
 }
