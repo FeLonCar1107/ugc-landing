@@ -58,20 +58,20 @@ export default function Navbar({
           currentLanguage={lang}
         />
       </div>
+      <a
+        onClick={goToHome}
+        className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[25px] cursor-pointer animated fadeIn"
+      >
+        ILA
+      </a>
       {showNavOptions && (
         <>
-          <a
-            onClick={goToHome}
-            className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[25px] cursor-pointer animated fadeIn"
-          >
-            ILA
-          </a>
           <NavOptions options={navigation.nav_options} />
           <LangSwitcher currentLanguage={lang} />
         </>
       )}
       {!showNavOptions && (
-        <div className="hidden lg:block bg-jazzberry-jam-600 rounded-full">
+        <div className="hidden lg:block bg-jazzberry-jam-600 rounded-full scale-in-tr">
           <HamburgerMenu
             size={20}
             color="#ffff"

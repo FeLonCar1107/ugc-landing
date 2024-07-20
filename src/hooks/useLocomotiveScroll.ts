@@ -8,10 +8,12 @@ export const LocomotiveScrollContext = createContext<LocomotiveScroll | null>(
 const useLocomotiveScroll = () => {
   const [locomotiveScrollInstance, setLocomotiveScrollInstance] =
     useState<LocomotiveScroll | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     let locomotiveScroll: LocomotiveScroll;
     (async () => {
+      setIsLoading(true);
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       locomotiveScroll = new LocomotiveScroll({
         el: document.querySelector("#main") as HTMLElement,
@@ -21,6 +23,7 @@ const useLocomotiveScroll = () => {
         },
       });
       setLocomotiveScrollInstance(locomotiveScroll);
+      setIsLoading(false);
     })();
 
     return () => {
@@ -28,7 +31,7 @@ const useLocomotiveScroll = () => {
     };
   }, []);
 
-  return locomotiveScrollInstance;
+  return { locomotiveScrollInstance, isLoading };
 };
 
 export default useLocomotiveScroll;

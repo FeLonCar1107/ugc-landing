@@ -460,7 +460,16 @@
     },
     "instaFeed": {
       "title": "Instagram",
-      "subtitle": "en insta"
+      "subtitle": "en insta",
+      "buttons": {
+        "loadMore": {
+          "title": "Ver más"
+        },
+        "follow": {
+          "title": "Sígueme",
+          "url": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+        }
+      }
     },
     "ugc": {
       "title": "UGC",
@@ -539,7 +548,7 @@
                 "id": 1,
                 "type": "social",
                 "title": "Instagram",
-                "value": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr "
+                "value": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
               },
               {
                 "id": 2,

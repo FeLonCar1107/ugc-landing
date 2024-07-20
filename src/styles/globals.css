@@ -94,6 +94,7 @@ textarea:focus {
 
 #main {
   width: 100%;
+  min-height: 100vh;
   height: auto;
 }
 
@@ -765,6 +766,68 @@ textarea:focus {
   }
 }
 
+.fade-out {
+  animation: fade-out 1s ease-out both;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.scale-in-tr {
+  animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-tr {
+  0% {
+    transform: scale(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+.scale-in-tl {
+  animation: scale-in-tl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-tl {
+  0% {
+    transform: scale(0);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+.scale-out-center {
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
 .slide-fwd-center {
   -webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
@@ -946,52 +1009,218 @@ textarea:focus {
   animation-fill-mode: both;
 }
 
+.animate-underline {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+.animate-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f3419c;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.animate-underline:hover::after,
+.animate-underline:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+.animate-underline {
+  overflow: hidden;
+}
+
+.animate-underline::after {
+  content: "";
+  display: block;
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+.animate-underline:hover::after,
+.animate-underline:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
 /* DIVIDERS
 ================================================== */
 
-.custom-shape-divider-bottom-1718564546 {
-  position: absolute;
-  top: -99px;
-  left: 0;
-  width: 100%;
+.modelViewPort {
+  perspective: 1000px;
+  width: 20rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fca5d5;
   overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
 }
-
-.custom-shape-divider-bottom-1718564546 svg {
+.eva {
+  --EVA-ROTATION-DURATION: 4s;
+  transform-style: preserve-3d;
+  animation: rotateRight var(--EVA-ROTATION-DURATION) linear infinite alternate;
+}
+.head-eva {
   position: relative;
-  display: block;
-  width: calc(160% + 1.3px);
-  height: 100px;
+  width: 6rem;
+  height: 4rem;
+  border-radius: 48% 53% 45% 55% / 79% 79% 20% 22%;
+  background: linear-gradient(to right, white 45%, gray);
 }
-
-.custom-shape-divider-bottom-1718564546 .shape-fill {
-  fill: #fde6f3;
+.eyeChamber-eva {
+  width: 4.5rem;
+  height: 2.75rem;
+  position: relative;
+  left: 50%;
+  top: 55%;
+  border-radius: 45% 53% 45% 48% / 62% 59% 35% 34%;
+  background-color: #0c203c;
+  box-shadow: 0px 0px 2px 2px white, inset 0px 0px 0px 2px black;
+  transform: translate(-50%, -50%);
+  animation: moveRight var(--EVA-ROTATION-DURATION) linear infinite alternate;
 }
-
-.custom-shape-divider-top-1718565044 {
+.eye-eva {
+  width: 1.2rem;
+  height: 1.5rem;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+  border-radius: 50%;
 }
-
-.custom-shape-divider-top-1718565044 svg {
+.eye-eva:first-child {
+  left: 12px;
+  top: 50%;
+  background: repeating-linear-gradient(
+    65deg,
+    #9bdaeb 0px,
+    #9bdaeb 1px,
+    white 2px
+  );
+  box-shadow: inset 0px 0px 5px #04b8d5, 0px 0px 15px 1px #0bdaeb;
+  transform: translate(0, -50%) rotate(-65deg);
+}
+.eye-eva:nth-child(2) {
+  right: 12px;
+  top: 50%;
+  background: repeating-linear-gradient(
+    -65deg,
+    #9bdaeb 0px,
+    #9bdaeb 1px,
+    white 2px
+  );
+  box-shadow: inset 0px 0px 5px #04b8d5, 0px 0px 15px 1px #0bdaeb;
+  transform: translate(0, -50%) rotate(65deg);
+}
+.body-eva {
+  width: 6rem;
+  height: 8rem;
   position: relative;
-  display: block;
-  width: calc(181% + 1.3px);
-  height: 100px;
+  margin-block-start: 0.25rem;
+  border-radius: 47% 53% 45% 55% / 12% 9% 90% 88%;
+  background: linear-gradient(to right, white 35%, gray);
 }
-
-.custom-shape-divider-top-1718565044 .shape-fill {
-  fill: #fde6f3;
+.hand-eva {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.75rem;
+  width: 2rem;
+  height: 5.5rem;
+  border-radius: 40%;
+  background: linear-gradient(to left, white 15%, gray);
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.25);
+  transform: rotateY(55deg) rotateZ(10deg);
 }
-
-/* LOADERS
-================================================== */
+.hand-eva:first-child {
+  animation: compensateRotation var(--EVA-ROTATION-DURATION) linear infinite
+    alternate;
+}
+.hand-eva:nth-child(2) {
+  left: 92%;
+  background: linear-gradient(to right, white 15%, gray);
+  transform: rotateY(55deg) rotateZ(-10deg);
+  animation: compensateRotationRight var(--EVA-ROTATION-DURATION) linear
+    infinite alternate;
+}
+.scannerThing {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 60%;
+  top: 10%;
+  border-top: 180px solid #9bdaeb;
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  transform-origin: top left;
+  mask: linear-gradient(to right, white, transparent 35%);
+  animation: glow 2s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+}
+.scannerOrigin {
+  position: absolute;
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 60%;
+  top: 10%;
+  background: #9bdaeb;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+  animation: moveRight var(--EVA-ROTATION-DURATION) linear infinite;
+}
+@keyframes rotateRight {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(25deg);
+  }
+}
+@keyframes moveRight {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-40%, -50%);
+  }
+}
+@keyframes compensateRotation {
+  from {
+    transform: rotateY(55deg) rotateZ(10deg);
+  }
+  to {
+    transform: rotatey(30deg) rotateZ(10deg);
+  }
+}
+@keyframes compensateRotationRight {
+  from {
+    transform: rotateY(55deg) rotateZ(-10deg);
+  }
+  to {
+    transform: rotateY(70deg) rotateZ(-10deg);
+  }
+}
+@keyframes glow {
+  from {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  45% {
+    transform: rotate(-25deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .media-loader {
   width: 65px;

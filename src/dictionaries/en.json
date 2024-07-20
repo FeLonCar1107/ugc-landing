@@ -448,7 +448,16 @@
     },
     "instaFeed": {
       "title": "Instagram",
-      "subtitle": "on insta"
+      "subtitle": "on insta",
+      "buttons": {
+        "loadMore": {
+          "title": "Load more"
+        },
+        "follow": {
+          "title": "Follow me",
+          "url": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
+        }
+      }
     },
     "ugc": {
       "title": "UGC",
