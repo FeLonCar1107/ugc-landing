@@ -1053,6 +1053,50 @@ textarea:focus {
 /* DIVIDERS
 ================================================== */
 
+.custom-shape-divider-bottom-1718564546 {
+  position: absolute;
+  top: -99px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1718564546 svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-bottom-1718564546 .shape-fill {
+  fill: #fde6f3;
+}
+
+.custom-shape-divider-top-1718565044 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1718565044 svg {
+  position: relative;
+  display: block;
+  width: calc(181% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-top-1718565044 .shape-fill {
+  fill: #fde6f3;
+}
+
+/* LOADERS
+================================================== */
+
 .modelViewPort {
   perspective: 1000px;
   width: 20rem;
