@@ -14,7 +14,6 @@ import Portafolio from "@/components/views/Portafolio";
 import About from "@/components/views/About";
 import InstaFeed from "@/components/views/InstaFeed";
 import UGC from "@/components/views/UGC";
-// import FeedBack from "@/components/views/FeedBack";
 import Contact from "@/components/views/Contact";
 import SocialFixed from "@/components/SocialFixed";
 import Navbar from "@/components/ui/Navbar";
@@ -25,18 +24,6 @@ export default function Main(props: IMainProps) {
   const { navigation, page } = props;
   const { locomotiveScrollInstance, isLoading } = useLocomotiveScroll();
   const [lang, setLang] = useState<Locale>(Languages.ES);
-  const {
-    home,
-    videos,
-    collaborations,
-    portafolio,
-    about,
-    instaFeed,
-    ugc,
-    contact,
-    footer,
-    social,
-  } = page;
 
   useEffect(() => {
     setLang(document.documentElement.lang as Locale);
@@ -56,16 +43,16 @@ export default function Main(props: IMainProps) {
       <main id="main" data-scroll-container className="bg-jazzberry-jam-100">
         {!isLoading ? (
           <>
-            <Home {...home} />
-            <Videos {...videos} />
-            <Collaborations {...collaborations} />
-            <Portafolio {...portafolio} />
-            <About {...about} />
-            <InstaFeed {...instaFeed} />
-            <UGC {...ugc} />
-            <Contact {...contact} />
-            <Footer {...footer} />
-            <SocialFixed {...social} />
+            <Home {...page.home} />
+            <Videos {...page.videos} />
+            <Collaborations {...page.collaborations} />
+            <Portafolio {...page.portafolio} />
+            <About {...page.about} />
+            <InstaFeed {...page.instaFeed} />
+            <UGC {...page.ugc} />
+            <Contact {...page.contact} />
+            <Footer {...page.footer} />
+            <SocialFixed {...page.social} />
           </>
         ) : (
           <div className="fade-out w-screen h-screen flex items-center justify-center">

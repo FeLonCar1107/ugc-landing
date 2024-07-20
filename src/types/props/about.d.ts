@@ -25,9 +25,5 @@ export interface IAboutProps {
       month: string;
       year: number;
     };
-    button: {
-      title: string;
-      url: string;
-    };
   };
 }
