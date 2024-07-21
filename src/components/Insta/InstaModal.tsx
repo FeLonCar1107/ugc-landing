@@ -39,10 +39,10 @@ const InstaModal: React.FC<InstaModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-[5000] bg-jazzberry-jam-100 flex items-center justify-center">
-      <div className="relative w-[70%] max-w-[1200px] h-[85%] bg-jazzberry-jam-50 flex flex-col md:flex-row rounded-sm shadow-lg animated zoomIn">
+      <div className="relative w-[70%] lg:max-w-[800px] 2xl:max-w-[1200px] h-[80%] lg:max-h-[570px] 2xl:max-h-[850px] bg-jazzberry-jam-50 flex flex-col md:flex-row rounded-sm shadow-lg animated zoomIn">
         <button
           className="w-6 h-6 absolute top-[-10px] right-[-10px] text-white bg-jazzberry-jam-300 rounded-full p-1 z-50"
-          onClick={closeModal}
+          onClick={() => closeModal()}
         >
           <CloseIcon color="#FFFFFF" />
         </button>

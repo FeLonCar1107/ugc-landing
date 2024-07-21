@@ -126,7 +126,7 @@ export default function ContactForm(props: IContactFormProps) {
           </div>
         </div>
       ))}
-      <div className="w-full h-auto flex items-center justify-end">
+      <div className="w-full h-auto flex items-center justify-end py-1">
         <button
           type="submit"
           className="bg-jazzberry-jam-900 text-white text-sm font-medium w-full h-20 mt-3 md:mt-0 md:w-40 md:h-40 rounded-md md:rounded-full flex items-center justify-center hover:bg-jazzberry-jam-800 transition-all duration-300 ease-in-out"

@@ -27,7 +27,7 @@ export default function Portafolio(props: IPortafolioProps) {
     <section
       data-scroll-section
       id="portafolio"
-      className="w-screen h-screen bg-transparent flex flex-col items-center justify-center gap-5 lg:gap-16 2xl:gap-20"
+      className="w-screen h-screen bg-transparent flex flex-col items-center justify-center gap-5 lg:gap-10 2xl:gap-20"
     >
       <div className="w-full flex flex-col items-center justify-center">
         <p className="text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase leading-none overflow-hidden">

@@ -88,7 +88,7 @@ export default function UGC(props: IUserCreatorContentProps) {
                     src={card.image.src}
                     alt={card.image.alt}
                     fill
-                    sizes="100vw"
+                    sizes="(max-width: 600px) 100vw, 600px"
                     className={`picture-image rounded-sm ${
                       imageLoadingStates[card.id] ? "opacity-0" : "opacity-100"
                     }`}
@@ -122,7 +122,7 @@ export default function UGC(props: IUserCreatorContentProps) {
           </div>
         </div>
         {selectedImage && (
-          <p className="w-[60%] max-w-[800px] min-h-24 text-center text-jazzberry-jam-800 fade-in">
+          <p className="w-[60%] max-w-[800px] min-h-24 text-center text-jazzberry-jam-800">
             {selectedImage.description}
           </p>
         )}

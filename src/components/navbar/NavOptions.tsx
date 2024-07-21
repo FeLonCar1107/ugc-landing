@@ -7,9 +7,7 @@ export default function NavOptions({ options }: NavOptionsProps) {
   const locomotiveScroll = useContext(LocomotiveScrollContext);
 
   useEffect(() => {
-    if (locomotiveScroll) {
-      locomotiveScroll.update();
-    }
+    if (locomotiveScroll) locomotiveScroll.update();
   }, [locomotiveScroll]);
 
   const scrollTo = (target: string) => {

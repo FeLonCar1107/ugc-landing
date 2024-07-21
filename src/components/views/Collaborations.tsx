@@ -29,7 +29,7 @@ export default function Collaborations(props: ICollaborationsProps) {
     <section
       data-scroll-section
       id="collaborations"
-      className="w-screen h-auto relative bg-transparent"
+      className="w-screen h-auto relative bg-transparent lg:pb-20"
     >
       <div className="w-full h-auto flex items-end justify-center">
         <div

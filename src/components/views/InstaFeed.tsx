@@ -21,11 +21,11 @@ export default function InstaFeed(props: IInstaFeedProps) {
   const [mediaLoadingStates, setMediaLoadingStates] = useState<boolean[]>([]);
   const [content, setContent] = useState<IInstagramMediaResponse[]>([]);
   const locomotiveScroll = useContext(LocomotiveScrollContext);
-  const itemsPerRow = isMobile ? 2 : 3;
   const [currentButton, setCurrentButton] = useState<IActionButton>(
     props.buttons.loadMore,
   );
-
+  
+  const itemsPerRow = isMobile ? 2 : 3;
   useEffect(() => {
     fetchData();
     handleResize();
@@ -75,7 +75,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
     <section
       data-scroll-section
       id="insta-feed"
-      className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-10 py-10 bg-red-800"
+      className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-6 py-10 bg-red-800"
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-3 text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase">
         <h2 className="font-bold hover:scale-95 hover:opacity-90 transition duration-300 transform origin-center">

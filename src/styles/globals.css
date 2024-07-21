@@ -478,8 +478,9 @@ textarea:focus {
 }
 
 .pictures-carousel .picture {
-  width: calc(100% / 3);
-  height: 475px;
+  width: calc(33.333% - 0.25rem);
+  height: 0;
+  padding-bottom: 50%;
   margin-left: 10px;
   flex-shrink: 0;
   cursor: pointer;
@@ -663,6 +664,20 @@ textarea:focus {
 
 /* ANIMATIONS
 ================================================== */
+
+.blur-in {
+  animation: blur-in 0.5s linear both;
+}
+@keyframes blur-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 
 .scale-up-ver-top {
   -webkit-animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)

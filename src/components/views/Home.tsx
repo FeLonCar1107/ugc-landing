@@ -10,11 +10,11 @@ export default function Home(props: IHomeProps) {
       data-scroll-section
       className="w-screen min-h-screen h-screen bg-transparent relative"
     >
-      <div className="absolute top-20 lg:top-11 left-[14%] sm:left-[7%] text-jazzberry-jam-300 font-bold ">
+      <div className="absolute top-20 lg:top-[4rem] 2xl:top-14 left-[14%] sm:left-[7%] lg:left-[6%] text-jazzberry-jam-300 font-bold ">
         <Skills words={content?.skills} />
       </div>
-      <div className="w-[50%] sm:w-auto absolute top-20 lg:top-12 right-0 sm:right-[7%] text-jazzberry-jam-300 font-bold">
-        <p className="text-sm sm:text-base h-auto sm:text-[2.5vw] lg:text-[1.4vw] sm:max-w-[40vw] lg:max-w-[20vw] pr-5 md:pr-0 lg:leading-[1.5vw]">
+      <div className="w-[50%] sm:w-auto absolute top-20 lg:top-[4rem] 2xl:top-14 right-0 sm:right-[7%] lg:right-[4%] text-jazzberry-jam-300 font-bold">
+        <p className="text-sm sm:text-base h-auto sm:text-[2.5vw] lg:text-[1.4vw] sm:max-w-[40vw] lg:max-w-[25vw] pr-5 md:pr-0 lg:leading-[1.5vw]">
           {content?.shortDescription}
         </p>
       </div>
@@ -41,8 +41,9 @@ export default function Home(props: IHomeProps) {
             alt="Isabella"
             fill
             sizes="(max-width: 600px) 100vw, 600px"
+            priority
             quality={100}
-            className="main-image"
+            className="main-image blur-in"
           />
         </div>
       </div>
@@ -61,6 +62,7 @@ export default function Home(props: IHomeProps) {
             src={content?.flower}
             alt="flower"
             fill
+            priority
             sizes="(max-width: 600px) 100vw, 600px"
             className="rotate-[-30deg] md:ml-8 lg:ml-14 2x:ml-20"
           />
@@ -75,6 +77,7 @@ export default function Home(props: IHomeProps) {
             src={content?.flower}
             alt="flower"
             fill
+            priority
             sizes="(max-width: 600px) 100vw, 600px"
           />
         </div>

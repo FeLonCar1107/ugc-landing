@@ -34,6 +34,7 @@ export default function Contact(props: IContactProps) {
                 alt={content.image.alt}
                 fill
                 sizes="(max-width: 600px) 100vw, 600px"
+                priority
                 className="rounded-full"
               />
             </div>
