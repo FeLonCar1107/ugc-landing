@@ -24,7 +24,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
   const [currentButton, setCurrentButton] = useState<IActionButton>(
     props.buttons.loadMore,
   );
-  
+
   const itemsPerRow = isMobile ? 2 : 3;
   useEffect(() => {
     fetchData();
@@ -73,8 +73,8 @@ export default function InstaFeed(props: IInstaFeedProps) {
 
   return (
     <section
-      data-scroll-section
       id="insta-feed"
+      data-scroll-section
       className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-6 py-10 bg-red-800"
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-3 text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase">

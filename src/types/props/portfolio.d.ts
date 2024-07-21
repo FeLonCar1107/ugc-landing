@@ -1,6 +1,6 @@
 import { IPicture } from "@/types/picture";
 
-export interface IPortafolioProps {
+export interface IPortfolioProps {
   title: string;
   splitTitle: string[];
   content: {

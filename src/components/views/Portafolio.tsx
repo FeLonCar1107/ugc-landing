@@ -3,10 +3,10 @@ import Image from "next/image";
 import LeftArrowIcon from "@/components/svg/LeftArrow";
 import RightArrowIcon from "@/components/svg/RightArrow";
 import { IPicture } from "@/types/picture";
-import { IPortafolioProps } from "@/types/props/portafolio";
+import { IPortfolioProps } from "@/types/props/portfolio";
 import { usePictureCarousel } from "@/hooks/usePictureCarousel";
 
-export default function Portafolio(props: IPortafolioProps) {
+export default function Portafolio(props: IPortfolioProps) {
   usePictureCarousel();
   const { splitTitle, content } = props;
   const [imageLoadingStates, setImageLoadingStates] = useState<boolean[]>([]);
@@ -25,8 +25,8 @@ export default function Portafolio(props: IPortafolioProps) {
 
   return (
     <section
+      id="portfolio"
       data-scroll-section
-      id="portafolio"
       className="w-screen h-screen bg-transparent flex flex-col items-center justify-center gap-5 lg:gap-10 2xl:gap-20"
     >
       <div className="w-full flex flex-col items-center justify-center">

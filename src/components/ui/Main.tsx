@@ -46,7 +46,7 @@ export default function Main(props: IMainProps) {
             <Home {...page.home} />
             <Videos {...page.videos} />
             <Collaborations {...page.collaborations} />
-            <Portafolio {...page.portafolio} />
+            <Portafolio {...page.portfolio} />
             <About {...page.about} />
             <InstaFeed {...page.instaFeed} />
             <UGC {...page.ugc} />

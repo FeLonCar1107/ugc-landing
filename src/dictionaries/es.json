@@ -10,7 +10,7 @@
     },
     "portfolio": {
       "title": "Portafolio",
-      "url": "/portafolio"
+      "url": "/portfolio"
     },
     "contact": {
       "title": "Contacto",
@@ -40,7 +40,7 @@
       {
         "id": 3,
         "title": "Portafolio",
-        "href": "#portafolio",
+        "href": "#portfolio",
         "image": "https://static.wixstatic.com/media/655690_17ba6728d82340fe8b585b2e82cea766~mv2.webp"
       },
       {
@@ -387,7 +387,7 @@
         }
       }
     },
-    "portafolio": {
+    "portfolio": {
       "title": "Portafolio",
       "splitTitle": ["Porta", "folio"],
       "content": {

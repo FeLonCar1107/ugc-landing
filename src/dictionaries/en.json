@@ -40,7 +40,7 @@
       {
         "id": 3,
         "title": "Portfolio",
-        "href": "#portafolio",
+        "href": "#portfolio",
         "image": "https://static.wixstatic.com/media/655690_17ba6728d82340fe8b585b2e82cea766~mv2.webp"
       },
       {
@@ -375,9 +375,9 @@
         }
       }
     },
-    "portafolio": {
-      "title": "Portafolio",
-      "splitTitle": ["Porta", "folio"],
+    "portfolio": {
+      "title": "Portfolio",
+      "splitTitle": ["Port", "folio"],
       "content": {
         "pictures": [
           {
