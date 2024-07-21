@@ -58,7 +58,11 @@ export default function Contact(props: IContactProps) {
                       onClick={() => ACTIONS[item.type](item.value)}
                       className="text-base text-jazzberry-jam-100 flex flex-col"
                     >
-                      <p className="h-7 cursor-pointer animate-underline">
+                      <p
+                        className={`h-7 cursor-pointer ${
+                          item.action ? "animate-underline" : ""
+                        }`}
+                      >
                         {item.title ?? item.value}
                       </p>
                     </div>

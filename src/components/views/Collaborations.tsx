@@ -42,7 +42,7 @@ export default function Collaborations(props: ICollaborationsProps) {
             alt={content.butterfly.alt}
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
-            quality={100}
+            unoptimized={true}
             className="mariposas transform scale-x-[-1]"
           />
         </div>

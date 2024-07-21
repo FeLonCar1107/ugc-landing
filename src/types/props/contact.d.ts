@@ -14,6 +14,7 @@ export interface IContactProps {
         id: number;
         type: string;
         title?: string;
+        action: boolean;
         value: string;
       }[];
     }[];

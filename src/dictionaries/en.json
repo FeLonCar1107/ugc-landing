@@ -464,7 +464,7 @@
             "title": "What is UGC?",
             "description": "User-generated content. Authentic and organic. 79% of people trust a UGC video or photo more than brand-made advertising.",
             "image": {
-              "src": "https://static.wixstatic.com/media/655690_58bfb99f86c94a938aa6a856fe64d909~mv2.webp",
+              "src": "https://static.wixstatic.com/media/655690_d61ae0c41dd641c49275aa5efcf82723~mv2.webp",
               "alt": "ugc-picture-1"
             }
           },
@@ -473,16 +473,16 @@
             "title": "Benefits of UGC",
             "description": "You will build the credibility and trust of your services. You will have greater reach and more sales. You will save time and resources in your brand.",
             "image": {
-              "src": "https://static.wixstatic.com/media/655690_35e3ad5dfcdf4eb59837bb238ca974b5~mv2.webp",
+              "src": "https://static.wixstatic.com/media/655690_6ff5378e4aca465781153c57e135dcdf~mv2.webp",
               "alt": "ugc-picture-2"
             }
           },
           {
             "id": "card-3",
-            "title": "How to implement UGC?",
-            "description": "You can do it through hashtags, contests, surveys, testimonials, reviews, comments, etc.",
+            "title": "Collaboration process",
+            "description": "Contact - Content planning - Content creation - Publication - Analysis and results.",
             "image": {
-              "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp",
+              "src": "https://static.wixstatic.com/media/655690_01a6881c2771438da6aa91cdc1414c76~mv2.webp",
               "alt": "ugc-picture-3"
             }
           }
@@ -494,7 +494,7 @@
       "splitTitle": ["Contact", "me"],
       "content": {
         "image": {
-          "src": "https://static.wixstatic.com/media/655690_e0071ec614e4408b9f248046306c93dd~mv2.webp",
+          "src": "https://static.wixstatic.com/media/655690_32ce88244189425cb56dbdc699eb5642~mv2.webp",
           "alt": "Isabella Lizarralde Arias"
         },
         "details": [
@@ -505,6 +505,7 @@
               {
                 "id": 1,
                 "type": "email",
+                "action": true,
                 "value": "isabella.ugc11@gmail.com"
               }
             ]
@@ -516,11 +517,13 @@
               {
                 "id": 1,
                 "type": "style",
+                "action": false,
                 "value": "Fashion - beauty - lifestyle"
               },
               {
                 "id": 2,
                 "type": "location",
+                "action": true,
                 "value": "Manizales, Colombia"
               }
             ]
@@ -533,18 +536,21 @@
                 "id": 1,
                 "type": "social",
                 "title": "Instagram",
+                "action": true,
                 "value": "https://www.instagram.com/isabella.ugc11?igsh=MW5yNnJrbHMzY3plbA%3D%3D&utm_source=qr"
               },
               {
                 "id": 2,
                 "type": "social",
                 "title": "TikTok",
+                "action": true,
                 "value": "https://www.tiktok.com/@isabella.ugc11?_t=8nDuAFf4tGw&_r=1"
               },
               {
                 "id": 3,
                 "type": "social",
                 "title": "Facebook",
+                "action": true,
                 "value": "https://www.facebook.com/Isabella.ugc11?mibextid=LQQJ4d"
               }
             ]
