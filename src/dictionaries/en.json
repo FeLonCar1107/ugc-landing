@@ -29,19 +29,19 @@
         "id": 1,
         "title": "Videos",
         "href": "#videos",
-        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449862696_2121698384870511_6495772675542692860_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=sCiuuyN9S_oQ7kNvgGMkHOk&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCfWwMoEsVSyr9f1XMzPEj9YcaQEIRsdX4rp8-UBq4M1A&oe=6690CAC9"
+        "image": "https://static.wixstatic.com/media/655690_aada8d40f5f642d998937a7a0a7824b4~mv2.webp"
       },
       {
         "id": 2,
         "title": "Collabs",
         "href": "#collaborations",
-        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/450367816_2302485350345329_3797717077683477378_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=18de74&_nc_ohc=OaRGUr245n4Q7kNvgEt4bOU&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAY8kLQHtiLAmf3_7ODgXdqHXqV8B1HzR4YRUWWeyCatw&oe=6690C8C3"
+        "image": "https://static.wixstatic.com/media/655690_d8afacbc743748fc91e37e415fdb8fd3~mv2.webp"
       },
       {
         "id": 3,
         "title": "Portfolio",
         "href": "#portafolio",
-        "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449861877_783490363981777_8452274963786244354_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=18de74&_nc_ohc=hSX0m6Ywn80Q7kNvgHfqDAm&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYCe6A_s1ZK51BMYuZacoMqK82y8GA6vWy0_As8nIhJXfQ&oe=6690F65C"
+        "image": "https://static.wixstatic.com/media/655690_17ba6728d82340fe8b585b2e82cea766~mv2.webp"
       },
       {
         "id": 4,
@@ -83,7 +83,7 @@
       }
     ],
     "menu": {
-      "image": "https://scontent.cdninstagram.com/v/t51.29350-15/449248694_496934582995989_6491671145130259660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=MAJcGMzzRaEQ7kNvgE3sf6j&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYDICsqcx7ucHI_AhcIGAgLmKmSgbHZ8bP3PLmvQCI-XNA&oe=669071A3"
+      "image": "https://static.wixstatic.com/media/655690_ff5b6a5e6ae0442abfab38ac1044f1f4~mv2.webp"
     }
   },
   "page": {
@@ -92,7 +92,7 @@
       "content": {
         "name": "Isabella",
         "fullName": "Isabella Lizarralde Arias",
-        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nuncs. Lorem opsum dolor sit amet.",
+        "shortDescription": "Unique and creative content to boost your brand. Building trust and credibility with your potential customers.",
         "skills": ["Model", "UGC Creator", "Content Creator"],
         "image": "https://static.wixstatic.com/media/655690_74ce8f138f3e4a42ab59547aeafc628c~mv2.webp",
         "flower": "https://static.wixstatic.com/media/655690_0ccf1e76087f4d63a5fa8458572340d0~mv2.webp"
