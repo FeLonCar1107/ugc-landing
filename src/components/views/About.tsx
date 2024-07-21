@@ -81,6 +81,7 @@ export default function About(props: IAboutProps) {
                 alt={content.image.alt}
                 width={400}
                 height={800}
+                priority
                 className="show-image grayscale"
               />
             </div>
