@@ -10,7 +10,7 @@ export default function LangSwitcher({ currentLanguage }: ILangSwitcherProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [isColombianFlag, setIsColombianFlag] = useState<boolean>(
-    currentLanguage === Languages.ES,
+    pathname.includes(Languages.ES),
   );
 
   const handleLanguageChange = () => {
@@ -22,12 +22,12 @@ export default function LangSwitcher({ currentLanguage }: ILangSwitcherProps) {
 
   return (
     <button
-      className="w-[40px] h-[20px] rounded-full bg-jazzberry-jam-400 flex items-center transition duration-300 focus:outline-none shadow animated fadeIn"
+      className="w-[35px] h-[15px] rounded-full bg-jazzberry-jam-400 flex items-center transition duration-300 focus:outline-none shadow animated fadeIn"
       onClick={handleLanguageChange}
     >
       <div
         id="switch-toggle"
-        className={`w-[30px] h-[30px] relative rounded-full transition duration-500 transform ${
+        className={`w-[25px] h-[25px] relative rounded-full transition duration-500 transform ${
           isColombianFlag ? "-translate-x-[10px]" : "translate-x-[20px]"
         }`}
       >
