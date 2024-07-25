@@ -7,13 +7,14 @@ import CarouselIcon from "@/components/svg/instagram/CarouselIcon";
 import InstaModal from "@/components/Insta/InstaModal";
 import { IActionButton } from "@/types/props/insta-feed";
 import { IInstaFeedProps } from "@/types/props/insta-feed";
+import { IInstagramUserResponse } from "@/types/responses/instagram-user";
 import { IInstagramMediaResponse } from "@/types/responses/instagram-media";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 
 const LIMIT = 12;
 
 export default function InstaFeed(props: IInstaFeedProps) {
-  const [user, setUser] = useState<any>({});
+  const [user, setUser] = useState<IInstagramUserResponse | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [visibleRows, setVisibleRows] = useState<number>(1);
@@ -158,9 +159,11 @@ export default function InstaFeed(props: IInstaFeedProps) {
       </button>
 
       <InstaModal
-        isOpen={isModalOpen}
+        user={user}
         content={content}
+        isOpen={isModalOpen}
         postIndex={currentPostIndex}
+        profilePictureUrl={props.profilePictureUrl}
         prevPost={() => {
           setCurrentPostIndex((prev) => Math.max(prev - 1, 0));
         }}

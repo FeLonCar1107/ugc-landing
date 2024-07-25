@@ -6,6 +6,7 @@ export interface IActionButton {
 export interface IInstaFeedProps {
   title: string;
   subtitle: string;
+  profilePictureUrl: string;
   buttons: {
     loadMore: IActionButton;
     follow: IActionButton;

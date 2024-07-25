@@ -35,37 +35,37 @@
         "id": 2,
         "title": "Collabs",
         "href": "#collaborations",
-        "image": "https://static.wixstatic.com/media/655690_d8afacbc743748fc91e37e415fdb8fd3~mv2.webp"
+        "image": "https://static.wixstatic.com/media/655690_ee6e5cf53e98488d88289212977474f7~mv2.webp"
       },
       {
         "id": 3,
         "title": "Portafolio",
         "href": "#portfolio",
-        "image": "https://static.wixstatic.com/media/655690_17ba6728d82340fe8b585b2e82cea766~mv2.webp"
+        "image": "https://static.wixstatic.com/media/655690_d8afacbc743748fc91e37e415fdb8fd3~mv2.webp"
       },
       {
         "id": 4,
         "title": "Sobre mi",
         "href": "#about",
-        "image": "https://static.wixstatic.com/media/655690_bf661983cf1744c9b57108da14238245~mv2.webp"
+        "image": "https://static.wixstatic.com/media/655690_6b6a38921f284339a0b661908faa7c15~mv2.webp"
       },
       {
         "id": 5,
         "title": "Insta",
         "href": "#insta-feed",
-        "image": "https://static.wixstatic.com/media/655690_e5cd386ad6c64ce3a666117ebaf71249~mv2.webp"
+        "image": "https://static.wixstatic.com/media/655690_f3a255b7824c4a5abf12d85290b6e823~mv2.webp"
       },
       {
         "id": 6,
         "title": "UGC",
         "href": "#ugc",
-        "image": "https://static.wixstatic.com/media/655690_a69450d610ff400b8b1e974ef155c49f~mv2.webp"
+        "image": "https://static.wixstatic.com/media/655690_17ba6728d82340fe8b585b2e82cea766~mv2.webp"
       },
       {
         "id": 7,
         "title": "Contacto",
         "href": "#contact",
-        "image": "https://static.wixstatic.com/media/655690_79aacb1ab26f4c6b894348e021c188e5~mv2.webp"
+        "image": "https://static.wixstatic.com/media/655690_357e905d771a45a68364ddc054f74098~mv2.webp"
       }
     ],
     "languages": [
@@ -457,6 +457,7 @@
     "instaFeed": {
       "title": "Instagram",
       "subtitle": "en insta",
+      "profilePictureUrl": "https://static.wixstatic.com/media/655690_32ce88244189425cb56dbdc699eb5642~mv2.webp",
       "buttons": {
         "loadMore": {
           "title": "Ver más"
