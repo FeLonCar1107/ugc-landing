@@ -8,15 +8,12 @@ import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function getStaticParams() {
+export async function generateStaticParams() {
   return i18n.locales.map((lang) => ({ params: { lang } }));
 }
 
 export const metadata: Metadata = {
-  title: {
-    default: "Isabella Lizarralde Arias",
-    template: "%s | Isabella Lizarralde Arias",
-  },
+  title: "Isabella Lizarralde Arias",
   description:
     "Descubre el portafolio de Isabella Lizarralde Arias: proyectos innovadores, videos creativos, fotos y detalles de contacto. Explora ahora y conoce el talento detrás de cada proyecto.",
   keywords: [
@@ -42,9 +39,9 @@ export const metadata: Metadata = {
       "Descubre el portafolio de Isabella Lizarralde Arias: proyectos innovadores, videos creativos, fotos impactantes y detalles de contacto.",
     images: [
       {
-        url: "https://static.wixstatic.com/media/655690_74ce8f138f3e4a42ab59547aeafc628c~mv2.webp",
-        width: 800,
-        height: 600,
+        url: "https://static.wixstatic.com/media/655690_32ce88244189425cb56dbdc699eb5642~mv2.webp",
+        width: 70,
+        height: 70,
         alt: "Isabella Lizarralde Arias",
       },
     ],
