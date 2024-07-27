@@ -1070,6 +1070,19 @@ textarea:focus {
   box-shadow: inset 30em 0 0 0 #e22079;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: spin 2s linear infinite;
+}
+
 /* DIVIDERS
 ================================================== */
 
