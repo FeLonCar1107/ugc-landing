@@ -24,7 +24,7 @@ export default function Skills({ words }: { words: string[] }) {
 
   return (
     <div className="max-w-[35vw] md:w-auto h-auto flex flex-col md:space-y-[-1vw]">
-      {words.map((word, index) => (
+      {words.map((word: string, index: number) => (
         <span
           key={index}
           ref={(el) => {

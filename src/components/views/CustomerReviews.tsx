@@ -106,6 +106,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               height={500}
               priority
               className="show-image grayscale"
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
         </div>
@@ -120,8 +121,8 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
             </div>
           ) : (
             <div className="w-full h-screen flex flex-col">
-              {Array.from({ length: 5 }).map((_) => (
-                <span className="reviews-loader"></span>
+              {Array.from({ length: 5 }).map((_, index: number) => (
+                <span key={index} className="reviews-loader"></span>
               ))}
             </div>
           )}

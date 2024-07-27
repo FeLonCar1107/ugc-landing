@@ -133,7 +133,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
             ))
         ) : (
           <>
-            {[...Array(itemsPerRow)].map((_, index) => (
+            {[...Array(itemsPerRow)].map((_, index: number) => (
               <div
                 key={index}
                 className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
