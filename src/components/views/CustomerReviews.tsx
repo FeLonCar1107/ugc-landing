@@ -102,8 +102,8 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
             <Image
               src={content.image.src}
               alt={content.image.alt}
-              width={300}
-              height={600}
+              width={270}
+              height={500}
               priority
               className="show-image grayscale"
             />
