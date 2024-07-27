@@ -4,8 +4,14 @@ export interface ICustomerReviewsProps {
   title: string;
   splitTitle: string[];
   splitLetter: string[];
-  flower: {
-    src: string;
-    alt: string;
+  content: {
+    image: {
+      src: string;
+      alt: string;
+    };
+    flower: {
+      src: string;
+      alt: string;
+    };
   };
 }

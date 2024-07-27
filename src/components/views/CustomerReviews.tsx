@@ -7,6 +7,7 @@ import apiService from "@/services/api.service";
 import CardReview from "@/components/CardReview";
 
 export default function CustomerReviews(props: ICustomerReviewsProps) {
+  const { content, splitTitle, splitLetter } = props;
   const [reviews, setReviews] = useState<IReview[]>([]);
   const locomotiveScroll = useContext(LocomotiveScrollContext);
 
@@ -41,18 +42,19 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
           data-scroll-target="#customers"
           className="w-[15%] lg:w-[40%] h-screen flex flex-col items-center justify-center"
         >
-          <div className="hidden lg:flex w-full lg:h-[20%] items-center justify-between">
+          <div className="hidden lg:flex w-full lg:h-[25%] items-center justify-between">
             <Image
-              src={props.flower.src}
-              alt={props.flower.alt}
+              src={content.flower.src}
+              alt={content.flower.alt}
               width={30}
               height={30}
+              className="rotating"
             />
             <div className="flex flex-col items-center justify-center -space-y-4">
-              {props.splitTitle.map((title: string, index: number) => (
+              {splitTitle.map((title: string, index: number) => (
                 <h2
                   key={index}
-                  className={`text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase ${
+                  className={`text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[45px] uppercase ${
                     index ? "font-bold" : "opacity-100"
                   }`}
                 >
@@ -61,24 +63,25 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               ))}
             </div>
             <Image
-              src={props.flower.src}
-              alt={props.flower.alt}
+              src={content.flower.src}
+              alt={content.flower.alt}
               width={30}
               height={30}
+              className="rotating"
             />
           </div>
           <div
             id="split-letter"
-            className="flex lg:hidden w-full h-full lg:h-[20%] flex-col items-center justify-center"
+            className="flex lg:hidden w-full h-full lg:h-[75%] flex-col items-center justify-center"
           >
             <Image
-              src={props.flower.src}
-              alt={props.flower.alt}
+              src={content.flower.src}
+              alt={content.flower.alt}
               width={30}
               height={30}
-              className="my-5"
+              className="rotating my-5"
             />
-            {props.splitLetter.map((letter: string, index: number) => (
+            {splitLetter.map((letter: string, index: number) => (
               <h2
                 key={index}
                 className={`text-jazzberry-jam-500 text-[35px] uppercase font-bold`}
@@ -87,22 +90,20 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               </h2>
             ))}
             <Image
-              src={props.flower.src}
-              alt={props.flower.alt}
+              src={content.flower.src}
+              alt={content.flower.alt}
               width={30}
               height={30}
-              className="my-5"
+              className="rotating my-5"
             />
           </div>
 
           <div className="hidden lg:flex w-full h-[80%] items-center justify-center">
             <Image
-              src={
-                "https://static.wixstatic.com/media/655690_dab13b086d8740fd8f212eb4f0bb565d~mv2.webp"
-              }
-              alt={"Foto de la tienda"}
-              width={400}
-              height={800}
+              src={content.image.src}
+              alt={content.image.alt}
+              width={300}
+              height={600}
               priority
               className="show-image grayscale"
             />

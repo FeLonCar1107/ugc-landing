@@ -490,6 +490,21 @@
         ]
       }
     },
+    "customerReviews": {
+      "title": "Customer reviews",
+      "splitTitle": ["Customer", "reviews"],
+      "splitLetter": ["R", "e", "v", "i", "e", "w", "s"],
+      "content": {
+        "image": {
+          "src": "https://static.wixstatic.com/media/655690_73330385601f46aaa318ae02a9ccb201~mv2.webp",
+          "alt": "Isabella Lizarralde Arias"
+        },
+        "flower": {
+          "src": "https://static.wixstatic.com/shapes/655690_ceb977d024b24b0199f10541acbd97a0.svg",
+          "alt": "Flowery decoration"
+        }
+      }
+    },
     "contact": {
       "title": ["Let's start", "a project together!"],
       "splitTitle": ["Contact", "me"],
