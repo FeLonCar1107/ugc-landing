@@ -14,6 +14,7 @@ import Portafolio from "@/components/views/Portafolio";
 import About from "@/components/views/About";
 import InstaFeed from "@/components/views/InstaFeed";
 import UGC from "@/components/views/UGC";
+import CustomerReviews from "@/components/views/CustomerReviews";
 import Contact from "@/components/views/Contact";
 import SocialFixed from "@/components/SocialFixed";
 import Navbar from "@/components/ui/Navbar";
@@ -50,6 +51,7 @@ export default function Main(props: IMainProps) {
             <About {...page.about} />
             <InstaFeed {...page.instaFeed} />
             <UGC {...page.ugc} />
+            <CustomerReviews {...page.customerReviews} />
             <Contact {...page.contact} />
             <Footer {...page.footer} />
             <SocialFixed {...page.social} />

@@ -555,8 +555,14 @@ textarea:focus {
   }
 }
 
-/* FEEDBACK SECTION
+/* CUSTOMER REVIEWS SECTION
 ================================================== */
+
+.review {
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 
 /* UGC SECTION
 ================================================== */
@@ -1122,11 +1128,13 @@ textarea:focus {
   background: #fca5d5;
   overflow: hidden;
 }
+
 .eva {
   --EVA-ROTATION-DURATION: 4s;
   transform-style: preserve-3d;
   animation: rotateRight var(--EVA-ROTATION-DURATION) linear infinite alternate;
 }
+
 .head-eva {
   position: relative;
   width: 6rem;
@@ -1134,6 +1142,7 @@ textarea:focus {
   border-radius: 48% 53% 45% 55% / 79% 79% 20% 22%;
   background: linear-gradient(to right, white 45%, gray);
 }
+
 .eyeChamber-eva {
   width: 4.5rem;
   height: 2.75rem;
@@ -1146,12 +1155,14 @@ textarea:focus {
   transform: translate(-50%, -50%);
   animation: moveRight var(--EVA-ROTATION-DURATION) linear infinite alternate;
 }
+
 .eye-eva {
   width: 1.2rem;
   height: 1.5rem;
   position: absolute;
   border-radius: 50%;
 }
+
 .eye-eva:first-child {
   left: 12px;
   top: 50%;
@@ -1164,6 +1175,7 @@ textarea:focus {
   box-shadow: inset 0px 0px 5px #04b8d5, 0px 0px 15px 1px #0bdaeb;
   transform: translate(0, -50%) rotate(-65deg);
 }
+
 .eye-eva:nth-child(2) {
   right: 12px;
   top: 50%;
@@ -1176,6 +1188,7 @@ textarea:focus {
   box-shadow: inset 0px 0px 5px #04b8d5, 0px 0px 15px 1px #0bdaeb;
   transform: translate(0, -50%) rotate(65deg);
 }
+
 .body-eva {
   width: 6rem;
   height: 8rem;
@@ -1184,6 +1197,7 @@ textarea:focus {
   border-radius: 47% 53% 45% 55% / 12% 9% 90% 88%;
   background: linear-gradient(to right, white 35%, gray);
 }
+
 .hand-eva {
   position: absolute;
   left: -1.5rem;
@@ -1195,10 +1209,12 @@ textarea:focus {
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.25);
   transform: rotateY(55deg) rotateZ(10deg);
 }
+
 .hand-eva:first-child {
   animation: compensateRotation var(--EVA-ROTATION-DURATION) linear infinite
     alternate;
 }
+
 .hand-eva:nth-child(2) {
   left: 92%;
   background: linear-gradient(to right, white 15%, gray);
@@ -1206,6 +1222,7 @@ textarea:focus {
   animation: compensateRotationRight var(--EVA-ROTATION-DURATION) linear
     infinite alternate;
 }
+
 .scannerThing {
   width: 0;
   height: 0;
@@ -1219,6 +1236,7 @@ textarea:focus {
   mask: linear-gradient(to right, white, transparent 35%);
   animation: glow 2s cubic-bezier(0.86, 0, 0.07, 1) infinite;
 }
+
 .scannerOrigin {
   position: absolute;
   width: 8px;
@@ -1230,6 +1248,7 @@ textarea:focus {
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
   animation: moveRight var(--EVA-ROTATION-DURATION) linear infinite;
 }
+
 @keyframes rotateRight {
   from {
     transform: rotateY(0deg);
@@ -1238,6 +1257,7 @@ textarea:focus {
     transform: rotateY(25deg);
   }
 }
+
 @keyframes moveRight {
   from {
     transform: translate(-50%, -50%);
@@ -1246,6 +1266,7 @@ textarea:focus {
     transform: translate(-40%, -50%);
   }
 }
+
 @keyframes compensateRotation {
   from {
     transform: rotateY(55deg) rotateZ(10deg);
@@ -1254,6 +1275,7 @@ textarea:focus {
     transform: rotatey(30deg) rotateZ(10deg);
   }
 }
+
 @keyframes compensateRotationRight {
   from {
     transform: rotateY(55deg) rotateZ(-10deg);
@@ -1262,6 +1284,7 @@ textarea:focus {
     transform: rotateY(70deg) rotateZ(-10deg);
   }
 }
+
 @keyframes glow {
   from {
     opacity: 0;
@@ -1424,5 +1447,49 @@ textarea:focus {
   100% {
     background-position: -30px 11px, -30px 35px, -30px 60px;
     opacity: 0;
+  }
+}
+
+.reviews-loader {
+  width: 320px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  position: relative;
+  background: #fdcde9;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.reviews-loader::after {
+  content: "";
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  background-image: linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 80%
+    ),
+    radial-gradient(circle 28px at 28px 28px, #fde6f3 99%, transparent 0),
+    linear-gradient(#fde6f3 24px, transparent 0),
+    linear-gradient(#fde6f3 18px, transparent 0),
+    linear-gradient(#fde6f3 66px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px, 290px 56px;
+  background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+  100% {
+    background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
   }
 }

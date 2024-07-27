@@ -502,6 +502,15 @@
         ]
       }
     },
+    "customerReviews": {
+      "title": "Reseñas de clientes",
+      "splitTitle": ["Reseñas", "de clientes"],
+      "splitLetter": ["R", "e", "s", "e", "ñ", "a", "s"],
+      "flower": {
+        "src": "https://static.wixstatic.com/shapes/655690_ceb977d024b24b0199f10541acbd97a0.svg",
+        "alt": "Flor"
+      }
+    },
     "contact": {
       "title": ["Comencemos", "un proyecto juntos!"],
       "content": {
