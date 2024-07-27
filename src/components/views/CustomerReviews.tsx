@@ -41,17 +41,31 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
           data-scroll-target="#customers"
           className="w-[15%] lg:w-[40%] h-screen flex flex-col items-center justify-center"
         >
-          <div className="hidden lg:flex w-full h-full lg:h-[20%] flex-col items-center justify-center -space-y-4">
-            {props.splitTitle.map((title: string, index: number) => (
-              <h2
-                key={index}
-                className={`text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase ${
-                  index ? "font-bold" : "opacity-100"
-                }`}
-              >
-                {title}
-              </h2>
-            ))}
+          <div className="hidden lg:flex w-full lg:h-[20%] items-center justify-between">
+            <Image
+              src={props.flower.src}
+              alt={props.flower.alt}
+              width={30}
+              height={30}
+            />
+            <div className="flex flex-col items-center justify-center -space-y-4">
+              {props.splitTitle.map((title: string, index: number) => (
+                <h2
+                  key={index}
+                  className={`text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase ${
+                    index ? "font-bold" : "opacity-100"
+                  }`}
+                >
+                  {title}
+                </h2>
+              ))}
+            </div>
+            <Image
+              src={props.flower.src}
+              alt={props.flower.alt}
+              width={30}
+              height={30}
+            />
           </div>
           <div
             id="split-letter"

@@ -1067,7 +1067,7 @@ textarea:focus {
 
 .slide:hover,
 .slide:focus {
-  box-shadow: inset 12em 0 0 0 #e22079;
+  box-shadow: inset 30em 0 0 0 #e22079;
 }
 
 /* DIVIDERS

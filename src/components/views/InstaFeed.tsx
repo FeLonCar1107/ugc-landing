@@ -44,7 +44,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
 
   const fetchData = async () => {
     try {
-      setUser(await apiService.GET("get-user"));
+      setUser(await apiService.GET("user"));
       setMediaLoadingStates(new Array(LIMIT).fill(true));
       setContent(await apiService.POST("content-media", { limit: LIMIT }));
     } catch (error) {

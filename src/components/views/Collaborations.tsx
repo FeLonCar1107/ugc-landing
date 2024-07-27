@@ -16,7 +16,7 @@ export default function Collaborations(props: ICollaborationsProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setBrands(await apiService.GET("get-brands"));
+        setBrands(await apiService.GET("brands"));
       } catch (error) {
         console.error(error);
       }
