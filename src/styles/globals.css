@@ -573,10 +573,6 @@ textarea:focus {
     width: 100%;
   }
 
-  input[type="radio"] {
-    display: none;
-  }
-
   .slider-ugc {
     width: 100%;
     height: 100%;
@@ -613,43 +609,35 @@ textarea:focus {
       rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
 
-  img {
+  .card img {
     width: 95%;
     height: 80%;
     object-fit: cover;
     border-radius: 6px;
   }
 
-  #card-1:checked ~ .cards #ugc-3,
-  #card-2:checked ~ .cards #ugc-1,
-  #card-3:checked ~ .cards #ugc-2 {
-    transform: translateX(-40%) scale(0.8) rotate(-10deg);
-    opacity: 0.9;
-    z-index: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-
-  #card-1:checked ~ .cards #ugc-2,
-  #card-2:checked ~ .cards #ugc-3,
-  #card-3:checked ~ .cards #ugc-1 {
-    transform: translateX(40%) scale(0.8) rotate(10deg);
-    opacity: 0.9;
-    z-index: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-
-  #card-1:checked ~ .cards #ugc-1,
-  #card-2:checked ~ .cards #ugc-2,
-  #card-3:checked ~ .cards #ugc-3 {
+  .selected {
     transform: translateX(0) scale(1);
     opacity: 1;
     z-index: 1;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
 
-  #card-1:checked ~ .cards #ugc-1 img,
-  #card-2:checked ~ .cards #ugc-2 img,
-  #card-3:checked ~ .cards #ugc-3 img {
+  .prev {
+    transform: translateX(-40%) scale(0.8) rotate(-10deg);
+    opacity: 0.9;
+    z-index: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .next {
+    transform: translateX(40%) scale(0.8) rotate(10deg);
+    opacity: 0.9;
+    z-index: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .selected img {
     box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
   }
 

@@ -12,21 +12,20 @@ const classMap: { [key: string]: string } = {
 export default function UGC(props: IUserCreatorContentProps) {
   const { content } = props;
   const [selected, setSelected] = useState("card-1");
-  const [imageLoadingStates, setImageLoadingStates] = useState<
-    Record<string, boolean>
-  >({});
+  const [imageLoadingStates, setImageLoadingStates] = useState<{
+    [key: string]: boolean;
+  }>({});
 
   useEffect(() => {
-    const initialStates = content.cards.reduce((acc, card) => {
-      acc[card.id] = true;
-      return acc;
-    }, {} as Record<string, boolean>);
+    const initialStates = content.cards.reduce<{ [key: string]: boolean }>(
+      (acc, card) => {
+        acc[card.id] = true;
+        return acc;
+      },
+      {},
+    );
     setImageLoadingStates(initialStates);
   }, [content.cards]);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelected(event.target.id);
-  };
 
   const handleNext = () => {
     setSelected((prev) =>
@@ -47,7 +46,16 @@ export default function UGC(props: IUserCreatorContentProps) {
     }));
   };
 
-  const selectedImage = content.cards.find((card) => card.id === selected);
+  const selectedIndex = content.cards.findIndex((card) => card.id === selected);
+
+  const getCardClass = (index: number) => {
+    if (index === selectedIndex) return "selected";
+    if (index === (selectedIndex + 1) % 3) return "next";
+    if (index === (selectedIndex + 2) % 3) return "prev";
+    return "";
+  };
+
+  const selectedImage = content.cards[selectedIndex];
 
   return (
     <div
@@ -59,23 +67,12 @@ export default function UGC(props: IUserCreatorContentProps) {
         UGC
       </p>
       <div className="slider-ugc">
-        {content.cards.map((image) => (
-          <input
-            key={image.id}
-            type="radio"
-            name="slider"
-            id={image.id}
-            checked={selected === image.id}
-            onChange={handleChange}
-          />
-        ))}
         <div className="cards">
-          {content.cards.map((card) => (
-            <label
+          {content.cards.map((card, index: number) => (
+            <div
               key={card.id}
-              className="card"
-              htmlFor={card.id}
-              id={`ugc-${card.id.split("-")[1]}`}
+              className={`card ${getCardClass(index)}`}
+              onClick={() => setSelected(card.id)}
             >
               <div className="w-full h-full flex flex-col text-jazzberry-jam-200">
                 <div className="w-full h-[80%] relative">
@@ -101,7 +98,7 @@ export default function UGC(props: IUserCreatorContentProps) {
                   </p>
                 </div>
               </div>
-            </label>
+            </div>
           ))}
         </div>
         <div className="w-full h-fit flex items-center justify-center gap-5">
