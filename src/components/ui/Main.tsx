@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import { Locale } from "@/i18n/config";
+import { montserrat } from "@/app/ui/fonts";
 import { IMainProps } from "@/types/props/main";
 import Loader from "@/components/Loader";
 import Languages from "@/enums/languages.enum";
@@ -41,7 +42,11 @@ export default function Main(props: IMainProps) {
       <div className="cursor-dot" data-cursor-dot id="cursor-one"></div>
       <div className="cursor-outline" data-cursor-outline id="cursor-two"></div>
       <div className="cursor-outline-sec" id="cursor-tree"></div>
-      <main id="main" data-scroll-container className="bg-jazzberry-jam-100">
+      <main
+        id="main"
+        data-scroll-container
+        className={`${montserrat.className} bg-jazzberry-jam-100`}
+      >
         {!isLoading ? (
           <>
             <Home {...page.home} />

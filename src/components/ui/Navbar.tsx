@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Locale } from "@/i18n/config";
+import { montserrat } from "@/app/ui/fonts";
 import { INavigationProps } from "@/types/props/navigation";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import NavOptions from "@/components/navbar/NavOptions";
@@ -46,6 +47,8 @@ export default function Navbar({
   return (
     <nav
       className={`w-full h-14 lg:h-16 flex items-center justify-between px-4 text-white fixed top-0 left-0 z-[1000] transition-transform duration-500 ease-out animated fadeIn ${
+        montserrat.className
+      } ${
         showNavOptions
           ? "border-[1px] border-jazzberry-jam-500 md:border-none border-opacity-20"
           : ""

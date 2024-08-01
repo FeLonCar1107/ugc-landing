@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Locale, i18n } from "@/i18n/config";
+import { Toaster } from "react-hot-toast";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "../../styles/globals.css";
 import "../../styles/tailwind.css";
-import { Toaster } from "react-hot-toast";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "@/app/ui/fonts";
 
 export async function generateStaticParams() {
   return i18n.locales.map((lang) => ({ params: { lang } }));
@@ -57,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
+      <body className={`${inter.className} antialiased`}>
         <Toaster />
         {children}
       </body>
