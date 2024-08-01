@@ -22,7 +22,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "instagram.feoh3-1.fna.fbcdn.net",
+        hostname: "scontent-ord5-2.cdninstagram.com",
         port: "",
         pathname: "/**",
       },
