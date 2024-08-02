@@ -42,6 +42,7 @@ export default function Videos(props: IVideosProps) {
                     loop
                     playsInline
                     controls
+                    controlsList="nodownload"
                   />
                   <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
                     {showInfo === index && (
