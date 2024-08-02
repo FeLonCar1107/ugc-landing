@@ -10,25 +10,6 @@ export default function Videos(props: IVideosProps) {
   const { splitTitle, content } = props;
   const [showInfo, setShowInfo] = useState<number | null>(null);
 
-  const handleMouseEnter = (
-    event: React.MouseEvent<HTMLVideoElement, MouseEvent>,
-    index: number,
-  ) => {
-    setShowInfo(index);
-    const videoElement = event.currentTarget;
-    videoElement.play();
-  };
-
-  const handleMouseLeave = (index: number) => {
-    setShowInfo(null);
-    const videoElement = document.getElementById(
-      `video-${index}`,
-    ) as HTMLVideoElement;
-    if (videoElement) {
-      videoElement.pause();
-    }
-  };
-
   return (
     <section
       data-scroll-section
@@ -61,8 +42,6 @@ export default function Videos(props: IVideosProps) {
                     loop
                     playsInline
                     controls
-                    onMouseEnter={(event) => handleMouseEnter(event, index)}
-                    onMouseLeave={() => handleMouseLeave(index)}
                   />
                   <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
                     {showInfo === index && (
