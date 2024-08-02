@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import { Locale } from "@/i18n/config";
 import { montserrat } from "@/app/ui/fonts";
 import { IMainProps } from "@/types/props/main";
+import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import Loader from "@/components/Loader";
 import Languages from "@/enums/languages.enum";
 import useLocomotiveScroll from "@/hooks/useLocomotiveScroll";

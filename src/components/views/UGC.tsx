@@ -77,7 +77,7 @@ export default function UGC(props: IUserCreatorContentProps) {
               <div className="w-full h-full flex flex-col text-jazzberry-jam-200">
                 <div className="w-full h-[80%] relative">
                   {imageLoadingStates[card.id] && (
-                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200 rounded-sm">
+                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200 rounded-md">
                       <div className="media-loader"></div>
                     </div>
                   )}
@@ -86,10 +86,9 @@ export default function UGC(props: IUserCreatorContentProps) {
                     alt={card.image.alt}
                     fill
                     sizes="(max-width: 600px) 100vw, 600px"
-                    className={`picture-image rounded-sm transition-opacity duration-500 ${
-                      imageLoadingStates[card.id] ? "opacity-0" : "opacity-100"
-                    }`}
+                    className="picture-image rounded-md transition-all duration-500"
                     onLoad={() => handleImageLoad(card.id)}
+                    onError={() => handleImageLoad(card.id)}
                   />
                 </div>
                 <div className="w-full h-[20%] flex items-center justify-center">

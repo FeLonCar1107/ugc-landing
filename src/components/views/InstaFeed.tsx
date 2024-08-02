@@ -104,7 +104,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
                   src={post.type === MediaTypes.VIDEO ? post.preview : post.url}
                   alt={post.caption}
                   fill
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
+                  className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-500 ${
                     mediaLoadingStates[index] ? "opacity-0" : "opacity-100"
                   }`}
                   sizes="(min-width: 768px) 50vw, 100vw"
