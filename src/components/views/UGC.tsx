@@ -86,7 +86,7 @@ export default function UGC(props: IUserCreatorContentProps) {
                     alt={card.image.alt}
                     fill
                     sizes="(max-width: 600px) 100vw, 600px"
-                    className={`picture-image rounded-sm ${
+                    className={`picture-image rounded-sm transition-opacity duration-500 ${
                       imageLoadingStates[card.id] ? "opacity-0" : "opacity-100"
                     }`}
                     onLoad={() => handleImageLoad(card.id)}

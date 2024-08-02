@@ -108,6 +108,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
                     mediaLoadingStates[index] ? "opacity-0" : "opacity-100"
                   }`}
                   sizes="(min-width: 768px) 50vw, 100vw"
+                  unoptimized={true}
                   onLoad={() => handleMediaLoad(index)}
                 />
                 {mediaLoadingStates[index] && (
