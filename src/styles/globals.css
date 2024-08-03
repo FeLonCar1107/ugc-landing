@@ -231,15 +231,6 @@ textarea:focus {
   scroll-behavior: smooth;
 }
 
-.videos-carousel.dragging {
-  cursor: grab;
-  scroll-behavior: auto;
-}
-
-.videos-carousel.dragging .video {
-  pointer-events: none;
-}
-
 .videos-wrapper .video-arrow {
   width: 40px;
   height: 40px;
@@ -442,15 +433,6 @@ textarea:focus {
   white-space: nowrap;
   overflow: hidden;
   scroll-behavior: smooth;
-}
-
-.pictures-carousel.dragging {
-  cursor: grab;
-  scroll-behavior: auto;
-}
-
-.pictures-carousel.dragging .picture {
-  pointer-events: none;
 }
 
 .pictures-wrapper .picture-arrow {
