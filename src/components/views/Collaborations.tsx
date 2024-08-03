@@ -67,7 +67,7 @@ export default function Collaborations(props: ICollaborationsProps) {
       </div>
       <div className="collaborations-slider z-30">
         <div className="collaborations-slider-track">
-          {brands?.map((brand: IBrand, index: number) => (
+          {brands?.map((brand: IBrand) => (
             <div key={brand.id} className="collaborations-slider-brand">
               <div className="brand relative">
                 <Image
