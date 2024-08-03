@@ -1,36 +1,41 @@
 import { useEffect } from "react";
 
-export const usePictureCarousel = () => {
+export const usePictureCarousel = (numberOfPictures: number) => {
   useEffect(() => {
     const carousel = document.querySelector(".pictures-carousel");
-    const firstImage = carousel?.querySelectorAll(".picture")[0];
+    const pictures = carousel?.querySelectorAll(".picture");
     const arrowButtons =
       document.querySelectorAll<HTMLButtonElement>(".picture-arrow");
 
     const showHideArrows = () => {
-      let scrollWidth =
+      const scrollWidth =
         (carousel?.scrollWidth ?? 0) - (carousel?.clientWidth ?? 0);
       arrowButtons[0].style.display =
         carousel?.scrollLeft === 0 ? "none" : "block";
-
       arrowButtons[1].style.display =
         carousel?.scrollLeft === scrollWidth ? "none" : "block";
     };
 
-    arrowButtons?.forEach((button) => {
-      let firstImageWidth = firstImage?.clientWidth ?? 0 + 10;
-      button.addEventListener("click", () => {
+    const handleArrowClick = (button: HTMLButtonElement) => {
+      const pictureWidth = pictures ? pictures[0]?.clientWidth : 0;
+      if (button.id === "left-picture-arrow") {
         if (carousel) {
-          if (button.id === "left-picture-arrow") {
-            carousel.scrollLeft -= firstImageWidth;
-          } else {
-            carousel.scrollLeft += firstImageWidth;
-          }
+          carousel.scrollLeft -=
+            pictureWidth + (window.innerWidth <= 800 ? 0 : 10);
         }
-        setTimeout(() => showHideArrows(), 60);
-      });
+      } else {
+        if (carousel) {
+          carousel.scrollLeft +=
+            pictureWidth + (window.innerWidth <= 800 ? 0 : 10);
+        }
+      }
+      setTimeout(showHideArrows, 60);
+    };
+
+    arrowButtons.forEach((button) => {
+      button.addEventListener("click", () => handleArrowClick(button));
     });
 
     showHideArrows();
-  }, []);
+  }, [numberOfPictures]);
 };

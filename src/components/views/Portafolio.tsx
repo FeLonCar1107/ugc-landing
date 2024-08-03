@@ -7,9 +7,10 @@ import { IPortfolioProps } from "@/types/props/portfolio";
 import { usePictureCarousel } from "@/hooks/usePictureCarousel";
 
 export default function Portafolio(props: IPortfolioProps) {
-  usePictureCarousel();
   const { splitTitle, content } = props;
   const [imageLoadingStates, setImageLoadingStates] = useState<boolean[]>([]);
+
+  usePictureCarousel(content.pictures.length);
 
   useEffect(() => {
     setImageLoadingStates(new Array(content.pictures.length).fill(true));
@@ -52,12 +53,12 @@ export default function Portafolio(props: IPortfolioProps) {
                   src={picture.src}
                   alt={picture.alt}
                   fill
-                  sizes="(max-width: 600px) 100vw, 600px"
                   quality={100}
+                  onLoad={() => handleImageLoad(index)}
+                  sizes="(max-width: 600px) 100vw, 600px"
                   className={`picture-image ${
                     imageLoadingStates[index] ? "opacity-0" : "opacity-100"
                   }`}
-                  onLoad={() => handleImageLoad(index)}
                 />
               </div>
             ))}

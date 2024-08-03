@@ -42,7 +42,7 @@ export default function Videos(props: IVideosProps) {
                     loop
                     playsInline
                     controls
-                    controlsList="nodownload"
+                    controlsList="nodownload,nofullscreen"
                     poster={video.preview}
                   />
                   <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
