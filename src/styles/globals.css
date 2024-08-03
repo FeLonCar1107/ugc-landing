@@ -454,7 +454,7 @@ textarea:focus {
 }
 
 .pictures-carousel .picture {
-  width: calc(33.333% - 0.25rem);
+  width: calc(33.333% - 9px);
   height: 0;
   padding-bottom: 50%;
   margin-left: 10px;
@@ -471,19 +471,18 @@ textarea:focus {
 }
 
 .pictures-carousel .picture:first-child {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 @media screen and (min-width: 375px) and (max-width: 640px) {
   .pictures-wrapper .pictures-carousel {
     width: 80%;
-    height: auto;
   }
 
   .pictures-carousel .picture {
     width: 100%;
     height: 110vw;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .pictures-wrapper .picture-arrow {
@@ -508,12 +507,10 @@ textarea:focus {
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .pictures-wrapper .pictures-carousel {
     width: 85%;
-    height: auto;
-    border: 1px solid red;
   }
 
   .pictures-carousel .picture {
-    width: calc(100% / 2 - 5px);
+    width: calc(50% - 5px);
     height: 550px;
     margin-left: 5px;
   }
@@ -522,11 +519,10 @@ textarea:focus {
 @media screen and (min-width: 801px) and (max-width: 1200px) {
   .pictures-wrapper .pictures-carousel {
     width: 85%;
-    height: auto;
   }
 
   .pictures-carousel .picture {
-    width: calc(100% / 3);
+    width: calc(33.333% - 10px);
     height: 400px;
   }
 }
