@@ -55,7 +55,9 @@ const InstaModal: React.FC<InstaModalProps> = ({
                 <video
                   src={content[postIndex].url}
                   loop
-                  autoPlay
+                  playsInline
+                  controls
+                  controlsList="nodownload nofullscreen"
                   className="absolute top-0 left-0 w-full h-full object-cover"
                 />
               ) : (
