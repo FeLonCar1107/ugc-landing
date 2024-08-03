@@ -43,6 +43,7 @@ export default function Videos(props: IVideosProps) {
                     playsInline
                     controls
                     controlsList="nodownload"
+                    poster={video.preview}
                   />
                   <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
                     {showInfo === index && (

@@ -562,11 +562,6 @@ textarea:focus {
 ================================================== */
 
 #ugc {
-  img {
-    display: block;
-    width: 100%;
-  }
-
   .slider-ugc {
     width: 100%;
     height: 100%;
