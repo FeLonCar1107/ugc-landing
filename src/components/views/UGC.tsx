@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
+import { IUserCreatorContentProps } from "@/types/props/ugc";
 import Image from "next/image";
 import SvgArrow from "@/components/svg/Arrow";
-import { IUserCreatorContentProps } from "@/types/props/ugc";
+import UgcCards from "@/enums/ugc-cards.enum";
 
 const classMap: { [key: string]: string } = {
-  "card-1": "ugc-1",
-  "card-2": "ugc-2",
-  "card-3": "ugc-3",
+  [UgcCards.CARD_ONE]: UgcCards.UGC_ONE,
+  [UgcCards.CARD_TWO]: UgcCards.UGC_TWO,
+  [UgcCards.CARD_THREE]: UgcCards.UGC_THREE,
 };
 
 export default function UGC(props: IUserCreatorContentProps) {
   const { content } = props;
-  const [selected, setSelected] = useState("card-1");
+  const [selected, setSelected] = useState<UgcCards>(UgcCards.CARD_ONE);
   const [imageLoadingStates, setImageLoadingStates] = useState<{
     [key: string]: boolean;
   }>({});
@@ -28,14 +29,18 @@ export default function UGC(props: IUserCreatorContentProps) {
   }, [content.cards]);
 
   const handleNext = () => {
-    setSelected((prev) =>
-      prev === "card-3" ? "card-1" : `card-${parseInt(prev.split("-")[1]) + 1}`,
+    setSelected((prev: UgcCards) =>
+      prev === UgcCards.CARD_THREE
+        ? UgcCards.CARD_ONE
+        : (`card-${parseInt(prev.split("-")[1]) + 1}` as UgcCards),
     );
   };
 
   const handlePrev = () => {
-    setSelected((prev) =>
-      prev === "card-1" ? "card-3" : `card-${parseInt(prev.split("-")[1]) - 1}`,
+    setSelected((prev: UgcCards) =>
+      prev === UgcCards.CARD_ONE
+        ? UgcCards.CARD_THREE
+        : (`card-${parseInt(prev.split("-")[1]) - 1}` as UgcCards),
     );
   };
 
@@ -72,7 +77,7 @@ export default function UGC(props: IUserCreatorContentProps) {
             <div
               key={card.id}
               className={`card ${getCardClass(index)}`}
-              onClick={() => setSelected(card.id)}
+              onClick={() => setSelected(card.id as UgcCards)}
             >
               <div className="w-full h-full flex flex-col text-jazzberry-jam-200">
                 <div className="w-full h-[80%] relative">
@@ -118,7 +123,7 @@ export default function UGC(props: IUserCreatorContentProps) {
           </div>
         </div>
         {selectedImage && (
-          <p className="w-[60%] max-w-[800px] min-h-24 text-center text-jazzberry-jam-800">
+          <p className="w-[60%] max-w-[800px] min-h-36 lg:min-h-28 text-center text-jazzberry-jam-800">
             {selectedImage.description}
           </p>
         )}
