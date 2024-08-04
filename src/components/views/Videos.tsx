@@ -31,18 +31,17 @@ export default function Videos(props: IVideosProps) {
             <div className="videos-carousel">
               {content.videos.map((video: IVideo, index: number) => (
                 <div
+                  key={video.id}
+                  className="video"
                   onMouseEnter={() => setShowInfo(index)}
                   onMouseLeave={() => setShowInfo(null)}
-                  key={`${video.id}-${index}`}
-                  className="video"
                 >
                   <video
-                    id={`video-${index}`}
-                    src={video.src}
                     loop
                     playsInline
                     controls
                     controlsList="nodownload nofullscreen"
+                    src={video.src}
                     poster={video.preview}
                   />
                   <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
