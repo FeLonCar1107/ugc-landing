@@ -21,7 +21,7 @@ export default function Home(props: IHomeProps) {
     if (innerWidth <= 768) {
       return { width: 600, height: 400 };
     } else if (innerWidth <= 1500) {
-      return { width: 300, height: 600 };
+      return { width: 255, height: 400 };
     } else {
       return { width: 380, height: 700 };
     }
@@ -64,7 +64,7 @@ export default function Home(props: IHomeProps) {
             height={height}
             priority
             quality={100}
-            className="main-image blur-in w-[95%] 2xl:w-full h-auto"
+            className="main-image blur-in w-full h-auto"
           />
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function Home(props: IHomeProps) {
           data-scroll
           data-scroll-direction="horizontal"
           data-scroll-speed="-1.5"
-          className="w-[57vw] sm:w-[40vw] md:w-[25vw] h-[67vw] sm:h-[50vw] md:h-[30vw] relative"
+          className="w-[55vw] sm:w-[40vw] md:w-[20vw] h-[65vw] sm:h-[50vw] md:h-[25vw] relative"
         >
           <Image
             src={content?.flower}
@@ -92,7 +92,7 @@ export default function Home(props: IHomeProps) {
           data-scroll
           data-scroll-direction="horizontal"
           data-scroll-speed="1.5"
-          className="w-[57vw] sm:w-[40vw] md:w-[25vw] h-[67vw] sm:h-[50vw] md:h-[30vw] relative"
+          className="w-[55vw] sm:w-[40vw] md:w-[20vw] h-[65vw] sm:h-[50vw] md:h-[25vw] relative"
         >
           <Image
             src={content?.flower}
