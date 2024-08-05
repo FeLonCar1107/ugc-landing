@@ -1444,14 +1444,41 @@ textarea:focus {
   background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px, 290px 56px;
   background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
   box-sizing: border-box;
-  animation: animloader 1s linear infinite;
+  animation: animLoader 1s linear infinite;
 }
 
-@keyframes animloader {
+@keyframes animLoader {
   0% {
     background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
   }
   100% {
     background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+}
+
+.collabs-loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: #f96db8;
+  box-sizing: border-box;
+  animation: animCollabsLoader 1s linear infinite alternate;
+}
+
+@keyframes animCollabsLoader {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
   }
 }

@@ -7,6 +7,7 @@ import apiService from "@/services/api.service";
 export default function Collaborations(props: ICollaborationsProps) {
   const { splitTitle, content } = props;
   const [brands, setBrands] = useState<IBrand[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -16,7 +17,9 @@ export default function Collaborations(props: ICollaborationsProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setIsLoading(true);
         setBrands(await apiService.GET("brands"));
+        setIsLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -65,23 +68,30 @@ export default function Collaborations(props: ICollaborationsProps) {
           />
         </div>
       </div>
-      <div className="collaborations-slider z-30">
-        <div className="collaborations-slider-track">
-          {brands?.map((brand: IBrand) => (
-            <div key={brand.id} className="collaborations-slider-brand">
-              <div className="brand relative">
-                <Image
-                  src={brand.logo}
-                  alt={brand.alt}
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  unoptimized={true}
-                />
-              </div>
-            </div>
-          ))}
+      {isLoading ? (
+        <div className="w-full h-[250px] flex items-center justify-center">
+          <div className="collabs-loader"></div>
         </div>
-      </div>
+      ) : (
+        <div className="collaborations-slider z-30">
+          <div className="collaborations-slider-track">
+            {brands?.map((brand: IBrand) => (
+              <div key={brand.id} className="collaborations-slider-brand">
+                <div className="brand relative">
+                  <Image
+                    src={brand.logo}
+                    alt={brand.alt}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    unoptimized={true}
+                    className="transition-all duration-300"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
