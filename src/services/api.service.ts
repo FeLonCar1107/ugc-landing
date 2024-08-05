@@ -20,7 +20,9 @@ const apiService = () => {
 
   const GET = async (path: string) => {
     try {
-      const response = await fetch(`/api/${path}`);
+      const response = await fetch(`/api/${path}`, {
+        next: { revalidate: 24 * 60 * 60 * 7 },
+      });
       const result = await response.json();
 
       return result.data;
