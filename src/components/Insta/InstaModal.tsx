@@ -53,12 +53,13 @@ const InstaModal: React.FC<InstaModalProps> = ({
             <div className="relative w-full md:w-[50%] h-[50%] md:h-full">
               {content[postIndex].type === MediaTypes.VIDEO ? (
                 <video
-                  src={content[postIndex].url}
                   loop
                   playsInline
                   controls
                   controlsList="nodownload nofullscreen"
                   className="absolute top-0 left-0 w-full h-full object-cover"
+                  src={content[postIndex].url}
+                  poster={content[postIndex].preview}
                 />
               ) : (
                 <Image
