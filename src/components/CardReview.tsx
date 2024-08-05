@@ -11,11 +11,11 @@ export default function CardReview({
   const colors = ["200", "50", "300"];
   return (
     <div
-      className={`review w-[90%] max-w-[450px] h-[130px] lg:max-h-[200px] rounded-xl flex flex-col justify-center items-center gap-1 lg:gap-3 py-4 px-3 lg:p-10 bg-jazzberry-jam-${
+      className={`review w-full h-full rounded-xl flex flex-col justify-center items-center gap-1 lg:gap-3 py-4 px-3 lg:p-10 bg-jazzberry-jam-${
         colors[index % colors.length]
       }`}
     >
-      <div className="w-full flex justify-start items-center gap-3">
+      <div className="w-full h-auto flex justify-start items-center gap-3">
         <Image
           src={review.image.src}
           alt={review.image.alt}
@@ -28,7 +28,7 @@ export default function CardReview({
           <p className="opacity-70 text-[10px] lg:text-xs">{review.role}</p>
         </div>
       </div>
-      <p className="w-full text-jazzberry-jam-900 text-[10px] md:text-xs lg:text-xs text-start">
+      <p className="w-full h-auto text-jazzberry-jam-900 text-[10px] md:text-xs lg:text-xs text-start">
         {review.description}
       </p>
     </div>

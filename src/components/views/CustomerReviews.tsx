@@ -33,7 +33,6 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
       data-scroll-section
       className="w-screen flex items-center justify-center relative"
     >
-      <div className="absolute bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-transparent to-jazzberry-jam-100 pointer-events-none rounded-[3px]" />
       <div id="customers" className="w-[80%] max-w-[1200px] h-auto flex gap-10">
         <div
           data-scroll
@@ -97,7 +96,6 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               className="rotating my-5"
             />
           </div>
-
           <div className="hidden lg:flex w-full h-[80%] items-center justify-center">
             <Image
               src={content.image.src}
@@ -110,11 +108,16 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
             />
           </div>
         </div>
-        <div className="w-[85%] lg:w-[60%] pt-10 pb-20">
+        <div className="w-[85%] h-auto lg:w-[60%] pt-10 pb-20">
           {reviews.length ? (
-            <div className="w-full flex flex-col items-center justify-center gap-2 lg:gap-8">
+            <div className="w-full h-auto flex flex-col items-center justify-center gap-2 lg:gap-8">
               {reviews.map((review: IReview, index: number) => (
-                <div key={review.id} data-scroll data-scroll-speed="1">
+                <div
+                  key={review.id}
+                  data-scroll
+                  data-scroll-speed="1"
+                  className="w-[90%] max-w-[450px] h-[130px] lg:max-h-[200px]"
+                >
                   <CardReview review={review} index={index} />
                 </div>
               ))}
