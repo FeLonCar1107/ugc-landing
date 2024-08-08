@@ -116,7 +116,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
                   key={review.id}
                   data-scroll
                   data-scroll-speed="1"
-                  className="w-[90%] max-w-[450px] h-[130px] lg:max-h-[200px]"
+                  className="w-[90%] max-w-[450px] h-[150px] lg:h-[130px]"
                 >
                   <CardReview review={review} index={index} />
                 </div>
