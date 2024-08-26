@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     const url = `https://graph.instagram.com/me/media?fields=id,caption,permalink,media_type,media_url,thumbnail_url,timestamp,username,children{id,media_type,media_url,thumbnail_url}&access_token=${ACCESS_TOKEN}&limit=${payload.limit}`;
     const response = await fetch(url);
     const data = await response.json();
-    if (data.error) throw new Error(data.error);
+    if (data.error) throw data.error;
 
     const formattedData: IInstagramMediaResponse[] = data.data.map(
       (item: InstagramRes) => {
@@ -56,6 +56,6 @@ export async function POST(request: Request) {
 
     return Response.json({ data: formattedData });
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    return Response.json({ error, data: [] }, { status: 500 });
   }
 }
