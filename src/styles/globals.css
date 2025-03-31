@@ -384,7 +384,7 @@ textarea:focus {
 .collaborations-slider-track {
   display: flex;
   gap: 30px;
-  width: calc(140px * var(--total-brands) * 2);
+  width: calc(140px * var(--count-brands) * 2);
   animation: collaborations-scroll 60s linear infinite;
 }
 
@@ -410,7 +410,7 @@ textarea:focus {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-140px * var(--total-brands)));
+    transform: translateX(calc(-140px * var(--count-brands)));
   }
 }
 

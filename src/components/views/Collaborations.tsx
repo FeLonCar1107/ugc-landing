@@ -9,16 +9,16 @@ export default function Collaborations(props: ICollaborationsProps) {
   const [brands, setBrands] = useState<IBrand[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    root.style.setProperty("--total-brands", content.brands.length.toString());
-  }, [content.brands.length]);
+  useEffect(() => {}, [content.brands.length]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        setBrands(await apiService.GET("brands"));
+        const { brands } = await apiService.GET("collabs");
+        setBrands(brands);
+        const root = document.documentElement;
+        root.style.setProperty("--count-brands", brands.length.toString());
         setIsLoading(false);
       } catch (error) {
         console.error(error);

@@ -15,7 +15,7 @@ export default function About(props: IAboutProps) {
     setTotalBrands(
       window
         .getComputedStyle(document.documentElement)
-        .getPropertyValue("--total-brands"),
+        .getPropertyValue("--count-brands"),
     );
   }, []);
 
