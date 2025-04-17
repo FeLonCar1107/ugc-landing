@@ -1,32 +1,11 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { IBrand } from "@/types/brand";
 import { ICollaborationsProps } from "@/types/props/collaborations";
-import apiService from "@/services/api.service";
+import { useCollabs } from "@/context/CollabsContext";
 
 export default function Collaborations(props: ICollaborationsProps) {
   const { splitTitle, content } = props;
-  const [brands, setBrands] = useState<IBrand[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  useEffect(() => {}, [content.brands.length]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        const { brands } = await apiService.GET("collabs");
-        setBrands(brands);
-        const root = document.documentElement;
-        root.style.setProperty("--count-brands", brands.length.toString());
-        setIsLoading(false);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const { brands, isLoading } = useCollabs();
 
   return (
     <section

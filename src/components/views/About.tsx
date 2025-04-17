@@ -1,22 +1,18 @@
-import Image from "next/image";
-import useHoverEffects from "@/hooks/useHoverEffects";
 import { IAboutProps } from "@/types/props/about";
+import { useCollabs } from "@/context/CollabsContext";
 import { useEffect, useState } from "react";
 import CameraBackground from "@/components/svg/CameraBackground";
+import Image from "next/image";
+import useHoverEffects from "@/hooks/useHoverEffects";
 
 export default function About(props: IAboutProps) {
   useHoverEffects();
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-  const [totalBrands, setTotalBrands] = useState<string>("0");
+  const { totalBrands } = useCollabs();
   const { title, subtitle, content } = props;
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
 
   useEffect(() => {
     setIsDesktop(window.innerWidth > 1024);
-    setTotalBrands(
-      window
-        .getComputedStyle(document.documentElement)
-        .getPropertyValue("--count-brands"),
-    );
   }, []);
 
   return (

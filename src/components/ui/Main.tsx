@@ -20,6 +20,7 @@ import Contact from "@/components/views/Contact";
 import SocialFixed from "@/components/SocialFixed";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
+import { CollabsProvider } from "@/context/CollabsContext";
 
 export default function Main(props: IMainProps) {
   useCustomCursor();
@@ -38,35 +39,41 @@ export default function Main(props: IMainProps) {
 
   return (
     <LocomotiveScrollContext.Provider value={locomotiveScrollInstance}>
-      <Navbar lang={lang} navigation={navigation} />
-      <div className="cursor-dot" data-cursor-dot id="cursor-one"></div>
-      <div className="cursor-outline" data-cursor-outline id="cursor-two"></div>
-      <div className="cursor-outline-sec" id="cursor-tree"></div>
-      <main
-        id="main"
-        data-scroll-container
-        className={`${montserrat.className} bg-jazzberry-jam-100`}
-      >
-        {!isLoading ? (
-          <>
-            <Home {...page.home} />
-            <Videos {...page.videos} />
-            <Collaborations {...page.collaborations} />
-            <Portafolio {...page.portfolio} />
-            <About {...page.about} />
-            <InstaFeed {...page.instaFeed} />
-            <UGC {...page.ugc} />
-            <CustomerReviews {...page.customerReviews} />
-            <Contact {...page.contact} />
-            <Footer {...page.footer} />
-            <SocialFixed {...page.social} />
-          </>
-        ) : (
-          <div className="fade-out w-screen h-screen flex items-center justify-center">
-            <Loader />
-          </div>
-        )}
-      </main>
+      <CollabsProvider>
+        <Navbar lang={lang} navigation={navigation} />
+        <div className="cursor-dot" data-cursor-dot id="cursor-one"></div>
+        <div
+          className="cursor-outline"
+          data-cursor-outline
+          id="cursor-two"
+        ></div>
+        <div className="cursor-outline-sec" id="cursor-tree"></div>
+        <main
+          id="main"
+          data-scroll-container
+          className={`${montserrat.className} bg-jazzberry-jam-100`}
+        >
+          {!isLoading ? (
+            <>
+              <Home {...page.home} />
+              <Videos {...page.videos} />
+              <Collaborations {...page.collaborations} />
+              <Portafolio {...page.portfolio} />
+              <About {...page.about} />
+              <InstaFeed {...page.instaFeed} />
+              <UGC {...page.ugc} />
+              <CustomerReviews {...page.customerReviews} />
+              <Contact {...page.contact} />
+              <Footer {...page.footer} />
+              <SocialFixed {...page.social} />
+            </>
+          ) : (
+            <div className="fade-out w-screen h-screen flex items-center justify-center">
+              <Loader />
+            </div>
+          )}
+        </main>
+      </CollabsProvider>
     </LocomotiveScrollContext.Provider>
   );
 }
