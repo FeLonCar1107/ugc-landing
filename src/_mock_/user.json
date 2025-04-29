@@ -1,0 +1,19 @@
+{
+  "GET": {
+    "data": {
+      "id": "24165991523001288",
+      "username": "isabella.ugc11",
+      "accountType": "MEDIA_CREATOR",
+      "mediaCount": 250,
+      "profilePictureUrl": "https://scontent-iad3-1.cdninstagram.com/v/t51.2885-19/447631196_374452798961167_1101467851454334742_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=GOm3X3HCvs4Q7kNvgGOU5mB&_nc_oc=AdmglfVAzTASPjLoSFgzOCg2-2IW_c8WBbHKx8l706BpZt2GN1kASO6Gf07ShN_BKmk&_nc_zt=24&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AP4hL3IEAAAA&oh=00_AYEWzqH4LWcUdlSYA7vZKwRg-v6FwIVyUWIsYmDK_7nKLw&oe=67EF7A5A"
+    }
+  },
+  "POST": {
+    "data": {
+      "id": 2,
+      "name": "New User",
+      "email": "new@example.com",
+      "role": "user"
+    }
+  }
+}

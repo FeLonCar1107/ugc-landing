@@ -1,0 +1,174 @@
+{
+  "GET": {
+    "data": [
+      {
+        "description": "Isabella eres una genio, el video quedó demasiado precioso, me encantó... te quedó brutal.",
+        "fullName": "María Ortiz",
+        "id": 1,
+        "image": {
+          "alt": "review-avatar-1",
+          "src": "https://static.wixstatic.com/shapes/655690_24acd0e1ca3146a9be0479691d07dcbf.svg"
+        },
+        "role": "CEO - María Ortiz SPA"
+      },
+      {
+        "description": "Estoy muy contenta de haber podido trabajar contigo, estaba segura que no me equivocaba, ha sido un gustazo! Estoy pendiente para recomendarte a cualquier empresa de España.",
+        "fullName": "Mar",
+        "id": 2,
+        "image": {
+          "alt": "review-avatar-2",
+          "src": "https://static.wixstatic.com/shapes/655690_e91e3cbfe36e48a99b76826f9d8e19f6.svg"
+        },
+        "role": "UGC Recruiter España "
+      },
+      {
+        "description": "¡¡Nos encantoooo!! Muy buen video y excelente calidad. ¡¡Quedó genial!!",
+        "fullName": "Francis",
+        "id": 3,
+        "image": {
+          "alt": "review-avatar-3",
+          "src": "https://static.wixstatic.com/shapes/655690_af6f308334d54827947d30905c404b20.svg"
+        },
+        "role": "CEO - Smartgym"
+      },
+      {
+        "description": "Quedó muy bello, hermoso, ¡DI-VI-NO! ¡Sabíamos y confiábamos en que iba a quedar super wow! Dios bendiga tu proyecto y te multiplique todo lo lindo que haces.",
+        "fullName": "Daniela",
+        "id": 4,
+        "image": {
+          "alt": "review-avatar-4",
+          "src": "https://static.wixstatic.com/shapes/655690_a06ffd190df74446b74a73179d05f2b9.svg"
+        },
+        "role": "CEO - Delicias M y M"
+      },
+      {
+        "description": "¡Me moriiiii, que es ese video tan espectacular! Isa me encantó. Hermoso, precioso de verdad te felicito, que trabajo tan impecable.",
+        "fullName": "Sofía Hernández",
+        "id": 5,
+        "image": {
+          "alt": "review-avatar-5",
+          "src": "https://static.wixstatic.com/shapes/655690_8feb77bac60b4d81a4b86bb84e8c4655.svg"
+        },
+        "role": "CEO - Artesana Mar"
+      },
+      {
+        "description": "¡Muy buenos videos, funcionan bastante! Tengo otras marcas que cualquier cosa te voy avisando para hacer contenido.",
+        "fullName": "José",
+        "id": 6,
+        "image": {
+          "alt": "review-avatar-6",
+          "src": "https://static.wixstatic.com/shapes/655690_8828c40a9f5b4a0f8758676dc2389f34.svg"
+        },
+        "role": "Marketer - Tibusand"
+      },
+      {
+        "description": "¡Demasiado bello, mil gracias! Ya quiero subirlo. Hablando con el equipo decidimos hacer el pago por un poco más, trabajas muy bien y esperamos que se te abran muchas más puertas.",
+        "fullName": "Valeria",
+        "id": 7,
+        "image": {
+          "alt": "review-avatar-7",
+          "src": "https://static.wixstatic.com/shapes/655690_08a54cc386ef4d68bb6a116a040f3576.svg"
+        },
+        "role": "CEO - Tiaras Col"
+      },
+      {
+        "description": "Isabella ya lo pasé a aprobación y les encantoooo… no hay que hacer ninguna corrección, ya me habían dicho que eres una tesa!",
+        "fullName": "Isabel",
+        "id": 8,
+        "image": {
+          "alt": "review-avatar-8",
+          "src": "https://static.wixstatic.com/shapes/655690_50c66d9b3aea443fa01217b0a52ce1ff.svg"
+        },
+        "role": "Campaign Manager"
+      },
+      {
+        "description": "Isaaaa, nos encantó, hermoso como siempre! Lo amé y súper la idea del picnic. Ya lo quiero publicar.",
+        "fullName": "Manuela",
+        "id": 9,
+        "image": {
+          "alt": "review-avatar-9",
+          "src": "https://static.wixstatic.com/shapes/655690_09783a74717e4cf8ba05de9073549c35.svg"
+        },
+        "role": "CEO - Vikinitos restaurante"
+      },
+      {
+        "description": "Ufffff quedó re geniaaaaaaaal! Nos gustó mucho.",
+        "fullName": "Emmanuel",
+        "id": 10,
+        "image": {
+          "alt": "review-avatar-10",
+          "src": "https://static.wixstatic.com/shapes/655690_b8ba943be48d4b5a9aa47e4443930c42.svg"
+        },
+        "role": "CEO - Nutriyogo"
+      },
+      {
+        "description": "Uyyyyyy Isaaaaaa wowwww eso era lo que queríamos, espectacular la verdad! Que buen trabajo, cumplió con todas las expectativas",
+        "fullName": "Manuela",
+        "id": 11,
+        "image": {
+          "alt": "review-avatar-11",
+          "src": "https://static.wixstatic.com/shapes/655690_24acd0e1ca3146a9be0479691d07dcbf.svg"
+        },
+        "role": "CEO - Leavid"
+      },
+      {
+        "description": "¡Está brutal cómo siempre! Encantado el equipo jajajajja directo y conciso como lo buscábamos.",
+        "fullName": "José",
+        "id": 12,
+        "image": {
+          "alt": "review-avatar-12",
+          "src": "https://static.wixstatic.com/shapes/655690_11cfbc0cab7342ab936937d350d736ad.svg"
+        },
+        "role": "Marketing - Tibusands"
+      },
+      {
+        "description": "Gracias, enamorada de todo lo que haces, eres demasiado buena. Te felicito por tu trabajo.",
+        "fullName": "Karen",
+        "id": 13,
+        "image": {
+          "alt": "review-avatar-13",
+          "src": "https://static.wixstatic.com/shapes/655690_a06ffd190df74446b74a73179d05f2b9.svg"
+        },
+        "role": "CEO - Enkantada"
+      },
+      {
+        "description": "Excelente eres muy buena, gran trabajo la verdad, As always.",
+        "fullName": "Carlos",
+        "id": 14,
+        "image": {
+          "alt": "review-avatar-14",
+          "src": "https://static.wixstatic.com/shapes/655690_af6f308334d54827947d30905c404b20.svg"
+        },
+        "role": "Zenplug"
+      },
+      {
+        "description": "Acabo de tener reunión con la marca y tus videos van como un tiro, van genial de los que mejores van, me dijeron que te metiéramos como favorita.",
+        "fullName": "Mar",
+        "id": 15,
+        "image": {
+          "alt": "review-avatar-15",
+          "src": "https://static.wixstatic.com/shapes/655690_e91e3cbfe36e48a99b76826f9d8e19f6.svg"
+        },
+        "role": "España"
+      },
+      {
+        "description": "Ayyyy lo amé, de verdad. Me encantó, gracias!",
+        "fullName": "Manuela",
+        "id": 16,
+        "image": {
+          "alt": "review-avatar-16",
+          "src": "https://static.wixstatic.com/shapes/655690_50c66d9b3aea443fa01217b0a52ce1ff.svg"
+        },
+        "role": "CEO - Mg Polania shoes"
+      }
+    ]
+  },
+  "POST": {
+    "data": {
+      "id": 3,
+      "rating": 5,
+      "comment": "New review added",
+      "user": "NewUser"
+    }
+  }
+}

@@ -1,8 +1,17 @@
+import { Environment } from "../enums/environment";
+import { getMockData } from "../utils/mock-data";
+
 const apiService = () => {
   const POST = async (path: string, payload: any) => {
+    const method = "POST";
+
+    if (process.env.NODE_ENV === Environment.DEVELOPMENT) {
+      return getMockData(path, method, payload);
+    }
+
     try {
       const response = await fetch(`/api/${path}`, {
-        method: "POST",
+        method,
         headers: {
           "Content-Type": "application/json",
         },
@@ -19,6 +28,12 @@ const apiService = () => {
   };
 
   const GET = async (path: string) => {
+    const method = "GET";
+
+    if (process.env.NODE_ENV === Environment.DEVELOPMENT) {
+      return getMockData(path, method);
+    }
+
     try {
       const response = await fetch(`/api/${path}`, {
         next: { revalidate: 24 * 60 * 60 * 7 },
