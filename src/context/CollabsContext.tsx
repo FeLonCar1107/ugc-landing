@@ -27,7 +27,6 @@ export const CollabsProvider = ({ children }: { children: ReactNode }) => {
     const fetchCollabs = async () => {
       try {
         const data = await apiService.GET("collabs");
-        console.log("Collabs data:", data);
         setBrands(data.brands);
         setTotalBrands(data.totalBrands);
         const root = document.documentElement;

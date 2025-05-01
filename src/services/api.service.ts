@@ -5,10 +5,6 @@ const apiService = () => {
   const POST = async (path: string, payload: any) => {
     const method = "POST";
 
-    if (process.env.NODE_ENV === Environment.DEVELOPMENT) {
-      return getMockData(path, method, payload);
-    }
-
     try {
       const response = await fetch(`/api/${path}`, {
         method,
@@ -31,6 +27,7 @@ const apiService = () => {
     const method = "GET";
 
     if (process.env.NODE_ENV === Environment.DEVELOPMENT) {
+      console.log(`🚀 ~ Data from _mock_: ${path}`);
       return getMockData(path, method);
     }
 

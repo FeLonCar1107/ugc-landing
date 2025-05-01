@@ -3,227 +3,102 @@
     "data": {
       "brands": [
         {
-          "alt": "Abril",
+          "alt": "Trendy",
           "id": 1,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/abril-brand.png?alt=media&token=fe34a7e4-2ab2-40f9-b3c2-1b0214244f26"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/trendy.webp?alt=media&token=e3309cc1-c3ef-4d34-96fd-e1d7e68736fd"
         },
         {
-          "alt": "Acaitería",
+          "alt": "La Pocion",
           "id": 2,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/acai-brand.png?alt=media&token=1566350d-e8d0-48e7-a42f-df4a032eb31e"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/pocion.webp?alt=media&token=6c5226c3-368b-4353-a398-26c5f663e310"
         },
         {
-          "alt": "Almalu",
+          "alt": "Frisby",
           "id": 3,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/almalu-brand.png?alt=media&token=f60ba2cb-48e6-4c8a-adb7-3b6773ca82d5"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/frisby.webp?alt=media&token=c39296d0-52a3-48fa-8e26-c8471f62a1b8"
         },
         {
-          "alt": "Arena Shop",
+          "alt": "Jet",
           "id": 4,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/arenashop-brand.png?alt=media&token=4a781b35-0831-4f60-a051-5a4b1ee0acae"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/jet.webp?alt=media&token=9243f71c-6b36-449a-8b6c-e256dac848ba"
         },
         {
-          "alt": "Artesanamar",
+          "alt": "Infinitek Paris",
           "id": 5,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/artesanamar-brand.png?alt=media&token=c46c497a-5561-4c19-b75d-3b63b2605739"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/infinitekparis.webp?alt=media&token=d0a0e79d-46b8-4d7d-ab74-6c066540a8e0"
         },
         {
-          "alt": "Breyli",
+          "alt": "Sedal",
           "id": 6,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/breyli-brand.png?alt=media&token=e78e6aa2-89f8-4ea9-943e-29c1d879c2c4"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/sedal.webp?alt=media&token=8fb105c7-07db-4460-ae2e-1a3049bc1b7d"
         },
         {
-          "alt": "Chocobella",
+          "alt": "Postobon",
           "id": 7,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/chocobella-brand.png?alt=media&token=4e72632c-6035-41c8-b32a-b31435d99668"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/postobon.webp?alt=media&token=b507d96a-06ca-4b07-b77e-fd8a57bfedeb"
         },
         {
-          "alt": "Cleo",
+          "alt": "Kotex",
           "id": 8,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cleo-brand.png?alt=media&token=b75ce5b5-79a8-4e9e-828e-04c0a4803c78"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/kotex.webp?alt=media&token=337db2bb-ed3c-4543-8dc9-08345d9e9f77"
         },
         {
-          "alt": "Conectividad Emocional",
+          "alt": "Zenplug",
           "id": 9,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/conectividademocional-brand.png?alt=media&token=6993cc4a-7309-4823-b919-ceb71b50c8e8"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/zenplug.webp?alt=media&token=f0834272-fc00-4ece-a185-1866e178370d"
         },
         {
           "alt": "Cruz Verde",
           "id": 10,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cruzverde-brand.png?alt=media&token=3a9630a1-90ee-49d1-b4fd-9f51a6266a2b"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cruzverde.webp?alt=media&token=d606ca2d-598d-47e4-8c5b-e1c3913b9ba4"
         },
         {
-          "alt": "Delicias M&M",
+          "alt": "Normandy",
           "id": 11,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/deliciasmym-brand.png?alt=media&token=f240ef6c-b226-4fcc-9464-d2efc6b4b245"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/normandy.webp?alt=media&token=37185bfc-4991-4b5c-ad29-a004df8df5ac"
         },
         {
-          "alt": "Garrudos",
+          "alt": "I love Pinch",
           "id": 12,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/garrudos-brand.png?alt=media&token=bd06b544-9b38-4dd2-999a-5729fed36f21"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ilovepinch.webp?alt=media&token=6aa4ad1a-9fd5-40b3-ae57-7bf3e7463947"
         },
         {
-          "alt": "Glamboutique",
+          "alt": "Olé Capilar",
           "id": 13,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/glamboutique-brand.png?alt=media&token=674d0495-f080-4073-9156-1368c18648b1"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/olecapilar.webp?alt=media&token=28b5f0d8-d466-4b90-8291-0d1df265a1e5"
         },
         {
-          "alt": "Globus Arte",
+          "alt": "Noel",
           "id": 14,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/globusarte-brand.png?alt=media&token=8818bb28-42d8-4177-9942-9dfcf9f3f97a"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/noel.webp?alt=media&token=3899c4e3-f815-42e0-b7e3-d9e99d18262c"
         },
         {
-          "alt": "Harika",
+          "alt": "Croydon",
           "id": 15,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/harika-brand.png?alt=media&token=e18af56a-73bf-43c7-8a94-4d55761d794e"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/croydon.webp?alt=media&token=ff92cbb4-bb26-4ed1-8932-94c5cdaab8d9"
         },
         {
           "alt": "Hibeauty",
           "id": 16,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hibeauty-brand.png?alt=media&token=53154798-221e-4d72-892e-869cc932550d"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hibeauty.webp?alt=media&token=6c2cdede-5bfc-45c7-8e34-fff98248b3b3"
         },
         {
-          "alt": "Hip Universo Estampado",
+          "alt": "Oriflame",
           "id": 17,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hipuniversoestampado-brand.png?alt=media&token=a2d0c0ae-114d-4046-baf1-043a8376e061"
-        },
-        {
-          "alt": "I Love Pinch",
-          "id": 18,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ilovepinch-brand.png?alt=media&token=045dec5e-a2f3-47fc-a4d6-23795d4e452b"
-        },
-        {
-          "alt": "Karen's Cosmetics",
-          "id": 19,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/karenscosmetics-brand.png?alt=media&token=dd46d298-d9f2-4454-a526-4f08fbf0c1ee"
-        },
-        {
-          "alt": "Leavid",
-          "id": 20,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/leavid-brand.png?alt=media&token=3eaa3cc2-fdfd-4987-9f05-638e86909f1e"
-        },
-        {
-          "alt": "Lemon Sweet",
-          "id": 21,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/lemonsweet-brand.png?alt=media&token=5aa82d03-95d9-447f-88bf-262ecbce38c0"
-        },
-        {
-          "alt": "Mageia",
-          "id": 22,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mageia-brand.png?alt=media&token=a91c1dc2-4454-4c65-af8a-0edbd40b44ae"
-        },
-        {
-          "alt": "Magie",
-          "id": 23,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/magie-brand.png?alt=media&token=1f30292c-b078-43fe-882c-c9c0c479024d"
-        },
-        {
-          "alt": "María Ortiz SPA",
-          "id": 24,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mariaortiz-bland.png?alt=media&token=78c5b013-fdb6-4225-ad49-6539dd7821e2"
-        },
-        {
-          "alt": "Mg Polania",
-          "id": 25,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mgpolania-brand.png?alt=media&token=fa0a633a-8855-4c7b-9dd1-8daaab728de9"
-        },
-        {
-          "alt": "Mila",
-          "id": 26,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/mila-brand.png?alt=media&token=d27ca2d6-afa2-44ef-8645-de2c8d249b9f"
-        },
-        {
-          "alt": "Notco",
-          "id": 27,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/notco-brand.png?alt=media&token=b45fe2c5-e27d-4dd1-a62a-1bcc459880cd"
-        },
-        {
-          "alt": "Nutriyogo",
-          "id": 28,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/nutriyogo-brand.png?alt=media&token=1554d626-bca3-46d2-b46c-12ef9923d30d"
-        },
-        {
-          "alt": "Oh lala",
-          "id": 29,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ohlala-brand.png?alt=media&token=122e5962-650c-4b18-adeb-bfef58b2ee32"
-        },
-        {
-          "alt": "Planet Cocteils",
-          "id": 30,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/planetcocteils-brand.png?alt=media&token=eae9bbe5-2ae6-4e7a-a0e4-a9560bd7358e"
-        },
-        {
-          "alt": "Puerta Negra",
-          "id": 31,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/puertanegra-brand.png?alt=media&token=e46e4794-2185-4a1a-b110-5a90b6caf7b5"
-        },
-        {
-          "alt": "Quohotel",
-          "id": 32,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/quohotel-brand.png?alt=media&token=2cd862c1-a777-47fb-a499-b7ca201edddd"
-        },
-        {
-          "alt": "Qura",
-          "id": 33,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/qura-brand.png?alt=media&token=855b931b-26b7-4024-a991-107bbbfe15a3"
-        },
-        {
-          "alt": "Renewal",
-          "id": 34,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/renewal-brand.png?alt=media&token=45678db0-6b92-4d68-be2e-17fb1385a5c3"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/oriflame.webp?alt=media&token=7b8139b8-21be-4fbe-bdaa-a632f284d135"
         },
         {
           "alt": "Ruby Rose",
-          "id": 35,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/rubyrose-brand.png?alt=media&token=9265cf2b-e8f9-42ec-b9ce-20b1791b3916"
+          "id": 18,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/rubyrose.webp?alt=media&token=39767612-6639-481b-8aed-812bd1bb3d7c"
         },
         {
-          "alt": "Small Cakes",
-          "id": 36,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/smallcakes-brand.png?alt=media&token=d89bd404-1c5e-4fb3-9856-e1f681425f07"
-        },
-        {
-          "alt": "Smart Gym",
-          "id": 37,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/smartgym-brand.png?alt=media&token=6faed36b-4e45-4713-9290-61843397f3a6"
-        },
-        {
-          "alt": "Tiaras",
-          "id": 38,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/tiaras-brand.png?alt=media&token=bf22f95c-9770-42b8-b386-c619ffddea7b"
-        },
-        {
-          "alt": "Tibusand",
-          "id": 39,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/tibusand-brand.png?alt=media&token=2b871ff2-5d2c-4130-a833-96a554dc715d"
-        },
-        {
-          "alt": "Valen Brown",
-          "id": 40,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/valenbrown-brand.png?alt=media&token=29740da7-bd6e-4208-af92-949cb678403a"
-        },
-        {
-          "alt": "Vera Accesorios",
-          "id": 41,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/veraaccesorios-brand.png?alt=media&token=ef34f257-4684-49a8-a47a-89dd96768fdf"
-        },
-        {
-          "alt": "Vikinitos",
-          "id": 42,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/vikinitos-brand.png?alt=media&token=e2acacca-e8c5-4995-9236-4f5479c563ba"
-        },
-        {
-          "alt": "With Love",
-          "id": 43,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/withlove-brand.png?alt=media&token=aa3100bb-1754-481e-ad52-997389e0a492"
-        },
-        {
-          "alt": "Zenplug",
-          "id": 44,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/zenplug-brand.png?alt=media&token=da25d39b-4257-4706-9307-bdc22e12fd26"
+          "alt": "Ponto",
+          "id": 19,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ponto.webp?alt=media&token=f30ea8a9-bc0f-420a-940a-b01ab58f222f"
         }
       ],
-      "totalBrands": 44
+      "totalBrands": 100
     }
   },
   "POST": {
