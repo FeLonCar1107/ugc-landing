@@ -5,97 +5,92 @@
         {
           "alt": "Trendy",
           "id": 1,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/trendy.webp?alt=media&token=e3309cc1-c3ef-4d34-96fd-e1d7e68736fd"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/trendy.png?alt=media&token=14e6ae21-54ca-4fcd-a51d-6b0b3fbcabe4"
         },
         {
           "alt": "La Pocion",
           "id": 2,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/pocion.webp?alt=media&token=6c5226c3-368b-4353-a398-26c5f663e310"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/pocion.png?alt=media&token=dc794e7c-4f3d-43e4-a2b1-28afcec1ceb5"
         },
         {
           "alt": "Frisby",
           "id": 3,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/frisby.webp?alt=media&token=c39296d0-52a3-48fa-8e26-c8471f62a1b8"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/frisby.png?alt=media&token=129cc728-a4eb-40b4-a9f3-49a44c4fb938"
         },
         {
           "alt": "Jet",
           "id": 4,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/jet.webp?alt=media&token=9243f71c-6b36-449a-8b6c-e256dac848ba"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/jet.png?alt=media&token=401e2844-3686-4d49-9aa8-13fe948bec37"
         },
         {
           "alt": "Infinitek Paris",
           "id": 5,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/infinitekparis.webp?alt=media&token=d0a0e79d-46b8-4d7d-ab74-6c066540a8e0"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/infinitekparis.png?alt=media&token=8a94b690-c55b-428b-8d76-4f67da5f86f1"
         },
         {
           "alt": "Sedal",
           "id": 6,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/sedal.webp?alt=media&token=8fb105c7-07db-4460-ae2e-1a3049bc1b7d"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/sedal.png?alt=media&token=33b6a293-5b7f-45c9-98a3-108975de8991"
         },
         {
           "alt": "Postobon",
           "id": 7,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/postobon.webp?alt=media&token=b507d96a-06ca-4b07-b77e-fd8a57bfedeb"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/postobon.png?alt=media&token=c519ec6c-d5dd-4b82-8d3c-52a6a442fce7"
         },
         {
           "alt": "Kotex",
           "id": 8,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/kotex.webp?alt=media&token=337db2bb-ed3c-4543-8dc9-08345d9e9f77"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/kotex.png?alt=media&token=35cb3d97-4312-4e7e-95d7-2a6a28a395ee"
         },
         {
           "alt": "Zenplug",
           "id": 9,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/zenplug.webp?alt=media&token=f0834272-fc00-4ece-a185-1866e178370d"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/zenplug.png?alt=media&token=4babc537-1b29-4894-84b6-a3861fbf883a"
         },
         {
           "alt": "Cruz Verde",
           "id": 10,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cruzverde.webp?alt=media&token=d606ca2d-598d-47e4-8c5b-e1c3913b9ba4"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/cruzverde.png?alt=media&token=93406712-d5c0-467d-a2c6-c642f50b184b"
         },
         {
           "alt": "Normandy",
           "id": 11,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/normandy.webp?alt=media&token=37185bfc-4991-4b5c-ad29-a004df8df5ac"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/normandy.png?alt=media&token=3878133e-cd51-4647-8588-781d4afe84be"
         },
         {
           "alt": "I love Pinch",
           "id": 12,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ilovepinch.webp?alt=media&token=6aa4ad1a-9fd5-40b3-ae57-7bf3e7463947"
-        },
-        {
-          "alt": "Olé Capilar",
-          "id": 13,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/olecapilar.webp?alt=media&token=28b5f0d8-d466-4b90-8291-0d1df265a1e5"
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ilovepinch.png?alt=media&token=5a269b22-1c58-48ed-adb1-cf89dc6977fd"
         },
         {
           "alt": "Noel",
-          "id": 14,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/noel.webp?alt=media&token=3899c4e3-f815-42e0-b7e3-d9e99d18262c"
+          "id": 13,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/noel.png?alt=media&token=5631b250-3e3a-4e6e-af5a-12369cd5d864"
         },
         {
           "alt": "Croydon",
-          "id": 15,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/croydon.webp?alt=media&token=ff92cbb4-bb26-4ed1-8932-94c5cdaab8d9"
+          "id": 14,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/croydon.png?alt=media&token=f38f2ea6-92c9-43ed-a12f-7c491ee13b8f"
         },
         {
           "alt": "Hibeauty",
-          "id": 16,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hibeauty.webp?alt=media&token=6c2cdede-5bfc-45c7-8e34-fff98248b3b3"
+          "id": 15,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/hibeauty.png?alt=media&token=4db3f32c-2cfe-44b4-8fd4-c907474b9f9f"
         },
         {
           "alt": "Oriflame",
-          "id": 17,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/oriflame.webp?alt=media&token=7b8139b8-21be-4fbe-bdaa-a632f284d135"
+          "id": 16,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/oriflame.png?alt=media&token=1a2b6d86-5fd9-4a71-bb20-9cc4a159f616"
         },
         {
           "alt": "Ruby Rose",
-          "id": 18,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/rubyrose.webp?alt=media&token=39767612-6639-481b-8aed-812bd1bb3d7c"
+          "id": 17,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/rubyrose.png?alt=media&token=6f2f290b-3f65-4a0d-bafa-0f0178e73299"
         },
         {
           "alt": "Ponto",
-          "id": 19,
-          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ponto.webp?alt=media&token=f30ea8a9-bc0f-420a-940a-b01ab58f222f"
+          "id": 18,
+          "logo": "https://firebasestorage.googleapis.com/v0/b/ila-web-page.appspot.com/o/ponto.png?alt=media&token=60c518a5-e328-4768-8404-5e44c8a7c5a7"
         }
       ],
       "totalBrands": 100

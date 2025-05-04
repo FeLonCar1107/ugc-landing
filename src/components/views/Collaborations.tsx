@@ -7,6 +7,9 @@ export default function Collaborations(props: ICollaborationsProps) {
   const { splitTitle, content } = props;
   const { brands, isLoading } = useCollabs();
 
+  const sortedBrands = [...brands].sort((a, b) => a.id - b.id);
+  const doubledBrands = [...sortedBrands, ...sortedBrands, ...sortedBrands];
+
   return (
     <section
       data-scroll-section
@@ -54,8 +57,11 @@ export default function Collaborations(props: ICollaborationsProps) {
       ) : (
         <div className="collaborations-slider z-30">
           <div className="collaborations-slider-track">
-            {brands?.map((brand: IBrand) => (
-              <div key={brand.id} className="collaborations-slider-brand">
+            {doubledBrands?.map((brand: IBrand, idx: number) => (
+              <div
+                key={brand.id + "-" + idx}
+                className="collaborations-slider-brand"
+              >
                 <div className="brand relative">
                   <Image
                     src={brand.logo}
