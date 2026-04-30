@@ -39,3 +39,10 @@ next-env.d.ts
 # IDE
 /.vscode
 .qodo
+
+# AI Launch System (managed)
+agent-launch-core/
+.cursor/commands/launch-core-*.md
+.claude/commands/launch-core-*.md
+.opencode/commands/launch-core-*.md
+# End AI Launch System

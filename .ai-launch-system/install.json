@@ -1,0 +1,9 @@
+{
+  "version": "0.1.0",
+  "providers": [
+    "cursor",
+    "claude",
+    "opencode"
+  ],
+  "updatedAt": "2026-04-30T21:06:59.908Z"
+}
