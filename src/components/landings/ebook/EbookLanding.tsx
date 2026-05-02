@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
-import { montserrat, playfairDisplay } from "@/app/ui/fonts";
+import { montserrat } from "@/app/ui/fonts";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import FaqAccordion from "./FaqAccordion";
 import {
@@ -11,6 +11,10 @@ import {
   ScrollRevealStaggerUl,
 } from "./ScrollReveal";
 import StickyLaunchCta from "./StickyLaunchCta";
+
+/** Titulares de sección: peso + tracking; el texto respeta mayúsculas/minúsculas del copy (JSON). */
+const sectionBandHeading =
+  "font-semibold tracking-tighter text-[clamp(1.125rem,3.5vw,1.875rem)] leading-tight text-[#131212] md:text-[clamp(1.375rem,3vw,2.375rem)]";
 
 /** Filenames expected under `assetBase` (mirror `discover-your-character` or swap files keeping names). */
 const IMAGE_SLOTS = {
@@ -119,7 +123,9 @@ export default function EbookLanding({
     priceUsd.trim().length > 0 ? `$${priceUsd} USD` : copy.offer.priceHint;
 
   return (
-    <div className="relative min-h-screen bg-[#F8F7F4] text-[#131212]">
+    <div
+      className={`relative min-h-screen tracking-tight bg-[#F8F7F4] text-[#131212] ${montserrat.className}`}
+    >
       <StickyLaunchCta
         label={copy.hero.cta}
         href={checkoutUrl}
@@ -128,11 +134,11 @@ export default function EbookLanding({
 
       {/* Hero — grid stacks title + copy; portrait is absolute in right rail (overlap + height = copy column) */}
       <section className="relative overflow-x-clip overflow-y-visible bg-gradient-to-b from-[#ffe8f4]/40 to-[#F8F7F4] py-[clamp(3rem,8vw,5.5rem)] px-[clamp(1.25rem,8vw,6rem)] text-black">
-        <div className={`relative z-10 mx-auto w-full max-w-[76rem] ${montserrat.className}`}>
+        <div className="relative z-10 mx-auto w-full max-w-[76rem]">
           {/* Eyebrow stays outside the hero grid so md:row-start-2 still targets the row below the H1 */}
           {copy.hero.eyebrow.trim().length > 0 ? (
             <ScrollReveal className="block" y={14} duration={0.55}>
-              <p className="mb-[clamp(0.75rem,2vw,1rem)] text-center text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-[#e91e63] md:text-xs">
+              <p className="mb-1.5 text-center text-[0.6875rem] tracking-wide font-semibold uppercase text-[#e91e63] md:text-xs">
                 {copy.hero.eyebrow}
               </p>
             </ScrollReveal>
@@ -140,7 +146,7 @@ export default function EbookLanding({
 
           <ScrollRevealStagger className="relative mx-auto grid w-full max-w-4xl grid-cols-1 gap-y-0 md:grid-cols-[minmax(0,1fr)_minmax(232px,min(44%,300px))] md:items-stretch md:gap-x-0 md:gap-y-[clamp(1.25rem,3vw,2rem)] lg:gap-x-3">
             <ScrollRevealItem
-              className={`relative z-10 col-span-full m-0 max-w-none text-center text-pretty text-[clamp(2.25rem,5.5vw,3.75rem)] font-bold leading-[1.08] tracking-[-0.02em] text-black max-md:-mb-2 max-md:leading-[1.02] md:leading-[1.08] ${playfairDisplay.className}`}
+              className={`relative z-10 col-span-full m-0 max-w-none text-center text-pretty max-md:-mb-2 font-bold leading-[1.06] text-black text-3xl md:text-5xl tracking-tighter max-md:leading-[1.02] md:leading-[1.06]`}
             >
               <h1 className="m-0 max-w-none text-inherit">{copy.hero.productTitle}</h1>
             </ScrollRevealItem>
@@ -165,7 +171,7 @@ export default function EbookLanding({
             </ScrollRevealItem>
 
             <ScrollRevealItem className="relative z-10 flex min-w-0 flex-col gap-[clamp(0.875rem,2vw,1.125rem)] max-md:mt-14 md:col-start-1 md:row-start-2 md:mt-0 md:max-w-none md:pt-1 md:pl-24 md:-mr-10">
-              <h2 className="m-0 text-pretty text-[clamp(1.125rem,2.25vw,1.5rem)] font-bold leading-snug tracking-[-0.02em] text-black">
+              <h2 className="m-0 text-pretty text-[clamp(1.125rem,2.25vw,1.5rem)] font-semibold leading-snug text-black">
                 {copy.hero.headline}
               </h2>
               <p className="m-0 text-[clamp(0.9375rem,1.75vw,1.0625rem)] font-normal leading-relaxed text-black">
@@ -224,12 +230,10 @@ export default function EbookLanding({
       <section className="relative border-y border-[#131212]/10 bg-white/60 py-16">
         <div className="mx-auto max-w-6xl px-12">
           <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center">
-            <span className="rounded-full bg-[#ffb3d9]/35 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-[#131212]">
+            <span className="rounded-full bg-[#ffb3d9]/35 px-4 py-1 text-xs tracking-wide font-semibold uppercase text-[#131212]">
               {copy.problem.eyebrow}
             </span>
-            <h2 className="mt-6 text-3xl font-bold md:text-4xl">
-              {copy.problem.title}
-            </h2>
+            <h2 className={`mt-6 ${sectionBandHeading}`}>{copy.problem.title}</h2>
           </ScrollReveal>
           <ScrollRevealStagger className="grid gap-6 md:grid-cols-2">
             {copy.problem.cards.map((c, i) => (
@@ -257,7 +261,7 @@ export default function EbookLanding({
         <GrainOverlay />
         <div className="relative mx-auto max-w-6xl px-12">
           <ScrollReveal className="mb-10 flex flex-col items-center gap-4 md:flex-row md:justify-between">
-            <h2 className="text-center text-3xl font-bold md:text-left md:text-4xl">
+            <h2 className={`text-center md:text-left ${sectionBandHeading}`}>
               {copy.solution.title}
             </h2>
             <CheckoutLink
@@ -329,12 +333,10 @@ export default function EbookLanding({
       <section className="border-y border-[#131212]/10 bg-gradient-to-b from-[#ffe8f4]/40 to-[#F8F7F4] py-16">
         <div className="mx-auto max-w-6xl px-12">
           <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#ff62b4]">
+            <span className="text-xs tracking-wide font-bold uppercase text-[#ff62b4]">
               ★ {copy.proof.badge}
             </span>
-            <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-              {copy.proof.headline}
-            </h2>
+            <h2 className={`mt-4 ${sectionBandHeading}`}>{copy.proof.headline}</h2>
             <p className="mt-4 text-[#131212]/85">{copy.proof.intro}</p>
           </ScrollReveal>
 
@@ -349,7 +351,7 @@ export default function EbookLanding({
                     <span className="mt-3 text-sm font-bold text-[#ff62b4]">
                       {t.year}
                     </span>
-                    <span className="text-center text-xs font-semibold uppercase tracking-wide text-[#131212]/70">
+                    <span className="text-center text-xs font-semibold uppercase text-[#131212]/70">
                       {t.phase}
                     </span>
                   </div>
@@ -422,7 +424,7 @@ export default function EbookLanding({
         <div className="mx-auto max-w-6xl px-12">
           <ScrollRevealStagger className="grid gap-10 rounded-3xl border border-[#131212]/10 bg-white p-8 shadow-xl md:grid-cols-2 md:p-12">
             <ScrollRevealItem>
-              <h2 className="text-3xl font-bold">{copy.offer.title}</h2>
+              <h2 className={sectionBandHeading}>{copy.offer.title}</h2>
               <p className="mt-2 text-sm text-[#131212]/85">{copy.offer.subtitle}</p>
               <p className="mt-4 text-4xl font-black text-[#ff62b4]">{priceLine}</p>
               <CheckoutLink
@@ -467,7 +469,7 @@ export default function EbookLanding({
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ff62b4]/15 text-2xl">
                 💬
               </div>
-              <h2 className="text-3xl font-bold">{copy.faq.introTitle}</h2>
+              <h2 className={sectionBandHeading}>{copy.faq.introTitle}</h2>
               <p className="text-[#131212]/85">{copy.faq.introBody}</p>
               <CheckoutLink
                 href={checkoutUrl}
@@ -500,7 +502,9 @@ export default function EbookLanding({
         className="bg-[#131212] py-16 text-[#F8F7F4]"
       >
         <ScrollReveal className="mx-auto max-w-3xl px-12 text-center" y={22}>
-          <h2 className="text-3xl font-bold">{copy.close.headline}</h2>
+          <h2 className="max-w-[38ch] text-pretty text-3xl font-bold leading-snug md:text-4xl">
+            {copy.close.headline}
+          </h2>
           <p className="mt-4 text-lg text-[#F8F7F4]/85">{copy.close.body}</p>
           <CheckoutLink
             href={checkoutUrl}

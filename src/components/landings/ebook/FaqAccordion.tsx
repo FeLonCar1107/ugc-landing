@@ -28,7 +28,7 @@ export default function FaqAccordion({
                 {item.q}
               </span>
               <span
-                className="shrink-0 text-2xl font-light leading-none tracking-[-0.02em] text-[#ff62b4]"
+                className="shrink-0 text-2xl font-light leading-none tracking-tight text-[#ff62b4]"
                 aria-hidden
               >
                 {isOpen ? "−" : "+"}
