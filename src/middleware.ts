@@ -20,6 +20,15 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+
+  /** Static files under `public/` keep root URLs — do not prefix with locale. */
+  if (
+    pathname.startsWith("/launch-assets") ||
+    pathname.startsWith("/flags")
+  ) {
+    return NextResponse.next();
+  }
+
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}`) && pathname !== `/${locale}`,
   );
@@ -38,6 +47,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   // Matcher ignoring `/_next`, `/favicon.ico`, `/api`, `/sitemap.xml` and `/robots.txt`
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|launch-assets|flags).*)",
   ],
 };

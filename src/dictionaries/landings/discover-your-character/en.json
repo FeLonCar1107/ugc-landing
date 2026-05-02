@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "Discover your character — Saga for creators",
+    "description": "Ebook to define your visual identity and intentional content. Stop posting without direction."
+  },
+  "hero": {
+    "eyebrow": "Saga for creators",
+    "productTitle": "Discover your character",
+    "headline": "Discover your identity and become the protagonist of your content",
+    "subhead": "Stop creating without direction and start building content with intention and clarity. Give people a reason to remember you.",
+    "cta": "Start now ✨",
+    "imageAlt": "Isabella — lead visual placeholder",
+    "decorativeAlt": "Y2K collage style reference"
+  },
+  "problem": {
+    "eyebrow": "Sound familiar?",
+    "title": "When you post without a clear identity, effort doesn’t turn into outcomes",
+    "cards": [
+      {
+        "title": "You feel you don’t have enough followers",
+        "body": "Reach matters, but often the real issue is a message that doesn’t stand out."
+      },
+      {
+        "title": "You don’t know what to post",
+        "body": "You spend hours scrolling without a structure that tells you what to publish and why."
+      },
+      {
+        "title": "Everything feels saturated",
+        "body": "Constant comparison freezes you and your feed loses personality."
+      },
+      {
+        "title": "You’re unsure this is for you",
+        "body": "You want clarity without another generic course that ignores your voice."
+      }
+    ],
+    "cta": "I want clarity ✨"
+  },
+  "solution": {
+    "title": "What you’ll achieve with this ebook",
+    "giftHint": "Includes tactical bonuses to ship faster.",
+    "outcomes": [
+      {
+        "title": "Break limiting beliefs",
+        "body": "See the strategic mistakes keeping you stuck and how to exit autopilot."
+      },
+      {
+        "title": "Define visual identity with intent",
+        "body": "Clear steps so your content looks coherent and recognizable."
+      },
+      {
+        "title": "Content structures + retention",
+        "body": "Mental templates so every piece has a goal and direction."
+      },
+      {
+        "title": "A realistic monetization mindset",
+        "body": "From improvisation to a system you can repeat without relying only on \"motivation\"."
+      }
+    ],
+    "ctaTop": "See the offer ✨",
+    "ctaBottom": "Start now ✨",
+    "imageAlt": "Isabella — method applied in real content"
+  },
+  "proof": {
+    "badge": "My story",
+    "headline": "This system didn’t come from theory — it came from years of real content.",
+    "intro": "Before teaching it, I lived it: mistakes, pivots, and a method that finally organized my message and results.",
+    "timeline": [
+      {
+        "year": "2022",
+        "phase": "No direction",
+        "bullets": [
+          "Posting without a clear strategy",
+          "Copying trends without my own narrative",
+          "Feeling invisible in the feed"
+        ]
+      },
+      {
+        "year": "2023",
+        "phase": "Finding my style",
+        "bullets": [
+          "Testing formats and tones",
+          "Starting to hear my voice",
+          "Still missing full clarity"
+        ]
+      },
+      {
+        "year": "2024",
+        "phase": "Building the system",
+        "bullets": [
+          "Aligned mindset + identity + retention",
+          "More consistent output",
+          "Community began to reconnect"
+        ]
+      },
+      {
+        "year": "2025",
+        "phase": "Intentional content",
+        "bullets": [
+          "Clearer, more memorable message",
+          "Content aligned with conversion",
+          "More strategic decisions"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "title": "Everything included",
+    "subtitle": "Discover your character ebook + bonuses to execute.",
+    "priceHint": "USD price — set via environment.",
+    "bonusesTitle": "Included bonuses",
+    "bonuses": [
+      "Weekly content structure template",
+      "Content idea bank (30–50 ideas)",
+      "Visual identity moodboard guide",
+      "Simple routine to stay consistent"
+    ],
+    "cta": "Go to checkout ✨",
+    "supportNote": "Questions? Email us:",
+    "supportEmail": "soporteila@gmail.com"
+  },
+  "faq": {
+    "introTitle": "Frequently asked questions",
+    "introBody": "Quick answers before checkout. Need more detail? Reach out.",
+    "cta": "Start now ✨",
+    "items": [
+      {
+        "q": "What format is the ebook?",
+        "a": "It’s a digital product (PDF or the format defined by the purchase platform). You’ll get download instructions after payment."
+      },
+      {
+        "q": "Where do I buy and how do I get access?",
+        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s email/instructions."
+      },
+      {
+        "q": "Does it work if I have a small audience?",
+        "a": "Yes — the focus is identity clarity and content structure; that helps even with small audiences."
+      },
+      {
+        "q": "Is there a guarantee?",
+        "a": "Refund policy depends on the payment platform and applicable terms. Review it on the checkout page before buying."
+      },
+      {
+        "q": "Can I contact support?",
+        "a": "Yes — use the support email shown on the site if you need purchase help."
+      }
+    ]
+  },
+  "close": {
+    "headline": "Your personal brand needs direction — not more lost hours scrolling.",
+    "body": "If you’re ready to move from improvisation to a repeatable system, this ebook is written for you.",
+    "cta": "Start now ✨",
+    "footnote": "It’s not magic: focus + structure + action."
+  }
+}

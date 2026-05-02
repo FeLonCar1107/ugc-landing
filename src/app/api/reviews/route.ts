@@ -1,6 +1,8 @@
 import { database } from "@/utils/firebase";
 import { ref, child, get } from "firebase/database";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const dbRef = ref(database);

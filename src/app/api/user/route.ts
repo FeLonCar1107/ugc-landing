@@ -2,6 +2,8 @@ import { IInstagramUserResponse } from "@/types/responses/instagram-user";
 
 const ACCESS_TOKEN = process.env.INSTAGRAM_ACCESS_TOKEN;
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const url = `https://graph.instagram.com/me?fields=id,username,account_type,media_count,profile_picture_url&access_token=${ACCESS_TOKEN}`;

@@ -1,0 +1,191 @@
+{
+  "version": "1",
+  "landing": {
+    "id": "ldr_discover_your_character",
+    "name": "Descubre tu personaje",
+    "slug": "discover-your-character",
+    "status": "draft",
+    "sections": [
+      {
+        "id": "sec_hero",
+        "type": "hero",
+        "order": 0,
+        "content": {
+          "headline": "Descubre tu identidad y conviértete en la protagonista de tu contenido",
+          "subheadline": "Deja de crear sin rumbo y empieza a construir contenido con intención y claridad.",
+          "primaryCtaLabel": "Empezar ahora ✨",
+          "primaryCtaHref": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL",
+          "eyebrow": "Saga para creadoras"
+        }
+      },
+      {
+        "id": "sec_problem",
+        "type": "problem",
+        "order": 1,
+        "content": {
+          "title": "Cuando publicas sin identidad clara, el esfuerzo no se convierte en resultados",
+          "bullets": [
+            "No tengo seguidores suficientes",
+            "No sé qué contenido hacer",
+            "Siento que ya todo está saturado",
+            "No sé si esto realmente funcione para mí"
+          ]
+        }
+      },
+      {
+        "id": "sec_solution",
+        "type": "solution",
+        "order": 2,
+        "content": {
+          "title": "Lo que vas a lograr con este ebook",
+          "bullets": [
+            "Romper creencias que te frenan",
+            "Definir identidad visual con intención",
+            "Estructuras de contenido + retención",
+            "Enfoque de monetización realista"
+          ]
+        }
+      },
+      {
+        "id": "sec_proof",
+        "type": "social_proof",
+        "order": 3,
+        "content": {
+          "title": "Este sistema no salió de teoría: salió de años creando contenido real.",
+          "items": [
+            "Evolución documentada",
+            "Antes/después de contenido",
+            "Timeline 2022–2025"
+          ]
+        }
+      },
+      {
+        "id": "sec_offer",
+        "type": "offer_stack",
+        "order": 4,
+        "content": {
+          "bullets": [
+            "Plantilla estructura de contenido",
+            "Banco de ideas de contenido",
+            "Moodboard identidad visual",
+            "Rutina simple de creación"
+          ],
+          "checkoutUrl": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL",
+          "priceUsd": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_PRICE_USD"
+        }
+      },
+      {
+        "id": "sec_faq",
+        "type": "faq",
+        "order": 5,
+        "content": {
+          "intro": "Respuestas rápidas antes de entrar al checkout."
+        }
+      },
+      {
+        "id": "sec_close",
+        "type": "cta_band",
+        "order": 6,
+        "content": {
+          "headline": "Tu marca personal necesita dirección",
+          "ctaLabel": "Empezar ahora ✨",
+          "ctaHref": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL"
+        }
+      }
+    ],
+    "config": {
+      "theme": "light",
+      "sectionSpacing": "py-16",
+      "containerWidth": "max-w-6xl",
+      "visualMockups": [
+        {
+          "path": "launches/discover-your-character/assets/hero-wireframe-two-column.png",
+          "placement": "custom",
+          "alt": "Wireframe hero dos columnas"
+        },
+        {
+          "path": "launches/discover-your-character/assets/hero-composition-reference-external-landing.png",
+          "placement": "hero",
+          "alt": "Referencia composición hero"
+        },
+        {
+          "path": "launches/discover-your-character/assets/problem-wireframe-2x2-grid.png",
+          "placement": "custom",
+          "alt": "Wireframe problem grid"
+        },
+        {
+          "path": "launches/discover-your-character/assets/solution-wireframe-image-checklist-dual-cta.png",
+          "placement": "custom",
+          "alt": "Wireframe solution"
+        },
+        {
+          "path": "launches/discover-your-character/assets/proof-wireframe-timeline-four-years.png",
+          "placement": "custom",
+          "alt": "Wireframe proof timeline"
+        },
+        {
+          "path": "launches/discover-your-character/assets/faq-wireframe-intro-accordion.png",
+          "placement": "custom",
+          "alt": "Wireframe FAQ"
+        }
+      ]
+    }
+  },
+  "hooks": [
+    {
+      "id": "hook_sticky_cta_mobile",
+      "type": "sticky_cta",
+      "trigger": "scroll",
+      "triggerConfig": { "scrollPixels": 420 },
+      "action": {
+        "type": "navigate",
+        "payload": {
+          "href": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL"
+        }
+      }
+    },
+    {
+      "id": "hook_scroll_offer_emit",
+      "type": "inline",
+      "trigger": "scroll",
+      "triggerConfig": { "scrollPercent": 50 },
+      "action": {
+        "type": "emit_event",
+        "payload": { "name": "scroll_deep_offer_zone" }
+      }
+    }
+  ],
+  "leadMagnet": {
+    "enabled": false,
+    "notes": "Checkout-url-only funnel"
+  },
+  "offer": {
+    "mainCta": "Empezar ahora ✨",
+    "checkoutUrl": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL",
+    "currency": "USD",
+    "price": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_PRICE_USD"
+  },
+  "products": [
+    {
+      "id": "prd_discover_character_ebook",
+      "name": "Descubre tu personaje",
+      "price": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_PRICE_USD",
+      "currency": "USD",
+      "type": "one_time"
+    }
+  ],
+  "automations": [],
+  "tracking": {
+    "providers": ["analytics_web"],
+    "placeholders": {
+      "ANALYTICS_ID": "not-used",
+      "ADS_PIXEL_ID": "not-used"
+    },
+    "events": [
+      { "type": "page_view", "name": "landing_view" },
+      { "type": "click", "name": "cta_checkout_click" },
+      { "type": "conversion", "name": "purchase_success" }
+    ]
+  },
+  "experiments": []
+}

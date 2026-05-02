@@ -1,5 +1,7 @@
 import { IInstagramMediaResponse } from "@/types/responses/instagram-media";
 
+export const dynamic = "force-dynamic";
+
 const ACCESS_TOKEN = process.env.INSTAGRAM_ACCESS_TOKEN;
 
 interface ChildrenRes {
