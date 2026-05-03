@@ -27,6 +27,8 @@ const IMAGE_SLOTS = {
   solutionAchievementTrophy: "solution_achievement_trophy.png",
   solutionEbookHighlightOval: "solution_ebook_highlight_oval.png",
   faqAside: "faq_done.png",
+  /** Decorative heart beside closing CTA (`close_heart.png`). */
+  closeHeart: "close_heart.png",
 } as const;
 
 /** Per-year visuals in the proof timeline (`proof_timeline_2022.png` … matching `timeline[].year`). */
@@ -51,6 +53,9 @@ const SOLUTION_EBOOK_OVAL_INTRINSIC = { width: 367, height: 131 } as const;
 
 /** Intrinsic pixels of `IMAGE_SLOTS.proofHeadlineCamera`. */
 const PROOF_HEADLINE_CAMERA_INTRINSIC = { width: 848, height: 641 } as const;
+
+/** Intrinsic pixels of `IMAGE_SLOTS.closeHeart`. */
+const CLOSE_HEART_INTRINSIC = { width: 134, height: 251 } as const;
 
 /** Hero photo: Next/Image default quality (75) reads soft on hair/detail at this crop scale. */
 const HERO_IMAGE_QUALITY = 96;
@@ -644,12 +649,26 @@ export default function EbookLanding({
             {copy.close.headline}
           </h2>
           <p className="mt-4 text-lg text-[#F8F7F4]/85">{copy.close.body}</p>
-          <CheckoutLink
-            href={checkoutUrl}
-            className="mt-10 inline-flex rounded-full bg-[#ff62b4] px-10 py-4 text-lg font-semibold text-white"
-          >
-            {copy.close.cta}
-          </CheckoutLink>
+          <div className="mt-10 flex justify-center">
+            <div className="relative">
+              <CheckoutLink
+                href={checkoutUrl}
+                className="inline-flex rounded-full bg-[#ff62b4] px-10 py-4 text-lg font-semibold text-white"
+              >
+                {copy.close.cta}
+              </CheckoutLink>
+              <Image
+                src={asset(IMAGE_SLOTS.closeHeart)}
+                alt=""
+                width={CLOSE_HEART_INTRINSIC.width}
+                height={CLOSE_HEART_INTRINSIC.height}
+                className="pointer-events-none absolute left-full top-1/2 ml-4 h-[clamp(3rem,10vw,4.25rem)] w-auto max-w-none translate-x-10 translate-y-[calc(-50%-2.5rem)] rotate-12 object-contain mix-blend-screen opacity-[0.92] sm:ml-6"
+                sizes="(max-width: 640px) 18vw, 72px"
+                quality={100}
+                aria-hidden
+              />
+            </div>
+          </div>
           <p className="mt-10 text-sm text-[#F8F7F4]/55">{copy.close.footnote}</p>
         </ScrollReveal>
       </section>
