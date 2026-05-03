@@ -1,0 +1,39 @@
+---
+description: SDD agents — index, agents/ folder, global rule
+alwaysApply: true
+---
+
+# SDD system agents
+
+Each “agent” is a **cognitive role** the model assumes sequentially or as clearly separated segments in the same turn. Do not mix responsibilities: finish one role before taking the next. **Proposal and SDD trace Markdown are English-only**; chat may use another language (see `dev.mdc`).
+
+Per-role rules live in **`.cursor/rules/agents/`** (one `.mdc` per file; `alwaysApply: true` on all for the same global scope):
+
+| File | Contents |
+|------|----------|
+| `agents/orchestrators.mdc` | Slash ↔ conductors; Phase 1 `tasks.md` consolidation; refine / review modes |
+| `agents/product.mdc` | Product Agent |
+| `agents/spec.mdc` | Spec Agent (`spec.md` + YAML block) |
+| `agents/architect.mdc` | Architect Agent |
+| `agents/code.mdc` | Code Agent |
+| `agents/qa.mdc` | QA Agent |
+| `agents/test.mdc` | Test Hardening Agent (`/dev-test`; post-apply test implementation) |
+| `agents/verify.mdc` | Verification Agent (`/dev-verify`; coverage execution and quality gates) |
+| `agents/delivery.mdc` | **Delivery Agent** (`/dev-publish`; commit + push with Conventional Commits) |
+| `agents/archive.mdc` | **Archive Agent** (`/dev-archive`; minimal archive + proposal cleanup) |
+| `agents/workflow.mdc` | **Strict** command order and `workflow.json` |
+| `agents/bug-review.mdc` | **Bug Audit Agent** (`/dev-bug-review`; optional bug lane with proposal bootstrap) |
+
+**Phase 1 role order:** Product → Spec → Architect (see files under `agents/`). **Phase 2:** Code → QA/Test → Verify.
+
+**Slash command order (features):** `propose` → `refine` → `review` → `apply` → `test` → `verify`, with **`refine` ↔ `review`** loops allowed before `apply` (see `agents/workflow.mdc`).  
+**Bugfix entry (optional):** `bug-review` → then the same pattern ending in **`verify`**.  
+`/dev-guide`, `/dev-archive`, and `/dev-publish` remain optional side commands; for SDD-governed delivery use **`/dev-test` before `/dev-verify` before `/dev-archive` before `/dev-publish`**.
+
+---
+
+## Golden rule
+
+If the user has not run **`/dev-apply`** (or an explicit equivalent), no Phase 2 agent may create productive code or tests. When in doubt: **proposal or textual review only**. `/dev-bug-review` can bootstrap a bugfix proposal, but implementation still requires the gated path ending in **`/dev-apply`**.
+
+After every gated **`/dev-*`** conductor completion (and on STOP/order violations), include **`### Next step`** with the next **`/dev-*:{proposal-id}`** line per **`dev.mdc`** and **`agents/workflow.mdc`** cheat sheet.

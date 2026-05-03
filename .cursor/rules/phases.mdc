@@ -1,0 +1,173 @@
+---
+description: SDD phases — Proposal is Markdown only; app code (src/) on apply
+alwaysApply: true
+---
+
+# System phases (normative gates)
+
+This document defines **which artifacts** exist in each phase and **which actions are blocked**.
+
+---
+
+## PHASE 1 — PROPOSAL
+
+### Purpose
+
+Produce a **human-reviewable proposal**: product–spec–architecture–plan alignment, **as Markdown documentation only** (no code or tests).
+
+### Required output tree
+
+**Only `.md` files** under:
+
+```
+sdd-dev-system/generated/proposals/{proposal-id}/
+├── product.md
+├── spec.md          ← includes a fenced ```yaml block with the structured contract
+├── architecture.md
+└── tasks.md
+```
+
+Do not create standalone `.yaml` / `.yml` files or code folders in this phase.
+
+### Allowed agents
+
+- Product Agent → `product.md`
+- Spec Agent → `spec.md` (Markdown + internal YAML block)
+- Architect Agent → `architecture.md`
+- Consolidation → `tasks.md`
+
+### FORBIDDEN in Phase 1
+
+| Forbidden | Examples |
+|-----------|----------|
+| Application code | `.ts`, `.tsx`, `.js`, etc. under `src/`, `app/`, `packages/`, … |
+| Executable automated tests | `*.test.*`, `tests/**` with assertions |
+| App under `sdd-dev-system/generated/` | Any “productive” source under `sdd-dev-system/generated/implementations/**` |
+| Deployable build scripts | `Dockerfile`, pipelines, unless described as text without binaries |
+
+**Allowed:** pseudocode, diagrams, example payloads in Markdown, the YAML block **inside** `spec.md`.
+
+### Phase 1 exit criterion
+
+All **four** `.md` files exist and are coherent; critical `open_questions` are flagged as risk or resolved.
+
+---
+
+## PHASE 2 — IMPLEMENTATION
+
+### Purpose
+
+Materialize the proposal in the repository’s **real application tree** (code + tests), plus a **short report** in Markdown under `sdd-dev-system/generated/` when using the default trace path.
+
+### Single trigger
+
+Phase 2 **only** starts with **`/dev-apply`** + `{proposal-id}` when **command order** allows it (see `agents/workflow.mdc`: **`review` before `apply`** for both feature and bugfix tracks).
+
+### Strict order (summary)
+
+Do not generate **tests** or **code** in `src/` until **`/dev-apply`**.
+- Feature sequence: **`/dev-propose`** → **`/dev-refine`** → **`/dev-review`** → (optional **`/dev-refine` → `/dev-review`** repeats) → **`/dev-apply`** → **`/dev-test`** → **`/dev-verify`**.
+- Bugfix lane (after bootstrap): **`/dev-bug-review`** → then the same **`refine` ↔ `review`** pattern → **`/dev-apply`** → **`/dev-test`** → **`/dev-verify`**.
+Details and `workflow.json` in **`agents/workflow.mdc`**.
+
+### Where code goes (defaults)
+
+| Type | Default location |
+|------|------------------|
+| Application code | **`src/`** at workspace root |
+| Tests | **`tests/`** at workspace root |
+| Apply trace / notes | **`sdd-dev-system/generated/implementations/{implementation-id}/apply-notes.md`** (`.md` only) |
+
+`implementation-id` usually equals `proposal-id` or `{proposal-id}-vN`.
+
+If `architecture.md` defines another root (monorepo, `apps/foo`), **follow** that definition.
+
+### FORBIDDEN before the trigger
+
+- Create or modify **`src/`** (or another agreed app root) with productive intent without **`/dev-apply`**.
+- Use `sdd-dev-system/generated/implementations/.../code/` as the **default** destination (reserved for exceptions the user requests in writing).
+
+### FORBIDDEN during Phase 2 (quality)
+
+- Edit proposal `.md` files **without** recording the change in `apply-notes.md` (or the agreed channel) if implementation diverges from the spec.
+
+---
+
+## PHASE 1.5 — REFINE
+
+- Updates only the four proposal `.md` files.
+- **Do not** touch `src/` or `tests/` except under an explicit order separate from `/dev-apply`.
+
+## PHASE 1.7 — REVIEW
+
+- Optional but **recommended:** `sdd-dev-system/generated/proposals/{proposal-id}/review-notes.md` with actionable items tied to **`sdd-dev-system/generated/proposals/{proposal-id}/`** files and concrete locators (sections, YAML paths, task IDs).
+- After **`/dev-review`**, you may run **`/dev-refine`** to address feedback, then **`/dev-review`** again; **`/dev-apply`** only after a final **`review`** when you are satisfied.
+
+## PHASE 2.5 — TEST HARDENING
+
+- Triggered by **`/dev-test`** after `workflow.json` has reached **`apply`**.
+- Focuses on additional/updated automated tests for the implemented feature or bugfix.
+- Updates tests in the project test tree and appends **`test`** in `workflow.json`.
+- Produces/updates `sdd-dev-system/generated/implementations/{implementation-id}/apply-notes.md` with coverage, commands, results, and gaps.
+
+## PHASE 2.7 — VERIFICATION (COVERAGE GATE)
+
+- Triggered by **`/dev-verify`** after `workflow.json` has reached **`test`**.
+- Executes coverage commands and validates configured thresholds.
+- Appends **`verify`** in `workflow.json`.
+- Produces/updates `sdd-dev-system/generated/implementations/{implementation-id}/apply-notes.md` with coverage metrics and pass/fail verdict.
+
+---
+
+## OPTIONAL — BUG REVIEW (orthogonal)
+
+**Command:** **`/dev-bug-review`** (see `.cursor/commands/dev-bug-review.md`, **`agents/bug-review.mdc`**).
+
+- **Not required** for new-feature flow.
+- For bugfixes, it can **initialize proposal artifacts** and set bugfix track in `workflow.json`.
+- Optional trace: **`sdd-dev-system/generated/bugs/{bug-id}/bug-review-notes.md`** (Markdown; English per **`dev.mdc`**).
+
+---
+
+## OPTIONAL — PUBLISH TO ORIGIN (orthogonal)
+
+**Command:** **`/dev-publish`** (see `.cursor/commands/dev-publish.md`).
+
+- Optional operational step after implementation work.
+- **Requires prior archive** for the same `proposal-id` (`/dev-archive` first).
+- Commits current branch changes using **Conventional Commits** style and pushes to `origin`.
+- Does **not** mutate proposal `workflow.json`.
+
+---
+
+## OPTIONAL — ARCHIVE COMPLETED WORK (orthogonal)
+
+**Command:** **`/dev-archive`** (see `.cursor/commands/dev-archive.md`).
+
+- Optional operational cleanup after implementation is completed.
+- Requires proposal flow to have reached **`verify`**.
+- Writes a minimal file to **`sdd-dev-system/knowledge/archive/{proposal-id}.md`** and removes **`sdd-dev-system/generated/proposals/{proposal-id}/`** and related **`sdd-dev-system/generated/implementations/{implementation-id}`** folders for the same proposal.
+- Does **not** mutate `workflow.json` (the proposal folder is removed after archive write succeeds).
+- Must run **before** `/dev-publish` for SDD-governed delivery.
+
+---
+
+## Summary table
+
+| Phase | Command | Code / tests | `sdd-dev-system/generated/` |
+|-------|---------|--------------|--------------|
+| Proposal | `/dev-propose` | No | `proposals/.../*.md` + **`workflow.json`** |
+| Refine | `/dev-refine` | No | Updates MD + `workflow.json` (`refine`) |
+| Review | `/dev-review` | No | Optional `review-notes.md` + `workflow.json` (`review`) |
+| Implementation | `/dev-apply` | Yes under **`src/`** (+ baseline tests as needed) | `implementations/.../apply-notes.md` + `workflow.json` (`apply`) |
+| Test hardening | `/dev-test` | Yes in **`tests/`** (and minimal fixes in `src/` only if tests expose defects) | `implementations/.../apply-notes.md` + `workflow.json` (`test`) |
+| Verification | `/dev-verify` | Executes coverage + validates thresholds (minimal corrective changes only if explicitly requested) | `implementations/.../apply-notes.md` + `workflow.json` (`verify`) |
+| Bug audit + bootstrap (optional) | `/dev-bug-review` | No | Optional `sdd-dev-system/generated/bugs/{bug-id}/bug-review-notes.md` + optional proposal bootstrap under `sdd-dev-system/generated/proposals/{proposal-id}/` |
+| Archive completed work (optional) | `/dev-archive` | No new code by itself | Minimal `sdd-dev-system/knowledge/archive/{proposal-id}.md` + delete `sdd-dev-system/generated/proposals/{proposal-id}/` and related `sdd-dev-system/generated/implementations/*` traces |
+| Publish to origin (optional) | `/dev-publish` | No new code by itself | Git commit + push on current branch; requires archive for same proposal-id |
+
+---
+
+## Standard message if the user asks for code before Phase 2
+
+> Implementation goes to **`src/`** / **`tests/`** only after **`/dev-apply`**, and **`/dev-apply`** requires **`review`** to be recorded in `workflow.json` before **`apply`** (same for feature and bugfix tracks). After apply, run **`/dev-test`** and then **`/dev-verify`** before archive/publish. If a step is missing, state the correct command. If there is no proposal yet, run **`/dev-propose`** first (features) or **`/dev-bug-review`** first (bugfix bootstrap).

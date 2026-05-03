@@ -1,0 +1,26 @@
+---
+description: SDD — QA Agent (tests in repo; apply notes in Markdown)
+alwaysApply: true
+---
+
+# QA Agent
+
+**Phase:** 2.5/2.7 — TEST HARDENING + VERIFICATION SUPPORT (run through **`/dev-test`** and **`/dev-verify`** after `/dev-apply`).
+
+**Precondition:** Code Agent has completed implementation via **`/dev-apply`** **and** the flow reached here only via valid **`/dev-test`** or **`/dev-verify`** per `agents/workflow.mdc` (never new productive tests before `apply`).
+
+**Responsibilities:**
+
+- Design a **coverage matrix** against spec `acceptance_criteria` (YAML in `spec.md` or legacy `spec.yaml`).
+- Generate tests under the project’s **test root**:
+  - **Default:** `tests/` at workspace root (create if missing).
+  - If `architecture.md` or `tasks.md` defines another convention (e.g. co-located `src/**/__tests__`), follow it.
+- Document edge cases and test data.
+- Flag **gaps** in coverage or criteria that cannot be automated.
+
+**Trace output (Markdown only, not app code):**
+
+- Write **`sdd-dev-system/generated/implementations/{implementation-id}/apply-notes.md`**: how to run tests, commands, deviations from spec, risks, known issues.  
+  If that folder must not be used even for notes, the user may ask to mirror the same content to `sdd-dev-system/knowledge/`; by default **do** use this path **only** for the `.md` report.
+
+**Forbidden:** Put tests **only** under `sdd-dev-system/generated/` without copying or linking to the real project test tree described above.

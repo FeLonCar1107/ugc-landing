@@ -1,0 +1,51 @@
+---
+description: SDD — slash conductors, Phase 1 consolidation, refine/review modes
+alwaysApply: true
+---
+
+# Slash conductors and Phase 1 orchestration
+
+_Agent rule pack location: `.cursor/rules/agents/`._
+
+## Slash commands ↔ conductor agent
+
+Each command in `.cursor/commands/` has **one conductor agent**: the primary identity the model must adopt **for that turn**. The conductor **orchestrates** domain agents (Product, Spec, Architect, Code, QA, Verify); it does not replace them.
+
+There are no separate processes in Cursor: it is **one conversation** with an explicit identity and a sequence of roles.
+
+| Command | Conductor agent | Invokes (order) |
+|---------|-----------------|-----------------|
+| `/dev-propose` | **Proposal Orchestrator Agent** | Product Agent → Spec Agent → Architect Agent → `tasks.md` consolidation |
+| `/dev-apply` | **Implementation Orchestrator Agent** | Code Agent |
+| `/dev-refine` | **Refinement Orchestrator Agent** | Product → Spec → Architect (on an existing proposal; focus on gaps) |
+| `/dev-review` | **Proposal Audit Agent** | No proposal write pipeline; read-only + verdict |
+| `/dev-test` | **Test Hardening Agent** | QA Agent (post-apply test expansion and hardening) |
+| `/dev-verify` | **Verification Agent** | Verify Agent (coverage execution and thresholds) |
+| `/dev-bug-review` | **Bug Audit Agent** | Defect triage + bugfix proposal bootstrap (`sdd-dev-system/generated/proposals/{proposal-id}/...`) and optional `sdd-dev-system/generated/bugs/{bug-id}/bug-review-notes.md` |
+| `/dev-archive` | **Archive Agent** | Write minimal archive to `sdd-dev-system/knowledge/archive/` and remove completed `sdd-dev-system/generated/proposals/{proposal-id}/` |
+| `/dev-publish` | **Delivery Agent** | Commit current changes with Conventional Commits message and push current branch to `origin` (requires prior `/dev-archive` for same proposal-id) |
+| `/dev-guide` | **SDD Guide Agent** | None; explains methodology and commands (does not write proposals or code) |
+
+**Product**, **Spec**, **Architect**, **Code**, and **QA** are specialized roles defined in **`product.mdc`**, **`spec.mdc`**, **`architect.mdc`**, **`code.mdc`**, and **`qa.mdc`** (this folder). **Orchestrator / Audit / Guide** are the conductors tied to the slash command the user chose.
+
+---
+
+## Output consolidation — Phase 1 (Proposal Orchestrator)
+
+After running the three domain agents in order, the **Proposal Orchestrator** consolidates disk output:
+
+- `sdd-dev-system/generated/proposals/{id}/product.md`
+- `sdd-dev-system/generated/proposals/{id}/spec.md` (Markdown; structured YAML in a fenced block)
+- `sdd-dev-system/generated/proposals/{id}/architecture.md`
+- `sdd-dev-system/generated/proposals/{id}/tasks.md` — breakdown of **future implementation** tasks; each item verifiable; still no code.
+- `sdd-dev-system/generated/proposals/{id}/workflow.json` — command-order state; when **propose** finishes, write `{ "proposal_id": "<id>", "track": "feature", "steps": ["propose"] }` (see `workflow.mdc`). For bugfix bootstrap, **`/dev-bug-review`** sets `track: "bugfix"`.
+
+---
+
+## Auxiliary modes (refine vs audit)
+
+| Mode / command | Behavior |
+|----------------|----------|
+| **`/dev-refine`** | Re-run mainly Product + Spec + Architect on the same `{proposal-id}`; may follow **`/dev-review`** to apply cited edits (still no code/tests). |
+| **`/dev-review`** | **Proposal Audit Agent** role: quality, risks, consistency; **Improvements** and **Questions** must cite **`sdd-dev-system/generated/proposals/{proposal-id}/`** paths plus headings/YAML keys/task IDs. Emit verdict (`READY_FOR_APPLY`, `CHANGES_RECOMMENDED_NON_BLOCKING`, `CHANGES_REQUIRED_BLOCKING`) and guide next step accordingly; **do not** implement except under an explicit request separate from **`/dev-apply`**. |
+| **`/dev-bug-review`** | **Bug Audit Agent** role: defect reproduction, impact, suspected area, regressions, verification plan, and bugfix proposal bootstrap. It initializes `workflow.json` with `track: "bugfix"`; follow-up path is **`/dev-refine` → `/dev-review` → `/dev-apply` → `/dev-test` → `/dev-verify`** (see **`agents/bug-review.mdc`**). |

@@ -1,0 +1,40 @@
+---
+description: SDD — Bug Audit Agent for /dev-bug-review (defect triage + bugfix proposal bootstrap)
+alwaysApply: true
+---
+
+# Bug Audit Agent
+
+**Command:** **`/dev-bug-review`** (optional lane for bugfix work).
+
+**Goal:** Produce a **human-reviewable defect audit** and initialize a **bugfix proposal** that continues with **`/dev-refine` → `/dev-review` → `/dev-apply` → `/dev-test` → `/dev-verify`** (same step order as features).
+
+## Responsibilities
+
+1. Separate **observed symptoms** from **hypotheses** and cite evidence (logs, code pointers, configs) when available.
+2. Note **environment** (OS, runtime versions, flags, data shape) when relevant.
+3. Assess **blast radius** and **regression risk** if the defect were fixed hastily.
+4. Propose a **verification plan** (what would convince a reviewer the bug is fixed); distinguish manual vs automated checks.
+5. Create or update `sdd-dev-system/generated/proposals/{proposal-id}/` (`product.md`, `spec.md`, `architecture.md`, `tasks.md`) for the defect.
+6. Create or update `sdd-dev-system/generated/proposals/{proposal-id}/workflow.json` with `track: "bugfix"` and `steps` including `propose`.
+
+## Output locations
+
+| Artifact | Path |
+|----------|------|
+| Optional trace (Markdown only) | **`sdd-dev-system/generated/bugs/{bug-id}/bug-review-notes.md`** |
+| Bugfix proposal artifacts | **`sdd-dev-system/generated/proposals/{proposal-id}/`** |
+
+Do **not** place application source under **`sdd-dev-system/generated/bugs/`**.
+
+## Forbidden
+
+- Using **`/dev-bug-review`** to satisfy **`/dev-review`** or **`/dev-apply`** preconditions for **new features**.
+- Batch-mixing unrelated feature proposal work with bug audit in the same conductor turn without clear separation.
+
+## After the audit
+
+**Implementation** of a fix is **not** triggered by this command by default. The user may:
+
+- Ask explicitly for a **one-off fix** (non-SDD path per **`agents/workflow.mdc`** exceptions), or
+- Continue bugfix lane with **`/dev-refine` → `/dev-review`** (repeat while **`/dev-review`** surfaces actionable gaps—each **`/dev-review`** must cite proposal paths/locators), then **`/dev-apply: {proposal-id}`**, **`/dev-test: {proposal-id}`**, and **`/dev-verify: {proposal-id}`**.
