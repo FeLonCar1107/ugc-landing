@@ -6,9 +6,9 @@
   "hero": {
     "eyebrow": "Saga para creadoras",
     "productTitle": "Descubre tu personaje",
-    "headline": "Descubre tu identidad y conviértete en la protagonista de tu contenido",
+    "headline": "Construye tu identidad y conviértete en la protagonista de tu contenido",
     "subhead": "Deja de crear sin rumbo y empieza a construir contenido con intención y claridad. Haz que te recuerden.",
-    "cta": "Empezar ahora ✨",
+    "cta": "Empezar ahora",
     "imageAlt": "Isabella — referencia visual protagonista",
     "decorativeAlt": "Referencia estilo collage Y2K"
   },
@@ -22,18 +22,18 @@
       },
       {
         "title": "No sabes qué contenido hacer",
-        "body": "Pasas horas mirando el celular sin una estructura que te diga qué publicar y por qué."
+        "body": "Pasas horas scrolleando buscando inspiración: te saturas, no concretas y acabas perdiendo el tiempo."
       },
       {
         "title": "Todo te parece saturado",
-        "body": "La comparación constante te paraliza y tu feed pierde personalidad."
+        "body": "Diferentes tendencias sin un objetivo y tu feed queda en salpicón. La comparación te paraliza y se pierde personalidad en tu contenido."
       },
       {
         "title": "No sabes si esto es para ti",
-        "body": "Quieres claridad sin otro curso genérico que no se adapte a tu voz."
+        "body": "Quieres claridad sin tener que adquirir cursos costosos ni perder horas en tutoriales genéricos persiguiendo una guía mágica para saber qué publicar."
       }
     ],
-    "cta": "Quiero claridad ✨"
+    "cta": "Quiero claridad"
   },
   "solution": {
     "title": "Lo que vas a lograr con este ebook",
@@ -61,8 +61,8 @@
         "body": "De la improvisación a un sistema que puedes repetir sin depender solo del \"ánimo\"."
       }
     ],
-    "ctaTop": "Ver la oferta ✨",
-    "ctaBottom": "Empezar ahora ✨",
+    "ctaTop": "Ver la oferta",
+    "ctaBottom": "Empezar ahora",
     "imageAlt": "Isabella — método aplicado en contenido real"
   },
   "proof": {
@@ -119,14 +119,14 @@
       "Moodboard de identidad visual",
       "Rutina simple para crear con constancia"
     ],
-    "cta": "Ir al checkout ✨",
+    "cta": "Ir al checkout",
     "supportNote": "¿Dudas? Escríbenos:",
     "supportEmail": "soporteila@gmail.com"
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
     "introBody": "Respuestas rápidas antes de entrar al checkout. Si necesitas algo más específico, escríbenos.",
-    "cta": "Empezar ahora ✨",
+    "cta": "Empezar ahora",
     "items": [
       {
         "q": "¿Qué formato tiene el ebook?",
@@ -153,7 +153,7 @@
   "close": {
     "headline": "Tu marca personal necesita dirección, no más horas perdidas en el feed.",
     "body": "Si estás lista para pasar del improviso a un sistema que puedes repetir, este ebook está escrito para ti.",
-    "cta": "Empezar ahora ✨",
+    "cta": "Empezar ahora",
     "footnote": "No es magia: es enfoque + estructura + acción."
   }
 }

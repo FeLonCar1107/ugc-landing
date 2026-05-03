@@ -341,7 +341,7 @@ export default function EbookLanding({
               <ScrollRevealItem key={i}>
                 <div className="rounded-2xl border border-[#131212]/10 bg-[#F8F7F4] p-6 shadow-sm">
                   <h3 className="text-lg font-semibold text-[#ff62b4]">{c.title}</h3>
-                  <p className="mt-2 text-[#131212]/85">{c.body}</p>
+                  <p className="mt-2 whitespace-pre-line text-[#131212]/85">{c.body}</p>
                 </div>
               </ScrollRevealItem>
             ))}

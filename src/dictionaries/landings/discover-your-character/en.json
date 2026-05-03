@@ -6,9 +6,9 @@
   "hero": {
     "eyebrow": "Saga for creators",
     "productTitle": "Discover your character",
-    "headline": "Discover your identity and become the protagonist of your content",
+    "headline": "Build your identity and become the protagonist of your content",
     "subhead": "Stop creating without direction and start building content with intention and clarity. Give people a reason to remember you.",
-    "cta": "Start now ✨",
+    "cta": "Start now",
     "imageAlt": "Isabella — lead visual placeholder",
     "decorativeAlt": "Y2K collage style reference"
   },
@@ -22,18 +22,18 @@
       },
       {
         "title": "You don’t know what to post",
-        "body": "You spend hours scrolling without a structure that tells you what to publish and why."
+        "body": "You spend hours scrolling for inspiration — you get overwhelmed, never land on a clear idea, and time slips away."
       },
       {
         "title": "Everything feels saturated",
-        "body": "Constant comparison freezes you and your feed loses personality."
+        "body": "Different trends with no clear goal and your feed turns into a patchwork. Comparison freezes you and your content loses personality."
       },
       {
         "title": "You’re unsure this is for you",
-        "body": "You want clarity without another generic course that ignores your voice."
+        "body": "You want clarity without expensive courses or wasting hours on generic tutorials chasing a magic formula for what to post."
       }
     ],
-    "cta": "I want clarity ✨"
+    "cta": "I want clarity"
   },
   "solution": {
     "title": "What you’ll achieve with this ebook",
@@ -61,8 +61,8 @@
         "body": "From improvisation to a system you can repeat without relying only on \"motivation\"."
       }
     ],
-    "ctaTop": "See the offer ✨",
-    "ctaBottom": "Start now ✨",
+    "ctaTop": "See the offer",
+    "ctaBottom": "Start now",
     "imageAlt": "Isabella — method applied in real content"
   },
   "proof": {
@@ -119,14 +119,14 @@
       "Visual identity moodboard guide",
       "Simple routine to stay consistent"
     ],
-    "cta": "Go to checkout ✨",
+    "cta": "Go to checkout",
     "supportNote": "Questions? Email us:",
     "supportEmail": "soporteila@gmail.com"
   },
   "faq": {
     "introTitle": "Frequently asked questions",
     "introBody": "Quick answers before checkout. Need more detail? Reach out.",
-    "cta": "Start now ✨",
+    "cta": "Start now",
     "items": [
       {
         "q": "What format is the ebook?",
@@ -153,7 +153,7 @@
   "close": {
     "headline": "Your personal brand needs direction — not more lost hours scrolling.",
     "body": "If you’re ready to move from improvisation to a repeatable system, this ebook is written for you.",
-    "cta": "Start now ✨",
+    "cta": "Start now",
     "footnote": "It’s not magic: focus + structure + action."
   }
 }

@@ -36,7 +36,7 @@ market.compliance.resultsDisclaimer: none
 ## Brand
 brand.name: Saga para creadoras
 brand.tone: emocional, cercano, aspiracional, experticia, estilo bestie experta
-brand.heroClaim: Descubre tu identidad y conviértete en la protagonista de tu contenido
+brand.heroClaim: Construye tu identidad y conviértete en la protagonista de tu contenido
 brand.subheadline: Deja de crear sin rumbo y empieza a construir contenido con intención y claridad, haz que te recuerden
 brand.primaryColor: #ff62b4
 brand.secondaryColor: #F8F7F4
@@ -50,7 +50,7 @@ brand.colorRoles:
 - accent-gold (~#d4af37): detalles decorativos mínimos (p. ej. estrellas u iconografía premium con relieve sutil); nunca como color principal de CTA
 
 ## Offer
-offer.mainCTA: Empezar ahora ✨
+offer.mainCTA: Empezar ahora
 offer.checkoutUrl: env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL
 offer.price.currency: USD
 offer.price.full: env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_PRICE_USD

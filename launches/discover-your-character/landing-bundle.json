@@ -11,9 +11,9 @@
         "type": "hero",
         "order": 0,
         "content": {
-          "headline": "Descubre tu identidad y conviértete en la protagonista de tu contenido",
+          "headline": "Construye tu identidad y conviértete en la protagonista de tu contenido",
           "subheadline": "Deja de crear sin rumbo y empieza a construir contenido con intención y claridad.",
-          "primaryCtaLabel": "Empezar ahora ✨",
+          "primaryCtaLabel": "Empezar ahora",
           "primaryCtaHref": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL",
           "eyebrow": "Saga para creadoras"
         }
@@ -88,7 +88,7 @@
         "order": 6,
         "content": {
           "headline": "Tu marca personal necesita dirección",
-          "ctaLabel": "Empezar ahora ✨",
+          "ctaLabel": "Empezar ahora",
           "ctaHref": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL"
         }
       }
@@ -160,7 +160,7 @@
     "notes": "Checkout-url-only funnel"
   },
   "offer": {
-    "mainCta": "Empezar ahora ✨",
+    "mainCta": "Empezar ahora",
     "checkoutUrl": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_CHECKOUT_URL",
     "currency": "USD",
     "price": "env:NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_PRICE_USD"
