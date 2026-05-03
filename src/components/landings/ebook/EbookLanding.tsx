@@ -19,6 +19,8 @@ const sectionBandHeading =
 /** Filenames expected under `assetBase` (mirror `discover-your-character` or swap files keeping names). */
 const IMAGE_SLOTS = {
   heroVisual: "hero_done.png",
+  /** Doodle stars to the left of the hero product title (`hero_headline_stars.png`). */
+  heroHeadlineStars: "hero_headline_stars.png",
   heroSignature: "hero_signature.png",
   proofTimeline: "proof_done.png",
   proofHeadlineCamera: "proof_headline_camera.png",
@@ -37,6 +39,9 @@ const HERO_VISUAL_INTRINSIC = { width: 3748, height: 3684 } as const;
 
 /** Intrinsic pixels of `IMAGE_SLOTS.heroSignature`. */
 const HERO_SIGNATURE_INTRINSIC = { width: 384, height: 213 } as const;
+
+/** Intrinsic pixels of `IMAGE_SLOTS.heroHeadlineStars`. */
+const HERO_HEADLINE_STARS_INTRINSIC = { width: 241, height: 259 } as const;
 
 /** Intrinsic pixels of `IMAGE_SLOTS.solutionAchievementTrophy`. */
 const SOLUTION_TROPHY_INTRINSIC = { width: 300, height: 375 } as const;
@@ -196,7 +201,22 @@ export default function EbookLanding({
             <ScrollRevealItem
               className={`relative z-10 col-span-full m-0 max-w-none text-center text-pretty max-md:-mb-2 font-bold leading-[1.06] text-black text-3xl md:text-5xl tracking-tighter max-md:leading-[1.02] md:leading-[1.06]`}
             >
-              <h1 className="m-0 max-w-none text-inherit">{copy.hero.productTitle}</h1>
+              <div className="flex items-start justify-center gap-2 sm:gap-3">
+                <Image
+                  src={asset(IMAGE_SLOTS.heroHeadlineStars)}
+                  alt=""
+                  width={HERO_HEADLINE_STARS_INTRINSIC.width}
+                  height={HERO_HEADLINE_STARS_INTRINSIC.height}
+                  className="mt-[0.1em] h-[0.92em] w-auto shrink-0 origin-center object-contain mix-blend-screen opacity-[0.95] sm:h-[1em] md:h-[0.95em]"
+                  sizes="(max-width: 768px) 14vw, 72px"
+                  quality={100}
+                  priority
+                  aria-hidden
+                />
+                <h1 className="m-0 max-w-none text-inherit">
+                  {copy.hero.productTitle}
+                </h1>
+              </div>
             </ScrollRevealItem>
 
             {/* Mobile: portrait tucked under title (PNG pad + grid gap handled separately from copy block) */}
