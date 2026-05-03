@@ -19,6 +19,7 @@ const sectionBandHeading =
 /** Filenames expected under `assetBase` (mirror `discover-your-character` or swap files keeping names). */
 const IMAGE_SLOTS = {
   heroVisual: "hero_done.png",
+  heroSignature: "hero_signature.png",
   proofTimeline: "proof_done.png",
   faqAside: "faq_done.png",
 } as const;
@@ -30,6 +31,9 @@ function proofTimelineImageForYear(year: string) {
 
 /** Intrinsic pixels of `IMAGE_SLOTS.heroVisual` — keeps Next/Image aspect + srcset honest. */
 const HERO_VISUAL_INTRINSIC = { width: 3748, height: 3684 } as const;
+
+/** Intrinsic pixels of `IMAGE_SLOTS.heroSignature`. */
+const HERO_SIGNATURE_INTRINSIC = { width: 384, height: 213 } as const;
 
 /** Hero photo: Next/Image default quality (75) reads soft on hair/detail at this crop scale. */
 const HERO_IMAGE_QUALITY = 96;
@@ -166,6 +170,20 @@ export default function EbookLanding({
                     priority
                   />
                 </div>
+                <div
+                  className="pointer-events-none absolute right-[min(10%,2rem)] top-[clamp(10%,16vw,18%)] z-30 w-[clamp(4.5rem,33vw,6.5rem)] mix-blend-screen opacity-[0.94]"
+                  aria-hidden
+                >
+                  <Image
+                    src={asset(IMAGE_SLOTS.heroSignature)}
+                    alt=""
+                    width={HERO_SIGNATURE_INTRINSIC.width}
+                    height={HERO_SIGNATURE_INTRINSIC.height}
+                    className="h-auto w-full object-contain"
+                    sizes="min(104px,33vw)"
+                    quality={100}
+                  />
+                </div>
                 <figcaption className="sr-only">{copy.hero.imageAlt}</figcaption>
               </figure>
             </ScrollRevealItem>
@@ -217,6 +235,20 @@ export default function EbookLanding({
                     sizes={HERO_IMAGE_SIZES_DESKTOP}
                     quality={HERO_IMAGE_QUALITY}
                     priority
+                  />
+                </div>
+                <div
+                  className="pointer-events-none absolute left-[210px] top-[230px] z-30 w-[clamp(5.75rem,15vw,9.5rem)] mix-blend-screen opacity-[0.94]"
+                  aria-hidden
+                >
+                  <Image
+                    src={asset(IMAGE_SLOTS.heroSignature)}
+                    alt=""
+                    width={HERO_SIGNATURE_INTRINSIC.width}
+                    height={HERO_SIGNATURE_INTRINSIC.height}
+                    className="h-auto w-[85px] object-contain"
+                    sizes="(max-width: 768px) 0px, min(152px,15vw)"
+                    quality={100}
                   />
                 </div>
                 <figcaption className="sr-only">{copy.hero.imageAlt}</figcaption>
