@@ -21,6 +21,8 @@ const IMAGE_SLOTS = {
   heroVisual: "hero_done.png",
   heroSignature: "hero_signature.png",
   proofTimeline: "proof_done.png",
+  solutionAchievementTrophy: "solution_achievement_trophy.png",
+  solutionEbookHighlightOval: "solution_ebook_highlight_oval.png",
   faqAside: "faq_done.png",
 } as const;
 
@@ -34,6 +36,12 @@ const HERO_VISUAL_INTRINSIC = { width: 3748, height: 3684 } as const;
 
 /** Intrinsic pixels of `IMAGE_SLOTS.heroSignature`. */
 const HERO_SIGNATURE_INTRINSIC = { width: 384, height: 213 } as const;
+
+/** Intrinsic pixels of `IMAGE_SLOTS.solutionAchievementTrophy`. */
+const SOLUTION_TROPHY_INTRINSIC = { width: 300, height: 375 } as const;
+
+/** Intrinsic pixels of `IMAGE_SLOTS.solutionEbookHighlightOval`. */
+const SOLUTION_EBOOK_OVAL_INTRINSIC = { width: 367, height: 131 } as const;
 
 /** Hero photo: Next/Image default quality (75) reads soft on hair/detail at this crop scale. */
 const HERO_IMAGE_QUALITY = 96;
@@ -103,6 +111,38 @@ function CheckoutLink({
     >
       {children}
     </a>
+  );
+}
+
+function SolutionSectionHeading({
+  copy,
+  asset,
+}: {
+  copy: EbookLandingCopy;
+  asset: (filename: string) => string;
+}) {
+  const parts = copy.solution.titleHighlight;
+  if (!parts) {
+    return <>{copy.solution.title}</>;
+  }
+  return (
+    <>
+      {parts.before}
+      <span className="relative inline-block whitespace-nowrap">
+        <Image
+          src={asset(IMAGE_SLOTS.solutionEbookHighlightOval)}
+          alt=""
+          width={SOLUTION_EBOOK_OVAL_INTRINSIC.width}
+          height={SOLUTION_EBOOK_OVAL_INTRINSIC.height}
+          className="pointer-events-none absolute left-1/2 top-[52%] z-0 h-[1.42em] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 select-none object-contain opacity-[0.92]"
+          sizes="(max-width:768px) 55vw, min(280px, 28vw)"
+          quality={100}
+          aria-hidden
+        />
+        <span className="relative z-10">{parts.highlight}</span>
+      </span>
+      {parts.after}
+    </>
   );
 }
 
@@ -293,8 +333,13 @@ export default function EbookLanding({
         <GrainOverlay />
         <div className="relative mx-auto max-w-6xl px-12">
           <ScrollReveal className="mb-10 flex flex-col items-center gap-4 md:flex-row md:justify-between">
-            <h2 className={`text-center md:text-left ${sectionBandHeading}`}>
-              {copy.solution.title}
+            <h2
+              className={`text-center md:text-left ${sectionBandHeading}`}
+              {...(copy.solution.titleHighlight
+                ? { "aria-label": copy.solution.title }
+                : {})}
+            >
+              <SolutionSectionHeading copy={copy} asset={asset} />
             </h2>
             <CheckoutLink
               href={checkoutUrl}
@@ -309,24 +354,44 @@ export default function EbookLanding({
               y={20}
               duration={0.78}
             >
-              <div
-                className="relative aspect-[3/4] w-full overflow-hidden -mt-20"
-                style={
-                  {
-                    WebkitMaskImage:
-                      "linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%)",
-                    maskImage:
-                      "linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%)",
-                  } as CSSProperties
-                }
-              >
-                <Image
-                  src={asset(IMAGE_SLOTS.proofTimeline)}
-                  alt={copy.solution.imageAlt}
-                  fill
-                  className="object-contain object-bottom"
-                  sizes="(max-width:768px) 100vw, 320px"
-                />
+              <div className="relative aspect-[3/4] w-full -mt-20 overflow-visible">
+                <div
+                  className="absolute left-[-267px] top-[-10px] md:top-[-45px] right-0 bottom-0 overflow-hidden"
+                  style={
+                    {
+                      WebkitMaskImage:
+                        "linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%)",
+                      maskImage:
+                        "linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%)",
+                    } as CSSProperties
+                  }
+                >
+                  <Image
+                    src={asset(IMAGE_SLOTS.proofTimeline)}
+                    alt={copy.solution.imageAlt}
+                    fill
+                    className="object-contain object-bottom"
+                    style={{ left: 118, top: 12 }}
+                    sizes="(max-width:768px) 100vw, 320px"
+                    quality={100}
+                  />
+                </div>
+                {/* Trophy: empty band left of figure (~waist); not masked so it stays crisp.
+                    Avoid mix-blend-screen — it washes gold/light tones to white on this pale bg. */}
+                <div
+                  className="pointer-events-none absolute left-[9%] top-[43%] z-20 w-[clamp(2.5rem,14vw,3.85rem)] -translate-y-1/2 max-md:left-[7%] max-md:top-[45%]"
+                  aria-hidden
+                >
+                  <Image
+                    src={asset(IMAGE_SLOTS.solutionAchievementTrophy)}
+                    alt=""
+                    width={SOLUTION_TROPHY_INTRINSIC.width}
+                    height={SOLUTION_TROPHY_INTRINSIC.height}
+                    className="absolute left-0 top-[60px] h-auto w-full object-contain -rotate-[16deg] drop-shadow-[0_2px_4px_rgba(19,18,18,0.12),0_6px_18px_rgba(19,18,18,0.22)]"
+                    sizes="64px"
+                    quality={100}
+                  />
+                </div>
               </div>
               <p className="mt-5 text-center text-xs font-medium text-[#ff62b4]">
                 {copy.solution.giftHint}

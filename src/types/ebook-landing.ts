@@ -19,6 +19,15 @@ export interface EbookLandingCopy {
   };
   solution: {
     title: string;
+    /**
+     * Optional split title: draws `highlight` with a scribble oval asset behind it.
+     * When omitted, render plain `title`.
+     */
+    titleHighlight?: {
+      before: string;
+      highlight: string;
+      after: string;
+    };
     giftHint: string;
     outcomes: { title: string; body: string }[];
     ctaTop: string;

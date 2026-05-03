@@ -37,6 +37,11 @@
   },
   "solution": {
     "title": "What you’ll achieve with this ebook",
+    "titleHighlight": {
+      "before": "What you’ll achieve with this ",
+      "highlight": "ebook",
+      "after": ""
+    },
     "giftHint": "Includes tactical bonuses to ship faster.",
     "outcomes": [
       {

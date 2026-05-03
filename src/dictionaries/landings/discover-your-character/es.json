@@ -37,6 +37,11 @@
   },
   "solution": {
     "title": "Lo que vas a lograr con este ebook",
+    "titleHighlight": {
+      "before": "Lo que vas a lograr con este ",
+      "highlight": "ebook",
+      "after": ""
+    },
     "giftHint": "Incluye bonuses tácticos para ejecutar rápido.",
     "outcomes": [
       {
