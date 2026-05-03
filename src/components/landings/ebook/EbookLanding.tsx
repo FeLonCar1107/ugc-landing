@@ -21,6 +21,7 @@ const IMAGE_SLOTS = {
   heroVisual: "hero_done.png",
   heroSignature: "hero_signature.png",
   proofTimeline: "proof_done.png",
+  proofHeadlineCamera: "proof_headline_camera.png",
   solutionAchievementTrophy: "solution_achievement_trophy.png",
   solutionEbookHighlightOval: "solution_ebook_highlight_oval.png",
   faqAside: "faq_done.png",
@@ -42,6 +43,9 @@ const SOLUTION_TROPHY_INTRINSIC = { width: 300, height: 375 } as const;
 
 /** Intrinsic pixels of `IMAGE_SLOTS.solutionEbookHighlightOval`. */
 const SOLUTION_EBOOK_OVAL_INTRINSIC = { width: 367, height: 131 } as const;
+
+/** Intrinsic pixels of `IMAGE_SLOTS.proofHeadlineCamera`. */
+const PROOF_HEADLINE_CAMERA_INTRINSIC = { width: 848, height: 641 } as const;
 
 /** Hero photo: Next/Image default quality (75) reads soft on hair/detail at this crop scale. */
 const HERO_IMAGE_QUALITY = 96;
@@ -433,7 +437,24 @@ export default function EbookLanding({
             <span className="text-xs tracking-wide font-bold uppercase text-[#ff62b4]">
               ★ {copy.proof.badge}
             </span>
-            <h2 className={`mt-4 ${sectionBandHeading}`}>{copy.proof.headline}</h2>
+            <h2
+              className={`mt-4 flex items-start justify-center gap-2 sm:gap-3 ${sectionBandHeading}`}
+            >
+              {/* Camera icon beside headline (`proof_headline_camera.png`). */}
+              <Image
+                src={asset(IMAGE_SLOTS.proofHeadlineCamera)}
+                alt=""
+                width={PROOF_HEADLINE_CAMERA_INTRINSIC.width}
+                height={PROOF_HEADLINE_CAMERA_INTRINSIC.height}
+                className="mt-[0.18em] h-[1.05em] w-auto shrink-0 origin-center -rotate-12 object-contain sm:h-[1.12em]"
+                sizes="(max-width: 640px) 12vw, 64px"
+                quality={100}
+                aria-hidden
+              />
+              <span className="max-w-[min(100%,52rem)] text-balance">
+                {copy.proof.headline}
+              </span>
+            </h2>
             <p className="mt-4 text-[#131212]/85">{copy.proof.intro}</p>
           </ScrollReveal>
 
