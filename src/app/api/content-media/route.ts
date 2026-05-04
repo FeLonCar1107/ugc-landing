@@ -1,8 +1,8 @@
+import { getInstagramAccessToken } from "@/lib/instagramAccessToken";
 import { IInstagramMediaResponse } from "@/types/responses/instagram-media";
 
 export const dynamic = "force-dynamic";
-
-const ACCESS_TOKEN = process.env.INSTAGRAM_ACCESS_TOKEN;
+export const runtime = "nodejs";
 
 interface ChildrenRes {
   id: string;
@@ -27,8 +27,15 @@ interface InstagramRes {
 
 export async function POST(request: Request) {
   try {
+    const accessToken = await getInstagramAccessToken();
+    if (!accessToken) {
+      return Response.json(
+        { error: "INSTAGRAM_ACCESS_TOKEN not configured", data: [] },
+        { status: 503 },
+      );
+    }
     const payload = await request.json();
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,permalink,media_type,media_url,thumbnail_url,timestamp,username,children{id,media_type,media_url,thumbnail_url}&access_token=${ACCESS_TOKEN}&limit=${payload.limit}`;
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,permalink,media_type,media_url,thumbnail_url,timestamp,username,children{id,media_type,media_url,thumbnail_url}&access_token=${accessToken}&limit=${payload.limit}`;
     const response = await fetch(url);
     const data = await response.json();
     if (data.error) throw data.error;
