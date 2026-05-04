@@ -44,7 +44,11 @@ export function getLaunchBonusBundleDeadlineIso(slug: string): string | undefine
 }
 
 /** Top-of-page landing hero image — Isabella portrait vs ebook mockup (conversion A/B). */
-export type LaunchHeroVisual = "portrait" | "mockup";
+export const LAUNCH_HERO_VISUAL_PORTRAIT = "portrait" as const;
+export const LAUNCH_HERO_VISUAL_MOCKUP = "mockup" as const;
+export type LaunchHeroVisual =
+  | typeof LAUNCH_HERO_VISUAL_PORTRAIT
+  | typeof LAUNCH_HERO_VISUAL_MOCKUP;
 
 /**
  * Reads `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL`.
@@ -54,5 +58,7 @@ export type LaunchHeroVisual = "portrait" | "mockup";
 export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
   const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_HERO_VISUAL`;
   const v = process.env[k]?.trim().toLowerCase();
-  return v === "mockup" ? "mockup" : "portrait";
+  return v === LAUNCH_HERO_VISUAL_MOCKUP
+    ? LAUNCH_HERO_VISUAL_MOCKUP
+    : LAUNCH_HERO_VISUAL_PORTRAIT;
 }

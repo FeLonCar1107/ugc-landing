@@ -4,6 +4,7 @@ import { i18n } from "@/i18n/config";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import {
   getLaunchBonusBundleDeadlineIso,
+  getLaunchHeroVisual,
   getLaunchOfferPhaseLabel,
 } from "@/utils/launchEnv";
 import { sectionBandHeading } from "./ebookLandingConstants";
@@ -53,6 +54,7 @@ export default function EbookLanding({
     priceUsd.trim().length > 0 ? `$${priceUsd} USD` : copy.offer.priceHint;
 
   const launchSlug = launchSlugFromAssetBase(assetBase);
+  const heroVisual = getLaunchHeroVisual(launchSlug);
   const offerPhaseLabel = getLaunchOfferPhaseLabel(launchSlug);
   const offerDeadlineIso = getLaunchBonusBundleDeadlineIso(launchSlug);
 
@@ -67,6 +69,7 @@ export default function EbookLanding({
       />
 
       <EbookHeroSection
+        heroVisual={heroVisual}
         hero={copy.hero}
         checkoutUrl={checkoutUrl}
         timeToResult={timeToResult}
