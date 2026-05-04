@@ -4,6 +4,12 @@ export const GA_MEASUREMENT_ID =
     ? process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? ""
     : "";
 
+/** When true, GA4 sends hits to DebugView (Admin → DebugView). Use only while testing. */
+export const GA_DEBUG =
+  typeof process !== "undefined" &&
+  (process.env.NEXT_PUBLIC_GA_DEBUG === "1" ||
+    process.env.NEXT_PUBLIC_GA_DEBUG === "true");
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;

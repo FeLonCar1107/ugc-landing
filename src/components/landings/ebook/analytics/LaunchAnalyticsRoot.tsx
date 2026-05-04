@@ -3,6 +3,7 @@
 import Script from "next/script";
 import { useEffect, type ReactNode } from "react";
 import {
+  GA_DEBUG,
   GA_MEASUREMENT_ID,
   trackLandingView,
 } from "@/lib/analytics/launchGa";
@@ -56,7 +57,10 @@ export default function LaunchAnalyticsRoot({
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
+gtag('config', '${GA_MEASUREMENT_ID}', ${JSON.stringify({
+              send_page_view: false,
+              ...(GA_DEBUG ? { debug_mode: true } : {}),
+            })});
             `.trim()}
           </Script>
         </>
