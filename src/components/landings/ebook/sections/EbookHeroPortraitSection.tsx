@@ -112,6 +112,7 @@ export default function EbookHeroPortraitSection({
             <div className="flex justify-start pt-1">
               <CheckoutLink
                 href={checkoutUrl}
+                placement="hero"
                 className="inline-flex items-center justify-center rounded-full border border-brand-accent-mid bg-brand-accent-mid/[0.07] px-[1.75rem] py-3.5 text-base font-bold leading-tight text-brand-accent-mid no-underline transition-colors duration-200 hover:bg-brand-accent-mid hover:text-brand-card md:px-[2rem] md:py-4 md:text-[1.0625rem]"
               >
                 {hero.cta}

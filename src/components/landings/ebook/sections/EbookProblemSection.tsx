@@ -39,6 +39,7 @@ export default function EbookProblemSection({
         <ScrollReveal className="mt-12 flex justify-center" y={18}>
           <CheckoutLink
             href={checkoutUrl}
+            placement="problem"
             className="rounded-full bg-brand-ink px-8 py-3 font-semibold text-brand-card hover:bg-black"
           >
             {problem.cta}

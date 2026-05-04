@@ -26,6 +26,7 @@ export default function EbookCloseSection({
           <div className="relative">
             <CheckoutLink
               href={checkoutUrl}
+              placement="close"
               className="inline-flex rounded-full bg-brand-accent px-10 py-4 text-lg font-semibold text-brand-card"
             >
               {close.cta}

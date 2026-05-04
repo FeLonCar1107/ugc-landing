@@ -29,7 +29,7 @@ describe("OfferSection", () => {
     expect(container.querySelector("#offer")).not.toBeNull();
     const cta = screen.getByRole("link", { name: offer.ctaPrimary });
     expect(cta).toHaveAttribute("href", checkout);
-    expect(cta.className).toContain("bg-[#ff62b4]");
+    expect(cta.className).toContain("bg-brand-accent");
   });
 
   it("uses CheckoutLink fallback #offer when checkout URL empty (A9)", () => {

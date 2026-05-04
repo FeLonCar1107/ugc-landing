@@ -11,6 +11,7 @@ import {
   isAllowedLandingSlug,
   type AllowedLandingSlug,
 } from "@/lib/allowedLandings";
+import LaunchAnalyticsRoot from "@/components/landings/ebook/analytics/LaunchAnalyticsRoot";
 import {
   getLaunchCheckoutUrl,
   getLaunchPriceUsd,
@@ -62,13 +63,15 @@ export default async function LandingBySlugPage({
   const timeToResult = getLaunchTimeToResult(slug);
 
   return (
-    <EbookLanding
-      copy={copy}
-      assetBase={launchAssetBase(slug)}
-      checkoutUrl={checkoutUrl}
-      priceUsd={priceUsd}
-      timeToResult={timeToResult}
-      locale={params.lang}
-    />
+    <LaunchAnalyticsRoot slug={slug} locale={params.lang}>
+      <EbookLanding
+        copy={copy}
+        assetBase={launchAssetBase(slug)}
+        checkoutUrl={checkoutUrl}
+        priceUsd={priceUsd}
+        timeToResult={timeToResult}
+        locale={params.lang}
+      />
+    </LaunchAnalyticsRoot>
   );
 }

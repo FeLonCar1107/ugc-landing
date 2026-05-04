@@ -49,6 +49,7 @@ export default function EbookSolutionSection({
           </h2>
           <CheckoutLink
             href={checkoutUrl}
+            placement="solution_top"
             className="hidden rounded-full border-2 border-brand-accent px-6 py-2 text-sm font-semibold text-brand-accent md:inline-flex"
           >
             {solution.ctaTop}
@@ -113,6 +114,7 @@ export default function EbookSolutionSection({
             <ScrollReveal className="flex justify-end pt-6" y={16}>
               <CheckoutLink
                 href={checkoutUrl}
+                placement="solution_bottom"
                 className="rounded-full bg-brand-accent px-8 py-4 font-semibold text-brand-card shadow-md"
               >
                 {solution.ctaBottom}

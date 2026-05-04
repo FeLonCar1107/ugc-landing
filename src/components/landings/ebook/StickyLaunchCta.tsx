@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import CheckoutLink from "./CheckoutLink";
 
 export default function StickyLaunchCta({
   label,
@@ -39,12 +40,13 @@ export default function StickyLaunchCta({
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-brand-ink/10 bg-brand-surface/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden">
-      <a
-        href={href || "#offer"}
+      <CheckoutLink
+        href={href}
+        placement="sticky_mobile"
         className="flex w-full items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-center text-base font-semibold text-brand-card shadow-lg shadow-brand-accent/25"
       >
         {label}
-      </a>
+      </CheckoutLink>
     </div>
   );
 }

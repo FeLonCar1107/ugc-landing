@@ -38,6 +38,7 @@ export default function EbookFaqSection({
             <p className="text-brand-ink/85">{faq.introBody}</p>
             <CheckoutLink
               href={checkoutUrl}
+              placement="faq"
               className="inline-flex rounded-full bg-brand-ink px-8 py-3 font-semibold text-brand-card"
             >
               {faq.cta}

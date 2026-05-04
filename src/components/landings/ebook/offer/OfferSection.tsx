@@ -88,6 +88,7 @@ export default function OfferSection({
             <div className="flex w-full min-w-0 flex-col items-center gap-3 text-center">
               <CheckoutLink
                 href={checkoutUrl}
+                placement="offer"
                 className="inline-flex min-h-[48px] w-full max-w-md items-center justify-center rounded-full bg-brand-accent px-7 py-3.5 text-base font-semibold text-brand-card shadow-lg shadow-brand-accent/25 sm:text-lg"
               >
                 {offer.ctaPrimary}
