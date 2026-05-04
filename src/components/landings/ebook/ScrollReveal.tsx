@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 
 /** Smooth deceleration — similar feel to typical Framer marketing pages */
 const easeEditorial = [0.16, 1, 0.3, 1] as const;
@@ -11,6 +11,73 @@ const defaultViewport = {
   margin: "-56px 0px -12% 0px" as const,
   amount: 0.18 as const,
 };
+
+type MotionDivProps = ComponentProps<typeof motion.div>;
+type MotionUlProps = ComponentProps<typeof motion.ul>;
+type MotionLiProps = ComponentProps<typeof motion.li>;
+
+function ReducedMotionDiv({
+  reduceMotion,
+  className,
+  children,
+  motionProps,
+}: {
+  reduceMotion: boolean;
+  className?: string;
+  children: ReactNode;
+  motionProps: Omit<MotionDivProps, "children" | "className">;
+}) {
+  if (reduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+  return (
+    <motion.div className={className} {...motionProps}>
+      {children}
+    </motion.div>
+  );
+}
+
+function ReducedMotionUl({
+  reduceMotion,
+  className,
+  children,
+  motionProps,
+}: {
+  reduceMotion: boolean;
+  className?: string;
+  children: ReactNode;
+  motionProps: Omit<MotionUlProps, "children" | "className">;
+}) {
+  if (reduceMotion) {
+    return <ul className={className}>{children}</ul>;
+  }
+  return (
+    <motion.ul className={className} {...motionProps}>
+      {children}
+    </motion.ul>
+  );
+}
+
+function ReducedMotionLi({
+  reduceMotion,
+  className,
+  children,
+  motionProps,
+}: {
+  reduceMotion: boolean;
+  className?: string;
+  children: ReactNode;
+  motionProps: Omit<MotionLiProps, "children" | "className">;
+}) {
+  if (reduceMotion) {
+    return <li className={className}>{children}</li>;
+  }
+  return (
+    <motion.li className={className} {...motionProps}>
+      {children}
+    </motion.li>
+  );
+}
 
 type ScrollRevealProps = {
   children: ReactNode;
@@ -28,19 +95,19 @@ export function ScrollReveal({
   duration = 0.72,
 }: ScrollRevealProps) {
   const reduceMotion = useReducedMotion();
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
   return (
-    <motion.div
+    <ReducedMotionDiv
+      reduceMotion={!!reduceMotion}
       className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={defaultViewport}
-      transition={{ duration, delay, ease: easeEditorial }}
+      motionProps={{
+        initial: { opacity: 0, y },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: defaultViewport,
+        transition: { duration, delay, ease: easeEditorial },
+      }}
     >
       {children}
-    </motion.div>
+    </ReducedMotionDiv>
   );
 }
 
@@ -79,37 +146,37 @@ export function ScrollRevealStagger({
   delayChildren = 0.05,
 }: ScrollRevealStaggerProps) {
   const reduceMotion = useReducedMotion();
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
   return (
-    <motion.div
+    <ReducedMotionDiv
+      reduceMotion={!!reduceMotion}
       className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={defaultViewport}
-      variants={makeStaggerContainer(staggerChildren, delayChildren)}
+      motionProps={{
+        initial: "hidden",
+        whileInView: "visible",
+        viewport: defaultViewport,
+        variants: makeStaggerContainer(staggerChildren, delayChildren),
+      }}
     >
       {children}
-    </motion.div>
+    </ReducedMotionDiv>
   );
 }
 
-export function ScrollRevealItem({
-  children,
-  className,
-}: {
+export type ScrollRevealItemProps = {
   children: ReactNode;
   className?: string;
-}) {
+};
+
+export function ScrollRevealItem({ children, className }: ScrollRevealItemProps) {
   const reduceMotion = useReducedMotion();
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
   return (
-    <motion.div className={className} variants={staggerItem}>
+    <ReducedMotionDiv
+      reduceMotion={!!reduceMotion}
+      className={className}
+      motionProps={{ variants: staggerItem }}
+    >
       {children}
-    </motion.div>
+    </ReducedMotionDiv>
   );
 }
 
@@ -127,36 +194,36 @@ export function ScrollRevealStaggerUl({
   delayChildren = 0.04,
 }: ScrollRevealStaggerUlProps) {
   const reduceMotion = useReducedMotion();
-  if (reduceMotion) {
-    return <ul className={className}>{children}</ul>;
-  }
   return (
-    <motion.ul
+    <ReducedMotionUl
+      reduceMotion={!!reduceMotion}
       className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={defaultViewport}
-      variants={makeStaggerContainer(staggerChildren, delayChildren)}
+      motionProps={{
+        initial: "hidden",
+        whileInView: "visible",
+        viewport: defaultViewport,
+        variants: makeStaggerContainer(staggerChildren, delayChildren),
+      }}
     >
       {children}
-    </motion.ul>
+    </ReducedMotionUl>
   );
 }
 
-export function ScrollRevealLi({
-  children,
-  className,
-}: {
+export type ScrollRevealLiProps = {
   children: ReactNode;
   className?: string;
-}) {
+};
+
+export function ScrollRevealLi({ children, className }: ScrollRevealLiProps) {
   const reduceMotion = useReducedMotion();
-  if (reduceMotion) {
-    return <li className={className}>{children}</li>;
-  }
   return (
-    <motion.li className={className} variants={staggerItem}>
+    <ReducedMotionLi
+      reduceMotion={!!reduceMotion}
+      className={className}
+      motionProps={{ variants: staggerItem }}
+    >
       {children}
-    </motion.li>
+    </ReducedMotionLi>
   );
 }

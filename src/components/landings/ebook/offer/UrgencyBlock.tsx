@@ -35,23 +35,23 @@ export default function UrgencyBlock({
   }
 
   return (
-    <div className="w-full min-w-0 space-y-2.5 rounded-xl border border-[#ff62b4]/25 bg-[#ff62b4]/8 p-3 sm:p-4">
+    <div className="w-full min-w-0 space-y-2.5 rounded-xl border border-brand-accent/25 bg-brand-accent/8 p-3 sm:p-4">
       {phaseLabel ? (
         <div>
-          <span className="inline-flex rounded-md border border-[#131212]/10 bg-white/90 px-2 py-0.5 text-[0.625rem] font-bold uppercase tracking-wide text-[#131212]">
+          <span className="inline-flex rounded-md border border-brand-ink/10 bg-brand-card/90 px-2 py-0.5 text-[0.625rem] font-bold uppercase tracking-wide text-brand-ink">
             {phaseLabel}
           </span>
         </div>
       ) : null}
       <div>
-        <h3 className="text-base font-bold leading-snug text-[#131212] sm:text-lg">
+        <h3 className="text-base font-bold leading-snug text-brand-ink sm:text-lg">
           {urgency.title}
         </h3>
       </div>
-      <ul className="space-y-1.5 text-left text-[0.8125rem] leading-relaxed text-[#131212]/90 sm:text-sm">
+      <ul className="space-y-1.5 text-left text-[0.8125rem] leading-relaxed text-brand-ink/90 sm:text-sm">
         {bullets.map((line, i) => (
           <li key={i} className="flex gap-2">
-            <span className="mt-0.5 shrink-0 text-[#ff62b4]">✦</span>
+            <span className="mt-0.5 shrink-0 text-brand-accent">✦</span>
             <span className="min-w-0">{line}</span>
           </li>
         ))}

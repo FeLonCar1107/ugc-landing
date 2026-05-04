@@ -3,6 +3,26 @@
   src: url(../../public/fonts/Beckan-Personal-Use.otf);
 }
 
+/*
+ * Brand palette — single source for Tailwind `brand-*` utilities.
+ * Change RGB triplets here to retheme marketing surfaces across the app.
+ */
+:root {
+  --brand-ink-rgb: 19 18 18;
+  --brand-surface-rgb: 248 247 244;
+  --brand-card-rgb: 255 255 255;
+  --brand-accent-rgb: 255 98 180;
+  --brand-accent-mid-rgb: 233 30 99;
+  --brand-accent-deep-rgb: 197 17 95;
+  --brand-blush-rgb: 255 232 244;
+  --brand-rose-rgb: 255 179 217;
+  --brand-warm-rgb: 107 83 68;
+  --brand-cutout-from-rgb: 255 251 247;
+  --brand-cutout-via-rgb: 255 246 242;
+  --brand-cutout-to-rgb: 239 232 228;
+  --brand-shadow-tint-rgb: 180 110 130;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,13 +57,13 @@ html.launch-scroll-document body {
 .cursor-dot {
   width: 3px;
   height: 3px;
-  background-color: #c5115f;
+  background-color: rgb(var(--brand-accent-deep-rgb));
 }
 
 .cursor-outline {
   width: 30px;
   height: 30px;
-  border: 2px solid #fca5d5;
+  border: 2px solid rgb(var(--brand-rose-rgb));
   box-shadow: rgba(131, 74, 105, 0.08) 0px 4px 12px;
 }
 

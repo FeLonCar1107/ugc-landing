@@ -17,7 +17,7 @@ export default function BonusGrid({
       {bonuses.map((bonus, i) => (
         <div
           key={`${bonus.imageFile}-${i}`}
-          className="flex h-full min-h-0 min-w-0 flex-col overflow-hidden rounded-xl border border-[#131212]/10 bg-white shadow-sm"
+          className="flex h-full min-h-0 min-w-0 flex-col overflow-hidden rounded-xl border border-brand-ink/10 bg-brand-card shadow-sm"
         >
           <div className={BONUS_MEDIA_SLOT}>
             <Image
@@ -28,11 +28,11 @@ export default function BonusGrid({
               sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 22vw"
             />
           </div>
-          <div className="flex min-h-0 flex-1 flex-col justify-start border-t border-[#131212]/8 bg-white px-3 pb-4 pt-3 sm:px-3.5 sm:pb-5">
-            <p className="text-xs font-bold leading-snug text-[#131212] sm:text-sm">
+          <div className="flex min-h-0 flex-1 flex-col justify-start border-t border-brand-ink/8 bg-brand-card px-3 pb-4 pt-3 sm:px-3.5 sm:pb-5">
+            <p className="text-xs font-bold leading-snug text-brand-ink sm:text-sm">
               {bonus.painHeadline}
             </p>
-            <p className="text-[0.8125rem] leading-relaxed text-[#131212]/85 sm:text-sm">
+            <p className="text-[0.8125rem] leading-relaxed text-brand-ink/85 sm:text-sm">
               {bonus.outcomeBenefit}
             </p>
           </div>

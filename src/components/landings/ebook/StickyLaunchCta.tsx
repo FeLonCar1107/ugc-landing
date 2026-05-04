@@ -38,10 +38,10 @@ export default function StickyLaunchCta({
   if (!pastIntro || finalSectionVisible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#131212]/10 bg-[#F8F7F4]/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-brand-ink/10 bg-brand-surface/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden">
       <a
         href={href || "#offer"}
-        className="flex w-full items-center justify-center rounded-full bg-[#ff62b4] px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-[#ff62b4]/25"
+        className="flex w-full items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-center text-base font-semibold text-brand-card shadow-lg shadow-brand-accent/25"
       >
         {label}
       </a>

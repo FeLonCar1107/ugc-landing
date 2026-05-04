@@ -35,7 +35,7 @@ export default function OfferSection({
           Offer stack is static (no ScrollReveal / whileInView here). Scroll-driven
           opacity + stagger made the block feel empty or slow until IO fired.
         */}
-        <div className="rounded-3xl border border-[#131212]/10 bg-white p-4 shadow-xl sm:p-5 md:p-7 lg:p-8">
+        <div className="rounded-3xl border border-brand-ink/10 bg-brand-card p-4 shadow-xl sm:p-5 md:p-7 lg:p-8">
           <div className="flex w-full min-w-0 flex-col gap-6 md:gap-7">
             <div>
               <h2 className={`${sectionBandHeading} text-center`}>
@@ -57,20 +57,20 @@ export default function OfferSection({
 
             <div className="flex w-full min-w-0 flex-col items-center gap-4">
               <div className="flex w-full flex-wrap items-center justify-center gap-2">
-                <span className="rounded-full border border-[#131212]/15 bg-[#ff62b4]/12 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-[#131212]">
+                <span className="rounded-full border border-brand-ink/15 bg-brand-accent/12 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-ink">
                   {offer.hero.badges[0] ?? ""}
                 </span>
-                <span className="rounded-full border border-[#131212]/15 bg-white/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-[#131212]">
+                <span className="rounded-full border border-brand-ink/15 bg-brand-card/90 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-ink">
                   {offer.hero.badges[1] ?? ""}
                 </span>
               </div>
-              <p className="w-full max-w-none text-pretty text-[clamp(1.05rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-tight text-[#131212]">
+              <p className="w-full max-w-none text-pretty text-[clamp(1.05rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-tight text-brand-ink">
                 {offer.hero.statement}
               </p>
             </div>
 
             <div className="w-full min-w-0 space-y-3">
-              <h3 className="text-center text-base tracking-wide font-semibold text-[#ff62b4] sm:text-lg">
+              <h3 className="text-center text-base tracking-wide font-semibold text-brand-accent sm:text-lg">
                 {offer.bonusesSectionTitle}
               </h3>
               <BonusGrid bonuses={offer.bonuses} asset={asset} />
@@ -88,15 +88,15 @@ export default function OfferSection({
             <div className="flex w-full min-w-0 flex-col items-center gap-3 text-center">
               <CheckoutLink
                 href={checkoutUrl}
-                className="inline-flex min-h-[48px] w-full max-w-md items-center justify-center rounded-full bg-[#ff62b4] px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#ff62b4]/25 sm:text-lg"
+                className="inline-flex min-h-[48px] w-full max-w-md items-center justify-center rounded-full bg-brand-accent px-7 py-3.5 text-base font-semibold text-brand-card shadow-lg shadow-brand-accent/25 sm:text-lg"
               >
                 {offer.ctaPrimary}
               </CheckoutLink>
-              <p className="text-sm text-[#131212]/65">
+              <p className="text-sm text-brand-ink/65">
                 {offer.supportNote}{" "}
                 <a
                   href={`mailto:${offer.supportEmail}`}
-                  className="font-semibold text-[#ff62b4] underline"
+                  className="font-semibold text-brand-accent underline"
                 >
                   {offer.supportEmail}
                 </a>

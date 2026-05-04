@@ -9,6 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        /** Marketing / ebook palette — values driven by `globals.css` `:root` */
+        brand: {
+          ink: "rgb(var(--brand-ink-rgb) / <alpha-value>)",
+          surface: "rgb(var(--brand-surface-rgb) / <alpha-value>)",
+          card: "rgb(var(--brand-card-rgb) / <alpha-value>)",
+          accent: "rgb(var(--brand-accent-rgb) / <alpha-value>)",
+          "accent-mid": "rgb(var(--brand-accent-mid-rgb) / <alpha-value>)",
+          "accent-deep": "rgb(var(--brand-accent-deep-rgb) / <alpha-value>)",
+          blush: "rgb(var(--brand-blush-rgb) / <alpha-value>)",
+          rose: "rgb(var(--brand-rose-rgb) / <alpha-value>)",
+          warm: "rgb(var(--brand-warm-rgb) / <alpha-value>)",
+          "cutout-from": "rgb(var(--brand-cutout-from-rgb) / <alpha-value>)",
+          "cutout-via": "rgb(var(--brand-cutout-via-rgb) / <alpha-value>)",
+          "cutout-to": "rgb(var(--brand-cutout-to-rgb) / <alpha-value>)",
+          "shadow-tint": "rgb(var(--brand-shadow-tint-rgb) / <alpha-value>)",
+        },
         xBlack: "#141517",
         xChartTruth: "#EAFC88",
         xCoolWhip: "#FFFEEC",

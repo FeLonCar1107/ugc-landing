@@ -13,7 +13,7 @@ const EBOOK_IMAGE_AREA = "relative min-h-0 flex-1 w-full";
 
 /** Subtle oval under the book — sits below the image frame so it is never covered by opaque pixels. */
 const EBOOK_GROUND_SHADOW =
-  "bg-gray-600 pointer-events-none h-2.5 w-[72%] max-w-[220px] shrink-0 rounded-[100%] bg-[rgba(15,15,18,0.14)] shadow-[0_0_24px_rgba(15,15,18,0.12)] blur-[12px] sm:h-3 sm:w-[68%] sm:blur-[14px]";
+  "pointer-events-none h-2.5 w-[72%] max-w-[220px] shrink-0 rounded-[100%] bg-brand-ink/14 shadow-[0_0_24px_rgb(var(--brand-ink-rgb)/0.12)] blur-[12px] sm:h-3 sm:w-[68%] sm:blur-[14px]";
 
 /** Ebook mockup only — badges and headline live in `OfferSection` (full card width). */
 export default function ProductHero({

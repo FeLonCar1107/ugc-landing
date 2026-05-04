@@ -16,11 +16,11 @@ export default function FaqAccordion({
         return (
           <div
             key={i}
-            className="border-b border-[#6B5344]/18 last:border-b-0"
+            className="border-b border-brand-warm/18 last:border-b-0"
           >
             <button
               type="button"
-              className="flex w-full items-center justify-between gap-6 py-6 text-left text-[#131212] md:py-7"
+              className="flex w-full items-center justify-between gap-6 py-6 text-left text-brand-ink md:py-7"
               aria-expanded={isOpen}
               onClick={() => setOpen(isOpen ? null : i)}
             >
@@ -28,14 +28,14 @@ export default function FaqAccordion({
                 {item.q}
               </span>
               <span
-                className="shrink-0 text-2xl font-light leading-none tracking-tight text-[#ff62b4]"
+                className="shrink-0 text-2xl font-light leading-none tracking-tight text-brand-accent"
                 aria-hidden
               >
                 {isOpen ? "−" : "+"}
               </span>
             </button>
             {isOpen ? (
-              <p className="-mt-1 pb-8 text-[0.9375rem] leading-relaxed text-[#131212]/80 md:text-base">
+              <p className="-mt-1 pb-8 text-[0.9375rem] leading-relaxed text-brand-ink/80 md:text-base">
                 {item.a}
               </p>
             ) : null}

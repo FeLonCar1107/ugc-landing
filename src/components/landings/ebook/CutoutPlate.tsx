@@ -12,8 +12,8 @@ export default function CutoutPlate({
     <div
       className={[
         "relative overflow-hidden rounded-2xl",
-        "bg-gradient-to-b from-[#FFFBF7] via-[#FFF6F2] to-[#EFE8E4]",
-        "shadow-[0_16px_48px_-20px_rgba(180,110,130,0.28)]",
+        "bg-gradient-to-b from-brand-cutout-from via-brand-cutout-via to-brand-cutout-to",
+        "shadow-[0_16px_48px_-20px_rgb(var(--brand-shadow-tint-rgb)/0.28)]",
         className ?? "",
       ].join(" ")}
     >
