@@ -68,6 +68,7 @@ export default async function LandingBySlugPage({
       checkoutUrl={checkoutUrl}
       priceUsd={priceUsd}
       timeToResult={timeToResult}
+      locale={params.lang}
     />
   );
 }

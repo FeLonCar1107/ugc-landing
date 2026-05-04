@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run",
+    "assets:transparent-offer": "node scripts/generate-transparent-offer-assets.mjs"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
@@ -22,16 +24,22 @@
     "resend": "^3.3.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
     "@types/locomotive-scroll": "^4.1.3",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18.2.75",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "jsdom": "^25.0.1",
     "postcss": "^8",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^2.1.9"
   }
 }

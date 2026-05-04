@@ -109,19 +109,83 @@
     ]
   },
   "offer": {
-    "title": "Everything included",
-    "subtitle": "Discover your character ebook + bonuses to execute.",
-    "priceHint": "USD price — set via environment.",
-    "bonusesTitle": "Included bonuses",
+    "sectionTitle": "Everything in your access",
+    "hero": {
+      "badges": ["Launch offer", "Ebook + 4 bonuses"],
+      "statement": "Move from improvising to a clear identity system: ebook + resources you can execute with this week.",
+      "imageAlt": "“Discover your character” ebook mockup"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook",
+          "label": "Ebook “Discover your character”",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "Weekly content structure template",
+          "anchorValueLabel": "USD 15"
+        },
+        {
+          "id": "b2",
+          "label": "Content idea bank (30–50 ideas)",
+          "anchorValueLabel": "USD 15"
+        },
+        {
+          "id": "b3",
+          "label": "Visual identity moodboard guide",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b4",
+          "label": "Simple routine to stay consistent",
+          "anchorValueLabel": "USD 12"
+        }
+      ],
+      "totalLabel": "Estimated bundle value",
+      "totalAnchorLabel": "USD 81",
+      "youPayLabel": "Your investment today"
+    },
+    "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
-      "Weekly content structure template",
-      "Content idea bank (30–50 ideas)",
-      "Visual identity moodboard guide",
-      "Simple routine to stay consistent"
+      {
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Bonus: weekly content structure template",
+        "painHeadline": "You post without a through-line",
+        "outcomeBenefit": "A weekly template so every piece has intent, tone, and a slot on your calendar."
+      },
+      {
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Bonus: content idea bank",
+        "painHeadline": "You freeze in front of the camera",
+        "outcomeBenefit": "30–50 prompts to start in minutes without relying only on trends."
+      },
+      {
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Bonus: visual identity moodboard",
+        "painHeadline": "Your feed looks inconsistent",
+        "outcomeBenefit": "A moodboard guide to align palette, type, and references with your voice."
+      },
+      {
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: consistency routine",
+        "painHeadline": "Consistency depends on motivation",
+        "outcomeBenefit": "A simple, realistic routine to publish with focus without burning out."
+      }
     ],
-    "cta": "Go to checkout",
+    "urgency": {
+      "title": "Why it helps to decide now",
+      "bullets": [
+        "Launch window: the bundle is built for creators who want identity + content clarity now—not “someday.”",
+        "No fake scarcity: we don’t invent stock counts; the real cost is your time if clarity keeps waiting."
+      ],
+      "deadlineLineTemplate": "For this edition, launch bonuses apply through {date}."
+    },
+    "ctaPrimary": "I want my ebook access now",
     "supportNote": "Questions? Email us:",
-    "supportEmail": "soporteila@gmail.com"
+    "supportEmail": "soporteila@gmail.com",
+    "priceHint": "USD price — set via environment."
   },
   "faq": {
     "introTitle": "Frequently asked questions",

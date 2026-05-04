@@ -1,8 +1,17 @@
 import Image from "next/image";
-import type { CSSProperties, ReactNode } from "react";
+import type { CSSProperties } from "react";
 import { montserrat } from "@/app/ui/fonts";
+import type { Locale } from "@/i18n/config";
+import { i18n } from "@/i18n/config";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import {
+  getLaunchBonusBundleDeadlineIso,
+  getLaunchOfferPhaseLabel,
+} from "@/utils/launchEnv";
+import CheckoutLink from "./CheckoutLink";
+import CutoutPlate from "./CutoutPlate";
 import FaqAccordion from "./FaqAccordion";
+import OfferSection from "./offer/OfferSection";
 import {
   ScrollReveal,
   ScrollRevealItem,
@@ -16,10 +25,8 @@ import StickyLaunchCta from "./StickyLaunchCta";
 const sectionBandHeading =
   "font-semibold tracking-tighter text-[clamp(1.125rem,3.5vw,1.875rem)] leading-tight text-[#131212] md:text-[clamp(1.375rem,3vw,2.375rem)]";
 
-/** Filenames expected under `assetBase` (mirror `discover-your-character` or swap files keeping names). */
 const IMAGE_SLOTS = {
   heroVisual: "hero_done.png",
-  /** Doodle stars to the left of the hero product title (`hero_headline_stars.png`). */
   heroHeadlineStars: "hero_headline_stars.png",
   heroSignature: "hero_signature.png",
   proofTimeline: "proof_done.png",
@@ -27,7 +34,6 @@ const IMAGE_SLOTS = {
   solutionAchievementTrophy: "solution_achievement_trophy.png",
   solutionEbookHighlightOval: "solution_ebook_highlight_oval.png",
   faqAside: "faq_done.png",
-  /** Decorative heart beside closing CTA (`close_heart.png`). */
   closeHeart: "close_heart.png",
 } as const;
 
@@ -71,30 +77,7 @@ const HERO_IMAGE_DESKTOP = {
  * Desktop rail caps at 300px CSS width; `scale(1.06)` upsamples the bitmap — bump `sizes` by scale
  * so Next srcset targets aren’t undersized (DPR is applied by the browser on top).
  */
-const HERO_IMAGE_SIZES_DESKTOP =
-  `(max-width: 768px) 0px, min(${Math.ceil(300 * HERO_IMAGE_DESKTOP.scale)}px, 92vw)`;
-
-/** Warm plate behind transparent PNG cutouts (cream / blush) — avoids “floating” halos vs flat page bg. */
-function CutoutPlate({
-  className,
-  children,
-}: {
-  className?: string;
-  children: ReactNode;
-}) {
-  return (
-    <div
-      className={[
-        "relative overflow-hidden rounded-2xl",
-        "bg-gradient-to-b from-[#FFFBF7] via-[#FFF6F2] to-[#EFE8E4]",
-        "shadow-[0_16px_48px_-20px_rgba(180,110,130,0.28)]",
-        className ?? "",
-      ].join(" ")}
-    >
-      {children}
-    </div>
-  );
-}
+const HERO_IMAGE_SIZES_DESKTOP = `(max-width: 768px) 0px, min(${Math.ceil(300 * HERO_IMAGE_DESKTOP.scale)}px, 92vw)`;
 
 function GrainOverlay() {
   return (
@@ -104,27 +87,6 @@ function GrainOverlay() {
         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
       }}
     />
-  );
-}
-
-function CheckoutLink({
-  href,
-  children,
-  className,
-}: {
-  href: string;
-  children: ReactNode;
-  className?: string;
-}) {
-  const safe = href || "#offer";
-  return (
-    <a
-      href={safe}
-      className={className}
-      {...(!href ? { "aria-disabled": true } : {})}
-    >
-      {children}
-    </a>
   );
 }
 
@@ -166,6 +128,7 @@ export default function EbookLanding({
   checkoutUrl,
   priceUsd,
   timeToResult,
+  locale = i18n.defaultLocale,
 }: {
   copy: EbookLandingCopy;
   /** e.g. `/launch-assets/<slug>` — no trailing slash */
@@ -173,12 +136,18 @@ export default function EbookLanding({
   checkoutUrl: string;
   priceUsd: string;
   timeToResult: string;
+  locale?: Locale;
 }) {
   const base = assetBase.replace(/\/$/, "");
   const asset = (filename: string) => `${base}/${filename}`;
 
   const priceLine =
     priceUsd.trim().length > 0 ? `$${priceUsd} USD` : copy.offer.priceHint;
+
+  const launchSlug =
+    assetBase.replace(/^\//, "").split("/").filter(Boolean).pop() ?? "";
+  const offerPhaseLabel = getLaunchOfferPhaseLabel(launchSlug);
+  const offerDeadlineIso = getLaunchBonusBundleDeadlineIso(launchSlug);
 
   return (
     <div
@@ -253,7 +222,9 @@ export default function EbookLanding({
                     quality={100}
                   />
                 </div>
-                <figcaption className="sr-only">{copy.hero.imageAlt}</figcaption>
+                <figcaption className="sr-only">
+                  {copy.hero.imageAlt}
+                </figcaption>
               </figure>
             </ScrollRevealItem>
 
@@ -320,7 +291,9 @@ export default function EbookLanding({
                     quality={100}
                   />
                 </div>
-                <figcaption className="sr-only">{copy.hero.imageAlt}</figcaption>
+                <figcaption className="sr-only">
+                  {copy.hero.imageAlt}
+                </figcaption>
               </figure>
             </ScrollRevealItem>
           </ScrollRevealStagger>
@@ -334,14 +307,20 @@ export default function EbookLanding({
             <span className="rounded-full bg-[#ffb3d9]/35 px-4 py-1 text-xs tracking-wide font-semibold uppercase text-[#131212]">
               {copy.problem.eyebrow}
             </span>
-            <h2 className={`mt-6 ${sectionBandHeading}`}>{copy.problem.title}</h2>
+            <h2 className={`mt-6 ${sectionBandHeading}`}>
+              {copy.problem.title}
+            </h2>
           </ScrollReveal>
           <ScrollRevealStagger className="grid gap-6 md:grid-cols-2">
             {copy.problem.cards.map((c, i) => (
               <ScrollRevealItem key={i}>
                 <div className="rounded-2xl border border-[#131212]/10 bg-[#F8F7F4] p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold text-[#ff62b4]">{c.title}</h3>
-                  <p className="mt-2 whitespace-pre-line text-[#131212]/85">{c.body}</p>
+                  <h3 className="text-lg font-semibold text-[#ff62b4]">
+                    {c.title}
+                  </h3>
+                  <p className="mt-2 whitespace-pre-line text-[#131212]/85">
+                    {c.body}
+                  </p>
                 </div>
               </ScrollRevealItem>
             ))}
@@ -527,34 +506,34 @@ export default function EbookLanding({
             {copy.proof.timeline.map((t) => (
               <ScrollRevealItem key={t.year}>
                 <div className="rounded-2xl border border-[#131212]/10 bg-white/90 p-5 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ff62b4] text-sm font-bold text-white">
-                    {t.year.slice(2)}
-                  </span>
-                  <div>
-                    <p className="font-bold text-[#ff62b4]">{t.year}</p>
-                    <p className="text-sm font-semibold">{t.phase}</p>
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ff62b4] text-sm font-bold text-white">
+                      {t.year.slice(2)}
+                    </span>
+                    <div>
+                      <p className="font-bold text-[#ff62b4]">{t.year}</p>
+                      <p className="text-sm font-semibold">{t.phase}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="mx-auto mt-4 w-full max-w-[17rem] min-w-0">
-                  <CutoutPlate className="relative aspect-video">
-                    <Image
-                      src={asset(proofTimelineImageForYear(t.year))}
-                      alt={t.phase}
-                      fill
-                      className="object-cover object-center"
-                      sizes="(max-width:1024px) 272px, 228px"
-                    />
-                  </CutoutPlate>
-                </div>
-                <ul className="mt-4 space-y-2 text-sm text-[#131212]/85">
-                  {t.bullets.map((b, j) => (
-                    <li key={j} className="flex gap-2">
-                      <span className="text-[#ff62b4]">•</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <div className="mx-auto mt-4 w-full max-w-[17rem] min-w-0">
+                    <CutoutPlate className="relative aspect-video">
+                      <Image
+                        src={asset(proofTimelineImageForYear(t.year))}
+                        alt={t.phase}
+                        fill
+                        className="object-cover object-center"
+                        sizes="(max-width:1024px) 272px, 228px"
+                      />
+                    </CutoutPlate>
+                  </div>
+                  <ul className="mt-4 space-y-2 text-sm text-[#131212]/85">
+                    {t.bullets.map((b, j) => (
+                      <li key={j} className="flex gap-2">
+                        <span className="text-[#ff62b4]">•</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </ScrollRevealItem>
             ))}
@@ -562,50 +541,22 @@ export default function EbookLanding({
         </div>
       </section>
 
-      {/* Offer */}
-      <section id="offer" className="scroll-mt-24 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-12">
-          <ScrollRevealStagger className="grid gap-10 rounded-3xl border border-[#131212]/10 bg-white p-8 shadow-xl md:grid-cols-2 md:p-12">
-            <ScrollRevealItem>
-              <h2 className={sectionBandHeading}>{copy.offer.title}</h2>
-              <p className="mt-2 text-sm text-[#131212]/85">{copy.offer.subtitle}</p>
-              <p className="mt-4 text-4xl font-black text-[#ff62b4]">{priceLine}</p>
-              <CheckoutLink
-                href={checkoutUrl}
-                className="mt-4 inline-flex rounded-full bg-[#ff62b4] px-10 py-4 text-lg font-semibold text-white shadow-lg"
-              >
-                {copy.offer.cta}
-              </CheckoutLink>
-              <p className="mt-5 text-sm text-[#131212]/65">
-                {copy.offer.supportNote}{" "}
-                <a
-                  href={`mailto:${copy.offer.supportEmail}`}
-                  className="font-semibold text-[#ff62b4] underline"
-                >
-                  {copy.offer.supportEmail}
-                </a>
-              </p>
-            </ScrollRevealItem>
-            <ScrollRevealItem>
-              <h3 className="text-lg font-semibold">{copy.offer.bonusesTitle}</h3>
-              <ScrollRevealStaggerUl className="mt-4 space-y-3">
-                {copy.offer.bonuses.map((b, i) => (
-                  <ScrollRevealLi
-                    key={i}
-                    className="flex gap-3 rounded-xl bg-[#F8F7F4] px-4 py-3 text-[#131212]/90"
-                  >
-                    <span className="text-[#ff62b4]">✦</span>
-                    <span>{b}</span>
-                  </ScrollRevealLi>
-                ))}
-              </ScrollRevealStaggerUl>
-            </ScrollRevealItem>
-          </ScrollRevealStagger>
-        </div>
-      </section>
+      <OfferSection
+        offer={copy.offer}
+        assetBase={base}
+        priceLine={priceLine}
+        checkoutUrl={checkoutUrl}
+        sectionBandHeading={sectionBandHeading}
+        locale={locale}
+        phaseLabel={offerPhaseLabel}
+        deadlineIso={offerDeadlineIso}
+      />
 
       {/* FAQ */}
-      <section id="faq" className="scroll-mt-24 border-t border-[#131212]/10 bg-[#F8F7F4] py-16">
+      <section
+        id="faq"
+        className="scroll-mt-24 border-t border-[#131212]/10 bg-[#F8F7F4] py-16"
+      >
         <div className="mx-auto max-w-6xl px-12">
           <ScrollRevealStagger className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
             <ScrollRevealItem className="space-y-6">
@@ -640,10 +591,7 @@ export default function EbookLanding({
       </section>
 
       {/* Close */}
-      <section
-        id="landing-close"
-        className="bg-[#131212] py-16 text-[#F8F7F4]"
-      >
+      <section id="landing-close" className="bg-[#131212] py-16 text-[#F8F7F4]">
         <ScrollReveal className="mx-auto max-w-3xl px-12 text-center" y={22}>
           <h2 className="max-w-[38ch] text-pretty text-3xl font-bold leading-snug md:text-4xl">
             {copy.close.headline}
@@ -669,7 +617,9 @@ export default function EbookLanding({
               />
             </div>
           </div>
-          <p className="mt-10 text-sm text-[#F8F7F4]/55">{copy.close.footnote}</p>
+          <p className="mt-10 text-sm text-[#F8F7F4]/55">
+            {copy.close.footnote}
+          </p>
         </ScrollReveal>
       </section>
     </div>

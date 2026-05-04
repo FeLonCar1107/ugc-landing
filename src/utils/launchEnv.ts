@@ -22,3 +22,37 @@ export function getLaunchTimeToResult(slug: string): string {
   const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_TIME_TO_RESULT`;
   return process.env[k] ?? "";
 }
+
+/** Optional editorial label (e.g. launch phase) for offer urgency — no fabricated inventory. */
+export function getLaunchOfferPhaseLabel(slug: string): string | undefined {
+  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_OFFER_PHASE_LABEL`;
+  const v = process.env[k]?.trim();
+  return v && v.length > 0 ? v : undefined;
+}
+
+/**
+ * Optional ISO-8601 instant for bonus bundle deadline; invalid values are treated as absent
+ * so the UI never shows a false-precision date.
+ */
+export function getLaunchBonusBundleDeadlineIso(slug: string): string | undefined {
+  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_BONUS_BUNDLE_DEADLINE_ISO`;
+  const v = process.env[k]?.trim();
+  if (!v) return undefined;
+  const ms = Date.parse(v);
+  if (Number.isNaN(ms)) return undefined;
+  return v;
+}
+
+/** Top-of-page landing hero image — Isabella portrait vs ebook mockup (conversion A/B). */
+export type LaunchHeroVisual = "portrait" | "mockup";
+
+/**
+ * Reads `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL`.
+ * - `mockup` — `offer_ebook_mockup.png` in the first hero.
+ * - Any other value or unset — `hero_done.png` (portrait / Isabella), current default.
+ */
+export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
+  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_HERO_VISUAL`;
+  const v = process.env[k]?.trim().toLowerCase();
+  return v === "mockup" ? "mockup" : "portrait";
+}

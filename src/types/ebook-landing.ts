@@ -41,14 +41,42 @@ export interface EbookLandingCopy {
     timeline: { year: string; phase: string; bullets: string[] }[];
   };
   offer: {
-    title: string;
-    subtitle: string;
-    priceHint: string;
-    bonusesTitle: string;
-    bonuses: string[];
-    cta: string;
+    /** Visible band title above the conversion stack (access / bundle framing). */
+    sectionTitle: string;
+    hero: {
+      /** Launch framing; v1 expects two strings (rendered as pills). */
+      badges: string[];
+      statement: string;
+      imageAlt: string;
+    };
+    valueStack: {
+      lineItems: Array<{
+        id: string;
+        label: string;
+        anchorValueLabel: string;
+      }>;
+      totalLabel: string;
+      totalAnchorLabel: string;
+      youPayLabel: string;
+    };
+    bonusesSectionTitle: string;
+    bonuses: Array<{
+      imageFile: string;
+      imageAlt: string;
+      painHeadline: string;
+      outcomeBenefit: string;
+    }>;
+    urgency: {
+      title: string;
+      bullets: string[];
+      /** When set and `NEXT_PUBLIC_LAUNCH_*_BONUS_BUNDLE_DEADLINE_ISO` is valid, `{date}` is replaced. */
+      deadlineLineTemplate?: string;
+    };
+    ctaPrimary: string;
     supportNote: string;
     supportEmail: string;
+    /** Shown when `priceUsd` env is empty (same behavior as legacy `priceHint`). */
+    priceHint: string;
   };
   faq: {
     introTitle: string;

@@ -109,19 +109,83 @@
     ]
   },
   "offer": {
-    "title": "Todo lo que incluye tu acceso",
-    "subtitle": "Ebook \"Descubre tu personaje\" + bonuses para ejecutar.",
-    "priceHint": "Precio en USD — configuración por entorno.",
-    "bonusesTitle": "Bonuses incluidos",
+    "sectionTitle": "Todo lo que incluye tu acceso",
+    "hero": {
+      "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
+      "statement": "Pasa de improvisar a un sistema con identidad clara: ebook + recursos para ejecutar esta semana.",
+      "imageAlt": "Mockup del ebook «Descubre tu personaje»"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook",
+          "label": "Ebook «Descubre tu personaje»",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "Plantilla de estructura de contenido",
+          "anchorValueLabel": "USD 15"
+        },
+        {
+          "id": "b2",
+          "label": "Banco de ideas de contenido (30–50 ideas)",
+          "anchorValueLabel": "USD 15"
+        },
+        {
+          "id": "b3",
+          "label": "Moodboard de identidad visual",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b4",
+          "label": "Rutina simple para crear con constancia",
+          "anchorValueLabel": "USD 12"
+        }
+      ],
+      "totalLabel": "Valor referencial del paquete",
+      "totalAnchorLabel": "USD 81",
+      "youPayLabel": "Tu inversión hoy"
+    },
+    "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
-      "Plantilla de estructura de contenido",
-      "Banco de ideas de contenido (30–50 ideas)",
-      "Moodboard de identidad visual",
-      "Rutina simple para crear con constancia"
+      {
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Bonus: plantilla de estructura de contenido",
+        "painHeadline": "Publicas sin un hilo conductor",
+        "outcomeBenefit": "Plantilla semanal para que cada pieza tenga objetivo, tono y lugar en tu calendario."
+      },
+      {
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Bonus: banco de ideas de contenido",
+        "painHeadline": "Te quedas en blanco frente a la cámara",
+        "outcomeBenefit": "Banco de 30–50 ideas para arrancar en minutos sin depender solo del algoritmo."
+      },
+      {
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Bonus: moodboard de identidad visual",
+        "painHeadline": "Tu feed se ve inconsistente",
+        "outcomeBenefit": "Guía de moodboard para alinear paleta, tipografías y referencias visuales con tu voz."
+      },
+      {
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: rutina de constancia",
+        "painHeadline": "La constancia depende del ánimo",
+        "outcomeBenefit": "Rutina simple y realista para publicar con foco sin quemarte en el intento."
+      }
     ],
-    "cta": "Ir al checkout",
+    "urgency": {
+      "title": "Por qué conviene decidir ahora",
+      "bullets": [
+        "Ventana de lanzamiento: el bundle está armado para quien quiera ordenar identidad + contenido sin esperar \"el momento perfecto\".",
+        "Sin inventarios falsos: no usamos cupos inventados; el costo real es tu tiempo si sigues posponiendo claridad."
+      ],
+      "deadlineLineTemplate": "En esta edición, los bonuses de lanzamiento aplican hasta el {date}."
+    },
+    "ctaPrimary": "Quiero mi acceso al ebook ahora",
     "supportNote": "¿Dudas? Escríbenos:",
-    "supportEmail": "soporteila@gmail.com"
+    "supportEmail": "soporteila@gmail.com",
+    "priceHint": "Precio en USD — configuración por entorno."
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
