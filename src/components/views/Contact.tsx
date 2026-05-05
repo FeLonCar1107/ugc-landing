@@ -25,7 +25,7 @@ export default function Contact(props: IContactProps) {
     >
       <DividerBottom />
       <DividerTop />
-      <div className="w-[68%] max-w-[1300px] h-auto flex flex-col md:flex-row gap-7 pt-[100px]">
+      <div className="section-shell h-auto flex flex-col md:flex-row gap-7 pt-[100px]">
         <div className="w-full md:w-[50%] h-auto flex flex-col items-start justify-start text-jazzberry-jam-50">
           <div className="w-full flex gap-3 items-center justify-start">
             <div className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-full relative shadow-md">

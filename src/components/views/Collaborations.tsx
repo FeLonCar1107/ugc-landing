@@ -16,7 +16,7 @@ export default function Collaborations(props: ICollaborationsProps) {
       id="collaborations"
       className="w-screen h-auto relative bg-transparent lg:pb-20"
     >
-      <div className="w-full h-auto flex items-end justify-center">
+      <div className="section-shell h-auto flex items-end justify-center">
         <div
           data-scroll
           data-scroll-speed="-1.5"
@@ -50,33 +50,35 @@ export default function Collaborations(props: ICollaborationsProps) {
           />
         </div>
       </div>
-      {isLoading ? (
-        <div className="w-full h-[250px] flex items-center justify-center">
-          <div className="collabs-loader"></div>
-        </div>
-      ) : (
-        <div className="collaborations-slider z-30">
-          <div className="collaborations-slider-track">
-            {doubledBrands?.map((brand: IBrand, idx: number) => (
-              <div
-                key={brand.id + "-" + idx}
-                className="collaborations-slider-brand"
-              >
-                <div className="brand relative">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.alt}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    unoptimized={true}
-                    className="transition-all duration-300"
-                  />
-                </div>
-              </div>
-            ))}
+      <div className="section-shell w-full">
+        {isLoading ? (
+          <div className="flex h-[250px] w-full items-center justify-center">
+            <div className="collabs-loader"></div>
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="collaborations-slider z-30">
+            <div className="collaborations-slider-track">
+              {doubledBrands?.map((brand: IBrand, idx: number) => (
+                <div
+                  key={brand.id + "-" + idx}
+                  className="collaborations-slider-brand"
+                >
+                  <div className="brand relative">
+                    <Image
+                      src={brand.logo}
+                      alt={brand.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      unoptimized={true}
+                      className="transition-all duration-300"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

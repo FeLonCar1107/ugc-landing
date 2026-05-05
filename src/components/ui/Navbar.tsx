@@ -46,7 +46,7 @@ export default function Navbar({
 
   return (
     <nav
-      className={`w-full h-14 lg:h-16 flex items-center justify-between px-4 text-white fixed top-0 left-0 z-[1000] transition-transform duration-500 ease-out animated fadeIn ${
+      className={`box-border flex h-[var(--navbar-height)] min-h-[var(--navbar-height)] max-h-[var(--navbar-height)] w-full shrink-0 items-center justify-center text-white fixed top-0 left-0 z-[1000] transition-transform duration-500 ease-out animated fadeIn ${
         montserrat.className
       } ${
         showNavOptions
@@ -54,35 +54,38 @@ export default function Navbar({
           : ""
       }`}
     >
-      <div className="lg:hidden">
-        <HamburgerMenu
-          color="#530424"
-          navigation={navigation}
-          currentLanguage={lang}
-        />
-      </div>
-      <a
-        onClick={goToHome}
-        className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[24px] lg:text-[25px] cursor-pointer animated fadeIn"
-      >
-        ILA
-      </a>
-      {showNavOptions && (
-        <>
-          <NavOptions options={navigation.nav_options} />
-          <LangSwitcher currentLanguage={lang} />
-        </>
-      )}
-      {!showNavOptions && (
-        <div className="hidden lg:block bg-jazzberry-jam-600 rounded-full scale-in-tr">
+      <div className="section-shell flex h-full w-full min-w-0 items-center justify-between gap-2">
+        {/* hamburger-react usa caja 48px con barras centradas (~12px de hueco a la izquierda); -ml-3 alinea el trazo con section-shell como el texto del hero */}
+        <div className="md:hidden -ml-3 flex shrink-0 items-center justify-start">
           <HamburgerMenu
-            size={20}
-            color="#ffff"
-            currentLanguage={lang}
+            color="#530424"
             navigation={navigation}
+            currentLanguage={lang}
           />
         </div>
-      )}
+        <a
+          onClick={goToHome}
+          className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[20px] cursor-pointer animated fadeIn"
+        >
+          ILA
+        </a>
+        {showNavOptions && (
+          <>
+            <NavOptions options={navigation.nav_options} />
+            <LangSwitcher currentLanguage={lang} />
+          </>
+        )}
+        {!showNavOptions && (
+          <div className="hidden lg:block bg-jazzberry-jam-600 rounded-full scale-in-tr">
+            <HamburgerMenu
+              size={20}
+              color="#ffff"
+              currentLanguage={lang}
+              navigation={navigation}
+            />
+          </div>
+        )}
+      </div>
     </nav>
   );
 }

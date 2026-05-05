@@ -71,7 +71,7 @@ export default function UGC(props: IUserCreatorContentProps) {
       <p className="absolute top-0 left-1/2 transform -translate-x-1/2 text-[45vw] md:text-[25vw] 2xl:text-[20vw] font-BeckanPersonal text-jazzberry-jam-300 leading-none drop-shadow-md z-0">
         UGC
       </p>
-      <div className="slider-ugc z-10">
+      <div className="slider-ugc section-shell z-10">
         <div className="cards">
           {content.cards.map((card, index: number) => (
             <div

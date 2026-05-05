@@ -21,7 +21,7 @@ export default function About(props: IAboutProps) {
       id="about"
       className="w-screen h-auto min-h-screen flex items-center justify-center lg:py-10"
     >
-      <div className="w-full h-full max-w-[1300px] flex flex-col lg:flex-row items-center justify-center gap-3">
+      <div className="section-shell flex h-full flex-col lg:flex-row items-center justify-center gap-3">
         <div className="w-full lg:w-[40%] h-full flex flex-col items-center justify-center">
           <div
             data-scroll

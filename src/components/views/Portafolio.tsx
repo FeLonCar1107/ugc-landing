@@ -30,41 +30,43 @@ export default function Portafolio(props: IPortfolioProps) {
       data-scroll-section
       className="w-screen h-screen bg-transparent flex flex-col items-center justify-center gap-5 lg:gap-10 2xl:gap-20"
     >
-      <div className="w-full flex flex-col items-center justify-center">
-        <p className="text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase leading-none overflow-hidden">
-          <strong>{splitTitle[0]}</strong>
-          {splitTitle[1]}
-        </p>
-      </div>
-      <div className="w-[77%] md:w-[85%] max-w-[1150px] h-auto min-h-[475px] flex items-center justify-between overflow-hidden">
-        <div className="pictures-wrapper">
-          <div id="left-picture-arrow" className="picture-arrow">
-            <LeftArrowIcon color="#871444" />
-          </div>
-          <div className="pictures-carousel">
-            {content.pictures.map((picture: IPicture, index: number) => (
-              <div key={picture.id} className="picture">
-                {imageLoadingStates[index] && (
-                  <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
-                    <div className="media-loader"></div>
-                  </div>
-                )}
-                <Image
-                  src={picture.src}
-                  alt={picture.alt}
-                  fill
-                  quality={100}
-                  onLoad={() => handleImageLoad(index)}
-                  sizes="(max-width: 600px) 100vw, 600px"
-                  className={`picture-image ${
-                    imageLoadingStates[index] ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-              </div>
-            ))}
-          </div>
-          <div id="right-picture-arrow" className="picture-arrow">
-            <RightArrowIcon color="#871444" />
+      <div className="section-shell flex w-full flex-col items-center justify-center gap-5 lg:gap-10 2xl:gap-20">
+        <div className="w-full flex flex-col items-center justify-center">
+          <p className="text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase leading-none overflow-hidden">
+            <strong>{splitTitle[0]}</strong>
+            {splitTitle[1]}
+          </p>
+        </div>
+        <div className="w-full h-auto min-h-[475px] flex items-center justify-between overflow-hidden">
+          <div className="pictures-wrapper">
+            <div id="left-picture-arrow" className="picture-arrow">
+              <LeftArrowIcon color="#871444" />
+            </div>
+            <div className="pictures-carousel">
+              {content.pictures.map((picture: IPicture, index: number) => (
+                <div key={picture.id} className="picture">
+                  {imageLoadingStates[index] && (
+                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                      <div className="media-loader"></div>
+                    </div>
+                  )}
+                  <Image
+                    src={picture.src}
+                    alt={picture.alt}
+                    fill
+                    quality={100}
+                    onLoad={() => handleImageLoad(index)}
+                    sizes="(max-width: 600px) 100vw, 600px"
+                    className={`picture-image ${
+                      imageLoadingStates[index] ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
+                </div>
+              ))}
+            </div>
+            <div id="right-picture-arrow" className="picture-arrow">
+              <RightArrowIcon color="#871444" />
+            </div>
           </div>
         </div>
       </div>

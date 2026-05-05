@@ -1,106 +1,91 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Skills from "@/components/Skills";
 import { IHomeProps } from "@/types/props/home";
 
+/** Fluid hero title: scales with viewport width, no breakpoint tweaks (min / preferred vw / max). */
+const HERO_NAME_SIZE = "clamp(4.5rem, 17.5vw + 0.9rem, 15.5rem)";
+
+/** Top strip: clears fixed navbar + fluid inset (single source; Main no longer adds pt). */
+const HOME_TOP_PADDING =
+  "calc(var(--navbar-height) + clamp(0.5rem, 2.5vh, 1.25rem))";
+
+/** Short description: fluid size + line-height (no breakpoint font classes). */
+const HOME_INTRO_FONT_SIZE =
+  "clamp(0.8125rem, 1.15vw + 0.58rem, 1.125rem)";
+const HOME_INTRO_LINE_HEIGHT =
+  "clamp(1.28rem, 0.65vw + 1.05rem, 1.65rem)";
+
 export default function Home(props: IHomeProps) {
   const { content } = props;
-  const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
-
-  const handleResize = () => {
-    setInnerWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const getImageDimensions = () => {
-    if (innerWidth <= 768) {
-      return { width: 600, height: 400 };
-    } else if (innerWidth <= 1500) {
-      return { width: 255, height: 400 };
-    } else {
-      return { width: 380, height: 700 };
-    }
-  };
-
-  const { width, height } = getImageDimensions();
 
   return (
     <section
       id="home"
       data-scroll-section
-      className="w-screen min-h-screen h-screen bg-transparent relative"
+      className="flex h-[100dvh] min-h-0 w-full flex-col overflow-hidden bg-transparent lg:overflow-visible"
     >
-      <div className="absolute top-20 lg:top-[4rem] 2xl:top-14 left-[14%] sm:left-[7%] lg:left-[6%] text-jazzberry-jam-300 font-bold">
-        <Skills words={content?.skills} />
-      </div>
-      <div className="w-[50%] sm:w-auto absolute top-20 lg:top-[4rem] 2xl:top-14 right-0 sm:right-[7%] lg:right-[4%] text-jazzberry-jam-300 font-bold">
-        <p className="text-sm sm:text-base h-auto sm:text-[2.5vw] lg:text-[1.4vw] sm:max-w-[40vw] lg:max-w-[25vw] pr-5 md:pr-0 lg:leading-[1.5vw]">
-          {content?.shortDescription}
-        </p>
-      </div>
+      {/* Top band: skills + short description — pt en calc para empezar siempre bajo el navbar */}
       <div
-        data-scroll
-        data-scroll-speed="5"
-        className="absolute top-[35%] transform -translate-y-1/3 sm:bottom-12 w-full h-auto flex flex-col items-center justify-end z-10 overflow-hidden space-y-[-3.3vw]"
+        className="section-shell flex shrink-0 flex-row items-start justify-between gap-12 font-semibold text-jazzberry-jam-300"
+        style={{ paddingTop: HOME_TOP_PADDING }}
       >
-        <h1 className="tw-primary-title text-jazzberry-jam-400 font-BeckanPersonal leading-none text-[17vw] xl:text-[15vw] 2xl:text-[13vw] overflow-hidden">
-          {content?.name.toUpperCase()}
-        </h1>
-        <h1 className="tw-secondary-title font-BeckanPersonal text-transparent text-[17vw] xl:text-[15vw] 2xl:text-[13vw] leading-none overflow-hidden">
-          {content?.name.toUpperCase()}
-        </h1>
-      </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20">
-        <div data-scroll data-scroll-speed="1" className="relative">
-          <Image
-            src={content?.image}
-            alt="Isabella"
-            width={width}
-            height={height}
-            priority
-            quality={100}
-            className="main-image blur-in w-full h-auto"
-          />
+        <div className="min-h-0 min-w-0 flex-1 basis-0 max-w-[350px]">
+          <Skills words={content?.skills} />
+        </div>
+        <div className="min-h-0 min-w-0 flex-1 basis-0 max-w-[350px]">
+          <p
+            className="text-right sm:text-left"
+            style={{
+              fontSize: HOME_INTRO_FONT_SIZE,
+              lineHeight: HOME_INTRO_LINE_HEIGHT,
+            }}
+          >
+            {content?.shortDescription}
+          </p>
         </div>
       </div>
-      <div
-        data-scroll
-        data-scroll-speed="0.3"
-        className="absolute bottom-[-50px] sm:bottom-[35vw] md:bottom-0 2xl:-bottom-32 w-full flex justify-between"
-      >
+
+      {/* Hero: resto del viewport */}
+      <div className="relative min-h-0 w-full flex-1 overflow-hidden lg:overflow-visible">
         <div
           data-scroll
-          data-scroll-direction="horizontal"
-          data-scroll-speed="-1.5"
-          className="w-[55vw] sm:w-[40vw] md:w-[20vw] h-[65vw] sm:h-[50vw] md:h-[25vw] relative"
+          data-scroll-speed="5"
+          className="pointer-events-none absolute inset-0 z-10 flex w-full flex-col items-center justify-center overflow-hidden"
         >
-          <Image
-            src={content?.flower}
-            alt="flower"
-            fill
-            priority
-            sizes="(max-width: 600px) 100vw, 600px"
-            className="rotate-[-30deg] md:ml-8 lg:ml-14 2x:ml-20"
-          />
+          <h1
+            className="tw-primary-title font-BeckanPersonal leading-none text-jazzberry-jam-400"
+            style={{ fontSize: HERO_NAME_SIZE }}
+          >
+            {content?.name.toUpperCase()}
+          </h1>
+          <h1
+            className="tw-secondary-title font-BeckanPersonal leading-none text-transparent"
+            style={{
+              fontSize: HERO_NAME_SIZE,
+              marginTop: "calc(-1 * clamp(0.85rem, 3.2vw, 2.75rem))",
+            }}
+          >
+            {content?.name.toUpperCase()}
+          </h1>
         </div>
-        <div
-          data-scroll
-          data-scroll-direction="horizontal"
-          data-scroll-speed="1.5"
-          className="w-[55vw] sm:w-[40vw] md:w-[20vw] h-[65vw] sm:h-[50vw] md:h-[25vw] relative"
-        >
-          <Image
-            src={content?.flower}
-            alt="flower"
-            fill
-            priority
-            sizes="(max-width: 600px) 100vw, 600px"
-          />
+
+        {/* Imagen: capa llena el flex-1 */}
+        <div className="absolute inset-0 z-20 min-h-0 overflow-hidden lg:overflow-visible">
+          <div
+            data-scroll
+            data-scroll-speed="1"
+            className="section-shell relative h-full"
+          >
+            <Image
+              src={content?.image}
+              alt="Isabella"
+              fill
+              sizes="(max-width: 640px) 96vw, (max-width: 1024px) 88vw, (max-width: 1536px) 75vw, 65vw"
+              priority
+              quality={100}
+              className="main-image blur-in origin-bottom object-contain object-bottom lg:scale-[1.25]"
+            />
+          </div>
         </div>
       </div>
     </section>

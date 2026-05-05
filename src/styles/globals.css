@@ -8,6 +8,8 @@
  * Change RGB triplets here to retheme marketing surfaces across the app.
  */
 :root {
+  /* Fixed shell height — keep Navbar.tsx / Main / Home in sync (h-14 mobile, lg:h-16). */
+  --navbar-height: 3.5rem;
   --brand-ink-rgb: 19 18 18;
   --brand-surface-rgb: 248 247 244;
   --brand-card-rgb: 255 255 255;
@@ -23,6 +25,12 @@
   --brand-shadow-tint-rgb: 180 110 130;
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --navbar-height: 4rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +44,10 @@ body {
   overflow: hidden;
   scroll-behavior: smooth;
   cursor: none;
+}
+
+html {
+  scroll-padding-top: var(--navbar-height);
 }
 
 /* Marketing landings: normal document scroll (portfolio keeps overflow:hidden + locomotive). */
@@ -354,10 +366,11 @@ textarea:focus {
 /* COLLABORATIONS SECTION
 ================================================== */
 
+/* Width comes from parent `.section-shell` (max-w-6xl + same px as rest of site). */
 .collaborations-slider {
-  margin: auto;
-  width: 80%;
-  max-width: 1500px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: none;
   height: 250px;
   display: grid;
   place-items: center;
@@ -404,10 +417,6 @@ textarea:focus {
 }
 
 @media screen and (max-width: 640px) {
-  .collaborations-slider {
-    width: 65%;
-  }
-
   .collaborations-slider::before,
   .collaborations-slider::after {
     display: none;

@@ -6,6 +6,5 @@ export interface IHomeProps {
     shortDescription: string;
     skills: string[];
     image: string;
-    flower: string;
   };
 }

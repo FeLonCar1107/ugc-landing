@@ -33,7 +33,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
       data-scroll-section
       className="w-screen flex items-center justify-center relative"
     >
-      <div id="customers" className="w-[80%] max-w-[1200px] h-auto flex gap-10">
+      <div id="customers" className="section-shell h-auto flex gap-10">
         <div
           data-scroll
           data-scroll-sticky

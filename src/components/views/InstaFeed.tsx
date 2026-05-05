@@ -76,88 +76,90 @@ export default function InstaFeed(props: IInstaFeedProps) {
     <section
       id="insta-feed"
       data-scroll-section
-      className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-6 py-10 bg-red-800"
+      className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-6 py-10"
     >
-      <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-3 text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase">
-        <h2 className="font-bold hover:scale-95 hover:opacity-90 transition duration-300 transform origin-center">
-          <a
-            target="_blank"
-            className="animate-underline"
-            href={props.buttons.follow.url}
-          >
-            @{user?.username}
-          </a>
-        </h2>
-        <h2>{props.subtitle}</h2>
-      </div>
-      <div className="w-[75%] max-w-[1000px] flex flex-wrap gap-1 justify-center items-center">
-        {content.length ? (
-          content
-            .slice(0, visibleRows * itemsPerRow)
-            .map((post: IInstagramMediaResponse, index: number) => (
-              <div
-                key={post.id}
-                className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
-                onClick={() => openModal(index)}
-              >
-                <Image
-                  src={post.type === MediaTypes.VIDEO ? post.preview : post.url}
-                  alt={post.caption}
-                  fill
-                  className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-500 ${
-                    mediaLoadingStates[index] ? "opacity-0" : "opacity-100"
-                  }`}
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  unoptimized={true}
-                  onLoad={() => handleMediaLoad(index)}
-                />
-                {mediaLoadingStates[index] && (
+      <div className="section-shell flex flex-col items-center justify-center gap-5 lg:gap-6">
+        <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-3 text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase">
+          <h2 className="font-bold hover:scale-95 hover:opacity-90 transition duration-300 transform origin-center">
+            <a
+              target="_blank"
+              className="animate-underline"
+              href={props.buttons.follow.url}
+            >
+              @{user?.username}
+            </a>
+          </h2>
+          <h2>{props.subtitle}</h2>
+        </div>
+        <div className="w-full flex flex-wrap gap-1 justify-center items-center">
+          {content.length ? (
+            content
+              .slice(0, visibleRows * itemsPerRow)
+              .map((post: IInstagramMediaResponse, index: number) => (
+                <div
+                  key={post.id}
+                  className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
+                  onClick={() => openModal(index)}
+                >
+                  <Image
+                    src={post.type === MediaTypes.VIDEO ? post.preview : post.url}
+                    alt={post.caption}
+                    fill
+                    className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-500 ${
+                      mediaLoadingStates[index] ? "opacity-0" : "opacity-100"
+                    }`}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    unoptimized={true}
+                    onLoad={() => handleMediaLoad(index)}
+                  />
+                  {mediaLoadingStates[index] && (
+                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                      <div className="media-loader"></div>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
+                    <p className="text-[10px] md:text-base text-white text-center overflow-hidden whitespace-pre-wrap text-ellipsis w-[80%] max-h-[75%]">
+                      {post.caption}
+                    </p>
+                  </div>
+                  <div className="w-4 h-4 md:w-6 md:h-6 absolute top-2 right-2">
+                    {post.type === MediaTypes.VIDEO ? (
+                      <ReelIcon color="#FFFFFF" size="100%" />
+                    ) : post.type === MediaTypes.CAROUSEL_ALBUM ? (
+                      <CarouselIcon color="#FFFFFF" size="100%" />
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                </div>
+              ))
+          ) : (
+            <>
+              {[...Array(itemsPerRow)].map((_, index: number) => (
+                <div
+                  key={index}
+                  className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
+                >
                   <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
                     <div className="media-loader"></div>
                   </div>
-                )}
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
-                  <p className="text-[10px] md:text-base text-white text-center overflow-hidden whitespace-pre-wrap text-ellipsis w-[80%] max-h-[75%]">
-                    {post.caption}
-                  </p>
                 </div>
-                <div className="w-4 h-4 md:w-6 md:h-6 absolute top-2 right-2">
-                  {post.type === MediaTypes.VIDEO ? (
-                    <ReelIcon color="#FFFFFF" size="100%" />
-                  ) : post.type === MediaTypes.CAROUSEL_ALBUM ? (
-                    <CarouselIcon color="#FFFFFF" size="100%" />
-                  ) : (
-                    <></>
-                  )}
-                </div>
-              </div>
-            ))
-        ) : (
-          <>
-            {[...Array(itemsPerRow)].map((_, index: number) => (
-              <div
-                key={index}
-                className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
-              >
-                <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
-                  <div className="media-loader"></div>
-                </div>
-              </div>
-            ))}
-          </>
-        )}
-      </div>
+              ))}
+            </>
+          )}
+        </div>
 
-      <button
-        onClick={
-          !currentButton?.url
-            ? handleLoadMore
-            : () => window.open(currentButton.url)
-        }
-        className="mt-3 w-40 h-11 bg-jazzberry-jam-500 text-white rounded hover:bg-jazzberry-jam-600 transition-colors duration-300"
-      >
-        {currentButton.title}
-      </button>
+        <button
+          onClick={
+            !currentButton?.url
+              ? handleLoadMore
+              : () => window.open(currentButton.url)
+          }
+          className="mt-3 w-40 h-11 bg-jazzberry-jam-500 text-white rounded hover:bg-jazzberry-jam-600 transition-colors duration-300"
+        >
+          {currentButton.title}
+        </button>
+      </div>
 
       <InstaModal
         user={user}

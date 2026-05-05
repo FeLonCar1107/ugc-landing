@@ -3,6 +3,8 @@ import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import { INavOption } from "@/types/nav-option";
 import { NavOptionsProps } from "@/types/props/nav-options";
 
+const NAV_OPTIONS_FONT_SIZE = "clamp(10px, 1.5vw + 0.5rem, 13px)";
+
 export default function NavOptions({ options }: NavOptionsProps) {
   const locomotiveScroll = useContext(LocomotiveScrollContext);
 
@@ -25,7 +27,8 @@ export default function NavOptions({ options }: NavOptionsProps) {
         <a
           onClick={() => scrollTo(option.href)}
           key={option.id}
-          className="text-jazzberry-jam-800 rounded-3xl hover:text-jazzberry-jam-500 py-2 px-5 flex-grow text-[11px] lg:text-[14px] 2xl:text-[20px] text-center font-medium cursor-pointer transition-all duration-300 ease-in-out nav-option"
+          className="text-jazzberry-jam-800 rounded-3xl hover:text-jazzberry-jam-500 py-2 px-5 flex-grow text-center font-medium cursor-pointer transition-all duration-300 ease-in-out nav-option"
+          style={{ fontSize: NAV_OPTIONS_FONT_SIZE }}
         >
           {option.title}
         </a>

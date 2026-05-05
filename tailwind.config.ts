@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -58,6 +59,31 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addComponents, theme }) => {
+      addComponents({
+        ".section-shell": {
+          marginLeft: "auto",
+          marginRight: "auto",
+          width: "100%",
+          maxWidth: theme("maxWidth.6xl"),
+          paddingLeft: theme("spacing.4"),
+          paddingRight: theme("spacing.4"),
+          "@screen sm": {
+            paddingLeft: theme("spacing.6"),
+            paddingRight: theme("spacing.6"),
+          },
+          "@screen md": {
+            paddingLeft: "2.5rem",
+            paddingRight: "2.5rem",
+          },
+          "@screen lg": {
+            paddingLeft: theme("spacing.12"),
+            paddingRight: theme("spacing.12"),
+          },
+        },
+      });
+    }),
+  ],
 };
 export default config;

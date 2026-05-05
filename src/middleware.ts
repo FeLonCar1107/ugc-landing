@@ -24,7 +24,8 @@ export function middleware(request: NextRequest) {
   /** Static files under `public/` keep root URLs — do not prefix with locale. */
   if (
     pathname.startsWith("/launch-assets") ||
-    pathname.startsWith("/flags")
+    pathname.startsWith("/flags") ||
+    pathname.startsWith("/portfolio")
   ) {
     return NextResponse.next();
   }

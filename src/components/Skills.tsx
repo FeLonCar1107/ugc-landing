@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+const SKILLS_FONT_SIZE = "clamp(0.9rem, 2.5vw + 0.4rem, 1.5rem)";
+
 export default function Skills({ words }: { words: string[] }) {
   const refs = useRef<(HTMLSpanElement | null)[]>([]);
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(0);
@@ -23,7 +25,10 @@ export default function Skills({ words }: { words: string[] }) {
   }, [words]);
 
   return (
-    <div className="max-w-[35vw] md:w-auto h-auto flex flex-col md:space-y-[-1vw]">
+    <div
+      className="max-w-[35vw] md:w-auto h-auto flex flex-col space-y-[-0.3vw]"
+      style={{ fontSize: SKILLS_FONT_SIZE }}
+    >
       {words.map((word: string, index: number) => (
         <span
           key={index}
@@ -32,7 +37,7 @@ export default function Skills({ words }: { words: string[] }) {
           }}
           className={`skills-fade-in ${
             index === currentWordIndex ? "visible" : ""
-          } text-[4vw] sm:text-[3.5vw] md:text-[2.7vw] lg:text-[1.9vw]`}
+          }`}
         >
           {word}
         </span>

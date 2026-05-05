@@ -8,7 +8,7 @@ export default function Footer(props: IFooterProps) {
       className="bg-jazzberry-jam-700 w-screen h-auto relative"
     >
       <div className="bg-jazzberry-jam-700 w-full h-2 absolute -top-1"></div>
-      <div className="w-full h-auto flex flex-col items-center justify-center gap-2 p-4 text-jazzberry-jam-50 text-xs lg:text-sm">
+      <div className="section-shell flex h-auto flex-col items-center justify-center gap-2 py-4 text-jazzberry-jam-50 text-xs lg:text-sm">
         <p>
           © {new Date().getFullYear()} - {content.rights}
         </p>
