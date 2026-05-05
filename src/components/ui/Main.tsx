@@ -4,7 +4,6 @@ import { Locale } from "@/i18n/config";
 import { montserrat } from "@/app/ui/fonts";
 import { IMainProps } from "@/types/props/main";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
-import Loader from "@/components/Loader";
 import Languages from "@/enums/languages.enum";
 import useLocomotiveScroll from "@/hooks/useLocomotiveScroll";
 import useCustomCursor from "@/hooks/useCustomCursor";
@@ -25,7 +24,7 @@ import { CollabsProvider } from "@/context/CollabsContext";
 export default function Main(props: IMainProps) {
   useCustomCursor();
   const { navigation, page } = props;
-  const { locomotiveScrollInstance, isLoading } = useLocomotiveScroll();
+  const { locomotiveScrollInstance } = useLocomotiveScroll();
   const [lang, setLang] = useState<Locale>(Languages.ES);
 
   useEffect(() => {
@@ -33,9 +32,8 @@ export default function Main(props: IMainProps) {
   }, []);
 
   useEffect(() => {
-    if (!isLoading && locomotiveScrollInstance)
-      locomotiveScrollInstance.update();
-  }, [isLoading, locomotiveScrollInstance]);
+    if (locomotiveScrollInstance) locomotiveScrollInstance.update();
+  }, [locomotiveScrollInstance]);
 
   return (
     <LocomotiveScrollContext.Provider value={locomotiveScrollInstance}>
@@ -53,25 +51,17 @@ export default function Main(props: IMainProps) {
           data-scroll-container
           className={`${montserrat.className} bg-jazzberry-jam-100`}
         >
-          {!isLoading ? (
-            <>
-              <Home {...page.home} />
-              <Videos {...page.videos} />
-              <Collaborations {...page.collaborations} />
-              <Portafolio {...page.portfolio} />
-              <About {...page.about} />
-              <InstaFeed {...page.instaFeed} />
-              <UGC {...page.ugc} />
-              <CustomerReviews {...page.customerReviews} />
-              <Contact {...page.contact} />
-              <Footer {...page.footer} />
-              <SocialFixed {...page.social} />
-            </>
-          ) : (
-            <div className="fade-out w-screen h-screen flex items-center justify-center">
-              <Loader />
-            </div>
-          )}
+          <Home {...page.home} />
+          <Videos {...page.videos} />
+          <Collaborations {...page.collaborations} />
+          <Portafolio {...page.portfolio} />
+          <About {...page.about} />
+          <InstaFeed {...page.instaFeed} />
+          <UGC {...page.ugc} />
+          <CustomerReviews {...page.customerReviews} />
+          <Contact {...page.contact} />
+          <Footer {...page.footer} />
+          <SocialFixed {...page.social} />
         </main>
       </CollabsProvider>
     </LocomotiveScrollContext.Provider>
