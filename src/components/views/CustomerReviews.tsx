@@ -41,7 +41,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
           data-scroll-target="#customers"
           className="w-[15%] lg:w-[40%] h-screen flex flex-col items-center justify-center"
         >
-          <div className="hidden lg:flex w-full lg:h-[25%] items-center justify-between">
+          <div className="relative z-20 hidden lg:flex w-full lg:h-[25%] shrink-0 items-center justify-between">
             <Image
               src={content.flower.src}
               alt={content.flower.alt}
@@ -49,7 +49,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               height={30}
               className="rotating"
             />
-            <div className="flex flex-col items-center justify-center -space-y-4">
+            <div className="flex flex-col items-center justify-center -space-y-4 px-2">
               {splitTitle.map((title: string, index: number) => (
                 <h2
                   key={index}
@@ -96,15 +96,16 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               className="rotating my-5"
             />
           </div>
-          <div className="hidden lg:flex w-full h-[80%] items-center justify-center">
+          <div className="hidden lg:flex w-full h-[70%] items-end justify-center px-2 pb-3">
             <Image
               src={content.image.src}
               alt={content.image.alt}
-              width={255}
-              height={400}
+              width={900}
+              height={1410}
               priority
-              className="show-image grayscale"
-              style={{ width: "auto", height: "auto" }}
+              quality={100}
+              sizes="(min-width: 1024px) min(40vw, 270px), 0px"
+              className="show-image h-auto w-full max-w-[min(100%,270px)]"
             />
           </div>
         </div>

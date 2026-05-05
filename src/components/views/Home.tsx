@@ -83,7 +83,7 @@ export default function Home(props: IHomeProps) {
               sizes="(max-width: 640px) 96vw, (max-width: 1024px) 88vw, (max-width: 1536px) 75vw, 65vw"
               priority
               quality={100}
-              className="main-image blur-in origin-bottom object-contain object-bottom lg:scale-[1.25]"
+              className="main-image blur-in origin-bottom object-contain object-bottom lg:scale-[1]"
             />
           </div>
         </div>
