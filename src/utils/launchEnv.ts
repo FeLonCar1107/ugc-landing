@@ -34,7 +34,9 @@ export function getLaunchOfferPhaseLabel(slug: string): string | undefined {
  * Optional ISO-8601 instant for bonus bundle deadline; invalid values are treated as absent
  * so the UI never shows a false-precision date.
  */
-export function getLaunchBonusBundleDeadlineIso(slug: string): string | undefined {
+export function getLaunchBonusBundleDeadlineIso(
+  slug: string,
+): string | undefined {
   const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_BONUS_BUNDLE_DEADLINE_ISO`;
   const v = process.env[k]?.trim();
   if (!v) return undefined;
@@ -46,6 +48,7 @@ export function getLaunchBonusBundleDeadlineIso(slug: string): string | undefine
 /** Top-of-page landing hero image — Isabella portrait vs ebook mockup (conversion A/B). */
 export const LAUNCH_HERO_VISUAL_PORTRAIT = "portrait" as const;
 export const LAUNCH_HERO_VISUAL_MOCKUP = "mockup" as const;
+
 export type LaunchHeroVisual =
   | typeof LAUNCH_HERO_VISUAL_PORTRAIT
   | typeof LAUNCH_HERO_VISUAL_MOCKUP;

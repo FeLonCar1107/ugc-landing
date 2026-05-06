@@ -19,7 +19,6 @@ import StickyLaunchCta from "./StickyLaunchCta";
 
 export type EbookLandingProps = {
   copy: EbookLandingCopy;
-  /** e.g. `/launch-assets/<slug>` — no trailing slash */
   assetBase: string;
   checkoutUrl: string;
   priceUsd: string;

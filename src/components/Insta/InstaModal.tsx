@@ -68,6 +68,7 @@ const InstaModal: React.FC<InstaModalProps> = ({
                   fill
                   className="absolute top-0 left-0 w-full h-full object-cover"
                   sizes="(min-width: 768px) 50vw, 100vw"
+                  unoptimized
                   onLoad={() => handleMediaLoad(postIndex)}
                 />
               )}
@@ -81,6 +82,7 @@ const InstaModal: React.FC<InstaModalProps> = ({
                     width={35}
                     height={35}
                     className="bg-jazzberry-jam-200 rounded-full"
+                    unoptimized
                   />
                   <div className="flex flex-col">
                     <h2 className="text-sm font-bold">

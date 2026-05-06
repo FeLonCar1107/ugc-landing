@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/i18n/config";
 import { i18n } from "@/i18n/config";
 import EbookLanding from "@/components/landings/ebook/EbookLanding";
-import {
-  getEbookLandingCopy,
-} from "@/lib/ebookLandingCopy";
+import { getEbookLandingCopy } from "@/lib/ebookLandingCopy";
 import {
   ALLOWED_LANDING_SLUGS,
   isAllowedLandingSlug,
