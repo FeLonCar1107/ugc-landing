@@ -10,21 +10,29 @@ const useLocomotiveScroll = () => {
     useState<LocomotiveScroll | null>(null);
 
   useEffect(() => {
-    let locomotiveScroll: LocomotiveScroll;
+    let locomotiveScroll: LocomotiveScroll | undefined;
+    let cancelled = false;
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const el = document.querySelector("#main") as HTMLElement | null;
+      if (!el || cancelled) return;
+
       locomotiveScroll = new LocomotiveScroll({
-        el: document.querySelector("#main") as HTMLElement,
+        el,
         smooth: true,
         smartphone: {
           smooth: true,
         },
       });
-      setLocomotiveScrollInstance(locomotiveScroll);
+      if (!cancelled) setLocomotiveScrollInstance(locomotiveScroll);
+      else locomotiveScroll.destroy();
     })();
 
     return () => {
-      if (locomotiveScroll) locomotiveScroll.destroy();
+      cancelled = true;
+      setLocomotiveScrollInstance(null);
+      locomotiveScroll?.destroy();
     };
   }, []);
 

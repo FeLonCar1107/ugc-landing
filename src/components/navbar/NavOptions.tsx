@@ -13,19 +13,25 @@ export default function NavOptions({ options }: NavOptionsProps) {
   }, [locomotiveScroll]);
 
   const scrollTo = (target: string) => {
-    if (locomotiveScroll) {
-      locomotiveScroll.scrollTo(target, {
-        duration: 1000,
-        easing: [0.22, 0.22, 0.2, 1],
-      });
-    }
+    const ls = locomotiveScroll;
+    if (!ls) return;
+    ls.update();
+    ls.scrollTo(target, {
+      duration: 1000,
+      easing: [0.22, 0.22, 0.2, 1],
+      callback: () => ls.update(),
+    });
   };
 
   return (
     <div className="hidden md:flex mx-auto justify-center items-center gap-2 2xl:gap-8 nav-options animated fadeIn">
       {options.map((option: INavOption) => (
         <a
-          onClick={() => scrollTo(option.href)}
+          href={option.href}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo(option.href);
+          }}
           key={option.id}
           className="text-jazzberry-jam-800 rounded-3xl hover:text-jazzberry-jam-500 py-2 px-5 flex-grow text-center font-medium cursor-pointer transition-all duration-300 ease-in-out nav-option"
           style={{ fontSize: NAV_OPTIONS_FONT_SIZE }}

@@ -31,12 +31,16 @@ export default function Menu({ data, closeMenu }: MenuProps) {
 
   const scrollTo = (target: string) => {
     closeMenu();
-    if (locomotiveScroll) {
-      locomotiveScroll.scrollTo(target, {
+    const ls = locomotiveScroll;
+    if (!ls) return;
+    requestAnimationFrame(() => {
+      ls.update();
+      ls.scrollTo(target, {
         duration: 1000,
         easing: [0.22, 0.22, 0.2, 1],
+        callback: () => ls.update(),
       });
-    }
+    });
   };
 
   return (
@@ -74,8 +78,15 @@ export default function Menu({ data, closeMenu }: MenuProps) {
             onMouseEnter={() => handleMouseEnter(option.image)}
             onMouseLeave={handleMouseLeave}
           >
-            <Link href={option.href} className="link">
-              <span className="mask" onClick={() => scrollTo(option.href)}>
+            <a
+              href={option.href}
+              className="link"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo(option.href);
+              }}
+            >
+              <span className="mask">
                 <div className="link-container">
                   <span className="link-title-one title">{option.title}</span>
                   <span className="link-title-two title font-BeckanPersonal tracking-[0.3rem] text-jazzberry-jam-600">
@@ -83,7 +94,7 @@ export default function Menu({ data, closeMenu }: MenuProps) {
                   </span>
                 </div>
               </span>
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

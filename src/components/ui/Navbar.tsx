@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import type LocomotiveScroll from "locomotive-scroll";
 import { Locale } from "@/i18n/config";
 import { montserrat } from "@/app/ui/fonts";
 import { INavigationProps } from "@/types/props/navigation";
@@ -7,6 +8,9 @@ import NavOptions from "@/components/navbar/NavOptions";
 import LangSwitcher from "@/components/navbar/LangSwitcher";
 import HamburgerMenu from "@/components/navbar/HamburgerMenu";
 
+/** Past ~88% of first viewport (hero is 100dvh) → treat as entering the next section. */
+const PAST_HERO_RATIO = 0.88;
+
 export default function Navbar({
   lang,
   navigation,
@@ -14,25 +18,31 @@ export default function Navbar({
   lang: Locale;
   navigation: INavigationProps;
 }) {
-  const [showNavOptions, setShowNavOptions] = useState<boolean>(true);
+  const [pastHero, setPastHero] = useState(false);
   const locomotiveScroll = useContext(LocomotiveScrollContext);
 
   useEffect(() => {
-    const controlNavbar = () => {
-      if (typeof window !== "undefined") {
-        locomotiveScroll?.on("scroll", (event) => {
-          setShowNavOptions(event.scroll.y <= 5);
-        });
-      }
+    if (!locomotiveScroll) return;
+
+    locomotiveScroll.update();
+
+    const heroThreshold = () =>
+      typeof window !== "undefined" ? window.innerHeight * PAST_HERO_RATIO : 0;
+
+    const onScroll = (event: { scroll: { y: number } }) => {
+      setPastHero(event.scroll.y > heroThreshold());
     };
 
-    if (locomotiveScroll) {
-      locomotiveScroll.update();
-      controlNavbar();
+    locomotiveScroll.on("scroll", onScroll);
+    onScroll({ scroll: { y: 0 } });
 
-      window.addEventListener("scroll", controlNavbar);
-      return () => window.removeEventListener("scroll", controlNavbar);
-    }
+    return () => {
+      (
+        locomotiveScroll as LocomotiveScroll & {
+          off: (event: "scroll", callback: typeof onScroll) => void;
+        }
+      ).off("scroll", onScroll);
+    };
   }, [locomotiveScroll]);
 
   const goToHome = () => {
@@ -46,12 +56,12 @@ export default function Navbar({
 
   return (
     <nav
-      className={`box-border flex h-[var(--navbar-height)] min-h-[var(--navbar-height)] max-h-[var(--navbar-height)] w-full shrink-0 items-center justify-center text-white fixed top-0 left-0 z-[1000] transition-transform duration-500 ease-out animated fadeIn ${
+      className={`box-border flex h-[var(--navbar-height)] min-h-[var(--navbar-height)] max-h-[var(--navbar-height)] w-full shrink-0 items-center justify-center text-white fixed top-0 left-0 z-[1000] animated fadeIn transition-[background-color,backdrop-filter,box-shadow,border-color] duration-500 ease-out ${
         montserrat.className
       } ${
-        showNavOptions
-          ? "border-[1px] border-jazzberry-jam-500 md:border-none border-opacity-20"
-          : ""
+        pastHero
+          ? "border-b border-white/25 bg-jazzberry-jam-100/55 shadow-[0_8px_32px_-12px_rgba(83,4,36,0.18)] backdrop-blur-xl backdrop-saturate-150 [box-shadow:inset_0_1px_0_0_rgba(255,255,255,0.35)]"
+          : "border-[1px] border-jazzberry-jam-500 border-opacity-20 bg-transparent md:border-none md:border-opacity-0"
       }`}
     >
       <div className="section-shell flex h-full w-full min-w-0 items-center justify-between gap-2">
@@ -69,22 +79,8 @@ export default function Navbar({
         >
           ILA
         </a>
-        {showNavOptions && (
-          <>
-            <NavOptions options={navigation.nav_options} />
-            <LangSwitcher currentLanguage={lang} />
-          </>
-        )}
-        {!showNavOptions && (
-          <div className="hidden lg:block bg-jazzberry-jam-600 rounded-full scale-in-tr">
-            <HamburgerMenu
-              size={20}
-              color="#ffff"
-              currentLanguage={lang}
-              navigation={navigation}
-            />
-          </div>
-        )}
+        <NavOptions options={navigation.nav_options} />
+        <LangSwitcher currentLanguage={lang} />
       </div>
     </nav>
   );
