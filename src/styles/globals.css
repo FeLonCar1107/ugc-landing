@@ -416,13 +416,6 @@ textarea:focus {
   top: 0;
 }
 
-@media screen and (max-width: 640px) {
-  .collaborations-slider::before,
-  .collaborations-slider::after {
-    display: none;
-  }
-}
-
 .collaborations-slider-track {
   display: flex;
   gap: 30px;

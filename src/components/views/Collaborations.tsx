@@ -3,6 +3,9 @@ import { IBrand } from "@/types/brand";
 import { ICollaborationsProps } from "@/types/props/collaborations";
 import { useCollabs } from "@/context/CollabsContext";
 
+/** Fluid butterfly frame: min / vw blend / max — no breakpoint utilities. */
+const COLLAB_BUTTERFLY_SIZE = "clamp(2.25rem, 5vw + 0.2rem, 4rem)";
+
 export default function Collaborations(props: ICollaborationsProps) {
   const { splitTitle, content } = props;
   const { brands, isLoading } = useCollabs();
@@ -20,31 +23,44 @@ export default function Collaborations(props: ICollaborationsProps) {
         <div
           data-scroll
           data-scroll-speed="-1.5"
-          className="relative w-[15vw] h-[15vw] max-w-[250px] max-h-[250px]"
+          className="relative shrink-0"
+          style={{
+            width: COLLAB_BUTTERFLY_SIZE,
+            height: COLLAB_BUTTERFLY_SIZE,
+          }}
         >
           <Image
             src={content.butterfly.rose}
             alt={content.butterfly.alt}
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="80px"
             unoptimized={true}
             className="mariposas transform scale-x-[-1]"
           />
         </div>
-        <p className="flex gap-3 text-[25px] md:text-[40px] xl:text-[50px] uppercase text-jazzberry-jam-600">
-          <strong>{splitTitle[0]}</strong>{" "}
-          <span className="hidden md:flex">{splitTitle[1]}</span>
-        </p>
+        <h2 className="tw-section-heading flex items-center gap-3 text-jazzberry-jam-600">
+          <span className="font-bold">{splitTitle[0]}</span>
+          {splitTitle[1] ? (
+            <>
+              {" "}
+              <span className="hidden font-normal md:inline">{splitTitle[1]}</span>
+            </>
+          ) : null}
+        </h2>
         <div
           data-scroll
           data-scroll-speed="3"
-          className="relative w-[15vw] h-[15vw] max-w-[250px] max-h-[250px]"
+          className="relative shrink-0"
+          style={{
+            width: COLLAB_BUTTERFLY_SIZE,
+            height: COLLAB_BUTTERFLY_SIZE,
+          }}
         >
           <Image
             src={content.butterfly.gold}
             alt={content.butterfly.alt}
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="80px"
             unoptimized={true}
             className="mariposas"
           />

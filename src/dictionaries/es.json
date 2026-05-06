@@ -162,8 +162,8 @@
       }
     },
     "collaborations": {
-      "title": "Colaboraciones",
-      "splitTitle": ["Colaboraciones", "con"],
+      "title": "Collabs",
+      "splitTitle": ["COLLABS"],
       "content": {
         "brands": [],
         "butterfly": {
@@ -285,9 +285,9 @@
       }
     },
     "customerReviews": {
-      "title": "Reseñas de clientes",
-      "splitTitle": ["Reseñas", "de clientes"],
-      "splitLetter": ["R", "e", "s", "e", "ñ", "a", "s"],
+      "title": "Reseña de clientes",
+      "splitTitle": ["RESEÑA DE", "CLIENTES"],
+      "splitLetter": ["R", "E", "S", "E", "Ñ", "A", "S"],
       "content": {
         "image": {
           "src": "/portfolio/reviewers_portrait.png",

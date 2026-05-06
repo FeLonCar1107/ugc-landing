@@ -49,18 +49,14 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               height={30}
               className="rotating"
             />
-            <div className="flex flex-col items-center justify-center -space-y-4 px-2">
-              {splitTitle.map((title: string, index: number) => (
-                <h2
-                  key={index}
-                  className={`text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[45px] uppercase ${
-                    index ? "font-bold" : "opacity-100"
-                  }`}
-                >
-                  {title}
-                </h2>
-              ))}
-            </div>
+            <header className="flex min-w-0 max-w-[min(100%,20rem)] flex-col items-center justify-center space-y-0.5 px-2 text-center">
+              <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-jazzberry-jam-400">
+                {splitTitle[0]}
+              </p>
+              <h2 className="tw-section-heading font-bold text-jazzberry-jam-600">
+                {splitTitle[1]}
+              </h2>
+            </header>
             <Image
               src={content.flower.src}
               alt={content.flower.alt}
@@ -81,12 +77,12 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               className="rotating my-5"
             />
             {splitLetter.map((letter: string, index: number) => (
-              <h2
+              <span
                 key={index}
-                className={`text-jazzberry-jam-500 text-[35px] uppercase font-bold`}
+                className="text-[clamp(1.75rem,6vw,2.25rem)] font-bold uppercase leading-none tracking-[0.08em] text-jazzberry-jam-600"
               >
                 {letter}
-              </h2>
+              </span>
             ))}
             <Image
               src={content.flower.src}

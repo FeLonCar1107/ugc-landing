@@ -79,8 +79,8 @@ export default function InstaFeed(props: IInstaFeedProps) {
       className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-6 py-10"
     >
       <div className="section-shell flex flex-col items-center justify-center gap-5 lg:gap-6">
-        <div className="w-full flex flex-col md:flex-row justify-center items-center md:gap-3 text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase">
-          <h2 className="font-bold hover:scale-95 hover:opacity-90 transition duration-300 transform origin-center">
+        <div className="flex w-full flex-col items-center justify-center text-jazzberry-jam-600 md:flex-row md:gap-3">
+          <h2 className="tw-section-heading font-bold transition duration-300 hover:scale-95 hover:opacity-90">
             <a
               target="_blank"
               className="animate-underline"
@@ -89,7 +89,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
               @{user?.username}
             </a>
           </h2>
-          <h2>{props.subtitle}</h2>
+          <h2 className="tw-section-heading font-normal">{props.subtitle}</h2>
         </div>
         <div className="w-full flex flex-wrap gap-1 justify-center items-center">
           {content.length ? (

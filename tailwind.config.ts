@@ -62,6 +62,13 @@ const config: Config = {
   plugins: [
     plugin(({ addComponents, theme }) => {
       addComponents({
+        /** Matches section h2 in About: fluid size + uppercase tracking */
+        ".tw-section-heading": {
+          fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
+          lineHeight: "1.05",
+          textTransform: "uppercase",
+          letterSpacing: "0.08em",
+        },
         ".section-shell": {
           marginLeft: "auto",
           marginRight: "auto",

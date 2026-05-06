@@ -20,7 +20,7 @@ export default function About(props: IAboutProps) {
             <p className="text-center text-[11px] font-medium uppercase tracking-[0.35em] text-jazzberry-jam-400 lg:text-left">
               {title}
             </p>
-            <h2 className="text-center font-bold uppercase tracking-[0.08em] text-jazzberry-jam-600 text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] lg:text-left">
+            <h2 className="tw-section-heading text-center font-bold text-jazzberry-jam-600 lg:text-left">
               {subtitle}
             </h2>
           </header>

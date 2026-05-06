@@ -32,10 +32,10 @@ export default function Portafolio(props: IPortfolioProps) {
     >
       <div className="section-shell flex w-full flex-col items-center justify-center gap-5 lg:gap-10 2xl:gap-20">
         <div className="w-full flex flex-col items-center justify-center">
-          <p className="text-jazzberry-jam-500 text-[25px] md:text-[40px] xl:text-[50px] uppercase leading-none overflow-hidden">
-            <strong>{splitTitle[0]}</strong>
-            {splitTitle[1]}
-          </p>
+          <h2 className="tw-section-heading overflow-hidden text-jazzberry-jam-600">
+            <span className="font-bold">{splitTitle[0]}</span>
+            <span className="font-normal">{splitTitle[1]}</span>
+          </h2>
         </div>
         <div className="w-full h-auto min-h-[475px] flex items-center justify-between overflow-hidden">
           <div className="pictures-wrapper">

@@ -162,8 +162,8 @@
       }
     },
     "collaborations": {
-      "title": "Collaborations",
-      "splitTitle": ["Collaborations", "with"],
+      "title": "Collabs",
+      "splitTitle": ["COLLABS"],
       "content": {
         "brands": [],
         "butterfly": {
@@ -286,8 +286,8 @@
     },
     "customerReviews": {
       "title": "Customer reviews",
-      "splitTitle": ["Customer", "reviews"],
-      "splitLetter": ["R", "e", "v", "i", "e", "w", "s"],
+      "splitTitle": ["CUSTOMER", "REVIEWS"],
+      "splitLetter": ["R", "E", "V", "I", "E", "W", "S"],
       "content": {
         "image": {
           "src": "/portfolio/reviewers_portrait.png",

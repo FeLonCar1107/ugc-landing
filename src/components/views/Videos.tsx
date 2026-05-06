@@ -17,11 +17,11 @@ export default function Videos(props: IVideosProps) {
       className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center py-14"
     >
       <div className="section-shell h-auto">
-        <div className="bg-jazzberry-jam-200 w-full h-[35vw] max-h-[250px] text-[25px] md:text-[40px] xl:text-[50px] text-white text-center flex flex-col space-y-[-10px] md:space-y-0 md:flex-row md:justify-center md:gap-3 uppercase pt-[5vw] 2xl:pt-[1.5vw] shadow-sm">
-          <h2>
-            <strong>{splitTitle[0]}</strong>
+        <div className="flex h-[35vw] max-h-[250px] w-full flex-col space-y-[-10px] bg-jazzberry-jam-200 pt-[5vw] text-center text-white shadow-sm md:flex-row md:justify-center md:gap-3 md:space-y-0 2xl:pt-[1.5vw]">
+          <h2 className="tw-section-heading font-bold">
+            {splitTitle[0]}
           </h2>
-          <h2>{splitTitle[1]}</h2>
+          <h2 className="tw-section-heading font-normal">{splitTitle[1]}</h2>
         </div>
         <div className="w-full h-auto lg:h-auto mt-[-10vw] sm:mt-[-15vw] lg:mt-[-5vw] flex items-center justify-between">
           <div className="videos-wrapper">
