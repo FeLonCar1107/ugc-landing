@@ -3,10 +3,6 @@ export interface IAboutProps {
   subtitle: string;
   content: {
     hello: string;
-    illustration: {
-      src: string;
-      alt: string;
-    };
     image: {
       src: string;
       alt: string;

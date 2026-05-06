@@ -216,12 +216,8 @@
       "subtitle": "Sobre mi",
       "content": {
         "hello": "¡Hola! soy Isa.",
-        "illustration": {
-          "src": "https://static.wixstatic.com/media/655690_fcd065f159914abfb6d074fd53576d6a~mv2.webp",
-          "alt": "Cámara de fotos"
-        },
         "image": {
-          "src": "https://static.wixstatic.com/media/655690_dab13b086d8740fd8f212eb4f0bb565d~mv2.webp",
+          "src": "/portfolio/about_portrait.png",
           "alt": "Isabella Lizarralde Arias"
         },
         "description": {

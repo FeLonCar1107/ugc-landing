@@ -1,7 +1,5 @@
 import { IAboutProps } from "@/types/props/about";
 import { useCollabs } from "@/context/CollabsContext";
-import { useEffect, useState } from "react";
-import CameraBackground from "@/components/svg/CameraBackground";
 import Image from "next/image";
 import useHoverEffects from "@/hooks/useHoverEffects";
 
@@ -9,98 +7,57 @@ export default function About(props: IAboutProps) {
   useHoverEffects();
   const { totalBrands } = useCollabs();
   const { title, subtitle, content } = props;
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsDesktop(window.innerWidth > 1024);
-  }, []);
 
   return (
     <section
       data-scroll-section
       id="about"
-      className="w-screen h-auto min-h-screen flex items-center justify-center lg:py-10"
+      className="w-screen flex items-center justify-center py-16 md:py-20 lg:py-24"
     >
-      <div className="section-shell flex h-full flex-col lg:flex-row items-center justify-center gap-3">
-        <div className="w-full lg:w-[40%] h-full flex flex-col items-center justify-center">
-          <div
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed={isDesktop ? "-1" : "-3.5"}
-            className="hidden lg:block"
-          >
-            <CameraBackground color="#fdcde9">
-              <Image
-                src={content.illustration.src}
-                alt={content.illustration.alt}
-                width={800}
-                height={800}
-                className="camera-picture rotate-[-7deg] drop-shadow-md"
-              />
-            </CameraBackground>
-          </div>
-        </div>
-        <div className="w-full lg:w-[60%] h-full flex flex-col lg:flex-row items-center justify-center gap-3">
-          <div className="w-[75%] lg:w-full flex flex-col gap-3 lg:z-30">
-            <div className="w-full h-auto flex flex-col lg:flex-row text-jazzberry-jam-600 text-[25px] md:text-[40px] xl:text-[50px] uppercase space-y-[-3vw] md:space-y-[-1vw] lg:space-y-0">
-              <p className="flex text-center font-bold lg:hidden">{title}</p>
-              <p className="text-center lg:font-bold">{subtitle}</p>
-            </div>
-            <div className="w-full h-auto text-[10px] md:text-[0.8rem] text-jazzberry-jam-950">
-              <div className="w-full h-auto flex justify-start items-start">
-                <p className="w-[85%] h-full">
-                  {content.description.paragraph1}
-                </p>
-              </div>
-              <div className="w-full h-auto flex justify-end items-end">
-                <p className="w-[85%] h-full">
-                  {content.description.paragraph2}
-                </p>
-              </div>
-              <div className="hidden lg:flex w-full h-auto justify-start items-start">
-                <p className="w-[85%] h-full">
-                  {content.description.paragraph3} {totalBrands}{" "}
-                  {content.description.paragraph4}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed={isDesktop ? "1" : "3.5"}
-            className="w-full h-[550px] flex flex-col relative"
-          >
-            <div className="w-[320px] h-[450px] rotate-[8deg] absolute right-[3vw] z-10">
+      <div className="section-shell w-full">
+        <div className="grid w-full grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-[minmax(0,1fr)_minmax(17.5rem,26.25rem)] lg:items-start lg:gap-x-16 lg:gap-y-6 xl:gap-x-24 xl:gap-y-8">
+          <header className="min-w-0 space-y-0.5 lg:col-start-1 lg:row-start-1">
+            <p className="text-center text-[11px] font-medium uppercase tracking-[0.35em] text-jazzberry-jam-400 lg:text-left">
+              {title}
+            </p>
+            <h2 className="text-center font-bold uppercase tracking-[0.08em] text-jazzberry-jam-600 text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.05] lg:text-left">
+              {subtitle}
+            </h2>
+          </header>
+
+          <div className="flex w-full justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:justify-end">
+            <div className="relative aspect-[3/4] w-full max-w-[min(100%,380px)] overflow-hidden rounded-2xl bg-jazzberry-jam-100 shadow-[0_24px_60px_-20px_rgba(157,23,77,0.18)] sm:max-w-[420px]">
               <Image
                 src={content.image.src}
                 alt={content.image.alt}
-                width={400}
-                height={800}
+                fill
                 priority
-                className="show-image grayscale"
+                sizes="(max-width: 1024px) min(90vw, 420px), 45vw"
+                className="object-cover object-center"
               />
+              <div
+                className="pointer-events-none absolute left-7 top-10 z-10 p-2.5 backdrop-blur-[5px]"
+                aria-hidden
+              >
+                <Image
+                  src="/launch-assets/discover-your-character/hero_signature.png"
+                  alt=""
+                  width={300}
+                  height={120}
+                  className="relative block h-auto w-[min(30vw,7.5rem)] -rotate-[2.5deg] mix-blend-screen"
+                />
+              </div>
             </div>
-            <div
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed={isDesktop ? "1" : "3.5"}
-              className="w-full h-auto flex flex-col items-center justify-center font-semibold text-[30px] text-center text-white uppercase leading-none absolute bottom-0 z-50 drop-shadow-md"
-            >
-              {content.birth.name}
-              <br />
-              {content.birth.lastName}
-              <br />
-              {content.birth.prefix}
-              <em className="font-bold text-jazzberry-jam-300">
-                <span className="font-BeckanPersonal tracking-wider">
-                  {content.birth.day}
-                </span>{" "}
-                {content.birth.month}
-              </em>
-              <em className="font-BeckanPersonal tracking-wider text-jazzberry-jam-300">
-                {content.birth.year}
-              </em>
+          </div>
+
+          <div className="flex w-full min-w-0 flex-col justify-start lg:col-start-1 lg:row-start-2">
+            <div className="space-y-5 text-[13px] leading-relaxed text-jazzberry-jam-950/90 md:text-[0.95rem]">
+              <p>{content.description.paragraph1}</p>
+              <p>{content.description.paragraph2}</p>
+              <p className="hidden lg:block">
+                {content.description.paragraph3} {totalBrands}{" "}
+                {content.description.paragraph4}
+              </p>
             </div>
           </div>
         </div>

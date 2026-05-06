@@ -81,6 +81,19 @@ const config: Config = {
             paddingLeft: theme("spacing.12"),
             paddingRight: theme("spacing.12"),
           },
+          /* Below lg: equal extra inset on both sides (balance + clearance vs fixed social rail) */
+          "@media (max-width: 639px)": {
+            paddingLeft: `calc(${theme("spacing.4")} + 1.25rem)`,
+            paddingRight: `calc(${theme("spacing.4")} + 1.25rem)`,
+          },
+          "@media (min-width: 640px) and (max-width: 767px)": {
+            paddingLeft: `calc(${theme("spacing.6")} + 1.25rem)`,
+            paddingRight: `calc(${theme("spacing.6")} + 1.25rem)`,
+          },
+          "@media (min-width: 768px) and (max-width: 1023px)": {
+            paddingLeft: `calc(2.5rem + 1.25rem)`,
+            paddingRight: `calc(2.5rem + 1.25rem)`,
+          },
         },
       });
     }),
