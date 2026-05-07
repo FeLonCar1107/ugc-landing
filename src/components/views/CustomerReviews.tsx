@@ -31,7 +31,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
     <section
       id="customer-reviews"
       data-scroll-section
-      className="w-screen flex items-center justify-center relative"
+      className="relative flex w-screen items-center justify-center tw-section-y"
     >
       <div id="customers" className="section-shell h-auto flex gap-10">
         <div
@@ -50,10 +50,8 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               className="rotating"
             />
             <header className="flex min-w-0 max-w-[min(100%,20rem)] flex-col items-center justify-center space-y-0.5 px-2 text-center">
-              <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-jazzberry-jam-400">
-                {splitTitle[0]}
-              </p>
-              <h2 className="tw-section-heading font-bold text-jazzberry-jam-600">
+              <p className="tw-eyebrow">{splitTitle[0]}</p>
+              <h2 className="tw-section-heading tw-text-heading font-bold">
                 {splitTitle[1]}
               </h2>
             </header>
@@ -77,10 +75,7 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
               className="rotating my-5"
             />
             {splitLetter.map((letter: string, index: number) => (
-              <span
-                key={index}
-                className="text-[clamp(1.75rem,6vw,2.25rem)] font-bold uppercase leading-none tracking-[0.08em] text-jazzberry-jam-600"
-              >
+              <span key={index} className="tw-section-heading-split">
                 {letter}
               </span>
             ))}

@@ -49,7 +49,7 @@ export default function Main(props: IMainProps) {
         <main
           id="main"
           data-scroll-container
-          className={`${montserrat.className} bg-jazzberry-jam-100`}
+          className={`${montserrat.className} bg-landing-page`}
         >
           <Home {...page.home} />
           <Videos {...page.videos} />

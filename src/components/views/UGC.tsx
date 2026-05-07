@@ -68,7 +68,7 @@ export default function UGC(props: IUserCreatorContentProps) {
       data-scroll-section
       className={`w-screen h-screen flex flex-col gap-5 relative ${classMap[selected]}`}
     >
-      <p className="absolute top-0 left-1/2 transform -translate-x-1/2 text-[45vw] md:text-[25vw] 2xl:text-[20vw] font-BeckanPersonal text-jazzberry-jam-300 leading-none drop-shadow-md z-0">
+      <p className="absolute left-1/2 top-0 z-0 -translate-x-1/2 transform font-BeckanPersonal text-[45vw] leading-none tw-text-soft drop-shadow-md md:text-[25vw] 2xl:text-[20vw]">
         UGC
       </p>
       <div className="slider-ugc section-shell z-10">
@@ -82,7 +82,7 @@ export default function UGC(props: IUserCreatorContentProps) {
               <div className="w-full h-full flex flex-col text-jazzberry-jam-200">
                 <div className="w-full h-[80%] relative">
                   {imageLoadingStates[card.id] && (
-                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200 rounded-md">
+                    <div className="tw-media-placeholder absolute inset-0 rounded-md">
                       <div className="media-loader"></div>
                     </div>
                   )}
@@ -110,7 +110,7 @@ export default function UGC(props: IUserCreatorContentProps) {
             onClick={handlePrev}
             className="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] cursor-pointer"
           >
-            <SvgArrow color="#871444" position="left" />
+            <SvgArrow color="#9c114b" position="left" />
           </div>
           <span className="text-[6vw] md:text-[2vw] text-jazzberry-jam-900">
             •••
@@ -119,7 +119,7 @@ export default function UGC(props: IUserCreatorContentProps) {
             onClick={handleNext}
             className="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] cursor-pointer"
           >
-            <SvgArrow color="#871444" />
+            <SvgArrow color="#9c114b" />
           </div>
         </div>
         {selectedImage && (

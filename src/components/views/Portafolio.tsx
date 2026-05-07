@@ -32,7 +32,7 @@ export default function Portafolio(props: IPortfolioProps) {
     >
       <div className="section-shell flex w-full flex-col items-center justify-center gap-5 lg:gap-10 2xl:gap-20">
         <div className="w-full flex flex-col items-center justify-center">
-          <h2 className="tw-section-heading overflow-hidden text-jazzberry-jam-600">
+          <h2 className="tw-section-heading tw-text-heading overflow-hidden">
             <span className="font-bold">{splitTitle[0]}</span>
             <span className="font-normal">{splitTitle[1]}</span>
           </h2>
@@ -40,13 +40,13 @@ export default function Portafolio(props: IPortfolioProps) {
         <div className="w-full h-auto min-h-[475px] flex items-center justify-between overflow-hidden">
           <div className="pictures-wrapper">
             <div id="left-picture-arrow" className="picture-arrow">
-              <LeftArrowIcon color="#871444" />
+              <LeftArrowIcon color="#9c114b" />
             </div>
             <div className="pictures-carousel">
               {content.pictures.map((picture: IPicture, index: number) => (
                 <div key={picture.id} className="picture">
                   {imageLoadingStates[index] && (
-                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                    <div className="tw-media-placeholder absolute inset-0">
                       <div className="media-loader"></div>
                     </div>
                   )}
@@ -65,7 +65,7 @@ export default function Portafolio(props: IPortfolioProps) {
               ))}
             </div>
             <div id="right-picture-arrow" className="picture-arrow">
-              <RightArrowIcon color="#871444" />
+              <RightArrowIcon color="#9c114b" />
             </div>
           </div>
         </div>

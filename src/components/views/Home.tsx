@@ -26,7 +26,7 @@ export default function Home(props: IHomeProps) {
     >
       {/* Top band: skills + short description — pt en calc para empezar siempre bajo el navbar */}
       <div
-        className="section-shell flex shrink-0 flex-row items-start justify-between gap-12 font-semibold text-jazzberry-jam-300"
+        className="section-shell flex shrink-0 flex-row items-start justify-between gap-12 font-semibold tw-text-soft"
         style={{ paddingTop: HOME_TOP_PADDING }}
       >
         <div className="min-h-0 min-w-0 flex-1 basis-0 max-w-[350px]">

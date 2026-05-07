@@ -21,11 +21,11 @@ export default function Contact(props: IContactProps) {
     <section
       id="contact"
       data-scroll-section
-      className="bg-jazzberry-jam-700 w-screen min-h-screen h-auto flex items-center justify-center"
+      className="flex h-auto min-h-screen w-screen items-center justify-center bg-jazzberry-jam-700"
     >
       <DividerBottom />
       <DividerTop />
-      <div className="section-shell h-auto flex flex-col md:flex-row gap-7 pt-[100px]">
+      <div className="section-shell tw-contact-shell flex h-auto flex-col gap-7 md:flex-row">
         <div className="w-full md:w-[50%] h-auto flex flex-col items-start justify-start text-jazzberry-jam-50">
           <div className="w-full flex gap-3 items-center justify-start">
             <div className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-full relative shadow-md">

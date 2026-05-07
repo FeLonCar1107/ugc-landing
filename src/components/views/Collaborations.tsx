@@ -17,7 +17,7 @@ export default function Collaborations(props: ICollaborationsProps) {
     <section
       data-scroll-section
       id="collaborations"
-      className="w-screen h-auto relative bg-transparent lg:pb-20"
+      className="relative h-auto w-screen bg-transparent tw-section-y-compact lg:pb-20"
     >
       <div className="section-shell h-auto flex items-end justify-center">
         <div
@@ -38,7 +38,7 @@ export default function Collaborations(props: ICollaborationsProps) {
             className="mariposas transform scale-x-[-1]"
           />
         </div>
-        <h2 className="tw-section-heading flex items-center gap-3 text-jazzberry-jam-600">
+        <h2 className="tw-section-heading tw-text-heading flex items-center gap-3">
           <span className="font-bold">{splitTitle[0]}</span>
           {splitTitle[1] ? (
             <>

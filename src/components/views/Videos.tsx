@@ -14,19 +14,21 @@ export default function Videos(props: IVideosProps) {
     <section
       data-scroll-section
       id="videos"
-      className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center py-14"
+      className="bg-transparent flex h-auto min-h-screen w-screen flex-col items-center justify-center tw-section-y"
     >
       <div className="section-shell h-auto">
-        <div className="flex h-[35vw] max-h-[250px] w-full flex-col space-y-[-10px] bg-jazzberry-jam-200 pt-[5vw] text-center text-white shadow-sm md:flex-row md:justify-center md:gap-3 md:space-y-0 2xl:pt-[1.5vw]">
-          <h2 className="tw-section-heading font-bold">
+        <div className="tw-band-soft flex h-[35vw] max-h-[250px] w-full flex-col space-y-[-10px] overflow-hidden pt-[5vw] text-center md:flex-row md:justify-center md:gap-3 md:space-y-0 2xl:pt-[1.5vw]">
+          <h2 className="tw-section-heading font-bold tw-text-heading">
             {splitTitle[0]}
           </h2>
-          <h2 className="tw-section-heading font-normal">{splitTitle[1]}</h2>
+          <h2 className="tw-section-heading font-normal tw-text-heading">
+            {splitTitle[1]}
+          </h2>
         </div>
         <div className="w-full h-auto lg:h-auto mt-[-10vw] sm:mt-[-15vw] lg:mt-[-5vw] flex items-center justify-between">
           <div className="videos-wrapper">
             <div id="left-video-arrow" className="video-arrow">
-              <LeftArrowIcon color="#871444" />
+              <LeftArrowIcon color="#9c114b" />
             </div>
             <div className="videos-carousel">
               {content.videos.map((video: IVideo, index: number) => (
@@ -44,7 +46,7 @@ export default function Videos(props: IVideosProps) {
                     src={video.src}
                     poster={video.preview}
                   />
-                  <div className="w-full min-h-[70px] text-jazzberry-jam-950 relative">
+                  <div className="relative min-h-[70px] w-full text-jazzberry-jam-950">
                     {showInfo === index && (
                       <div className="fade-in-top w-full h-full text-center flex flex-col items-center justify-center">
                         <h3 className="font-bold text-sm md:text-base">
@@ -60,7 +62,7 @@ export default function Videos(props: IVideosProps) {
               ))}
             </div>
             <div id="right-video-arrow" className="video-arrow">
-              <RightArrowIcon color="#871444" />
+              <RightArrowIcon color="#9c114b" />
             </div>
           </div>
         </div>

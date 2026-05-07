@@ -10,6 +10,8 @@
 :root {
   /* Fixed shell height — keep Navbar.tsx / Main / Home in sync (h-14 mobile, lg:h-16). */
   --navbar-height: 3.5rem;
+  /* Landing canvas — matches jazzberry-jam-100; single source for Main background */
+  --landing-page-bg-rgb: 253 230 243;
   --brand-ink-rgb: 19 18 18;
   --brand-surface-rgb: 248 247 244;
   --brand-card-rgb: 255 255 255;

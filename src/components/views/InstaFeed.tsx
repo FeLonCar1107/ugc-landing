@@ -76,11 +76,11 @@ export default function InstaFeed(props: IInstaFeedProps) {
     <section
       id="insta-feed"
       data-scroll-section
-      className="bg-transparent w-screen min-h-screen h-auto flex flex-col items-center justify-center gap-5 lg:gap-6 py-10"
+      className="flex h-auto min-h-screen w-screen flex-col items-center justify-center gap-5 bg-transparent tw-section-y lg:gap-6"
     >
       <div className="section-shell flex flex-col items-center justify-center gap-5 lg:gap-6">
-        <div className="flex w-full flex-col items-center justify-center text-jazzberry-jam-600 md:flex-row md:gap-3">
-          <h2 className="tw-section-heading font-bold transition duration-300 hover:scale-95 hover:opacity-90">
+        <div className="flex w-full flex-col items-center justify-center md:flex-row md:gap-3">
+          <h2 className="tw-section-heading tw-text-heading tw-soft-interactive font-bold">
             <a
               target="_blank"
               className="animate-underline"
@@ -89,7 +89,9 @@ export default function InstaFeed(props: IInstaFeedProps) {
               @{user?.username}
             </a>
           </h2>
-          <h2 className="tw-section-heading font-normal">{props.subtitle}</h2>
+          <h2 className="tw-section-heading tw-text-heading font-normal">
+            {props.subtitle}
+          </h2>
         </div>
         <div className="w-full flex flex-wrap gap-1 justify-center items-center">
           {content.length ? (
@@ -113,7 +115,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
                     onLoad={() => handleMediaLoad(index)}
                   />
                   {mediaLoadingStates[index] && (
-                    <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                    <div className="tw-media-placeholder absolute inset-0">
                       <div className="media-loader"></div>
                     </div>
                   )}
@@ -140,7 +142,7 @@ export default function InstaFeed(props: IInstaFeedProps) {
                   key={index}
                   className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
                 >
-                  <div className="absolute inset-0 flex justify-center items-center bg-jazzberry-jam-200">
+                  <div className="tw-media-placeholder absolute inset-0">
                     <div className="media-loader"></div>
                   </div>
                 </div>
@@ -155,7 +157,8 @@ export default function InstaFeed(props: IInstaFeedProps) {
               ? handleLoadMore
               : () => window.open(currentButton.url)
           }
-          className="mt-3 w-40 h-11 bg-jazzberry-jam-500 text-white rounded hover:bg-jazzberry-jam-600 transition-colors duration-300"
+          type="button"
+          className="tw-btn-primary-soft mt-3"
         >
           {currentButton.title}
         </button>
