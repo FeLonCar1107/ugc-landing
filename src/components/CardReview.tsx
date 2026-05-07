@@ -1,36 +1,54 @@
 import Image from "next/image";
 import { IReview } from "@/types/review";
 
+/**
+ * Light → mid → deeper on the jazzberry ramp (100 / 200 / 300).
+ * Kept one scale so adjacent cards never look like duplicate pinks on typical displays.
+ */
+const CARD_SURFACES = [
+  "border-jazzberry-jam-400/30 bg-jazzberry-jam-200/95",
+  "border-jazzberry-jam-300/45 bg-jazzberry-jam-100",
+  "border-jazzberry-jam-400/40 bg-jazzberry-jam-300/60",
+  "border-jazzberry-jam-300/45 bg-jazzberry-jam-100",
+] as const;
+
 export default function CardReview({
   review,
-  index,
+  variantIndex,
 }: {
   review: IReview;
-  index: number;
+  variantIndex: number;
 }) {
-  const colors = ["200", "50", "300"];
+  const surface = CARD_SURFACES[variantIndex % CARD_SURFACES.length];
+
   return (
-    <div
-      className={`review w-full h-full rounded-xl flex flex-col justify-center items-center gap-1 lg:gap-3 py-4 px-3 lg:p-10 bg-jazzberry-jam-${
-        colors[index % colors.length]
-      }`}
+    <article
+      className={`flex h-full w-full flex-col rounded-2xl p-5 shadow-[0_4px_18px_-8px_rgba(130,20,70,0.14)] lg:p-6 ${surface}`}
     >
-      <div className="w-full h-auto flex justify-start items-center gap-3">
-        <Image
-          src={review.image.src}
-          alt={review.image.alt}
-          width={40}
-          height={40}
-          className="bg-jazzberry-jam-700 rounded-full p-1"
-        />
-        <div className="text-jazzberry-jam-700 flex flex-col">
-          <h2 className="text-xs lg:text-sm font-bold">{review.fullName}</h2>
-          <p className="opacity-70 text-[10px] lg:text-xs">{review.role}</p>
+      <div className="flex w-full items-start gap-3.5">
+        <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-2 ring-jazzberry-jam-100 ring-offset-2 ring-offset-[rgb(var(--landing-page-bg-rgb))]">
+          <Image
+            src={review.image.src}
+            alt={review.image.alt}
+            fill
+            sizes="44px"
+            className="object-cover"
+          />
+        </div>
+        <div className="min-w-0 flex-1 pt-0.5">
+          <h2 className="text-sm font-semibold leading-snug tracking-tight text-jazzberry-jam-900 lg:text-[0.95rem]">
+            {review.fullName}
+          </h2>
+          <p className="mt-0.5 text-[11px] font-medium leading-relaxed text-jazzberry-jam-600/75 lg:text-xs">
+            {review.role}
+          </p>
         </div>
       </div>
-      <p className="w-full h-auto text-jazzberry-jam-900 text-[10px] md:text-xs lg:text-xs text-start">
-        {review.description}
-      </p>
-    </div>
+      <div className="mt-4 border-t border-jazzberry-jam-300/35 pt-4">
+        <p className="text-left text-[13px] leading-relaxed text-jazzberry-jam-950/80 md:text-[0.8125rem] lg:text-sm">
+          {review.description}
+        </p>
+      </div>
+    </article>
   );
 }

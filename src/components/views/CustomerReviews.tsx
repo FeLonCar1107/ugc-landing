@@ -102,15 +102,15 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
         </div>
         <div className="w-[85%] h-auto lg:w-[60%] pt-10 pb-20">
           {reviews.length ? (
-            <div className="w-full h-auto flex flex-col items-center justify-center gap-2 lg:gap-8">
+            <div className="flex h-auto w-full flex-col items-center justify-center gap-4 lg:gap-7">
               {reviews.map((review: IReview, index: number) => (
                 <div
                   key={review.id}
                   data-scroll
                   data-scroll-speed="1"
-                  className="w-[90%] max-w-[450px] h-[150px] lg:h-[130px]"
+                  className="h-auto min-h-0 w-[90%] max-w-[450px]"
                 >
-                  <CardReview review={review} index={index} />
+                  <CardReview review={review} variantIndex={index} />
                 </div>
               ))}
             </div>
