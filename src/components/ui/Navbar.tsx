@@ -75,7 +75,7 @@ export default function Navbar({
         </div>
         <a
           onClick={goToHome}
-          className="text-jazzberry-jam-950 font-bold font-BeckanPersonal tracking-widest text-[20px] cursor-pointer animated fadeIn"
+          className="text-jazzberry-jam-900 font-bold font-BeckanPersonal tracking-widest text-[20px] cursor-pointer animated fadeIn"
         >
           ILA
         </a>

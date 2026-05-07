@@ -53,7 +53,8 @@ export default function Home(props: IHomeProps) {
           className="pointer-events-none absolute inset-0 z-10 flex w-full flex-col items-center justify-center overflow-hidden"
         >
           <h1
-            className="tw-primary-title font-BeckanPersonal leading-none text-jazzberry-jam-400"
+            // className="tw-primary-title font-BeckanPersonal leading-none text-jazzberry-jam-400"
+            className="tw-primary-title font-BeckanPersonal leading-none text-jazzberry-jam-900"
             style={{ fontSize: HERO_NAME_SIZE }}
           >
             {content?.name.toUpperCase()}

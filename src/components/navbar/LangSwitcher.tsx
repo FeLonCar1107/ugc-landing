@@ -49,7 +49,7 @@ export default function LangSwitcher({ currentLanguage }: ILangSwitcherProps) {
               {active && (
                 <motion.span
                   layoutId="lang-segment-indicator"
-                  className="absolute inset-0 z-0 rounded-full bg-jazzberry-jam-600 shadow-sm"
+                  className="absolute inset-0 z-0 rounded-full bg-jazzberry-jam-900 shadow-sm"
                   transition={indicatorTransition}
                 />
               )}

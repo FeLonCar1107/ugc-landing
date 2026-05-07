@@ -111,11 +111,11 @@ const config: Config = {
           fontWeight: "500",
           textTransform: "uppercase",
           letterSpacing: "0.35em",
-          color: theme("colors.jazzberry-jam.400"),
+          color: theme("colors.jazzberry-jam.900"),
         },
-        /** Primary section titles on light backgrounds */
+        /** Primary section titles on light backgrounds (matches hero h1: jazzberry-jam-900) */
         ".tw-text-heading": {
-          color: theme("colors.jazzberry-jam.600"),
+          color: theme("colors.jazzberry-jam.900"),
         },
         /** Soft accent copy (hero meta, watermarks) */
         ".tw-text-soft": {
@@ -189,7 +189,7 @@ const config: Config = {
           textTransform: "uppercase",
           lineHeight: "1",
           letterSpacing: "0.08em",
-          color: theme("colors.jazzberry-jam.600"),
+          color: theme("colors.jazzberry-jam.900"),
         },
         /** Contact: top padding below fixed nav */
         ".tw-contact-shell": {

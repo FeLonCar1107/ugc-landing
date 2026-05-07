@@ -451,53 +451,103 @@ textarea:focus {
   }
 }
 
-/* PORTFOLIO SECTION
+/* PORTFOLIO SECTION — mobile-first (snap carousel, fluid tiles)
 ================================================== */
 
 .pictures-wrapper {
   width: 100%;
-  height: auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+
+@media screen and (min-width: 640px) {
+  .pictures-wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pictures-wrapper {
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+  }
 }
 
 .pictures-wrapper .pictures-carousel {
-  width: 90%;
-  height: auto;
+  position: relative;
+  width: 100%;
   display: flex;
-  white-space: nowrap;
-  overflow: hidden;
+  gap: 0.75rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pictures-wrapper .pictures-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .pictures-wrapper .picture-arrow {
-  width: 40px;
-  height: 40px;
+  width: 2.25rem;
+  height: 2.25rem;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 10;
+  padding: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .pictures-wrapper .picture-arrow:first-child {
-  left: 0px;
-  display: none;
+  left: 0;
 }
 
 .pictures-wrapper .picture-arrow:last-child {
-  right: 0px;
+  right: 0;
 }
 
+/* One full column width per viewport on small screens */
 .pictures-carousel .picture {
-  width: calc(33.333% - 9px);
-  height: 0;
-  padding-bottom: 50%;
-  margin-left: 10px;
-  flex-shrink: 0;
-  cursor: pointer;
   position: relative;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: rgba(252, 228, 236, 0.45);
+  box-shadow: 0 12px 40px -18px rgba(83, 4, 36, 0.14);
+  aspect-ratio: 3 / 4;
+  opacity: 1;
+  transform: scale(1);
+  filter: saturate(1);
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 420ms ease,
+    filter 420ms ease,
+    box-shadow 420ms ease;
+}
+
+.pictures-carousel .picture.is-active {
+  opacity: 1;
+  transform: scale(1.01);
+  filter: saturate(1.03);
+  box-shadow: 0 16px 44px -18px rgba(83, 4, 36, 0.2);
 }
 
 .picture-image {
@@ -507,60 +557,43 @@ textarea:focus {
   object-position: center;
 }
 
-.pictures-carousel .picture:first-child {
-  margin-left: 0;
-}
-
-@media screen and (min-width: 375px) and (max-width: 640px) {
-  .pictures-wrapper .pictures-carousel {
-    width: 80%;
-  }
-
-  .pictures-carousel .picture {
-    width: 100%;
-    height: 110vw;
-    margin-left: 0;
-  }
-
+@media screen and (min-width: 640px) {
   .pictures-wrapper .picture-arrow {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
-  .pictures-wrapper .picture-arrow:first-child {
-    left: 0px;
-    display: none;
-  }
-
-  .pictures-wrapper .picture-arrow:last-child {
-    right: 0px;
-  }
-}
-
-@media screen and (min-width: 641px) and (max-width: 800px) {
   .pictures-wrapper .pictures-carousel {
-    width: 85%;
+    gap: 1rem;
   }
 
   .pictures-carousel .picture {
-    width: calc(50% - 5px);
-    height: 550px;
-    margin-left: 5px;
+    flex-basis: calc((100% - 1rem) / 2);
+    width: calc((100% - 1rem) / 2);
+    min-width: calc((100% - 1rem) / 2);
   }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1200px) {
-  .pictures-wrapper .pictures-carousel {
-    width: 85%;
+@media screen and (min-width: 1024px) {
+  .pictures-carousel .picture {
+    flex-basis: calc((100% - 2rem) / 3);
+    width: calc((100% - 2rem) / 3);
+    min-width: calc((100% - 2rem) / 3);
+    border-radius: 0.625rem;
+    box-shadow: 0 16px 48px -20px rgba(83, 4, 36, 0.12);
   }
 
+  .pictures-wrapper .pictures-carousel {
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
   .pictures-carousel .picture {
-    width: calc(33.333% - 10px);
-    height: 400px;
+    transition: none;
+    transform: none;
+    filter: none;
+    opacity: 1;
   }
 }
 

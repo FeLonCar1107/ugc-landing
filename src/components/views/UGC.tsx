@@ -75,13 +75,13 @@ export default function UGC(props: IUserCreatorContentProps) {
           >
             UGC
           </p>
-          <h2 className="relative z-[1] text-center font-BeckanPersonal text-[clamp(4.85rem,19vw,13.5rem)] md:text-[clamp(3rem,12vw,10rem)] tracking-[0.02em] text-jazzberry-jam-400">
+          <h2 className="relative z-[1] text-center font-BeckanPersonal text-[clamp(4.85rem,19vw,13.5rem)] md:text-[clamp(3rem,12vw,10rem)] tracking-[0.02em] text-jazzberry-jam-900">
             UGC
           </h2>
         </div>
       </header>
 
-      <div className="slider-ugc section-shell z-10 flex min-h-0 flex-1 flex-col justify-start gap-0 -mt-20">
+      <div className="slider-ugc section-shell z-10 flex min-h-0 flex-1 flex-col justify-start gap-0 -mt-20 md:-mt-10">
         <div className="cards">
           {content.cards.map((card, index: number) => (
             <div
