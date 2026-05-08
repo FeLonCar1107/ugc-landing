@@ -73,112 +73,124 @@ export default function InstaFeed(props: IInstaFeedProps) {
   };
 
   return (
-    <section
-      id="insta-feed"
-      data-scroll-section
-      className="flex h-auto min-h-screen w-screen flex-col items-center justify-center gap-5 bg-transparent tw-section-y lg:gap-6"
-    >
-      <div className="section-shell flex flex-col items-center justify-center gap-5 lg:gap-6">
-        <div className="flex w-full flex-col items-center justify-center md:flex-row md:gap-3">
-          <h2 className="tw-section-heading tw-text-heading tw-soft-interactive font-bold">
-            <a
-              target="_blank"
-              className="animate-underline"
-              href={props.buttons.follow.url}
-            >
-              @{user?.username}
-            </a>
-          </h2>
-          <h2 className="tw-section-heading tw-text-heading font-normal">
-            {props.subtitle}
-          </h2>
-        </div>
-        <div className="w-full flex flex-wrap gap-1 justify-center items-center">
-          {content.length ? (
-            content
-              .slice(0, visibleRows * itemsPerRow)
-              .map((post: IInstagramMediaResponse, index: number) => (
-                <div
-                  key={post.id}
-                  className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
-                  onClick={() => openModal(index)}
-                >
-                  <Image
-                    src={post.type === MediaTypes.VIDEO ? post.preview : post.url}
-                    alt={post.caption}
-                    fill
-                    className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-500 ${
-                      mediaLoadingStates[index] ? "opacity-0" : "opacity-100"
-                    }`}
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    unoptimized={true}
-                    onLoad={() => handleMediaLoad(index)}
-                  />
-                  {mediaLoadingStates[index] && (
-                    <div className="tw-media-placeholder absolute inset-0">
-                      <div className="media-loader"></div>
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
-                    <p className="text-[10px] md:text-base text-white text-center overflow-hidden whitespace-pre-wrap text-ellipsis w-[80%] max-h-[75%]">
-                      {post.caption}
-                    </p>
-                  </div>
-                  <div className="w-4 h-4 md:w-6 md:h-6 absolute top-2 right-2">
-                    {post.type === MediaTypes.VIDEO ? (
-                      <ReelIcon color="#FFFFFF" size="100%" />
-                    ) : post.type === MediaTypes.CAROUSEL_ALBUM ? (
-                      <CarouselIcon color="#FFFFFF" size="100%" />
-                    ) : (
-                      <></>
-                    )}
-                  </div>
-                </div>
-              ))
-          ) : (
-            <>
-              {[...Array(itemsPerRow)].map((_, index: number) => (
-                <div
-                  key={index}
-                  className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
-                >
-                  <div className="tw-media-placeholder absolute inset-0">
-                    <div className="media-loader"></div>
-                  </div>
-                </div>
-              ))}
-            </>
-          )}
-        </div>
-
-        <button
-          onClick={
-            !currentButton?.url
-              ? handleLoadMore
-              : () => window.open(currentButton.url)
-          }
-          type="button"
-          className="tw-btn-primary-soft mt-3"
+    <>
+      {user && content.length > 0 && (
+        <section
+          id="insta-feed"
+          data-scroll-section
+          className="flex h-auto min-h-screen w-screen flex-col items-center justify-center gap-5 bg-transparent tw-section-y lg:gap-6"
         >
-          {currentButton.title}
-        </button>
-      </div>
+          <div className="section-shell flex flex-col items-center justify-center gap-5 lg:gap-6">
+            <div className="flex w-full flex-col items-center justify-center md:flex-row md:gap-3">
+              <h2 className="tw-section-heading tw-text-heading tw-soft-interactive font-bold">
+                <a
+                  target="_blank"
+                  className="animate-underline"
+                  href={props.buttons.follow.url}
+                >
+                  @{user?.username}
+                </a>
+              </h2>
+              <h2 className="tw-section-heading tw-text-heading font-normal">
+                {props.subtitle}
+              </h2>
+            </div>
+            <div className="w-full flex flex-wrap gap-1 justify-center items-center">
+              {content.length ? (
+                content
+                  .slice(0, visibleRows * itemsPerRow)
+                  .map((post: IInstagramMediaResponse, index: number) => (
+                    <div
+                      key={post.id}
+                      className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
+                      onClick={() => openModal(index)}
+                    >
+                      <Image
+                        src={
+                          post.type === MediaTypes.VIDEO
+                            ? post.preview
+                            : post.url
+                        }
+                        alt={post.caption}
+                        fill
+                        className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-500 ${
+                          mediaLoadingStates[index]
+                            ? "opacity-0"
+                            : "opacity-100"
+                        }`}
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        unoptimized={true}
+                        onLoad={() => handleMediaLoad(index)}
+                      />
+                      {mediaLoadingStates[index] && (
+                        <div className="tw-media-placeholder absolute inset-0">
+                          <div className="media-loader"></div>
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2">
+                        <p className="text-[10px] md:text-base text-white text-center overflow-hidden whitespace-pre-wrap text-ellipsis w-[80%] max-h-[75%]">
+                          {post.caption}
+                        </p>
+                      </div>
+                      <div className="w-4 h-4 md:w-6 md:h-6 absolute top-2 right-2">
+                        {post.type === MediaTypes.VIDEO ? (
+                          <ReelIcon color="#FFFFFF" size="100%" />
+                        ) : post.type === MediaTypes.CAROUSEL_ALBUM ? (
+                          <CarouselIcon color="#FFFFFF" size="100%" />
+                        ) : (
+                          <></>
+                        )}
+                      </div>
+                    </div>
+                  ))
+              ) : (
+                <>
+                  {[...Array(itemsPerRow)].map((_, index: number) => (
+                    <div
+                      key={index}
+                      className="relative group w-[calc(50%-0.25rem)] md:w-[calc(33.333%-0.25rem)] h-0 pb-[50%] md:pb-[33.333%] overflow-hidden flex items-center justify-center cursor-pointer"
+                    >
+                      <div className="tw-media-placeholder absolute inset-0">
+                        <div className="media-loader"></div>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
 
-      <InstaModal
-        user={user}
-        content={content}
-        isOpen={isModalOpen}
-        postIndex={currentPostIndex}
-        profilePictureUrl={props.profilePictureUrl}
-        prevPost={() => {
-          setCurrentPostIndex((prev) => Math.max(prev - 1, 0));
-        }}
-        nextPost={() => {
-          setCurrentPostIndex((prev) => Math.min(prev + 1, content.length - 1));
-        }}
-        closeModal={() => setIsModalOpen(false)}
-        handleMediaLoad={handleMediaLoad}
-      />
-    </section>
+            <button
+              onClick={
+                !currentButton?.url
+                  ? handleLoadMore
+                  : () => window.open(currentButton.url)
+              }
+              type="button"
+              className="tw-btn-primary-soft mt-3"
+            >
+              {currentButton.title}
+            </button>
+          </div>
+
+          <InstaModal
+            user={user}
+            content={content}
+            isOpen={isModalOpen}
+            postIndex={currentPostIndex}
+            profilePictureUrl={props.profilePictureUrl}
+            prevPost={() => {
+              setCurrentPostIndex((prev) => Math.max(prev - 1, 0));
+            }}
+            nextPost={() => {
+              setCurrentPostIndex((prev) =>
+                Math.min(prev + 1, content.length - 1),
+              );
+            }}
+            closeModal={() => setIsModalOpen(false)}
+            handleMediaLoad={handleMediaLoad}
+          />
+        </section>
+      )}
+    </>
   );
 }

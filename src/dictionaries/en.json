@@ -51,18 +51,12 @@
       },
       {
         "id": 5,
-        "title": "Insta",
-        "href": "#insta-feed",
-        "image": "https://static.wixstatic.com/media/655690_f3a255b7824c4a5abf12d85290b6e823~mv2.webp"
-      },
-      {
-        "id": 6,
         "title": "UGC",
         "href": "#ugc",
         "image": "https://static.wixstatic.com/media/655690_17ba6728d82340fe8b585b2e82cea766~mv2.webp"
       },
       {
-        "id": 7,
+        "id": 6,
         "title": "Contact",
         "href": "#contact",
         "image": "https://static.wixstatic.com/media/655690_357e905d771a45a68364ddc054f74098~mv2.webp"
