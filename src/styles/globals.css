@@ -508,6 +508,7 @@ textarea:focus {
   display: none;
   align-items: center;
   justify-content: center;
+  background-color: #fdf2f8;
 }
 
 .pictures-wrapper .picture-arrow:first-child {
