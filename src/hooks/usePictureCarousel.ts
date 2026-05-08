@@ -12,7 +12,9 @@ export const usePictureCarousel = (numberOfPictures: number) => {
     const rightBtn = arrowButtons[1];
 
     const getSlides = () =>
-      [...carousel.querySelectorAll<HTMLElement>(".picture")];
+      Array.from(
+        carousel.querySelectorAll<HTMLElement>(".picture"),
+      ) as HTMLElement[];
 
     const maxScrollLeft = () =>
       Math.max(0, carousel.scrollWidth - carousel.clientWidth);
