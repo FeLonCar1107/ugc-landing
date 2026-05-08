@@ -3,6 +3,15 @@
   src: url(../../public/fonts/Beckan-Personal-Use.otf);
 }
 
+/* Names match Google Fonts CSS loaded in RootLayout — see layout.tsx <link href="...fonts.googleapis.com..."> */
+.font-inter {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
 /*
  * Brand palette — single source for Tailwind `brand-*` utilities.
  * Change RGB triplets here to retheme marketing surfaces across the app.
