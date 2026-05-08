@@ -78,7 +78,6 @@ export default function Portafolio(props: IPortfolioProps) {
                     quality={95}
                     draggable={false}
                     onLoad={() => handleImageLoad(index)}
-                    onLoadingComplete={() => handleImageLoad(index)}
                     onError={() => handleImageLoad(index)}
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 45vw, 30vw"
                     className={`picture-image rounded-[inherit] ${
