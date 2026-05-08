@@ -9,7 +9,7 @@
       "url": "/about"
     },
     "portfolio": {
-      "title": "Portafolio",
+      "title": "Fotografías",
       "url": "/portfolio"
     },
     "contact": {
@@ -39,7 +39,7 @@
       },
       {
         "id": 3,
-        "title": "Portafolio",
+        "title": "Fotografías",
         "href": "#portfolio",
         "image": "https://static.wixstatic.com/media/655690_d8afacbc743748fc91e37e415fdb8fd3~mv2.webp"
       },
@@ -174,8 +174,8 @@
       }
     },
     "portfolio": {
-      "title": "Portafolio",
-      "splitTitle": ["Porta", "folio"],
+      "title": "Fotografías",
+      "splitTitle": ["Foto", "grafías"],
       "content": {
         "pictures": [
           {
