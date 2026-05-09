@@ -38,6 +38,15 @@ export default function InstaFeed(props: IInstaFeedProps) {
     if (locomotiveScroll) locomotiveScroll.update();
   }, [visibleRows, locomotiveScroll]);
 
+  useEffect(() => {
+    if (!locomotiveScroll || !isModalOpen) return;
+    locomotiveScroll.stop();
+    return () => {
+      locomotiveScroll.start();
+      requestAnimationFrame(() => locomotiveScroll.update());
+    };
+  }, [isModalOpen, locomotiveScroll]);
+
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
   };
