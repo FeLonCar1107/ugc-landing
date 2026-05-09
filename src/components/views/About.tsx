@@ -42,7 +42,7 @@ export default function About(props: IAboutProps) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[40%_10%] opacity-10 [mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)]"
+          className="object-cover object-[40%_10%] opacity-20 [mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)]"
         />
       </div>
 
