@@ -68,7 +68,7 @@ export default function CountUpStat({
   className?: string;
   index?: number;
 }) {
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, {
     once: true,
     margin: "0px 0px -10% 0px",
@@ -106,8 +106,12 @@ export default function CountUpStat({
   }, [isInView, value, reduceMotion, index]);
 
   return (
-    <p ref={ref} className={className} suppressHydrationWarning>
+    <span
+      ref={ref}
+      className={className ? `block ${className}` : "block"}
+      suppressHydrationWarning
+    >
       {display}
-    </p>
+    </span>
   );
 }

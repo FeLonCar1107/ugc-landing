@@ -42,7 +42,7 @@ export default function About(props: IAboutProps) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_24%] opacity-15 [mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)]"
+          className="object-cover object-[40%_10%] opacity-15 [mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)]"
         />
       </div>
 
@@ -58,7 +58,7 @@ export default function About(props: IAboutProps) {
               alt=""
               fill
               sizes="100vw"
-              className="object-cover object-[76%_42%] opacity-15 [mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)]"
+              className="object-cover object-[60%_28%] opacity-15 [mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)] [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_24%,black_100%)]"
             />
           </div>
         </div>
@@ -140,31 +140,36 @@ export default function About(props: IAboutProps) {
                   </h3>
                   <div className="grid gap-2.5">
                     {content.socialStats.map((stat, i) => (
-                      <article
+                      <a
                         key={stat.platform}
-                        className="flex items-center justify-between rounded-xl border border-jazzberry-jam-100/60 bg-white px-4 py-3 text-jazzberry-jam-700 backdrop-blur-[1px]"
+                        href={stat.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${stat.platform} — ${stat.followers}`}
+                        className="flex items-center justify-between rounded-xl border border-jazzberry-jam-100/60 bg-white px-4 py-3 text-jazzberry-jam-700 backdrop-blur-[1px] transition-[border-color,box-shadow,background-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-jazzberry-jam-200/45 hover:bg-jazzberry-jam-50 hover:shadow-[0_2px_20px_-4px_rgba(157,23,77,0.08)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-jazzberry-jam-300/50 focus-visible:ring-offset-2"
                       >
                         <span className="inline-flex items-center">
                           {stat.platform === "TikTok" && (
-                            <TikTok url={stat.url} size={20} color="#9D174D" />
+                            <TikTok
+                              url={stat.url}
+                              size={20}
+                              color="#9D174D"
+                              variant="icon"
+                            />
                           )}
                           {stat.platform === "Instagram" && (
                             <Instagram
                               url={stat.url}
                               size={20}
                               color="#9D174D"
+                              variant="icon"
                             />
                           )}
                           {stat.platform !== "TikTok" &&
                             stat.platform !== "Instagram" && (
-                              <a
-                                href={stat.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm font-semibold underline-offset-2 hover:underline"
-                              >
+                              <span className="text-sm font-semibold">
                                 {stat.platform}
-                              </a>
+                              </span>
                             )}
                         </span>
                         <CountUpStat
@@ -172,7 +177,7 @@ export default function About(props: IAboutProps) {
                           index={experienceStats.length + i}
                           className="text-2xl font-bold leading-none tabular-nums"
                         />
-                      </article>
+                      </a>
                     ))}
                   </div>
                 </div>
