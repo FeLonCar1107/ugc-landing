@@ -81,7 +81,7 @@ export default function UGC(props: IUserCreatorContentProps) {
         </div>
       </header>
 
-      <div className="slider-ugc section-shell z-10 flex min-h-0 flex-1 flex-col justify-start gap-0 -mt-20 md:-mt-10">
+      <div className="slider-ugc section-shell z-10 flex min-h-0 flex-1 flex-col justify-start gap-0 -mt-5 md:-mt-10">
         <div className="cards">
           {content.cards.map((card, index: number) => (
             <div
