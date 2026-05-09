@@ -215,11 +215,56 @@
           "alt": "Isabella Lizarralde Arias"
         },
         "description": {
-          "paragraph1": "¡Hola! Soy Isabella, tengo 25 años, apasionada por la creatividad y la moda. Vivo actualmente en Colombia en la linda ciudad de Manizales. Desde muy niña siempre supe que mi destino estaba en crear cosas hermosas y significativas. Mi viaje comenzó vendiendo dulces para financiar mi primera cámara profesional, un paso crucial que encendió mi pasión por la fotografía.",
-          "paragraph2": "Pronto, mi amor por la moda se entrelazó con mi creatividad, empezando con la pintura de camisetas en el colegio, evolucionando hacia el lanzamiento de mi propia marca de ropa. Durante años, me dediqué al manejo integral de redes sociales, diseño y atención al cliente, perfeccionando cada detalle con pasión y dedicación.",
-          "paragraph3": "En este fascinante mundo. He tenido el privilegio de colaborar con más de",
-          "paragraph4": "marcas tanto a nivel nacional como internacional. Con formación en Psicología, tengo el complemento perfecto para entender y conectar con la comunidad. Mi objetivo es no solo capturar la atención, sino también ganarme el corazón de quienes me siguen, ofreciéndoles experiencias únicas, de aprendizaje y mucho entretenimiento."
+          "paragraph1": "Me dedico a crear contenido de alta calidad, donde la estética y una edición que enganche van de la mano. Como Psicóloga, me encanta ir más allá de lo visual: busco tocar esos puntos de dolor y generar emociones reales que logren una conexión verdadera con quien está del otro lado de la pantalla.",
+          "paragraph2": "",
+          "paragraph3": ""
         },
+        "whyWorkWithMeTitle": "¿Por qué trabajar conmigo?",
+        "reasons": [
+          {
+            "title": "Cuidado en los detalles",
+            "description": "Me apasiona entregar videos de alta calidad que se sientan profesionales, pero con esa esencia cercana que nos caracteriza."
+          },
+          {
+            "title": "Confianza \"Bestie\"",
+            "description": "Mi comunidad sabe que hablo desde la honestidad; por eso, cada colaboración se percibe como un consejo genuino entre amigas."
+          },
+          {
+            "title": "Versatilidad",
+            "description": "Me adapto con facilidad a cualquier reto creativo, logrando siempre que la esencia de tu marca sea la protagonista."
+          }
+        ],
+        "experienceTitle": "Experiencia",
+        "experience": {
+          "brandsTrustedLabel": "marcas han confiado",
+          "yearsCreatingLabel": "años creando contenido",
+          "yearsUgcLabel": "años de experiencia UGC",
+          "yearsCreatingValue": "+5",
+          "yearsUgcValue": "+3"
+        },
+        "toolsTitle": "Herramientas",
+        "tools": [
+          "iPhone 15 Pro",
+          "Micrófonos",
+          "Luces artificiales",
+          "CapCut Pro",
+          "Lente macro y gran angular",
+          "Estabilizador DJI Osmo",
+          "Cámara Canon EOS 4000D"
+        ],
+        "socialProofTitle": "Comunidad en redes",
+        "socialStats": [
+          {
+            "platform": "TikTok",
+            "followers": "28.4K",
+            "url": "https://www.tiktok.com/@isa.lizaa?_r=1&_t=ZS-96AxORkxFdo"
+          },
+          {
+            "platform": "Instagram",
+            "followers": "5.6K",
+            "url": "https://www.instagram.com/isa.lizaa?igsh=c2NscWZtbDhiZjcw"
+          }
+        ],
         "birth": {
           "name": "Isabella",
           "lastName": "Lizarralde Arias",
