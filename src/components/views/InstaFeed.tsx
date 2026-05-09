@@ -87,9 +87,9 @@ export default function InstaFeed(props: IInstaFeedProps) {
         <section
           id="insta-feed"
           data-scroll-section
-          className="flex h-auto min-h-screen w-screen flex-col items-center justify-center gap-5 bg-transparent tw-section-y lg:gap-6"
+          className="flex h-auto w-screen flex-col items-center justify-start gap-5 bg-transparent tw-section-y lg:gap-6"
         >
-          <div className="section-shell flex flex-col items-center justify-center gap-5 lg:gap-6">
+          <div className="section-shell flex flex-col items-center justify-start gap-5 lg:gap-6">
             <div className="flex w-full flex-col items-center justify-center md:flex-row md:gap-3">
               <h2 className="tw-section-heading tw-text-heading tw-soft-interactive font-bold">
                 <a

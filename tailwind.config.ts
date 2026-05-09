@@ -121,13 +121,25 @@ const config: Config = {
         ".tw-text-soft": {
           color: theme("colors.jazzberry-jam.300"),
         },
-        /** Vertical rhythm for scroll sections (soft, fluid) */
+        /**
+         * Vertical rhythm: top = nav clearance + small gutter (`--section-top-gutter`).
+         * Bottom keeps the previous soft section spacing.
+         */
         ".tw-section-y": {
-          paddingTop: "clamp(2.5rem, 6vw, 5rem)",
+          paddingTop: "calc(var(--navbar-height) + var(--section-top-gutter))",
           paddingBottom: "clamp(2.5rem, 6vw, 5rem)",
         },
+        /** Tighter bottom band; same top title band as `.tw-section-y`. */
         ".tw-section-y-compact": {
-          paddingTop: "clamp(2rem, 4vw, 3.5rem)",
+          paddingTop: "calc(var(--navbar-height) + var(--section-top-gutter))",
+          paddingBottom: "clamp(2rem, 4vw, 3.5rem)",
+        },
+        /**
+         * Stacked section (e.g. Collabs right after Videos): no repeated nav-height on
+         * padding-top — previous section + scroll offset already clear the fixed bar.
+         */
+        ".tw-section-y-stack": {
+          paddingTop: "clamp(1rem, 2.8vw, 2rem)",
           paddingBottom: "clamp(2rem, 4vw, 3.5rem)",
         },
         /** Long-form copy on light surfaces */
@@ -191,10 +203,9 @@ const config: Config = {
           letterSpacing: "0.08em",
           color: theme("colors.jazzberry-jam.900"),
         },
-        /** Contact: top padding below fixed nav */
+        /** Contact: same title inset as `.tw-section-y` */
         ".tw-contact-shell": {
-          paddingTop:
-            "calc(var(--navbar-height) + clamp(2rem, 8vw, 4rem))",
+          paddingTop: "calc(var(--navbar-height) + var(--section-top-gutter))",
         },
       });
     }),

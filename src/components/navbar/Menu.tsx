@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { INavOption } from "@/types/nav-option";
 import { IMenuProps } from "@/types/props/menu";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
+import { getNavbarScrollOffsetPx } from "@/lib/navbarScroll";
 
 interface MenuProps {
   data: IMenuProps;
@@ -36,6 +37,7 @@ export default function Menu({ data, closeMenu }: MenuProps) {
     requestAnimationFrame(() => {
       ls.update();
       ls.scrollTo(target, {
+        offset: -getNavbarScrollOffsetPx(),
         duration: 1000,
         easing: [0.22, 0.22, 0.2, 1],
         callback: () => ls.update(),

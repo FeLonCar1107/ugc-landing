@@ -7,6 +7,7 @@ import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
 import NavOptions from "@/components/navbar/NavOptions";
 import LangSwitcher from "@/components/navbar/LangSwitcher";
 import HamburgerMenu from "@/components/navbar/HamburgerMenu";
+import { getNavbarScrollOffsetPx } from "@/lib/navbarScroll";
 
 /**
  * Locomotive scroll `y` above this (px) → frosted navbar.
@@ -48,6 +49,7 @@ export default function Navbar({
   const goToHome = () => {
     if (locomotiveScroll) {
       locomotiveScroll.scrollTo("#home", {
+        offset: -getNavbarScrollOffsetPx(),
         duration: 1000,
         easing: [0.22, 0.22, 0.2, 1],
       });

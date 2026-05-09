@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { LocomotiveScrollContext } from "@/hooks/useLocomotiveScroll";
+import { getNavbarScrollOffsetPx } from "@/lib/navbarScroll";
 import { INavOption } from "@/types/nav-option";
 import { NavOptionsProps } from "@/types/props/nav-options";
 
@@ -17,6 +18,7 @@ export default function NavOptions({ options }: NavOptionsProps) {
     if (!ls) return;
     ls.update();
     ls.scrollTo(target, {
+      offset: -getNavbarScrollOffsetPx(),
       duration: 1000,
       easing: [0.22, 0.22, 0.2, 1],
       callback: () => ls.update(),

@@ -64,7 +64,7 @@ export default function UGC(props: IUserCreatorContentProps) {
     <div
       id="ugc"
       data-scroll-section
-      className={`relative flex min-h-screen w-screen flex-col pt-24 ${classMap[selected]}`}
+      className={`relative flex min-h-screen w-screen flex-col tw-section-y ${classMap[selected]}`}
     >
       {/* Title: watermark stays behind readable headline so “UGC” is never fully covered */}
       <header className="relative z-[5] flex w-full shrink-0 flex-col items-center px-4">

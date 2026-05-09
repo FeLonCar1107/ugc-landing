@@ -21,7 +21,7 @@ export default function Contact(props: IContactProps) {
     <section
       id="contact"
       data-scroll-section
-      className="flex h-auto min-h-screen w-screen items-center justify-center bg-jazzberry-jam-700"
+      className="relative flex h-auto min-h-screen w-screen items-start justify-start bg-jazzberry-jam-700"
     >
       <DividerBottom />
       <DividerTop />

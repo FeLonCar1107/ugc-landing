@@ -17,7 +17,7 @@ export default function Collaborations(props: ICollaborationsProps) {
     <section
       data-scroll-section
       id="collaborations"
-      className="relative h-auto w-screen bg-transparent tw-section-y-compact lg:pb-20"
+      className="relative h-auto w-screen bg-transparent tw-section-y-stack lg:pb-20"
     >
       <div className="section-shell h-auto flex items-end justify-center">
         <div

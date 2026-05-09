@@ -29,7 +29,7 @@ export default function About(props: IAboutProps) {
     <section
       data-scroll-section
       id="about"
-      className="tw-section-y relative isolate flex w-screen items-center justify-center overflow-hidden"
+      className="tw-section-y relative isolate flex w-screen flex-col items-stretch overflow-hidden"
     >
       {/* Mobile: full viewport width — outside .section-shell avoids mid-screen “stripe” */}
       <div

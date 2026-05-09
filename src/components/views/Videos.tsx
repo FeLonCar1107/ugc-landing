@@ -50,9 +50,9 @@ export default function Videos(props: IVideosProps) {
     <section
       data-scroll-section
       id="videos"
-      className="bg-transparent flex h-auto min-h-screen w-screen flex-col items-center justify-center tw-section-y"
+      className="bg-transparent flex h-auto w-screen flex-col items-center justify-start tw-section-y"
     >
-      <div className="section-shell flex h-auto flex-col items-center gap-8 pb-8 pt-6 md:gap-10 md:pb-12 md:pt-8 lg:gap-12 lg:pt-10">
+      <div className="section-shell flex h-auto flex-col items-center gap-8 pb-8 md:gap-10 md:pb-12 lg:gap-12">
         <header className="flex w-full max-w-2xl flex-col items-center px-1 text-center">
           <h2
             id="videos-heading"

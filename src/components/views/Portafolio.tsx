@@ -27,7 +27,7 @@ export default function Portafolio(props: IPortfolioProps) {
     <section
       id="portfolio"
       data-scroll-section
-      className="relative w-full scroll-mt-6 bg-transparent pt-16 pb-10 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16"
+      className="relative w-full bg-transparent tw-section-y"
     >
       <div className="section-shell flex flex-col items-center gap-6 md:gap-8 lg:gap-10">
         <header className="flex max-w-2xl flex-col items-center px-1 text-center">

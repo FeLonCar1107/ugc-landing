@@ -19,6 +19,8 @@
 :root {
   /* Fixed shell height — keep Navbar.tsx / Main / Home in sync (h-14 mobile, lg:h-16). */
   --navbar-height: 3.5rem;
+  /* Tight air between fixed nav and first line of section titles (not a second “nav-sized” band). */
+  --section-top-gutter: clamp(0.75rem, 2.2vw, 1.5rem);
   /* Landing canvas — matches jazzberry-jam-100; single source for Main background */
   --landing-page-bg-rgb: 253 230 243;
   --brand-ink-rgb: 19 18 18;
@@ -71,6 +73,11 @@ body {
 
 html {
   scroll-padding-top: var(--navbar-height);
+}
+
+/* Hash / native scroll: keep section anchors clear of fixed nav */
+[data-scroll-section] {
+  scroll-margin-top: var(--navbar-height);
 }
 
 /* Marketing landings: normal document scroll (portfolio keeps overflow:hidden + locomotive). */
