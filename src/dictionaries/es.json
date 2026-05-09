@@ -159,12 +159,7 @@
       "title": "Collabs",
       "splitTitle": ["COLLABS"],
       "content": {
-        "brands": [],
-        "butterfly": {
-          "gold": "https://static.wixstatic.com/media/655690_2d020694ff0e4e5caced8ea5579aa79b~mv2.gif",
-          "rose": "https://static.wixstatic.com/media/655690_e6fac945386c41c4a7d4b0a6290b3cb3~mv2.gif",
-          "alt": "Mariposa volando"
-        }
+        "brands": []
       }
     },
     "portfolio": {

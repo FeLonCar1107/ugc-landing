@@ -3,11 +3,8 @@ import { IBrand } from "@/types/brand";
 import { ICollaborationsProps } from "@/types/props/collaborations";
 import { useCollabs } from "@/context/CollabsContext";
 
-/** Fluid butterfly frame: min / vw blend / max — no breakpoint utilities. */
-const COLLAB_BUTTERFLY_SIZE = "clamp(2.25rem, 5vw + 0.2rem, 4rem)";
-
 export default function Collaborations(props: ICollaborationsProps) {
-  const { splitTitle, content } = props;
+  const { splitTitle } = props;
   const { brands, isLoading } = useCollabs();
 
   const sortedBrands = [...brands].sort((a, b) => a.id - b.id);
@@ -19,25 +16,7 @@ export default function Collaborations(props: ICollaborationsProps) {
       id="collaborations"
       className="relative h-auto w-screen bg-transparent tw-section-y-stack lg:pb-20"
     >
-      <div className="section-shell h-auto flex items-end justify-center">
-        <div
-          data-scroll
-          data-scroll-speed="-1.5"
-          className="relative shrink-0"
-          style={{
-            width: COLLAB_BUTTERFLY_SIZE,
-            height: COLLAB_BUTTERFLY_SIZE,
-          }}
-        >
-          <Image
-            src={content.butterfly.rose}
-            alt={content.butterfly.alt}
-            fill
-            sizes="80px"
-            unoptimized={true}
-            className="mariposas transform scale-x-[-1]"
-          />
-        </div>
+      <div className="section-shell flex h-auto items-center justify-center">
         <h2 className="tw-section-heading tw-text-heading flex items-center gap-3">
           <span className="font-bold">{splitTitle[0]}</span>
           {splitTitle[1] ? (
@@ -47,24 +26,6 @@ export default function Collaborations(props: ICollaborationsProps) {
             </>
           ) : null}
         </h2>
-        <div
-          data-scroll
-          data-scroll-speed="3"
-          className="relative shrink-0"
-          style={{
-            width: COLLAB_BUTTERFLY_SIZE,
-            height: COLLAB_BUTTERFLY_SIZE,
-          }}
-        >
-          <Image
-            src={content.butterfly.gold}
-            alt={content.butterfly.alt}
-            fill
-            sizes="80px"
-            unoptimized={true}
-            className="mariposas"
-          />
-        </div>
       </div>
       <div className="section-shell w-full">
         {isLoading ? (
