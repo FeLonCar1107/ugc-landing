@@ -31,73 +31,83 @@ export default function CustomerReviews(props: ICustomerReviewsProps) {
     <section
       id="customer-reviews"
       data-scroll-section
-      className="relative flex w-screen items-center justify-center tw-section-y"
+      className="relative z-[1] flex w-screen items-center justify-center tw-section-y"
     >
-      <div id="customers" className="section-shell h-auto flex gap-10">
+      <div id="customers" className="section-shell flex h-auto gap-10">
         <div
           data-scroll
           data-scroll-sticky
           data-scroll-speed="1.2"
           data-scroll-target="#customers"
-          className="w-[15%] lg:w-[40%] h-screen flex flex-col items-center justify-center"
+          className="relative z-[1] flex h-screen w-[15%] flex-col items-center lg:w-[40%]"
         >
-          <div className="relative z-20 hidden lg:flex w-full lg:h-[25%] shrink-0 items-center justify-between">
-            <Image
-              src={content.flower.src}
-              alt={content.flower.alt}
-              width={30}
-              height={30}
-              className="rotating"
-            />
-            <header className="flex min-w-0 max-w-[min(100%,20rem)] flex-col items-center justify-center space-y-0.5 px-2 text-center">
-              <p className="tw-eyebrow">{splitTitle[0]}</p>
-              <h2 className="tw-section-heading tw-text-heading font-bold">
-                {splitTitle[1]}
-              </h2>
-            </header>
-            <Image
-              src={content.flower.src}
-              alt={content.flower.alt}
-              width={30}
-              height={30}
-              className="rotating"
-            />
-          </div>
-          <div
-            id="split-letter"
-            className="flex lg:hidden w-full h-full lg:h-[75%] flex-col items-center justify-center"
-          >
-            <Image
-              src={content.flower.src}
-              alt={content.flower.alt}
-              width={30}
-              height={30}
-              className="rotating my-5"
-            />
-            {splitLetter.map((letter: string, index: number) => (
-              <span key={index} className="tw-section-heading-split">
-                {letter}
-              </span>
-            ))}
-            <Image
-              src={content.flower.src}
-              alt={content.flower.alt}
-              width={30}
-              height={30}
-              className="rotating my-5"
-            />
-          </div>
-          <div className="hidden lg:flex w-full h-[70%] items-end justify-center px-2 pb-3">
-            <Image
-              src={content.image.src}
-              alt={content.image.alt}
-              width={900}
-              height={1410}
-              priority
-              quality={100}
-              sizes="(min-width: 1024px) min(40vw, 270px), 0px"
-              className="show-image h-auto w-full max-w-[min(100%,270px)]"
-            />
+          {/*
+            Inner band: when Locomotive pins this column to the viewport top, section
+            tw-section-y padding no longer clears the fixed nav — this pt matches
+            --navbar-height + --section-top-gutter. Section/column stay z-[1]; Navbar z-[1000].
+          */}
+          <div className="flex min-h-0 w-full flex-1 flex-col items-center justify-start lg:pt-[calc(var(--navbar-height)+var(--section-top-gutter))]">
+            {/* Desktop: portrait sits behind the headline; anchor low so only a sliver peeks past the text */}
+            <div className="relative isolate hidden min-h-[min(52vh,420px)] w-full flex-1 flex-col lg:flex">
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[clamp(6.75rem,26vh,10.5rem)] z-0 flex items-end justify-center px-2 pb-3">
+                <Image
+                  src={content.image.src}
+                  alt={content.image.alt}
+                  width={900}
+                  height={1410}
+                  priority
+                  quality={100}
+                  sizes="(min-width: 1024px) min(42vw, 290px), 0px"
+                  className="customer-reviews-hero-img h-auto w-full max-w-[min(100%,290px)] translate-y-2 object-contain object-bottom"
+                />
+              </div>
+              <div className="relative z-10 flex w-full shrink-0 items-center justify-between">
+                <Image
+                  src={content.flower.src}
+                  alt={content.flower.alt}
+                  width={30}
+                  height={30}
+                  className="rotating"
+                />
+                <header className="flex min-w-0 max-w-[min(100%,20rem)] flex-col items-center justify-center space-y-0.5 px-2 text-center">
+                  <p className="tw-eyebrow">{splitTitle[0]}</p>
+                  <h2 className="tw-section-heading tw-text-heading font-bold [text-shadow:0_1px_0_rgb(var(--landing-page-bg-rgb)),0_2px_12px_rgb(var(--landing-page-bg-rgb)/0.85)]">
+                    {splitTitle[1]}
+                  </h2>
+                </header>
+                <Image
+                  src={content.flower.src}
+                  alt={content.flower.alt}
+                  width={30}
+                  height={30}
+                  className="rotating"
+                />
+              </div>
+            </div>
+            <div
+              id="split-letter"
+              className="flex h-full w-full flex-col items-center justify-center lg:hidden"
+            >
+              <Image
+                src={content.flower.src}
+                alt={content.flower.alt}
+                width={30}
+                height={30}
+                className="rotating my-5"
+              />
+              {splitLetter.map((letter: string, index: number) => (
+                <span key={index} className="tw-section-heading-split">
+                  {letter}
+                </span>
+              ))}
+              <Image
+                src={content.flower.src}
+                alt={content.flower.alt}
+                width={30}
+                height={30}
+                className="rotating my-5"
+              />
+            </div>
           </div>
         </div>
         <div className="w-[85%] h-auto lg:w-[60%] pt-10 pb-20">

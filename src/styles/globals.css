@@ -820,6 +820,26 @@ textarea:focus {
   mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 1) 10%);
 }
 
+/* Customer reviews hero: soft top (behind headline) + bottom fade (same idea as .show-image) */
+#customer-reviews .customer-reviews-hero-img {
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 0.35) 10%,
+    rgb(0 0 0 / 1) 24%,
+    rgb(0 0 0 / 1) 90%,
+    rgb(0 0 0 / 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 0.35) 10%,
+    rgb(0 0 0 / 1) 24%,
+    rgb(0 0 0 / 1) 90%,
+    rgb(0 0 0 / 0) 100%
+  );
+}
+
 /* ANIMATIONS
 ================================================== */
 
