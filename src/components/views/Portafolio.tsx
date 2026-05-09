@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import LeftArrowIcon from "@/components/svg/LeftArrow";
-import RightArrowIcon from "@/components/svg/RightArrow";
+import ChevronNav from "@/components/svg/ChevronNav";
 import { IPicture } from "@/types/picture";
 import { IPortfolioProps } from "@/types/props/portfolio";
 import { usePictureCarousel } from "@/hooks/usePictureCarousel";
@@ -49,13 +48,10 @@ export default function Portafolio(props: IPortfolioProps) {
             <button
               type="button"
               id="left-picture-arrow"
-              className="picture-arrow group flex items-center justify-center rounded-full border border-jazzberry-jam-200/40 bg-white/90 shadow-[0_4px_24px_-8px_rgba(83,4,36,0.15)] backdrop-blur-sm transition hover:border-jazzberry-jam-300/60 hover:bg-white"
+              className="picture-arrow group flex items-center justify-center rounded-full border border-jazzberry-jam-200/40 bg-white/90 text-jazzberry-jam-900 shadow-[0_4px_24px_-8px_rgba(83,4,36,0.15)] backdrop-blur-sm transition hover:border-jazzberry-jam-300/60 hover:bg-white"
               aria-label="Previous images"
             >
-              <LeftArrowIcon
-                color="#9c114b"
-                size="18px"
-              />
+              <ChevronNav direction="left" className="h-5 w-5" />
             </button>
 
             <div
@@ -91,10 +87,10 @@ export default function Portafolio(props: IPortfolioProps) {
             <button
               type="button"
               id="right-picture-arrow"
-              className="picture-arrow group flex items-center justify-center rounded-full border border-jazzberry-jam-200/40 bg-white/90 shadow-[0_4px_24px_-8px_rgba(83,4,36,0.15)] backdrop-blur-sm transition hover:border-jazzberry-jam-300/60 hover:bg-white"
+              className="picture-arrow group flex items-center justify-center rounded-full border border-jazzberry-jam-200/40 bg-white/90 text-jazzberry-jam-900 shadow-[0_4px_24px_-8px_rgba(83,4,36,0.15)] backdrop-blur-sm transition hover:border-jazzberry-jam-300/60 hover:bg-white"
               aria-label="Next images"
             >
-              <RightArrowIcon color="#9c114b" size="18px" />
+              <ChevronNav direction="right" className="h-5 w-5" />
             </button>
           </div>
         </div>
