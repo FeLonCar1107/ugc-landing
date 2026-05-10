@@ -98,59 +98,66 @@
         "videos": [
           {
             "id": 1,
-            "title": "Experience",
-            "description": "Manizales Fair",
-            "preview": "https://static.wixstatic.com/media/655690_b104974c021546b39684f89affcc079d~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_2fdf9cef67184f5dbc13e9e544b766b6/480p/mp4/file.mp4"
+            "title": "Before / After",
+            "description": "Hair care products",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_2cb6d00a9ed94d10abdf8e95c3fde7f0/1080p/mp4/file.mp4"
           },
           {
             "id": 2,
-            "title": "Festival",
-            "description": "Clothing Store",
-            "preview": "https://static.wixstatic.com/media/655690_78e1b27c43614bef9934f87e58f526b1~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_0c83a1fe109f478084643d7d6c811314/720p/mp4/file.mp4"
+            "title": "Ad Recommendation",
+            "description": "Ear plugs",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_2137d679896b414e87985ce72858894b/1080p/mp4/file.mp4"
           },
           {
             "id": 3,
             "title": "Product Usage",
             "description": "Accessories",
-            "preview": "https://static.wixstatic.com/media/655690_4499eed0114c4a548c29584250020a44~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_d7ed9d8b61124b7c93667a1dd643e567/1080p/mp4/file.mp4"
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_b6d35b3a65814813bead77bbbdf35a46/1080p/mp4/file.mp4"
           },
           {
             "id": 4,
-            "title": "Review",
-            "description": "Dessert Shop",
-            "preview": "https://static.wixstatic.com/media/655690_660ba405e94c4fcba691af8be00758e6~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_49ecfc1f8e154c92892aadceeb6648bf/720p/mp4/file.mp4"
+            "title": "Trend",
+            "description": "Shoe store",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_3c6894986ada4c4baa84d72c45d9f095/1080p/mp4/file.mp4"
           },
           {
             "id": 5,
-            "title": "Well-being",
-            "description": "Nutritional Supplement",
-            "preview": "https://static.wixstatic.com/media/655690_9112030f247141bcb09153ef73c4e63f~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_710f7bfbdb804391b920c3d0313b7785/1080p/mp4/file.mp4"
+            "title": "Experience Vlog",
+            "description": "Express hotels plan",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_16f5e63855cf471c826f39e70c0d8fc3/720p/mp4/file.mp4"
           },
           {
             "id": 6,
-            "title": "Problem / Solution",
-            "description": "Noise Stoppers",
-            "preview": "https://static.wixstatic.com/media/655690_48a5db11d93148cc83f48a1e59c9c1c5~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_3444b76af856465db886d92886bdc4c1/480p/mp4/file.mp4"
+            "title": "Organic Campaign",
+            "description": "Pet store",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_80000be3e21d4cc2abe6a4275cebc63b/1080p/mp4/file.mp4"
           },
           {
             "id": 7,
-            "title": "Trend",
-            "description": "Skincare",
-            "preview": "https://static.wixstatic.com/media/655690_c417a54690464af781f2a89fc564403e~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_ecf420120cbd441c9909a2341ef05912/1080p/mp4/file.mp4"
+            "title": "Product Trial",
+            "description": "Gem art",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_c3d2e9c0930c40489ccf676cdb0d6d55/720p/mp4/file.mp4"
           },
           {
             "id": 8,
-            "title": "Unboxing",
-            "description": "Pijama party",
-            "preview": "https://static.wixstatic.com/media/655690_bf7098a0a53744c9945f6699f6548113~mv2.webp",
-            "src": "https://video.wixstatic.com/video/655690_f3e42b9e8248434b98fa48fe6c29b275/1080p/mp4/file.mp4"
+            "title": "Product Review",
+            "description": "Couple jewelry",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_e6fb0a624d404aba961ffd8427db009a/720p/mp4/file.mp4"
+          },
+          {
+            "id": 9,
+            "title": "ASMR",
+            "description": "Spa and wellness",
+            "preview": "",
+            "src": "https://video.wixstatic.com/video/655690_6d39ed50f20e411b991d17faab387adf/1080p/mp4/file.mp4"
           }
         ]
       }
@@ -308,7 +315,7 @@
             "title": "What is UGC?",
             "description": "User-generated content. Authentic and organic. 79% of people trust a UGC video or photo more than brand-made advertising.",
             "image": {
-              "src": "https://static.wixstatic.com/media/655690_d61ae0c41dd641c49275aa5efcf82723~mv2.webp",
+              "src": "https://static.wixstatic.com/media/655690_cbb1fd605d6549d498721e60098b7016~mv2.jpeg",
               "alt": "ugc-picture-1"
             }
           },
@@ -317,7 +324,7 @@
             "title": "Benefits of UGC",
             "description": "You will build the credibility and trust of your services. You will have greater reach and more sales. You will save time and resources in your brand.",
             "image": {
-              "src": "https://static.wixstatic.com/media/655690_6ff5378e4aca465781153c57e135dcdf~mv2.webp",
+              "src": "https://static.wixstatic.com/media/655690_e42498287a2947b1a0439deeedaa913b~mv2.jpeg",
               "alt": "ugc-picture-2"
             }
           },
@@ -326,7 +333,7 @@
             "title": "Collaboration process",
             "description": "Contact - Content planning - Content creation - Publication - Analysis and results.",
             "image": {
-              "src": "https://static.wixstatic.com/media/655690_01a6881c2771438da6aa91cdc1414c76~mv2.webp",
+              "src": "https://static.wixstatic.com/media/655690_0200b46746a34cf383a6830fa0ab5c0a~mv2.jpeg",
               "alt": "ugc-picture-3"
             }
           }
