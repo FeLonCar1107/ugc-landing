@@ -24,6 +24,14 @@ const useLocomotiveScroll = () => {
       locomotiveScroll = new LocomotiveScroll({
         el,
         smooth: true,
+        // Default library behavior: `tablet.smooth` is false. Viewports ≥ breakpoint use
+        // Native scroll (window), but this app locks document scroll (`overflow:hidden` on
+        // html/body + `#main[data-scroll-container]`). iPads ≥1024px width hit that path and
+        // appear “stuck” on the hero; phones/tablets below breakpoint use Smooth instead.
+        tablet: {
+          smooth: true,
+          breakpoint: 1024,
+        },
         smartphone: {
           smooth: true,
         },
