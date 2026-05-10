@@ -98,7 +98,7 @@ export default function UGC(props: IUserCreatorContentProps) {
               }}
             >
               <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-[11px] bg-white shadow-[0_12px_40px_-12px_rgba(83,4,36,0.12)] ring-1 ring-jazzberry-jam-200/70">
-                <div className="relative min-h-0 flex-1">
+                <div className="relative min-h-0 flex-1 overflow-hidden bg-jazzberry-jam-100/40">
                   {imageLoadingStates[card.id] && (
                     <div className="tw-media-placeholder absolute inset-0 rounded-none">
                       <div className="media-loader"></div>
@@ -109,12 +109,12 @@ export default function UGC(props: IUserCreatorContentProps) {
                     alt={card.image.alt}
                     fill
                     sizes="(max-width: 640px) 85vw, 400px"
-                    className="picture-image object-cover transition-all duration-500"
+                    className="h-full w-full object-cover object-top transition-all duration-500"
                     onLoad={() => handleImageLoad(card.id)}
                     onError={() => handleImageLoad(card.id)}
                   />
                 </div>
-                <div className="flex shrink-0 flex-col justify-center bg-jazzberry-jam-50/95 px-3 py-3 sm:py-3.5">
+                <div className="flex min-h-[3.25rem] shrink-0 flex-col justify-center bg-jazzberry-jam-50/95 px-3 py-2.5 sm:min-h-[3.5rem] sm:py-3">
                   <p className="text-center text-[13px] font-medium leading-snug text-jazzberry-jam-900 sm:text-sm">
                     {card.title}
                   </p>

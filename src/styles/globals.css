@@ -661,13 +661,13 @@ textarea:focus {
     z-index: 10;
   }
 
-  /* Mobile-first: tighter stack so the headline stays visible; widen on md+ */
+  /* Mobile-first: taller deck so photos + labels fit without cropping (object-contain). */
   .cards {
     position: relative;
-    width: min(88vw, 260px);
-    height: min(52vh, 340px);
-    max-width: 280px;
-    max-height: 380px;
+    width: min(88vw, 270px);
+    height: min(58vh, 400px);
+    max-width: 300px;
+    max-height: 430px;
   }
 
   .card {
@@ -721,10 +721,10 @@ textarea:focus {
 
   @media screen and (min-width: 768px) {
     .cards {
-      width: min(72vw, 320px);
-      height: min(48vh, 420px);
-      max-width: 340px;
-      max-height: 440px;
+      width: min(72vw, 340px);
+      height: min(52vh, 480px);
+      max-width: 360px;
+      max-height: 500px;
     }
 
     .prev {
@@ -740,8 +740,8 @@ textarea:focus {
 
   @media screen and (min-width: 1280px) {
     .cards {
-      max-width: 360px;
-      max-height: 460px;
+      max-width: 380px;
+      max-height: 520px;
     }
 
     .prev {
