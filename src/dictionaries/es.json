@@ -166,7 +166,9 @@
       "title": "Collabs",
       "splitTitle": ["COLLABS"],
       "content": {
-        "brands": []
+        "brands": [],
+        "bookMockupAlt": "Libro abierto con un collage de ejemplo de marcas colaboradoras",
+        "bookMockupCaption": "Este cuaderno sigue sumando historias y me encantaría que la tuya sea la siguiente."
       }
     },
     "portfolio": {

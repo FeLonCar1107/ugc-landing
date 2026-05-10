@@ -5,5 +5,7 @@ export interface ICollaborationsProps {
   splitTitle: string[];
   content: {
     brands: IBrand[];
+    bookMockupAlt: string;
+    bookMockupCaption: string;
   };
 }

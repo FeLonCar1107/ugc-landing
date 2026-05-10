@@ -29,8 +29,6 @@ export const CollabsProvider = ({ children }: { children: ReactNode }) => {
         const data = await apiService.GET("collabs");
         setBrands(data.brands);
         setTotalBrands(data.totalBrands);
-        const root = document.documentElement;
-        root.style.setProperty("--count-brands", data.brands.length.toString());
       } catch (error) {
         console.error("Error fetching collabs:", error);
       } finally {

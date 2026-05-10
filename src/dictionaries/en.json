@@ -166,7 +166,9 @@
       "title": "Collabs",
       "splitTitle": ["COLLABS"],
       "content": {
-        "brands": []
+        "brands": [],
+        "bookMockupAlt": "Open book collage with a sample of brand collaboration logos",
+        "bookMockupCaption": "This scrapbook keeps adding stories—and I'd love yours to be next."
       }
     },
     "portfolio": {

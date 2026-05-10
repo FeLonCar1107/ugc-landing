@@ -1,14 +1,24 @@
+"use client";
+
 import Image from "next/image";
-import { IBrand } from "@/types/brand";
+import {
+  motion,
+  useInView,
+  useReducedMotion,
+} from "framer-motion";
+import { useRef } from "react";
 import { ICollaborationsProps } from "@/types/props/collaborations";
-import { useCollabs } from "@/context/CollabsContext";
+
+/** Editorial ease — aligned with CountUpStat / ScrollReveal */
+const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export default function Collaborations(props: ICollaborationsProps) {
-  const { splitTitle } = props;
-  const { brands, isLoading } = useCollabs();
+  const { splitTitle, content } = props;
+  const reducedMotion = useReducedMotion();
+  const figureRef = useRef<HTMLElement>(null);
+  const bookInView = useInView(figureRef, { amount: 0.22, margin: "0px 0px -8% 0px" });
 
-  const sortedBrands = [...brands].sort((a, b) => a.id - b.id);
-  const doubledBrands = [...sortedBrands, ...sortedBrands, ...sortedBrands];
+  const enableFloat = !reducedMotion && bookInView;
 
   return (
     <section
@@ -27,34 +37,46 @@ export default function Collaborations(props: ICollaborationsProps) {
           ) : null}
         </h2>
       </div>
-      <div className="section-shell w-full">
-        {isLoading ? (
-          <div className="flex h-[250px] w-full items-center justify-center">
-            <div className="collabs-loader"></div>
-          </div>
-        ) : (
-          <div className="collaborations-slider z-30">
-            <div className="collaborations-slider-track">
-              {doubledBrands?.map((brand: IBrand, idx: number) => (
-                <div
-                  key={brand.id + "-" + idx}
-                  className="collaborations-slider-brand"
-                >
-                  <div className="brand relative">
-                    <Image
-                      src={brand.logo}
-                      alt={brand.alt}
-                      fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      unoptimized={true}
-                      className="transition-all duration-300"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+      <div className="section-shell w-full px-6 mt-4">
+        <motion.figure
+          ref={figureRef}
+          className="collaborations-book"
+          initial={{ opacity: 0, y: 36 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.95, ease: easeOut }}
+        >
+          <motion.div
+            className="collaborations-book__float"
+            animate={
+              enableFloat ? { y: [0, -7, 0] } : { y: 0 }
+            }
+            transition={{
+              duration: 7.5,
+              repeat: enableFloat ? Infinity : 0,
+              ease: "easeInOut",
+            }}
+          >
+            <Image
+              src="/portfolio/collabs.png"
+              alt={content.bookMockupAlt}
+              width={735}
+              height={610}
+              sizes="(min-width: 1024px) 720px, (min-width: 768px) 90vw, 100vw"
+              className="collaborations-book__image"
+              priority={false}
+            />
+          </motion.div>
+          <motion.figcaption
+            className="collaborations-book__caption"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.35, duration: 0.7, ease: easeOut }}
+          >
+            {content.bookMockupCaption}
+          </motion.figcaption>
+        </motion.figure>
       </div>
     </section>
   );
