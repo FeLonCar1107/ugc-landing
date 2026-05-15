@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import enCatch from "@/dictionaries/landings/catch-the-attention/en.json";
+import esCatch from "@/dictionaries/landings/catch-the-attention/es.json";
 import en from "@/dictionaries/landings/discover-your-character/en.json";
 import es from "@/dictionaries/landings/discover-your-character/es.json";
 
@@ -47,5 +49,15 @@ describe("discover-your-character dictionaries — offer stack", () => {
 
   it("en.json offer satisfies extended contract (A11)", () => {
     assertOfferStackContract(en.offer as EbookLandingCopy["offer"], "en");
+  });
+});
+
+describe("catch-the-attention dictionaries — offer stack", () => {
+  it("es.json offer satisfies extended contract (A11)", () => {
+    assertOfferStackContract(esCatch.offer as EbookLandingCopy["offer"], "es");
+  });
+
+  it("en.json offer satisfies extended contract (A11)", () => {
+    assertOfferStackContract(enCatch.offer as EbookLandingCopy["offer"], "en");
   });
 });

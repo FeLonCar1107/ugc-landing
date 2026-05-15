@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Command the attention — Saga for creators",
+    "description": "Ebook to strengthen your digital presence, look more professional, and create opportunities. Brand, profile, intentional content, and portfolio."
+  },
+  "hero": {
+    "eyebrow": "Saga for creators",
+    "productTitle": "Command the attention",
+    "headline": "Boost your digital presence, look more professional, and open new opportunities",
+    "subhead": "It’s not a talent problem — it’s a structure problem. Stop building without foundations and create a brand people understand, connect with, and buy into — step by step, designed with you in mind.",
+    "cta": "Get the ebook",
+    "imageAlt": "Isabella — lead visual",
+    "decorativeAlt": "Y2K collage style reference"
+  },
+  "problem": {
+    "eyebrow": "Sound familiar?",
+    "title": "When you post without a clear foundation, effort doesn’t turn into opportunities",
+    "cards": [
+      {
+        "title": "You post without pillars or a clear message",
+        "body": "Your content feels scattered: lots of loose ideas, little direction. The algorithm isn’t the only issue — architecture is missing."
+      },
+      {
+        "title": "Your profile doesn’t signal a professional offer",
+        "body": "Brands look for clarity and trust. If your bio and grid don’t tell the same story, you lose partnerships before you start."
+      },
+      {
+        "title": "You improvise every week with no system",
+        "body": "You go blank or copy trends without a script. Creating this way drains you and doesn’t build a portfolio that backs you up."
+      },
+      {
+        "title": "Lots of effort, few measurable opportunities",
+        "body": "It’s not a discipline gap — it’s creating without a link between brand, format, and goal. Growth then feels random."
+      }
+    ],
+    "cta": "I want structure"
+  },
+  "solution": {
+    "title": "What you’ll build with this ebook",
+    "titleHighlight": {
+      "before": "What you’ll build with this ",
+      "highlight": "ebook",
+      "after": ""
+    },
+    "giftHint": "Includes bonuses to apply brand, profile, and visual quality without getting lost.",
+    "outcomes": [
+      {
+        "title": "Personal brand + message architecture",
+        "body": "Who you are, how you want to be perceived, mission, pillars, and a thread for everything you publish."
+      },
+      {
+        "title": "Profile optimized for brands",
+        "body": "How to look professional and coherent in bio, photo, and grid without overcomplicating."
+      },
+      {
+        "title": "Intentional content (not just more posts)",
+        "body": "Planning, scripts, formats, and an idea system so you’re not stuck in improvisation."
+      },
+      {
+        "title": "A portfolio that sells your pitch",
+        "body": "Turn what you already create into clear proof of value — content as a sales tool."
+      }
+    ],
+    "ctaTop": "See the offer",
+    "ctaBottom": "Get the ebook",
+    "imageAlt": "Isabella — method applied in real content"
+  },
+  "proof": {
+    "badge": "My story",
+    "headline": "This didn’t come from theory — it came from years of real content and learning what actually sustains a brand.",
+    "intro": "Before teaching it, I lived it: noisy seasons, pivots, and a path where structure started opening doors that effort alone couldn’t.",
+    "timeline": [
+      {
+        "year": "2022",
+        "phase": "Content without foundations",
+        "bullets": [
+          "Posting without clear brand pillars",
+          "Mix of trends without my own narrative",
+          "Hard to explain my offer in one sentence"
+        ]
+      },
+      {
+        "year": "2023",
+        "phase": "Sorting the message",
+        "bullets": [
+          "Early versions of mission and pillars",
+          "More focus on who my real audience was",
+          "Still missing a steady production system"
+        ]
+      },
+      {
+        "year": "2024",
+        "phase": "System + visual quality",
+        "bullets": [
+          "Scripts and formats with intent",
+          "Better set and lighting to lift perception",
+          "My profile started “closing” the story on its own"
+        ]
+      },
+      {
+        "year": "2025",
+        "phase": "Presence that starts conversations",
+        "bullets": [
+          "Portfolio and proof aligned with the message",
+          "Less creative chaos, more focused opportunities",
+          "Content as a sales tool, not filler"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "sectionTitle": "Everything in your access",
+    "hero": {
+      "badges": ["Launch offer", "Ebook + 4 bonuses"],
+      "statement": "Move from improvisation to a presence people understand: ebook + resources for brand, profile, content, and portfolio.",
+      "imageAlt": "“Command the attention” ebook mockup"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook",
+          "label": "Ebook “Command the attention”",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "Brand architecture template (mission, message, pillars)",
+          "anchorValueLabel": "USD 18"
+        },
+        {
+          "id": "b2",
+          "label": "Profile optimization checklist (“brand-ready”)",
+          "anchorValueLabel": "USD 18"
+        },
+        {
+          "id": "b3",
+          "label": "Lighting & set mini-guide + tools reminder",
+          "anchorValueLabel": "USD 9"
+        },
+        {
+          "id": "b4",
+          "label": "Edition BONUS content (per your purchase / platform)",
+          "anchorValueLabel": "USD 9"
+        }
+      ],
+      "totalLabel": "Estimated bundle value",
+      "totalAnchorLabel": "USD 81",
+      "youPayLabel": "Your investment today"
+    },
+    "bonusesSectionTitle": "Included bonuses",
+    "bonuses": [
+      {
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Bonus: brand architecture template",
+        "painHeadline": "Your message lives in your head, not your feed",
+        "outcomeBenefit": "A template for mission, core message, and content pillars aligned with how you want to be seen."
+      },
+      {
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Bonus: brand-ready profile checklist",
+        "painHeadline": "Your profile doesn’t “close” your pitch",
+        "outcomeBenefit": "A practical checklist for bio, photo, and professionalism signals brands look for."
+      },
+      {
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Bonus: lighting & set mini-guide",
+        "painHeadline": "Visual quality doesn’t match your level",
+        "outcomeBenefit": "Actionable lighting and set reminders plus alignment with the ebook’s tools chapter."
+      },
+      {
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: edition extra material",
+        "painHeadline": "You want an extra push while implementing",
+        "outcomeBenefit": "Edition BONUS per platform / post-purchase email — details on checkout."
+      }
+    ],
+    "urgency": {
+      "title": "Why deciding now helps",
+      "bullets": [
+        "Launch window: the bundle is built to organize presence and content without pushing clarity to “someday.”",
+        "No fake scarcity: the real cost is your time if you keep posting without structure."
+      ],
+      "deadlineLineTemplate": "For this edition, launch bonuses apply through {date}."
+    },
+    "ctaPrimary": "I want my ebook access now",
+    "supportNote": "Questions? Email us:",
+    "supportEmail": "soporteila@gmail.com",
+    "priceHint": "USD price — set via environment."
+  },
+  "faq": {
+    "introTitle": "Frequently asked questions",
+    "introBody": "Quick answers before checkout. Need more detail? Reach out.",
+    "cta": "Get the ebook",
+    "items": [
+      {
+        "q": "What format is the ebook?",
+        "a": "It’s a digital product (PDF or the format defined by the purchase platform). You’ll get download instructions after payment."
+      },
+      {
+        "q": "Where do I buy and how do I get access?",
+        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s email or instructions."
+      },
+      {
+        "q": "Does it work if I don’t have expensive gear or a studio?",
+        "a": "Yes — the ebook includes practical set and lighting guidance you can apply with what you have today."
+      },
+      {
+        "q": "Is this just another long course?",
+        "a": "It’s an ebook to read and apply by modules (brand → profile → content → portfolio). You go at your own pace — the key is to execute as you go."
+      },
+      {
+        "q": "Is there a guarantee?",
+        "a": "Refund policy depends on the payment platform and applicable terms. Review it on the checkout page before buying."
+      },
+      {
+        "q": "Can I contact support?",
+        "a": "Yes — use the support email shown on the site if you need purchase help."
+      }
+    ]
+  },
+  "close": {
+    "headline": "Your presence deserves structure — not just more hours on your phone.",
+    "body": "If you’re ready for your brand to be understood and your content to open opportunities, this ebook is written for you.",
+    "cta": "Get the ebook",
+    "footnote": "It’s not luck: clear brand + system + action."
+  }
+}

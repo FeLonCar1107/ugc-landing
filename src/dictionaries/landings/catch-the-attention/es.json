@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Conquista la atención — Saga para creadoras",
+    "description": "Ebook para potenciar tu presencia digital, verte más profesional y generar oportunidades. Marca, perfil, contenido con intención y portafolio."
+  },
+  "hero": {
+    "eyebrow": "Saga para creadoras",
+    "productTitle": "Conquista la atención",
+    "headline": "Potencia tu presencia digital, luce más profesional y abre nuevas oportunidades",
+    "subhead": "No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte y venda tu propuesta — paso a paso, pensado para ti.",
+    "cta": "Quiero el ebook",
+    "imageAlt": "Isabella — referencia visual protagonista",
+    "decorativeAlt": "Referencia estilo collage Y2K"
+  },
+  "problem": {
+    "eyebrow": "¿Te suena familiar?",
+    "title": "Cuando publicas sin una base clara, el esfuerzo no se convierte en oportunidades",
+    "cards": [
+      {
+        "title": "Publicas sin pilares ni mensaje ordenado",
+        "body": "Tu contenido se siente disperso: muchas ideas sueltas, poca dirección. El algoritmo no es el único culpable: falta arquitectura."
+      },
+      {
+        "title": "Tu perfil no comunica propuesta profesional",
+        "body": "Las marcas buscan claridad y confianza. Si tu bio y grid no cuentan la misma historia, pierdes colaboraciones antes de empezar."
+      },
+      {
+        "title": "Improvisas cada semana sin sistema",
+        "body": "Te quedas en blanco o copias tendencias sin guion. Crear así agota y no construye un portafolio que te respalde."
+      },
+      {
+        "title": "Mucho esfuerzo, pocas oportunidades medibles",
+        "body": "No es falta de disciplina: es crear sin enlace entre marca, formato y objetivo. Sin eso, el crecimiento se siente aleatorio."
+      }
+    ],
+    "cta": "Quiero estructura"
+  },
+  "solution": {
+    "title": "Lo que vas a construir con este ebook",
+    "titleHighlight": {
+      "before": "Lo que vas a construir con este ",
+      "highlight": "ebook",
+      "after": ""
+    },
+    "giftHint": "Incluye bonuses para aplicar marca, perfil y calidad visual sin perderte.",
+    "outcomes": [
+      {
+        "title": "Marca personal y arquitectura de mensaje",
+        "body": "Quién eres, cómo quieres ser percibida, misión, pilares y un hilo conductor para todo lo que publicas."
+      },
+      {
+        "title": "Perfil optimizado para marcas",
+        "body": "Cómo verte profesional y coherente en bio, foto y grid sin complicarte en exceso."
+      },
+      {
+        "title": "Contenido con intención (no solo más posts)",
+        "body": "Planeación, guiones, formatos y un sistema de ideas para no depender del improviso."
+      },
+      {
+        "title": "Portafolio que vende tu propuesta",
+        "body": "Traducir lo que ya creas en prueba clara de valor: tu contenido como herramienta de venta."
+      }
+    ],
+    "ctaTop": "Ver la oferta",
+    "ctaBottom": "Quiero el ebook",
+    "imageAlt": "Isabella — método aplicado en contenido real"
+  },
+  "proof": {
+    "badge": "Mi historia",
+    "headline": "Esto no salió de teoría: salió de años creando contenido real y probando qué sostiene una marca.",
+    "intro": "Antes de enseñarlo, lo viví: épocas de ruido, vueltas y un camino donde la estructura empezó a abrir puertas que el solo esfuerzo no abría.",
+    "timeline": [
+      {
+        "year": "2022",
+        "phase": "Contenido sin cimientos",
+        "bullets": [
+          "Publicaba sin pilares claros de marca",
+          "Mezcla de tendencias sin narrativa propia",
+          "Dificultad para explicar mi propuesta en una frase"
+        ]
+      },
+      {
+        "year": "2023",
+        "phase": "Ordenando el mensaje",
+        "bullets": [
+          "Primeras versiones de misión y pilares",
+          "Más foco en quién era mi audiencia real",
+          "Aún faltaba sistema de producción constante"
+        ]
+      },
+      {
+        "year": "2024",
+        "phase": "Sistema + calidad visual",
+        "bullets": [
+          "Guiones y formatos con intención",
+          "Mejor set e iluminación para elevar la percepción",
+          "El perfil empezó a “cerrar” la historia sola"
+        ]
+      },
+      {
+        "year": "2025",
+        "phase": "Presencia que abre conversaciones",
+        "bullets": [
+          "Portafolio y prueba social alineados al mensaje",
+          "Menos caos creativo, más oportunidades con foco",
+          "Contenido como herramienta de venta, no relleno"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "sectionTitle": "Todo lo que incluye tu acceso",
+    "hero": {
+      "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
+      "statement": "Pasa del improviso a una presencia que se entiende: ebook + recursos para marca, perfil, contenido y portafolio.",
+      "imageAlt": "Mockup del ebook «Conquista la atención»"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook",
+          "label": "Ebook «Conquista la atención»",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "Plantilla de arquitectura de marca (misión, mensaje, pilares)",
+          "anchorValueLabel": "USD 18"
+        },
+        {
+          "id": "b2",
+          "label": "Checklist de optimización de perfil «lista para marcas»",
+          "anchorValueLabel": "USD 18"
+        },
+        {
+          "id": "b3",
+          "label": "Mini guía de iluminación y set + recordatorio de herramientas",
+          "anchorValueLabel": "USD 9"
+        },
+        {
+          "id": "b4",
+          "label": "Contenido BONUS de la edición (según tu compra / plataforma)",
+          "anchorValueLabel": "USD 9"
+        }
+      ],
+      "totalLabel": "Valor referencial del paquete",
+      "totalAnchorLabel": "USD 81",
+      "youPayLabel": "Tu inversión hoy"
+    },
+    "bonusesSectionTitle": "Bonuses incluidos",
+    "bonuses": [
+      {
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Bonus: plantilla de arquitectura de marca",
+        "painHeadline": "Tu mensaje está en tu cabeza, no en tu feed",
+        "outcomeBenefit": "Plantilla para misión, mensaje central y pilares de contenido alineados a cómo quieres ser percibida."
+      },
+      {
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Bonus: checklist de perfil para marcas",
+        "painHeadline": "Tu perfil no “cierra” la venta de tu propuesta",
+        "outcomeBenefit": "Checklist práctica para bio, foto y señales de profesionalismo que buscan marcas."
+      },
+      {
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Bonus: mini guía de luz y set",
+        "painHeadline": "La calidad visual no acompaña tu nivel",
+        "outcomeBenefit": "Recordatorios accionables de iluminación y set + enlace mental con herramientas del ebook."
+      },
+      {
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: material extra de la edición",
+        "painHeadline": "Quieres un empujón extra al implementar",
+        "outcomeBenefit": "BONUS de la edición según plataforma / correo post-compra — detalle en checkout."
+      }
+    ],
+    "urgency": {
+      "title": "Por qué conviene decidir ahora",
+      "bullets": [
+        "Ventana de lanzamiento: el paquete está armado para ordenar presencia y contenido sin seguir posponiendo claridad.",
+        "Sin inventarios falsos: el costo real es tu tiempo si sigues publicando sin estructura."
+      ],
+      "deadlineLineTemplate": "En esta edición, los bonuses de lanzamiento aplican hasta el {date}."
+    },
+    "ctaPrimary": "Quiero mi acceso al ebook ahora",
+    "supportNote": "¿Dudas? Escríbenos:",
+    "supportEmail": "soporteila@gmail.com",
+    "priceHint": "Precio en USD — configuración por entorno."
+  },
+  "faq": {
+    "introTitle": "Preguntas frecuentes",
+    "introBody": "Respuestas rápidas antes de entrar al checkout. Si necesitas algo más específico, escríbenos.",
+    "cta": "Quiero el ebook",
+    "items": [
+      {
+        "q": "¿Qué formato tiene el ebook?",
+        "a": "Es un producto digital (PDF u formato definido por la plataforma de compra). Recibirás instrucciones de descarga después del pago."
+      },
+      {
+        "q": "¿Dónde compro y cómo recibo el acceso?",
+        "a": "El checkout se procesa en la plataforma externa configurada para este lanzamiento (por ejemplo Hotmart). Tras pagar, sigue el correo o instrucciones de esa plataforma."
+      },
+      {
+        "q": "¿Sirve si no tengo equipo caro ni estudio?",
+        "a": "Sí: el ebook incluye enfoque práctico de set e iluminación accesible y herramientas para crear con lo que tienes hoy."
+      },
+      {
+        "q": "¿No es solo otro curso largo?",
+        "a": "Es un ebook para leer y aplicar por módulos (marca → perfil → contenido → portafolio). Vas a tu ritmo; la clave es ejecutar mientras avanzas."
+      },
+      {
+        "q": "¿Hay garantía?",
+        "a": "La política de reembolsos depende de la plataforma de pago y del alcance legal aplicable. Revísalo en la página de checkout antes de comprar."
+      },
+      {
+        "q": "¿Puedo escribirles por soporte?",
+        "a": "Sí: usa el correo de soporte indicado en la página si necesitas ayuda con tu compra."
+      }
+    ]
+  },
+  "close": {
+    "headline": "Tu presencia merece estructura, no solo más horas frente al celular.",
+    "body": "Si estás lista para que tu marca se entienda y tu contenido abra oportunidades, este ebook está escrito para ti.",
+    "cta": "Quiero el ebook",
+    "footnote": "No es suerte: es marca clara + sistema + acción."
+  }
+}

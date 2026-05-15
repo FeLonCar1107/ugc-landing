@@ -16,6 +16,10 @@ export const ebookLandingCopyLoaders: Record<
     en: () => import("@/dictionaries/landings/discover-your-character/en.json"),
     es: () => import("@/dictionaries/landings/discover-your-character/es.json"),
   },
+  "catch-the-attention": {
+    en: () => import("@/dictionaries/landings/catch-the-attention/en.json"),
+    es: () => import("@/dictionaries/landings/catch-the-attention/es.json"),
+  },
 };
 
 export async function getEbookLandingCopy(
