@@ -28,14 +28,14 @@ export default function Contact(props: IContactProps) {
       <div className="section-shell tw-contact-shell flex h-auto flex-col gap-7 md:flex-row">
         <div className="w-full md:w-[50%] h-auto flex flex-col items-start justify-start text-jazzberry-jam-50">
           <div className="w-full flex gap-3 items-center justify-start">
-            <div className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-full relative shadow-md">
+            <div className="relative h-[70px] w-[70px] shrink-0 overflow-hidden rounded-full shadow-md lg:h-[100px] lg:w-[100px]">
               <Image
                 src={content.image.src}
                 alt={content.image.alt}
                 fill
-                sizes="(max-width: 600px) 100vw, 600px"
+                sizes="(max-width: 1024px) 70px, 100px"
                 priority
-                className="rounded-full"
+                className="object-cover object-[50%_60%]"
               />
             </div>
             <div className="w-[70%] flex flex-col items-start justify-start text-[4.5vw] md:text-[2vw] 2xl:md:text-[1vw]">
