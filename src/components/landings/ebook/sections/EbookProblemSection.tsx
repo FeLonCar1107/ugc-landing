@@ -40,7 +40,7 @@ export default function EbookProblemSection({
           <CheckoutLink
             href={checkoutUrl}
             placement="problem"
-            className="rounded-full bg-brand-ink px-8 py-3 font-semibold text-brand-card hover:bg-black"
+            className="rounded-full bg-brand-ink px-8 py-3 font-semibold text-brand-card hover:bg-brand-ink/85"
           >
             {problem.cta}
           </CheckoutLink>

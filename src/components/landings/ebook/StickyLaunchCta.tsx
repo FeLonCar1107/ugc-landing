@@ -7,11 +7,14 @@ export default function StickyLaunchCta({
   label,
   href,
   hideWhenIntersectingId,
+  barClassName,
 }: {
   label: string;
   href: string;
   /** When this element intersects the viewport, the bar is hidden (e.g. final section already has the same CTA). */
   hideWhenIntersectingId?: string;
+  /** Optional extra classes on the fixed bar (e.g. per-landing palette hooks). */
+  barClassName?: string;
 }) {
   const [pastIntro, setPastIntro] = useState(false);
   const [finalSectionVisible, setFinalSectionVisible] = useState(false);
@@ -38,8 +41,15 @@ export default function StickyLaunchCta({
 
   if (!pastIntro || finalSectionVisible) return null;
 
+  const barClasses = [
+    "fixed inset-x-0 bottom-0 z-40 border-t border-brand-ink/10 bg-brand-surface/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden",
+    barClassName,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-brand-ink/10 bg-brand-surface/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden">
+    <div className={barClasses}>
       <CheckoutLink
         href={href}
         placement="sticky_mobile"

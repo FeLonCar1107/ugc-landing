@@ -63,6 +63,7 @@ export default async function LandingBySlugPage({
   return (
     <LaunchAnalyticsRoot slug={slug} locale={params.lang}>
       <EbookLanding
+        slug={slug}
         copy={copy}
         assetBase={launchAssetBase(slug)}
         checkoutUrl={checkoutUrl}

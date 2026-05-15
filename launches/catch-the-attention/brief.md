@@ -38,16 +38,17 @@ brand.name: Saga para creadoras
 brand.tone: cercano, empoderador, experto sin intimidar; “bestie experta” que valida el esfuerzo y exige estructura con cariño; lenguaje explícitamente dirigido a mujeres creadoras
 brand.heroClaim: Potencia tu presencia digital, luce más profesional y abre nuevas oportunidades
 brand.subheadline: No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte y venda tu propuesta — paso a paso, pensado para ti.
-brand.primaryColor: #ff62b4
-brand.secondaryColor: #F8F7F4
-brand.tertiaryColor: #131212
+brand.primaryColor: #F2619C
+brand.secondaryColor: #EDE986
+brand.tertiaryColor: #242C48
 brand.supportEmail: soporteila@gmail.com
 brand.colorRoles:
-- primary (#ff62b4): CTAs, badges tipo sticker, acentos de marca y anotaciones destacadas
-- secondary (#F8F7F4): lienzo general tipo papel crema; zonas de aire entre bloques collage
-- tertiary (#131212): texto principal, titulares y máximo contraste
-- accent-soft (~baby pink #ffb3d9): fondos rosados suaves, degradados y capas secundarias (no sustituye al primary en botones)
-- accent-gold (~#d4af37): detalles decorativos mínimos (estrellas u iconografía premium); nunca como color principal de CTA
+- primary Raspberry Rose (#F2619C): CTAs, badges, acentos calientes principales
+- Lemon Cream (#EDE986): lienzo / sensación cálida; en UI implementada como surface suavizado (`--brand-surface-rgb`) para lectura larga
+- tertiary / ink (#242C48): texto principal (azul‑petróleo legible sobre crema y lila)
+- Soft Lilac (#E7BEF8): washes hero/proof (`--brand-blush` / `--brand-rose`)
+- Blueberry Milk (#93ABD9): acento secundario frío (`--brand-accent-mid`), bordes suaves, jerarquía distinta a la landing Saga rosa
+- decoración: sin gold obligatorio; sombras en tinte frío‑violeta coherente con la paleta
 
 ## Offer
 offer.mainCTA: Quiero el ebook
@@ -170,7 +171,7 @@ landing.ui.styleReference: y2k-scrapbook-collage-plus-soft-girl-layered-type
 landing.ui.theme: light
 landing.ui.visualTone: femenino, aspiracional, coherente con Saga: energía Y2K / soft-girl; collage con grain y stickers; hero con titulares en capas y acentos hot pink; mobile-first; sensación de “marca seria + cercanía” para creadoras
 landing.ui.primaryColor: use-brand-primary
-landing.ui.accentColor: #ff62b4
+landing.ui.accentColor: #F2619C
 landing.ui.sectionSpacing: py-16
 landing.ui.containerWidth: max-w-6xl
 landing.ui.cornerRadius: rounded-2xl
@@ -299,7 +300,7 @@ ideas.croTests:
 - none
 
 constraints.design:
-- Misma familia visual que discover-your-character (tokens #ff62b4, #F8F7F4, #131212, acentos gold puntuales) para consistencia de Saga; diferenciar con copy y mockups del ebook Conquista la atención
+- Identidad cromática propia vs discover: tokens en `[data-landing-slug="catch-the-attention"]` + bandas por sección (`.ebook-catch-surface--*`) — hero gradiente lila→arándano→limón, problema campo limón, solución lavado arándano, prueba diagonal lila/rosa, oferta halo lila, FAQ panel arándano, cierre gradiente frambuesa con copy limón; CTAs alternan pares **rosa+limón** como la tarjeta Clustr
 - Hero wireframe dos columnas; problem 2×2 + CTA; solution imagen + checklist + CTA; proof timeline desktop / vertical mobile; FAQ intro dos columnas + acordeón
 - Fotografía: misma línea de autorización de retratos que otros lanzamientos; no stock genérico que compita con la promesa de marca personal
 - Grain ligero opcional; CTAs siempre legibles en mobile

@@ -1,6 +1,7 @@
 import { montserrat } from "@/app/ui/fonts";
 import type { Locale } from "@/i18n/config";
 import { i18n } from "@/i18n/config";
+import type { AllowedLandingSlug } from "@/lib/allowedLandings";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import {
   getLaunchBonusBundleDeadlineIso,
@@ -18,6 +19,8 @@ import EbookSolutionSection from "./sections/EbookSolutionSection";
 import StickyLaunchCta from "./StickyLaunchCta";
 
 export type EbookLandingProps = {
+  /** Used to scope CSS variables so each ebook landing can have its own palette. */
+  slug: AllowedLandingSlug;
   copy: EbookLandingCopy;
   assetBase: string;
   checkoutUrl: string;
@@ -38,7 +41,26 @@ function launchSlugFromAssetBase(assetBase: string): string {
   return assetBase.replace(/^\//, "").split("/").filter(Boolean).pop() ?? "";
 }
 
+/** Layout-neutral wrapper: `display:contents` + hook classes for per-landing CSS (catch palette). */
+function EbookCatchSurface({
+  enabled,
+  slot,
+  children,
+}: {
+  enabled: boolean;
+  slot: "hero" | "problem" | "solution" | "proof" | "offer" | "faq" | "close";
+  children: React.ReactNode;
+}) {
+  if (!enabled) return <>{children}</>;
+  return (
+    <div className={`contents ebook-catch-surface ebook-catch-surface--${slot}`}>
+      {children}
+    </div>
+  );
+}
+
 export default function EbookLanding({
+  slug,
   copy,
   assetBase,
   checkoutUrl,
@@ -56,67 +78,84 @@ export default function EbookLanding({
   const heroVisual = getLaunchHeroVisual(launchSlug);
   const offerPhaseLabel = getLaunchOfferPhaseLabel(launchSlug);
   const offerDeadlineIso = getLaunchBonusBundleDeadlineIso(launchSlug);
+  const catchBoldPalette = slug === "catch-the-attention";
 
   return (
     <div
+      data-landing-slug={slug}
       className={`relative min-h-screen tracking-tight bg-brand-surface text-brand-ink ${montserrat.className}`}
     >
       <StickyLaunchCta
         label={copy.hero.cta}
         href={checkoutUrl}
         hideWhenIntersectingId="landing-close"
+        barClassName={catchBoldPalette ? "ebook-catch-sticky-bar" : undefined}
       />
 
-      <EbookHeroSection
-        heroVisual={heroVisual}
-        hero={copy.hero}
-        checkoutUrl={checkoutUrl}
-        timeToResult={timeToResult}
-        asset={asset}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="hero">
+        <EbookHeroSection
+          heroVisual={heroVisual}
+          hero={copy.hero}
+          checkoutUrl={checkoutUrl}
+          timeToResult={timeToResult}
+          asset={asset}
+        />
+      </EbookCatchSurface>
 
-      <EbookProblemSection
-        problem={copy.problem}
-        checkoutUrl={checkoutUrl}
-        sectionBandHeading={sectionBandHeading}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="problem">
+        <EbookProblemSection
+          problem={copy.problem}
+          checkoutUrl={checkoutUrl}
+          sectionBandHeading={sectionBandHeading}
+        />
+      </EbookCatchSurface>
 
-      <EbookSolutionSection
-        copy={copy}
-        checkoutUrl={checkoutUrl}
-        sectionBandHeading={sectionBandHeading}
-        asset={asset}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="solution">
+        <EbookSolutionSection
+          copy={copy}
+          checkoutUrl={checkoutUrl}
+          sectionBandHeading={sectionBandHeading}
+          asset={asset}
+        />
+      </EbookCatchSurface>
 
-      <EbookProofSection
-        proof={copy.proof}
-        sectionBandHeading={sectionBandHeading}
-        asset={asset}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="proof">
+        <EbookProofSection
+          proof={copy.proof}
+          sectionBandHeading={sectionBandHeading}
+          asset={asset}
+        />
+      </EbookCatchSurface>
 
-      <OfferSection
-        offer={copy.offer}
-        assetBase={base}
-        priceLine={priceLine}
-        checkoutUrl={checkoutUrl}
-        sectionBandHeading={sectionBandHeading}
-        locale={locale}
-        phaseLabel={offerPhaseLabel}
-        deadlineIso={offerDeadlineIso}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="offer">
+        <OfferSection
+          offer={copy.offer}
+          assetBase={base}
+          priceLine={priceLine}
+          checkoutUrl={checkoutUrl}
+          sectionBandHeading={sectionBandHeading}
+          locale={locale}
+          phaseLabel={offerPhaseLabel}
+          deadlineIso={offerDeadlineIso}
+        />
+      </EbookCatchSurface>
 
-      <EbookFaqSection
-        faq={copy.faq}
-        checkoutUrl={checkoutUrl}
-        sectionBandHeading={sectionBandHeading}
-        asset={asset}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="faq">
+        <EbookFaqSection
+          faq={copy.faq}
+          checkoutUrl={checkoutUrl}
+          sectionBandHeading={sectionBandHeading}
+          asset={asset}
+        />
+      </EbookCatchSurface>
 
-      <EbookCloseSection
-        close={copy.close}
-        checkoutUrl={checkoutUrl}
-        asset={asset}
-      />
+      <EbookCatchSurface enabled={catchBoldPalette} slot="close">
+        <EbookCloseSection
+          close={copy.close}
+          checkoutUrl={checkoutUrl}
+          asset={asset}
+        />
+      </EbookCatchSurface>
     </div>
   );
 }
