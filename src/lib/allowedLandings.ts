@@ -1,5 +1,8 @@
 /** Each slug needs: loaders in ebookLandingCopy.ts, JSON under dictionaries/landings/<slug>/, assets in public/launch-assets/<slug>/, env triplets in .env */
-export const ALLOWED_LANDING_SLUGS = ["discover-your-character"] as const;
+export const ALLOWED_LANDING_SLUGS = [
+  "discover-your-character",
+  "catch-the-attention",
+] as const;
 
 export type AllowedLandingSlug = (typeof ALLOWED_LANDING_SLUGS)[number];
 
