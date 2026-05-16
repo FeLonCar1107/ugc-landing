@@ -3,6 +3,7 @@ import type { Locale } from "@/i18n/config";
 import { i18n } from "@/i18n/config";
 import type { AllowedLandingSlug } from "@/lib/allowedLandings";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import { buildLaunchAssetResolver } from "@/utils/launchAssets";
 import {
   getLaunchBonusBundleDeadlineIso,
   getLaunchHeroVisual,
@@ -31,10 +32,6 @@ export type EbookLandingProps = {
 
 function normalizeAssetBase(assetBase: string): string {
   return assetBase.replace(/\/$/, "");
-}
-
-function buildAssetUrl(base: string) {
-  return (filename: string) => `${base}/${filename}`;
 }
 
 function launchSlugFromAssetBase(assetBase: string): string {
@@ -69,7 +66,7 @@ export default function EbookLanding({
   locale = i18n.defaultLocale,
 }: EbookLandingProps) {
   const base = normalizeAssetBase(assetBase);
-  const asset = buildAssetUrl(base);
+  const asset = buildLaunchAssetResolver(base);
 
   const priceLine =
     priceUsd.trim().length > 0 ? `$${priceUsd} USD` : copy.offer.priceHint;

@@ -1,5 +1,6 @@
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import type { Locale } from "@/i18n/config";
+import { resolveLaunchAssetUrl } from "@/utils/launchAssets";
 import CheckoutLink from "../CheckoutLink";
 import BonusGrid from "./BonusGrid";
 import ProductHero from "./ProductHero";
@@ -17,7 +18,7 @@ export default function OfferSection({
   deadlineIso,
 }: {
   offer: EbookLandingCopy["offer"];
-  /** Resolved launch-assets base without trailing slash (serializable; avoids passing functions from RSC). */
+  /** Per-launch folder, e.g. `/launch-assets/discover-your-character` (offer mockup + bonuses only). */
   assetBase: string;
   priceLine: string;
   checkoutUrl: string;
@@ -26,7 +27,7 @@ export default function OfferSection({
   phaseLabel?: string;
   deadlineIso?: string;
 }) {
-  const asset = (filename: string) => `${assetBase}/${filename}`;
+  const asset = (filename: string) => resolveLaunchAssetUrl(assetBase, filename);
 
   return (
     <section id="offer" className="scroll-mt-24 py-10 md:py-14">
