@@ -42,7 +42,7 @@
       "highlight": "ebook",
       "after": ""
     },
-    "giftHint": "Chapters from positioning to monetization + a BONUS to finish with action.",
+    "giftHint": "Ebook + 4 tactical bonuses: Notion system, metrics tracker, brand negotiation script, and a safe-zone template for recording.",
     "outcomes": [
       {
         "title": "A brand people remember—not just “more posts”",
@@ -111,7 +111,7 @@
   "offer": {
     "sectionTitle": "Everything included in your access",
     "hero": {
-      "badges": ["Launch offer", "Ebook + bonuses"],
+      "badges": ["Launch offer", "Ebook + 4 bonuses"],
       "statement": "Move from scattered creator to brand with a system: positioning, conversion, smart revenue, and content that feels pro.",
       "imageAlt": "Mockup of the «Magnetic Creator» ebook"
     },
@@ -124,54 +124,54 @@
         },
         {
           "id": "b1",
-          "label": "Exclusive ebook BONUS (expanded content)",
-          "anchorValueLabel": "USD 12"
+          "label": "Notion content system template (ideas bank, calendar, and tracking)",
+          "anchorValueLabel": "USD 24"
         },
         {
           "id": "b2",
-          "label": "Quick brand architecture checklist",
-          "anchorValueLabel": "USD 12"
+          "label": "Simplified metrics tracker (views, retention, saves, and decisions)",
+          "anchorValueLabel": "USD 15"
         },
         {
           "id": "b3",
-          "label": "Mini conversion system template",
-          "anchorValueLabel": "USD 10"
+          "label": "Brand negotiation script (reply, raise rates, say no)",
+          "anchorValueLabel": "USD 18"
         },
         {
           "id": "b4",
-          "label": "Express guide to actionable metrics",
-          "anchorValueLabel": "USD 10"
+          "label": "Safe-zone template for your videos",
+          "anchorValueLabel": "USD 12"
         }
       ],
       "totalLabel": "Reference package value",
-      "totalAnchorLabel": "USD 71",
+      "totalAnchorLabel": "USD 96",
       "youPayLabel": "Your investment today"
     },
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: ebook BONUS",
-        "painHeadline": "You need to finish with concrete action",
-        "outcomeBenefit": "Ebook BONUS material so you implement what you read—not only theory."
+        "imageAlt": "Bonus: Notion content system template",
+        "painHeadline": "You post without a system and run out of ideas",
+        "outcomeBenefit": "Your Notion system: ideas bank, calendar, and content tracking—the same base I use so you stop winging it every week."
       },
       {
         "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Bonus: brand architecture checklist",
-        "painHeadline": "Your message is still a mental draft",
-        "outcomeBenefit": "One-page checklist to align mission, pillars, and direction before you post."
+        "imageAlt": "Bonus: simplified metrics tracker",
+        "painHeadline": "You check metrics but don’t know what to do next",
+        "outcomeBenefit": "Tracker for views, retention, saves, and takeaways—with a dedicated decisions section (the key part: what to do next with the data)."
       },
       {
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: mini conversion template",
-        "painHeadline": "Views don’t turn into serious messages",
-        "outcomeBenefit": "Mini template linking content → interest → conversation or offer."
+        "imageAlt": "Bonus: brand negotiation script",
+        "painHeadline": "Brands reach out and you’re unsure how to reply or price",
+        "outcomeBenefit": "Pro-level script: how to reply to collabs, raise rates with confidence, and say no without burning bridges."
       },
       {
         "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: express metrics",
-        "painHeadline": "You look at numbers without knowing what to change",
-        "outcomeBenefit": "Short guide to smart metrics so you pick the next move without spiraling."
+        "imageAlt": "Bonus: safe-zone template for videos",
+        "painHeadline": "You freeze on camera or lose the thread while recording",
+        "outcomeBenefit": "Safe-zone template to structure hook, message, and CTA—record with more confidence and brand coherence."
       }
     ],
     "urgency": {

@@ -42,7 +42,7 @@
       "highlight": "ebook",
       "after": ""
     },
-    "giftHint": "Incluye capítulos de posicionamiento a monetización + BONUS para cerrar con acción.",
+    "giftHint": "Ebook + 4 bonuses tácticos: sistema Notion, tracker de métricas, script con marcas y zona segura para grabar.",
     "outcomes": [
       {
         "title": "Marca que se recuerda, no solo \"más posts\"",
@@ -111,7 +111,7 @@
   "offer": {
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
-      "badges": ["Oferta de lanzamiento", "Ebook + bonuses"],
+      "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
       "statement": "Pasa de creadora dispersa a marca con sistema: posicionamiento, conversión, ingresos inteligentes y contenido que se siente pro.",
       "imageAlt": "Mockup del ebook «Creadora Magnética»"
     },
@@ -124,54 +124,54 @@
         },
         {
           "id": "b1",
-          "label": "BONUS exclusivo del ebook (contenido ampliado)",
-          "anchorValueLabel": "USD 12"
+          "label": "Plantilla de sistema de contenido en Notion (ideas, calendario y tracking)",
+          "anchorValueLabel": "USD 24"
         },
         {
           "id": "b2",
-          "label": "Checklist rápida de arquitectura de marca",
-          "anchorValueLabel": "USD 12"
+          "label": "Tracker de métricas simplificado (views, retención, guardados y decisiones)",
+          "anchorValueLabel": "USD 15"
         },
         {
           "id": "b3",
-          "label": "Mini plantilla de sistema de conversión",
-          "anchorValueLabel": "USD 10"
+          "label": "Script de negociación con marcas (responder, subir precios, decir que no)",
+          "anchorValueLabel": "USD 18"
         },
         {
           "id": "b4",
-          "label": "Guía express de métricas accionables",
-          "anchorValueLabel": "USD 10"
+          "label": "Plantilla de zona segura para tus videos",
+          "anchorValueLabel": "USD 12"
         }
       ],
       "totalLabel": "Valor referencial del paquete",
-      "totalAnchorLabel": "USD 71",
+      "totalAnchorLabel": "USD 96",
       "youPayLabel": "Tu inversión hoy"
     },
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: BONUS del ebook",
-        "painHeadline": "Necesitas cerrar con acción concreta",
-        "outcomeBenefit": "Material BONUS del ebook para implementar lo leído sin quedarte en la teoría."
+        "imageAlt": "Bonus: plantilla de sistema de contenido en Notion",
+        "painHeadline": "Publicas sin sistema y se te acaban las ideas",
+        "outcomeBenefit": "Tu sistema en Notion: banco de ideas, calendario y tracking de contenido — dejas de improvisar cada semana con la misma base que uso yo."
       },
       {
         "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Bonus: checklist de arquitectura de marca",
-        "painHeadline": "Tu mensaje aún está en borrador mental",
-        "outcomeBenefit": "Checklist de una página para alinear misión, pilares y dirección antes de publicar."
+        "imageAlt": "Bonus: tracker de métricas simplificado",
+        "painHeadline": "Miras métricas pero no sabes qué hacer después",
+        "outcomeBenefit": "Tracker con views, retención, guardados y conclusiones — con espacio dedicado a decisiones (lo clave: qué hacer después con los datos)."
       },
       {
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: mini plantilla de conversión",
-        "painHeadline": "Las vistas no se convierten en mensajes serios",
-        "outcomeBenefit": "Mini plantilla para enlazar contenido → interés → conversación u oferta."
+        "imageAlt": "Bonus: script de negociación con marcas",
+        "painHeadline": "Te escriben marcas y no sabes cómo responder ni cobrar",
+        "outcomeBenefit": "Script nivel pro: cómo responder colaboraciones, subir precios con seguridad y decir que no sin quemar relaciones."
       },
       {
         "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: métricas express",
-        "painHeadline": "Miras números sin saber qué cambiar",
-        "outcomeBenefit": "Guía corta de métricas inteligentes para decidir siguiente movimiento sin obsesionarte."
+        "imageAlt": "Bonus: plantilla de zona segura para videos",
+        "painHeadline": "Te trabas al grabar o pierdes el hilo en cámara",
+        "outcomeBenefit": "Plantilla de zona segura para estructurar hook, mensaje y CTA — grabas con más confianza y coherencia de marca."
       }
     ],
     "urgency": {
