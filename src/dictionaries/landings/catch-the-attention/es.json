@@ -42,7 +42,7 @@
       "highlight": "ebook",
       "after": ""
     },
-    "giftHint": "Incluye bonuses para aplicar marca, perfil y calidad visual sin perderte.",
+    "giftHint": "Incluye portafolio en Canva, hooks, planeación semanal y guía para marcas.",
     "outcomes": [
       {
         "title": "Marca personal y arquitectura de mensaje",
@@ -112,7 +112,7 @@
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
       "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
-      "statement": "Pasa del improviso a una presencia que se entiende: ebook + recursos para marca, perfil, contenido y portafolio.",
+      "statement": "Pasa del improviso a una presencia que se entiende: ebook + portafolio en Canva, hooks, planeación semanal y guía para contactar marcas.",
       "imageAlt": "Mockup del ebook «Conquista la atención»"
     },
     "valueStack": {
@@ -124,54 +124,54 @@
         },
         {
           "id": "b1",
-          "label": "Plantilla de arquitectura de marca (misión, mensaje, pilares)",
-          "anchorValueLabel": "USD 18"
+          "label": "Plantilla editable de portafolio en Canva (presentación, servicios, videos, contacto)",
+          "anchorValueLabel": "USD 24"
         },
         {
           "id": "b2",
-          "label": "Checklist de optimización de perfil «lista para marcas»",
+          "label": "Banco de hooks listos para usar (50+ ideas reales)",
           "anchorValueLabel": "USD 18"
         },
         {
           "id": "b3",
-          "label": "Mini guía de iluminación y set + recordatorio de herramientas",
-          "anchorValueLabel": "USD 9"
+          "label": "Plantilla de planeación semanal de contenido (Notion + PDF)",
+          "anchorValueLabel": "USD 12"
         },
         {
           "id": "b4",
-          "label": "Contenido BONUS de la edición (según tu compra / plataforma)",
-          "anchorValueLabel": "USD 9"
+          "label": "Mini guía «Cómo escribirle a una marca» (DM + correo)",
+          "anchorValueLabel": "USD 12"
         }
       ],
       "totalLabel": "Valor referencial del paquete",
-      "totalAnchorLabel": "USD 81",
+      "totalAnchorLabel": "USD 93",
       "youPayLabel": "Tu inversión hoy"
     },
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: plantilla de arquitectura de marca",
-        "painHeadline": "Tu mensaje está en tu cabeza, no en tu feed",
-        "outcomeBenefit": "Plantilla para misión, mensaje central y pilares de contenido alineados a cómo quieres ser percibida."
+        "imageAlt": "Bonus: plantilla editable de portafolio en Canva",
+        "painHeadline": "No sabes por dónde empezar tu portafolio",
+        "outcomeBenefit": "Estructura ya armada en Canva: presentación, servicios, videos y contacto — diseño alineado a estética femenina/pro."
       },
       {
         "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Bonus: checklist de perfil para marcas",
-        "painHeadline": "Tu perfil no “cierra” la venta de tu propuesta",
-        "outcomeBenefit": "Checklist práctica para bio, foto y señales de profesionalismo que buscan marcas."
+        "imageAlt": "Bonus: banco de hooks para contenido",
+        "painHeadline": "Te quedas en blanco al grabar",
+        "outcomeBenefit": "50+ hooks reales para usar hoy — no frases genéricas; reduces el bloqueo de “no sé cómo empezar”."
       },
       {
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: mini guía de luz y set",
-        "painHeadline": "La calidad visual no acompaña tu nivel",
-        "outcomeBenefit": "Recordatorios accionables de iluminación y set + enlace mental con herramientas del ebook."
+        "imageAlt": "Bonus: planeación semanal de contenido",
+        "painHeadline": "Publicas sin plan ni objetivo claro",
+        "outcomeBenefit": "Plantilla simple con días de publicación, tipo de contenido y objetivo de cada pieza — versión Notion + PDF descargable."
       },
       {
         "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: material extra de la edición",
-        "painHeadline": "Quieres un empujón extra al implementar",
-        "outcomeBenefit": "BONUS de la edición según plataforma — detalle en checkout."
+        "imageAlt": "Bonus: cómo escribirle a una marca",
+        "painHeadline": "Te da pena o no sabes cómo acercarte a marcas",
+        "outcomeBenefit": "Mini guía con ejemplo de DM, ejemplo de correo y qué decir (y qué evitar) para abrir conversaciones."
       }
     ],
     "urgency": {

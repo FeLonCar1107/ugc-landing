@@ -42,7 +42,7 @@
       "highlight": "ebook",
       "after": ""
     },
-    "giftHint": "Includes bonuses to apply brand, profile, and visual quality without getting lost.",
+    "giftHint": "Includes Canva portfolio, hooks, weekly planner, and brand outreach guide.",
     "outcomes": [
       {
         "title": "Personal brand + message architecture",
@@ -112,7 +112,7 @@
     "sectionTitle": "Everything in your access",
     "hero": {
       "badges": ["Launch offer", "Ebook + 4 bonuses"],
-      "statement": "Move from improvisation to a presence people understand: ebook + resources for brand, profile, content, and portfolio.",
+      "statement": "Move from improvisation to a presence people understand: ebook + Canva portfolio template, hooks bank, weekly content planner, and brand outreach guide.",
       "imageAlt": "“Command the attention” ebook mockup"
     },
     "valueStack": {
@@ -124,54 +124,54 @@
         },
         {
           "id": "b1",
-          "label": "Brand architecture template (mission, message, pillars)",
-          "anchorValueLabel": "USD 18"
+          "label": "Editable Canva portfolio template (intro, services, videos, contact)",
+          "anchorValueLabel": "USD 24"
         },
         {
           "id": "b2",
-          "label": "Profile optimization checklist (“brand-ready”)",
+          "label": "Ready-to-use hooks bank (50+ real ideas)",
           "anchorValueLabel": "USD 18"
         },
         {
           "id": "b3",
-          "label": "Lighting & set mini-guide + tools reminder",
-          "anchorValueLabel": "USD 9"
+          "label": "Weekly content planning template (Notion + PDF)",
+          "anchorValueLabel": "USD 12"
         },
         {
           "id": "b4",
-          "label": "Edition BONUS content (per your purchase / platform)",
-          "anchorValueLabel": "USD 9"
+          "label": "Mini guide “How to message a brand” (DM + email)",
+          "anchorValueLabel": "USD 12"
         }
       ],
       "totalLabel": "Estimated bundle value",
-      "totalAnchorLabel": "USD 81",
+      "totalAnchorLabel": "USD 93",
       "youPayLabel": "Your investment today"
     },
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: brand architecture template",
-        "painHeadline": "Your message lives in your head, not your feed",
-        "outcomeBenefit": "A template for mission, core message, and content pillars aligned with how you want to be seen."
+        "imageAlt": "Bonus: editable Canva portfolio template",
+        "painHeadline": "You don’t know where to start your portfolio",
+        "outcomeBenefit": "Pre-built Canva structure: intro, services, videos, and contact — feminine/pro design that removes “I don’t know how to begin.”"
       },
       {
         "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Bonus: brand-ready profile checklist",
-        "painHeadline": "Your profile doesn’t “close” your pitch",
-        "outcomeBenefit": "A practical checklist for bio, photo, and professionalism signals brands look for."
+        "imageAlt": "Bonus: content hooks bank",
+        "painHeadline": "You freeze when it’s time to record",
+        "outcomeBenefit": "50+ real hooks to use today — not generic lines; cuts the biggest blocker: getting started."
       },
       {
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: lighting & set mini-guide",
-        "painHeadline": "Visual quality doesn’t match your level",
-        "outcomeBenefit": "Actionable lighting and set reminders plus alignment with the ebook’s tools chapter."
+        "imageAlt": "Bonus: weekly content planning template",
+        "painHeadline": "You post without a plan or clear goal",
+        "outcomeBenefit": "Simple template with publish days, content type, and goal per piece — Notion version + downloadable PDF."
       },
       {
         "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: edition extra material",
-        "painHeadline": "You want an extra push while implementing",
-        "outcomeBenefit": "Edition BONUS per platform — details at checkout."
+        "imageAlt": "Bonus: how to message a brand",
+        "painHeadline": "You hesitate or don’t know how to reach out to brands",
+        "outcomeBenefit": "Mini guide with a DM example, email example, and what to say (and avoid) to open conversations."
       }
     ],
     "urgency": {
