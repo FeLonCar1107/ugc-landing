@@ -80,3 +80,4 @@ export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
     LAUNCH_HERO_VISUAL_PORTRAIT
   );
 }
+

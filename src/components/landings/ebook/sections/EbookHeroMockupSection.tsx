@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import { HERO_HEADLINE_STARS_INTRINSIC, IMAGE_SLOTS } from "../ebookLandingConstants";
 import { OFFER_EBOOK_FILE } from "../offer/offerImageSlots";
-import OfferEbookMockup from "../offer/OfferEbookMockup";
+import HeroEbookMockup from "../offer/HeroEbookMockup";
 import CheckoutLink from "../CheckoutLink";
 import {
   ScrollReveal,
@@ -62,7 +62,7 @@ export default function EbookHeroMockupSection({
           </ScrollRevealItem>
 
           <ScrollRevealItem className="relative z-10 col-span-full mx-auto w-full max-md:-mt-1 max-md:-mb-[min(10vw,3rem)] md:hidden">
-            <OfferEbookMockup
+            <HeroEbookMockup
               src={asset(OFFER_EBOOK_FILE)}
               alt={hero.decorativeAlt}
               priority
@@ -93,7 +93,7 @@ export default function EbookHeroMockupSection({
           </ScrollRevealItem>
 
           <ScrollRevealItem className="relative z-20 hidden min-h-[240px] md:col-start-2 md:row-start-2 md:flex md:min-h-0 md:items-end md:justify-center md:pb-2 md:pt-4">
-            <OfferEbookMockup
+            <HeroEbookMockup
               src={asset(OFFER_EBOOK_FILE)}
               alt={hero.decorativeAlt}
               priority

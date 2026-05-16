@@ -1449,7 +1449,10 @@ textarea:focus {
  *
  * Section hooks: `.ebook-catch-surface--{hero|problem|...}` wraps every section (`display:contents`).
  * Mobile sticky: every slug uses `.ebook-catch-sticky-bar` (rules per slug below).
+ *
+ * Ebook mockups: hero `.ebook-hero-mockup__*`, offer `.ebook-offer-mockup__*` — tune per slug below.
  */
+
 [data-landing-slug="discover-your-character"] {
   --brand-ink-rgb: 19 18 18;
   --brand-surface-rgb: 248 247 244;

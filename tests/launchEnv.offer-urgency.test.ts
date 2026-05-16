@@ -78,4 +78,5 @@ describe("launchEnv — offer urgency helpers", () => {
     expect(getLaunchHeroVisual(SLUG)).toBe("portrait");
     expect(getLaunchHeroVisual("catch-the-attention")).toBe("mockup");
   });
+
 });
