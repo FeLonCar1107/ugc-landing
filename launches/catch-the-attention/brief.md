@@ -300,7 +300,7 @@ ideas.croTests:
 - none
 
 constraints.design:
-- Identidad cromática propia vs discover: tokens en `[data-landing-slug="catch-the-attention"]` + bandas por sección (`.ebook-catch-surface--*`) — hero gradiente lila→arándano→limón, problema campo limón, solución lavado arándano, prueba diagonal lila/rosa, oferta halo lila, FAQ panel arándano, cierre gradiente frambuesa con copy limón; CTAs alternan pares **rosa+limón** como la tarjeta Clustr
+- Identidad cromática propia vs discover: tokens en `[data-landing-slug="catch-the-attention"]` + bandas por sección (`.ebook-catch-surface--*`) — paleta @DESIGNERLAMB: hero violeta→arándano azul→bruma lima, problema campo lima en polvo, solución lavado cielo soleado, prueba diagonal violeta/cielo/azul, oferta halo violeta→cielo, FAQ panel cielo soleado, cierre gradiente cielo nocturno→arándano→violeta con copy lima; CTAs pares **arándano azul + lima** y **cielo nocturno + lima** según contraste de la tarjeta de color
 - Hero wireframe dos columnas; problem 2×2 + CTA; solution imagen + checklist + CTA; proof timeline desktop / vertical mobile; FAQ intro dos columnas + acordeón
 - Fotografía: misma línea de autorización de retratos que otros lanzamientos; no stock genérico que compita con la promesa de marca personal
 - Grain ligero opcional; CTAs siempre legibles en mobile

@@ -23,7 +23,7 @@ project.routes.recommendedLaunchRoute: /[lang]/catch-the-attention
 project.integrations.payments: external checkout via `NEXT_PUBLIC_LAUNCH_CATCH_THE_ATTENTION_CHECKOUT_URL`
 
 ## Reuse
-project.reuse.uiComponents: same as discover — `EbookLanding`, sections, offer, analytics. **Visual:** `catch-the-attention` uses scoped CSS variables via `data-landing-slug="catch-the-attention"` in `globals.css` (Clustr palette: Raspberry Rose, Soft Lilac, Blueberry Milk, Lemon Cream). `discover-your-character` inherits default `:root` Saga tokens.
+project.reuse.uiComponents: same as discover — `EbookLanding`, sections, offer, analytics. **Visual:** `catch-the-attention` uses scoped CSS variables via `data-landing-slug="catch-the-attention"` in `globals.css` (@DESIGNERLAMB palette: Powdered Lime #D0FFA4, Night Skies #000181, Violet #E8A0FF, Blue Raspberry #006EE9, Sunny Skies #83E7FF). `discover-your-character` inherits default `:root` Saga tokens.
 
 ## Launch Core
 project.launchContext.readiness: READY

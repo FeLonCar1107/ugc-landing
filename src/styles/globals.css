@@ -1441,7 +1441,9 @@ textarea:focus {
  *
  * discover-your-character — Saga “Descubre tu personaje” (matches historical `:root` brand row).
  *
- * catch-the-attention — bold Clustr palette + section bands.
+ * catch-the-attention — @DESIGNERLAMB palette + section bands
+ * (Powdered Lime #D0FFA4, Night Skies #000181, Violet #E8A0FF,
+ *  Blue Raspberry #006EE9, Sunny Skies #83E7FF).
  *
  * magnetic-creator — Pinterest / warm editorial palette + section bands.
  *
@@ -1482,87 +1484,87 @@ textarea:focus {
 }
 
 [data-landing-slug="catch-the-attention"] {
-  /* Default page wash — airy lilac (distinct from Saga cream) */
-  --brand-ink-rgb: 62 48 102;
-  --brand-surface-rgb: 241 228 252;
+  /* Default page wash — warm cream (palette card ground), distinct from Saga */
+  --brand-ink-rgb: 0 1 129; /* Night Skies */
+  --brand-surface-rgb: 253 251 247;
   --brand-card-rgb: 255 255 255;
-  --brand-accent-rgb: 242 97 156;
-  --brand-accent-mid-rgb: 147 171 217;
-  --brand-accent-deep-rgb: 176 52 108;
-  --brand-blush-rgb: 231 190 248;
-  --brand-rose-rgb: 220 178 245;
-  --brand-warm-rgb: 118 98 158;
-  --brand-cutout-from-rgb: 255 253 242;
-  --brand-cutout-via-rgb: 244 236 255;
-  --brand-cutout-to-rgb: 228 236 252;
-  --brand-shadow-tint-rgb: 150 100 175;
+  --brand-accent-rgb: 0 110 233; /* Blue Raspberry */
+  --brand-accent-mid-rgb: 131 231 255; /* Sunny Skies */
+  --brand-accent-deep-rgb: 0 72 188; /* Blue Raspberry (hover) */
+  --brand-blush-rgb: 232 160 255; /* Violet */
+  --brand-rose-rgb: 238 184 255; /* Violet (lifted for tints) */
+  --brand-warm-rgb: 24 48 120;
+  --brand-cutout-from-rgb: 255 254 252;
+  --brand-cutout-via-rgb: 245 252 255;
+  --brand-cutout-to-rgb: 232 245 255;
+  --brand-shadow-tint-rgb: 0 90 200;
 }
 
-/* —— Hero: lilac → blueberry → lemon mist; product title in Raspberry (card pairing) —— */
+/* —— Hero: Violet → Blue Raspberry → Powdered Lime mist; title in Blue Raspberry —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section {
   background-image: linear-gradient(
     168deg,
-    rgb(231 190 248 / 0.97) 0%,
-    rgb(147 171 217 / 0.72) 52%,
-    rgb(237 233 134 / 0.42) 100%
+    rgb(232 160 255 / 0.96) 0%,
+    rgb(0 110 233 / 0.58) 52%,
+    rgb(208 255 164 / 0.44) 100%
   ) !important;
   background-color: transparent !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section h1 {
-  color: rgb(242 97 156) !important;
+  color: rgb(0 110 233) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section h2 {
-  color: rgb(62 48 102) !important;
+  color: rgb(0 1 129) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section a[href] {
-  background-color: rgb(242 97 156) !important;
-  border-color: rgb(237 233 134) !important;
-  color: rgb(237 233 134) !important;
-  box-shadow: 0 10px 28px rgb(62 48 102 / 0.18) !important;
+  background-color: rgb(0 110 233) !important;
+  border-color: rgb(208 255 164) !important;
+  color: rgb(208 255 164) !important;
+  box-shadow: 0 10px 28px rgb(0 1 129 / 0.2) !important;
 }
 
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--hero
   > section
   a[href]:hover {
-  background-color: rgb(176 52 108) !important;
-  color: rgb(255 252 235) !important;
+  background-color: rgb(0 72 188) !important;
+  color: rgb(255 255 252) !important;
 }
 
-/* —— Problem: Lemon Cream field + ink body (yellow + pink titles already via accent) —— */
+/* —— Problem: Powdered Lime field + Night Skies / Blue Raspberry accents —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--problem > section {
-  background-color: rgb(237 233 134 / 0.88) !important;
-  border-color: rgb(242 97 156 / 0.22) !important;
+  background-color: rgb(208 255 164 / 0.88) !important;
+  border-color: rgb(0 110 233 / 0.22) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--problem > section a[href] {
-  background-color: rgb(62 48 102) !important;
-  color: rgb(237 233 134) !important;
+  background-color: rgb(0 1 129) !important;
+  color: rgb(208 255 164) !important;
 }
 
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--problem
   > section
   a[href]:hover {
-  background-color: rgb(242 97 156) !important;
-  color: rgb(237 233 134) !important;
+  background-color: rgb(0 110 233) !important;
+  color: rgb(208 255 164) !important;
 }
 
-/* —— Solution: Blueberry Milk wash —— */
+/* —— Solution: Sunny Skies wash —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--solution > section {
-  background-color: rgb(147 171 217 / 0.38) !important;
+  background-color: rgb(131 231 255 / 0.4) !important;
 }
 
-/* Top CTA: outline / ghost on blueberry */
+/* Top CTA: outline / ghost on sunny wash */
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--solution
   > section
   a[href].border-2 {
-  border-color: rgb(242 97 156 / 0.95) !important;
-  color: rgb(242 97 156) !important;
+  border-color: rgb(0 110 233 / 0.95) !important;
+  color: rgb(0 110 233) !important;
   background-color: rgb(255 255 255 / 0.92) !important;
 }
 
@@ -1570,105 +1572,105 @@ textarea:focus {
   .ebook-catch-surface--solution
   > section
   a[href].border-2:hover {
-  background-color: rgb(242 97 156) !important;
-  color: rgb(237 233 134) !important;
+  background-color: rgb(0 110 233) !important;
+  color: rgb(208 255 164) !important;
 }
 
-/* Bottom CTA: Raspberry fill + Lemon text (pairing from palette card) */
+/* Bottom CTA: Blue Raspberry + Powdered Lime (palette pairing) */
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--solution
   > section
   a[href]:not(.border-2) {
-  background-color: rgb(242 97 156) !important;
-  color: rgb(237 233 134) !important;
-  box-shadow: 0 10px 24px rgb(62 48 102 / 0.2) !important;
+  background-color: rgb(0 110 233) !important;
+  color: rgb(208 255 164) !important;
+  box-shadow: 0 10px 24px rgb(0 1 129 / 0.22) !important;
 }
 
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--solution
   > section
   a[href]:not(.border-2):hover {
-  background-color: rgb(176 52 108) !important;
-  color: rgb(255 252 235) !important;
+  background-color: rgb(0 72 188) !important;
+  color: rgb(255 255 252) !important;
 }
 
-/* —— Proof: lilac ↔ rose diagonal —— */
+/* —— Proof: Violet ↔ Sunny Skies ↔ Blue Raspberry diagonal —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--proof > section {
   background-image: linear-gradient(
     128deg,
-    rgb(245 228 252 / 0.95) 0%,
-    rgb(231 190 248 / 0.55) 45%,
-    rgb(147 171 217 / 0.35) 100%
+    rgb(232 160 255 / 0.92) 0%,
+    rgb(131 231 255 / 0.52) 45%,
+    rgb(0 110 233 / 0.28) 100%
   ) !important;
   background-color: transparent !important;
 }
 
-/* —— Offer: outer band lilac; inner card stays white —— */
+/* —— Offer: outer band Violet → Sunny Skies; inner card stays white —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--offer > section {
   background: linear-gradient(
     180deg,
-    rgb(231 190 248 / 0.55) 0%,
-    rgb(147 171 217 / 0.25) 100%
+    rgb(232 160 255 / 0.52) 0%,
+    rgb(131 231 255 / 0.28) 100%
   ) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--offer .rounded-3xl.border {
-  border-color: rgb(242 97 156 / 0.35) !important;
-  box-shadow: 0 24px 50px -22px rgb(62 48 102 / 0.2) !important;
+  border-color: rgb(0 110 233 / 0.35) !important;
+  box-shadow: 0 24px 50px -22px rgb(0 1 129 / 0.18) !important;
 }
 
-/* —— FAQ: Blueberry panel + lemon CTA pairing —— */
+/* —— FAQ: Sunny Skies panel + Powdered Lime / Blue Raspberry CTA —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--faq > section {
-  background-color: rgb(147 171 217 / 0.42) !important;
+  background-color: rgb(131 231 255 / 0.44) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--faq > section a[href] {
-  background-color: rgb(237 233 134) !important;
-  color: rgb(242 97 156) !important;
+  background-color: rgb(208 255 164) !important;
+  color: rgb(0 1 129) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--faq > section a[href]:hover {
-  background-color: rgb(242 97 156) !important;
-  color: rgb(237 233 134) !important;
+  background-color: rgb(0 110 233) !important;
+  color: rgb(208 255 164) !important;
 }
 
-/* —— Close: gradient footer + Lemon Cream copy (high contrast vs Saga black band) —— */
+/* —— Close: Night Skies → Blue Raspberry → Violet; Powdered Lime copy —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section {
-  background: linear-gradient(125deg, rgb(93 118 180) 0%, rgb(200 70 130) 52%, rgb(242 97 156) 100%) !important;
-  color: rgb(237 233 134) !important;
+  background: linear-gradient(125deg, rgb(0 1 129) 0%, rgb(0 110 233) 52%, rgb(232 160 255) 100%) !important;
+  color: rgb(208 255 164) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section h2,
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section p {
-  color: rgb(237 233 134) !important;
+  color: rgb(208 255 164) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section a[href] {
-  background-color: rgb(237 233 134) !important;
-  color: rgb(242 97 156) !important;
-  box-shadow: 0 12px 32px rgb(62 48 102 / 0.25) !important;
+  background-color: rgb(208 255 164) !important;
+  color: rgb(0 110 233) !important;
+  box-shadow: 0 12px 32px rgb(0 1 129 / 0.28) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section a[href]:hover {
-  background-color: rgb(255 252 235) !important;
-  color: rgb(176 52 108) !important;
+  background-color: rgb(131 231 255) !important;
+  color: rgb(0 1 129) !important;
 }
 
-/* Mobile sticky bar — lilac glass + raspberry / lemon CTA */
+/* Mobile sticky bar — Violet glass + Blue Raspberry / Lime CTA */
 [data-landing-slug="catch-the-attention"] .ebook-catch-sticky-bar {
-  background-color: rgb(231 190 248 / 0.94) !important;
-  border-color: rgb(242 97 156 / 0.35) !important;
+  background-color: rgb(232 160 255 / 0.92) !important;
+  border-color: rgb(0 110 233 / 0.3) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-sticky-bar a[href] {
-  background-color: rgb(242 97 156) !important;
-  color: rgb(237 233 134) !important;
-  box-shadow: 0 10px 26px rgb(62 48 102 / 0.22) !important;
+  background-color: rgb(0 110 233) !important;
+  color: rgb(208 255 164) !important;
+  box-shadow: 0 10px 26px rgb(0 1 129 / 0.22) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-sticky-bar a[href]:hover {
-  background-color: rgb(176 52 108) !important;
-  color: rgb(255 252 235) !important;
+  background-color: rgb(0 72 188) !important;
+  color: rgb(255 255 252) !important;
 }
 
 /*
