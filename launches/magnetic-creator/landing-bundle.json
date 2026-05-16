@@ -1,0 +1,169 @@
+{
+  "version": "1",
+  "landing": {
+    "id": "ldr_magnetic_creator",
+    "name": "Creadora Magnética",
+    "slug": "magnetic-creator",
+    "status": "draft",
+    "sections": [
+      {
+        "id": "sec_hero",
+        "type": "hero",
+        "order": 0,
+        "content": {
+          "headline": "Atrae audiencia, memorabilidad e ingresos sin perder tu esencia",
+          "subheadline": "La clave del éxito en la creación de contenido para que las personas te recuerden y empieces a monetizar — con marca, sistema y datos.",
+          "primaryCtaLabel": "Quiero el ebook",
+          "primaryCtaHref": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_CHECKOUT_URL",
+          "eyebrow": "Saga para creadoras"
+        }
+      },
+      {
+        "id": "sec_problem",
+        "type": "problem",
+        "order": 1,
+        "content": {
+          "title": "Cuando publicas sin arquitectura de marca ni sistema de conversión, el esfuerzo no se vuelve ingresos",
+          "bullets": [
+            "Te sientes invisible aunque publiques",
+            "La atención no se convierte en oportunidades",
+            "Tu monetización depende de una sola apuesta",
+            "Te cuesta cobrar o verte \"demasiado\""
+          ]
+        }
+      },
+      {
+        "id": "sec_solution",
+        "type": "solution",
+        "order": 2,
+        "content": {
+          "title": "Lo que vas a construir con Creadora Magnética",
+          "bullets": [
+            "Marca que se recuerda, no solo \"más posts\"",
+            "Sistema de conversión: atención → oportunidades",
+            "Ingresos sin depender de una sola fuente",
+            "Productividad, métricas y edición nivel pro"
+          ]
+        }
+      },
+      {
+        "id": "sec_proof",
+        "type": "social_proof",
+        "order": 3,
+        "content": {
+          "title": "Este marco no salió de teoría: salió de años creando contenido real y probando qué sostiene una marca que monetiza.",
+          "items": [
+            "Aplicación real del enfoque",
+            "Evolución de claridad y sistema",
+            "Timeline 2022–2025"
+          ]
+        }
+      },
+      {
+        "id": "sec_offer",
+        "type": "offer_stack",
+        "order": 4,
+        "content": {
+          "bullets": [
+            "BONUS exclusivo del ebook",
+            "Checklist rápida de arquitectura de marca",
+            "Mini plantilla de sistema de conversión",
+            "Guía express de métricas accionables"
+          ],
+          "checkoutUrl": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_CHECKOUT_URL",
+          "priceUsd": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_PRICE_USD"
+        }
+      },
+      {
+        "id": "sec_faq",
+        "type": "faq",
+        "order": 5,
+        "content": {
+          "intro": "Respuestas rápidas antes de entrar al checkout."
+        }
+      },
+      {
+        "id": "sec_close",
+        "type": "cta_band",
+        "order": 6,
+        "content": {
+          "headline": "Tu próximo nivel no es más horas en el feed: es marca, sistema y decisiones con datos.",
+          "ctaLabel": "Quiero el ebook",
+          "ctaHref": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_CHECKOUT_URL"
+        }
+      }
+    ],
+    "config": {
+      "theme": "light",
+      "sectionSpacing": "py-16",
+      "containerWidth": "max-w-6xl",
+      "visualMockups": [
+        {
+          "path": "launches/magnetic-creator/assets/palette-pinterest-2025-moodboard.png",
+          "placement": "custom",
+          "alt": "Mood board Pinterest Palette 2025 cherry butter vanilla columbia blue",
+          "caption": "Official launch palette reference"
+        }
+      ]
+    }
+  },
+  "hooks": [
+    {
+      "id": "hook_sticky_cta_mobile_magnetic",
+      "type": "sticky_cta",
+      "trigger": "scroll",
+      "triggerConfig": { "scrollPixels": 420 },
+      "conditions": {},
+      "action": {
+        "type": "navigate",
+        "payload": {
+          "href": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_CHECKOUT_URL"
+        }
+      }
+    },
+    {
+      "id": "hook_scroll_offer_emit_magnetic",
+      "type": "inline",
+      "trigger": "scroll",
+      "triggerConfig": { "scrollPercent": 50 },
+      "conditions": {},
+      "action": {
+        "type": "emit_event",
+        "payload": { "name": "scroll_deep_offer_zone" }
+      }
+    }
+  ],
+  "leadMagnet": {
+    "enabled": false,
+    "notes": "Checkout-url-only funnel"
+  },
+  "offer": {
+    "mainCta": "Quiero el ebook",
+    "checkoutUrl": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_CHECKOUT_URL",
+    "currency": "USD",
+    "price": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_PRICE_USD"
+  },
+  "products": [
+    {
+      "id": "prd_magnetic_creator_ebook",
+      "name": "Creadora Magnética",
+      "price": "env:NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_PRICE_USD",
+      "currency": "USD",
+      "type": "one_time"
+    }
+  ],
+  "automations": [],
+  "tracking": {
+    "providers": ["analytics_web"],
+    "placeholders": {
+      "ANALYTICS_ID": "not-used",
+      "ADS_PIXEL_ID": "not-used"
+    },
+    "events": [
+      { "type": "page_view", "name": "landing_view" },
+      { "type": "click", "name": "cta_checkout_click" },
+      { "type": "conversion", "name": "purchase_success" }
+    ]
+  },
+  "experiments": []
+}

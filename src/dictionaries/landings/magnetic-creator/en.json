@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Magnetic Creator — Saga for Creators",
+    "description": "Ebook to be remembered and start monetizing: brand, conversion system, smart revenue, and premium-feeling content."
+  },
+  "hero": {
+    "eyebrow": "Saga for Creators",
+    "productTitle": "Magnetic Creator",
+    "headline": "Attract audience, memorability, and income without losing who you are",
+    "subhead": "The key to successful content creation so people remember you and you start monetizing — with brand, system, and data.",
+    "cta": "Get the ebook",
+    "imageAlt": "Isabella — lead visual",
+    "decorativeAlt": "Warm editorial look: cherry red, vanilla, and columbia blue"
+  },
+  "problem": {
+    "eyebrow": "Sound familiar?",
+    "title": "When you post without brand architecture or a conversion system, effort doesn’t turn into income",
+    "cards": [
+      {
+        "title": "You feel invisible even though you post",
+        "body": "Your content doesn’t stick: you need a clear message, pillars, and an identity people associate with you instantly."
+      },
+      {
+        "title": "Attention doesn’t become opportunities",
+        "body": "You see views or likes… but few serious DMs, collabs, or sales. Without a simple funnel, reach evaporates."
+      },
+      {
+        "title": "Income depends on a single bet",
+        "body": "Virality, the algorithm, or grinding more hours. Without diversified smart revenue, every dip hits your wallet and morale."
+      },
+      {
+        "title": "Charging or looking “too much” feels hard",
+        "body": "You want premium positioning but fear of seeming boastful or raising prices keeps you below the value you deliver."
+      }
+    ],
+    "cta": "I want the system"
+  },
+  "solution": {
+    "title": "What you’ll build with Magnetic Creator",
+    "titleHighlight": {
+      "before": "What you’ll build with ",
+      "highlight": "Magnetic Creator",
+      "after": ""
+    },
+    "giftHint": "Chapters from positioning to monetization + a BONUS to finish with action.",
+    "outcomes": [
+      {
+        "title": "A brand people remember—not just “more posts”",
+        "body": "Positioning, brand architecture, and identity so your content feels recognizable and coherent."
+      },
+      {
+        "title": "Conversion system: attention → opportunities",
+        "body": "Clear steps to turn visibility into conversations, collaborations, and real sales."
+      },
+      {
+        "title": "Income without relying on one source",
+        "body": "A smart monetization map so you don’t stake everything on one format or platform."
+      },
+      {
+        "title": "Productivity, metrics, and pro-level editing",
+        "body": "Sustainable rhythm, actionable data, and editing standards that raise how your brand is perceived."
+      }
+    ],
+    "ctaTop": "See the offer",
+    "ctaBottom": "Get the ebook",
+    "imageAlt": "Isabella — method applied to real content"
+  },
+  "proof": {
+    "badge": "My story",
+    "headline": "This framework didn’t come from theory—it came from years of real content and learning what sustains a brand that earns.",
+    "intro": "Before teaching it, I lived it: noisy seasons, comparison, and a path where clarifying message, offer, and perception started to change results.",
+    "timeline": [
+      {
+        "year": "2022",
+        "phase": "Content without clear brand",
+        "bullets": [
+          "Posting without strong message pillars",
+          "Trend mix without a proprietary narrative",
+          "Hard to explain my promise in one line"
+        ]
+      },
+      {
+        "year": "2023",
+        "phase": "Sharpening positioning",
+        "bullets": [
+          "Early mission and audience focus drafts",
+          "Clearer sense of the problem I solve",
+          "Still missing a repeatable conversion system"
+        ]
+      },
+      {
+        "year": "2024",
+        "phase": "System + premium feel",
+        "bullets": [
+          "Better link between content and opportunities",
+          "More strategic decisions and negotiation",
+          "Higher bar for editing and perceived quality"
+        ]
+      },
+      {
+        "year": "2025",
+        "phase": "Magnetic brand",
+        "bullets": [
+          "More memorable, coherent messaging",
+          "Metrics to decide instead of guessing",
+          "Monetization less dependent on a single channel"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "sectionTitle": "Everything included in your access",
+    "hero": {
+      "badges": ["Launch offer", "Ebook + bonuses"],
+      "statement": "Move from scattered creator to brand with a system: positioning, conversion, smart revenue, and content that feels pro.",
+      "imageAlt": "Mockup of the «Magnetic Creator» ebook"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook",
+          "label": "Ebook «Magnetic Creator»",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "Exclusive ebook BONUS (expanded content)",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b2",
+          "label": "Quick brand architecture checklist",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b3",
+          "label": "Mini conversion system template",
+          "anchorValueLabel": "USD 10"
+        },
+        {
+          "id": "b4",
+          "label": "Express guide to actionable metrics",
+          "anchorValueLabel": "USD 10"
+        }
+      ],
+      "totalLabel": "Reference package value",
+      "totalAnchorLabel": "USD 71",
+      "youPayLabel": "Your investment today"
+    },
+    "bonusesSectionTitle": "Included bonuses",
+    "bonuses": [
+      {
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Bonus: ebook BONUS",
+        "painHeadline": "You need to finish with concrete action",
+        "outcomeBenefit": "Ebook BONUS material so you implement what you read—not only theory."
+      },
+      {
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Bonus: brand architecture checklist",
+        "painHeadline": "Your message is still a mental draft",
+        "outcomeBenefit": "One-page checklist to align mission, pillars, and direction before you post."
+      },
+      {
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Bonus: mini conversion template",
+        "painHeadline": "Views don’t turn into serious messages",
+        "outcomeBenefit": "Mini template linking content → interest → conversation or offer."
+      },
+      {
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: express metrics",
+        "painHeadline": "You look at numbers without knowing what to change",
+        "outcomeBenefit": "Short guide to smart metrics so you pick the next move without spiraling."
+      }
+    ],
+    "urgency": {
+      "title": "Why deciding now makes sense",
+      "bullets": [
+        "Launch window: the bundle is built for creators who want brand + monetization clarity without waiting for the “perfect moment.”",
+        "No fake scarcity: the real cost is staying inconsistent while the bar keeps rising."
+      ],
+      "deadlineLineTemplate": "In this edition, launch bonuses apply until {date}."
+    },
+    "ctaPrimary": "I want ebook access now",
+    "supportNote": "Questions? Email us:",
+    "supportEmail": "soporteila@gmail.com",
+    "priceHint": "Price in USD — set per environment."
+  },
+  "faq": {
+    "introTitle": "Frequently asked questions",
+    "introBody": "Quick answers before checkout. If you need something more specific, write us.",
+    "cta": "Get the ebook",
+    "items": [
+      {
+        "q": "What format is the ebook?",
+        "a": "It’s a digital product (PDF or the format defined by the purchase platform). You’ll get download instructions after payment."
+      },
+      {
+        "q": "Where do I buy and how do I get access?",
+        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s email/instructions."
+      },
+      {
+        "q": "What if I already bought another monetization ebook?",
+        "a": "This one focuses on brand + conversion + diversified income + premium + metrics in one journey—it complements loose courses with structure."
+      },
+      {
+        "q": "What if my niche is small?",
+        "a": "That’s when memorability and a clear offer matter most. The ebook works perception and a simple funnel—not just “more reach.”"
+      },
+      {
+        "q": "Is there a guarantee?",
+        "a": "Refund policy depends on the payment platform and applicable law. Review checkout before buying."
+      },
+      {
+        "q": "Can I contact support?",
+        "a": "Yes—use the support email on this page if you need help with your purchase."
+      }
+    ]
+  },
+  "close": {
+    "headline": "Your next level isn’t more hours in the feed—it’s brand, system, and data-backed decisions.",
+    "body": "If you’re ready to be remembered and start monetizing with judgment, Magnetic Creator is written for you.",
+    "cta": "Get the ebook",
+    "footnote": "Not magic—positioning + conversion + sustainable action."
+  }
+}

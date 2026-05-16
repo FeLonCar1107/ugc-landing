@@ -20,6 +20,10 @@ export const ebookLandingCopyLoaders: Record<
     en: () => import("@/dictionaries/landings/catch-the-attention/en.json"),
     es: () => import("@/dictionaries/landings/catch-the-attention/es.json"),
   },
+  "magnetic-creator": {
+    en: () => import("@/dictionaries/landings/magnetic-creator/en.json"),
+    es: () => import("@/dictionaries/landings/magnetic-creator/es.json"),
+  },
 };
 
 export async function getEbookLandingCopy(

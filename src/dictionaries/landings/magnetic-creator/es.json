@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "title": "Creadora Magnética — Saga para creadoras",
+    "description": "Ebook para que te recuerden y empieces a monetizar: marca, sistema de conversión, ingresos inteligentes y contenido premium."
+  },
+  "hero": {
+    "eyebrow": "Saga para creadoras",
+    "productTitle": "Creadora Magnética",
+    "headline": "Atrae audiencia, memorabilidad e ingresos sin perder tu esencia",
+    "subhead": "La clave del éxito en la creación de contenido para que las personas te recuerden y empieces a monetizar — con marca, sistema y datos.",
+    "cta": "Quiero el ebook",
+    "imageAlt": "Isabella — referencia visual protagonista",
+    "decorativeAlt": "Estética editorial cálida cherry, vainilla y azul columbia"
+  },
+  "problem": {
+    "eyebrow": "¿Te suena familiar?",
+    "title": "Cuando publicas sin arquitectura de marca ni sistema de conversión, el esfuerzo no se vuelve ingresos",
+    "cards": [
+      {
+        "title": "Te sientes invisible aunque publiques",
+        "body": "Tu contenido no deja huella: falta mensaje claro, pilares y una identidad que la gente asocie contigo al instante."
+      },
+      {
+        "title": "La atención no se convierte en oportunidades",
+        "body": "Ves vistas o likes… pero pocos mensajes serios, colaboraciones o ventas. Sin embudo simple, el alcance se evapora."
+      },
+      {
+        "title": "Tu monetización depende de una sola apuesta",
+        "body": "Viralidad, algoritmo o más horas. Sin ingresos inteligentes diversificados, cada bajón te golpea el bolsillo y el ánimo."
+      },
+      {
+        "title": "Te cuesta cobrar o verte \"demasiado\"",
+        "body": "Quieres posicionamiento premium pero el miedo a presumir o subir precios te deja por debajo del valor real que entregas."
+      }
+    ],
+    "cta": "Quiero el sistema"
+  },
+  "solution": {
+    "title": "Lo que vas a construir con Creadora Magnética",
+    "titleHighlight": {
+      "before": "Lo que vas a construir con ",
+      "highlight": "Creadora Magnética",
+      "after": ""
+    },
+    "giftHint": "Incluye capítulos de posicionamiento a monetización + BONUS para cerrar con acción.",
+    "outcomes": [
+      {
+        "title": "Marca que se recuerda, no solo \"más posts\"",
+        "body": "Posicionamiento, arquitectura de marca e identidad para que tu contenido se sienta reconocible y coherente."
+      },
+      {
+        "title": "Sistema de conversión: atención → oportunidades",
+        "body": "Pasos claros para traducir visibilidad en conversaciones, colaboraciones y ventas reales."
+      },
+      {
+        "title": "Ingresos sin depender de una sola fuente",
+        "body": "Mapa de monetización inteligente para dejar de apostar todo a un solo formato o plataforma."
+      },
+      {
+        "title": "Productividad, métricas y edición nivel pro",
+        "body": "Ritmo sostenible, datos accionables y estándares de edición que elevan la percepción de tu marca."
+      }
+    ],
+    "ctaTop": "Ver la oferta",
+    "ctaBottom": "Quiero el ebook",
+    "imageAlt": "Isabella — método aplicado en contenido real"
+  },
+  "proof": {
+    "badge": "Mi historia",
+    "headline": "Este marco no salió de teoría: salió de años creando contenido real y probando qué sostiene una marca que monetiza.",
+    "intro": "Antes de enseñarlo, lo viví: épocas de ruido, comparación y un camino donde ordenar mensaje, oferta y percepción empezó a cambiar resultados.",
+    "timeline": [
+      {
+        "year": "2022",
+        "phase": "Contenido sin marca clara",
+        "bullets": [
+          "Publicaba sin pilares de mensaje ni dirección",
+          "Mezcla de tendencias sin narrativa propia",
+          "Dificultad para explicar propuesta en una frase"
+        ]
+      },
+      {
+        "year": "2023",
+        "phase": "Ordenando posicionamiento",
+        "bullets": [
+          "Primeras versiones de misión y foco de audiencia",
+          "Más claridad en qué problema resuelvo",
+          "Aún faltaba sistema de conversión repetible"
+        ]
+      },
+      {
+        "year": "2024",
+        "phase": "Sistema + percepción premium",
+        "bullets": [
+          "Mejor enlace entre contenido y oportunidades",
+          "Decisiones y negociación más estratégicas",
+          "Contenido con estándar de edición más alto"
+        ]
+      },
+      {
+        "year": "2025",
+        "phase": "Marca magnética",
+        "bullets": [
+          "Mensaje más memorable y coherente",
+          "Métricas para decidir sin adivinar",
+          "Monetización menos dependiente de un solo canal"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "sectionTitle": "Todo lo que incluye tu acceso",
+    "hero": {
+      "badges": ["Oferta de lanzamiento", "Ebook + bonuses"],
+      "statement": "Pasa de creadora dispersa a marca con sistema: posicionamiento, conversión, ingresos inteligentes y contenido que se siente pro.",
+      "imageAlt": "Mockup del ebook «Creadora Magnética»"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook",
+          "label": "Ebook «Creadora Magnética»",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "BONUS exclusivo del ebook (contenido ampliado)",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b2",
+          "label": "Checklist rápida de arquitectura de marca",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b3",
+          "label": "Mini plantilla de sistema de conversión",
+          "anchorValueLabel": "USD 10"
+        },
+        {
+          "id": "b4",
+          "label": "Guía express de métricas accionables",
+          "anchorValueLabel": "USD 10"
+        }
+      ],
+      "totalLabel": "Valor referencial del paquete",
+      "totalAnchorLabel": "USD 71",
+      "youPayLabel": "Tu inversión hoy"
+    },
+    "bonusesSectionTitle": "Bonuses incluidos",
+    "bonuses": [
+      {
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Bonus: BONUS del ebook",
+        "painHeadline": "Necesitas cerrar con acción concreta",
+        "outcomeBenefit": "Material BONUS del ebook para implementar lo leído sin quedarte en la teoría."
+      },
+      {
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Bonus: checklist de arquitectura de marca",
+        "painHeadline": "Tu mensaje aún está en borrador mental",
+        "outcomeBenefit": "Checklist de una página para alinear misión, pilares y dirección antes de publicar."
+      },
+      {
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Bonus: mini plantilla de conversión",
+        "painHeadline": "Las vistas no se convierten en mensajes serios",
+        "outcomeBenefit": "Mini plantilla para enlazar contenido → interés → conversación u oferta."
+      },
+      {
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: métricas express",
+        "painHeadline": "Miras números sin saber qué cambiar",
+        "outcomeBenefit": "Guía corta de métricas inteligentes para decidir siguiente movimiento sin obsesionarte."
+      }
+    ],
+    "urgency": {
+      "title": "Por qué conviene decidir ahora",
+      "bullets": [
+        "Ventana de lanzamiento: el bundle está armado para quien quiera ordenar marca y monetización sin esperar \"el momento perfecto\".",
+        "Sin inventarios falsos: el costo real es seguir publicando sin sistema cuando la competencia sube el listón."
+      ],
+      "deadlineLineTemplate": "En esta edición, los bonuses de lanzamiento aplican hasta el {date}."
+    },
+    "ctaPrimary": "Quiero mi acceso al ebook ahora",
+    "supportNote": "¿Dudas? Escríbenos:",
+    "supportEmail": "soporteila@gmail.com",
+    "priceHint": "Precio en USD — configuración por entorno."
+  },
+  "faq": {
+    "introTitle": "Preguntas frecuentes",
+    "introBody": "Respuestas rápidas antes de entrar al checkout. Si necesitas algo más específico, escríbenos.",
+    "cta": "Quiero el ebook",
+    "items": [
+      {
+        "q": "¿Qué formato tiene el ebook?",
+        "a": "Es un producto digital (PDF u formato definido por la plataforma de compra). Recibirás instrucciones de descarga después del pago."
+      },
+      {
+        "q": "¿Dónde compro y cómo recibo el acceso?",
+        "a": "El checkout se procesa en la plataforma externa configurada para este lanzamiento (por ejemplo Hotmart). Tras pagar, sigue el correo/instrucciones de esa plataforma."
+      },
+      {
+        "q": "¿Sirve si ya compré otro ebook de monetización?",
+        "a": "Sí: aquí el foco es marca + conversión + ingresos diversificados + premium + métricas en un solo recorrido; complementa cursos sueltos dándote estructura."
+      },
+      {
+        "q": "¿Y si mi nicho es pequeño?",
+        "a": "Justo ahí importa más la memorabilidad y una oferta clara. El ebook trabaja percepción de marca y embudo simple, no solo \"más alcance\"."
+      },
+      {
+        "q": "¿Hay garantía?",
+        "a": "La política de reembolsos depende de la plataforma de pago y del alcance legal aplicable. Revísalo en la página de checkout antes de comprar."
+      },
+      {
+        "q": "¿Puedo escribirles por soporte?",
+        "a": "Sí: usa el correo de soporte indicado en la página si necesitas ayuda con tu compra."
+      }
+    ]
+  },
+  "close": {
+    "headline": "Tu próximo nivel no es más horas en el feed: es marca, sistema y decisiones con datos.",
+    "body": "Si estás lista para que te recuerden y empezar a monetizar con criterio, Creadora Magnética está escrito para ti.",
+    "cta": "Quiero el ebook",
+    "footnote": "No es magia: es posicionamiento + conversión + acción sostenible."
+  }
+}

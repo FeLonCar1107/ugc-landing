@@ -41,17 +41,17 @@ function launchSlugFromAssetBase(assetBase: string): string {
   return assetBase.replace(/^\//, "").split("/").filter(Boolean).pop() ?? "";
 }
 
-/** Layout-neutral wrapper: `display:contents` + hook classes for per-landing CSS (catch palette). */
+/**
+ * Layout-neutral wrapper: `display:contents` + `ebook-catch-surface--*` hooks
+ * so each landing can scope CSS (tokens + optional section bands) under `[data-landing-slug]`.
+ */
 function EbookCatchSurface({
-  enabled,
   slot,
   children,
 }: {
-  enabled: boolean;
   slot: "hero" | "problem" | "solution" | "proof" | "offer" | "faq" | "close";
   children: React.ReactNode;
 }) {
-  if (!enabled) return <>{children}</>;
   return (
     <div className={`contents ebook-catch-surface ebook-catch-surface--${slot}`}>
       {children}
@@ -78,7 +78,6 @@ export default function EbookLanding({
   const heroVisual = getLaunchHeroVisual(launchSlug);
   const offerPhaseLabel = getLaunchOfferPhaseLabel(launchSlug);
   const offerDeadlineIso = getLaunchBonusBundleDeadlineIso(launchSlug);
-  const catchBoldPalette = slug === "catch-the-attention";
 
   return (
     <div
@@ -89,10 +88,10 @@ export default function EbookLanding({
         label={copy.hero.cta}
         href={checkoutUrl}
         hideWhenIntersectingId="landing-close"
-        barClassName={catchBoldPalette ? "ebook-catch-sticky-bar" : undefined}
+        barClassName="ebook-catch-sticky-bar"
       />
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="hero">
+      <EbookCatchSurface slot="hero">
         <EbookHeroSection
           heroVisual={heroVisual}
           hero={copy.hero}
@@ -102,7 +101,7 @@ export default function EbookLanding({
         />
       </EbookCatchSurface>
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="problem">
+      <EbookCatchSurface slot="problem">
         <EbookProblemSection
           problem={copy.problem}
           checkoutUrl={checkoutUrl}
@@ -110,7 +109,7 @@ export default function EbookLanding({
         />
       </EbookCatchSurface>
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="solution">
+      <EbookCatchSurface slot="solution">
         <EbookSolutionSection
           copy={copy}
           checkoutUrl={checkoutUrl}
@@ -119,7 +118,7 @@ export default function EbookLanding({
         />
       </EbookCatchSurface>
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="proof">
+      <EbookCatchSurface slot="proof">
         <EbookProofSection
           proof={copy.proof}
           sectionBandHeading={sectionBandHeading}
@@ -127,7 +126,7 @@ export default function EbookLanding({
         />
       </EbookCatchSurface>
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="offer">
+      <EbookCatchSurface slot="offer">
         <OfferSection
           offer={copy.offer}
           assetBase={base}
@@ -140,7 +139,7 @@ export default function EbookLanding({
         />
       </EbookCatchSurface>
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="faq">
+      <EbookCatchSurface slot="faq">
         <EbookFaqSection
           faq={copy.faq}
           checkoutUrl={checkoutUrl}
@@ -149,7 +148,7 @@ export default function EbookLanding({
         />
       </EbookCatchSurface>
 
-      <EbookCatchSurface enabled={catchBoldPalette} slot="close">
+      <EbookCatchSurface slot="close">
         <EbookCloseSection
           close={copy.close}
           checkoutUrl={checkoutUrl}
