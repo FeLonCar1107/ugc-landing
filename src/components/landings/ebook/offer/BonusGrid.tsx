@@ -1,9 +1,9 @@
 import Image from "next/image";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
-
-/** Same visual slot for every bonus mockup (aligned row + image scales inside). */
-const BONUS_MEDIA_SLOT =
-  "relative h-[11.75rem] w-full shrink-0 sm:h-[12.75rem] lg:h-[13.25rem]";
+import {
+  OFFER_BONUS_FRAME_CLASS,
+  OFFER_BONUS_IMAGE_CLASS,
+} from "./offerImageSlots";
 
 export default function BonusGrid({
   bonuses,
@@ -19,14 +19,18 @@ export default function BonusGrid({
           key={`${bonus.imageFile}-${i}`}
           className="flex h-full min-h-0 min-w-0 flex-col overflow-hidden rounded-xl border border-brand-ink/10 bg-brand-card shadow-sm"
         >
-          <div className={BONUS_MEDIA_SLOT}>
-            <Image
-              src={asset(bonus.imageFile)}
-              alt={bonus.imageAlt}
-              fill
-              className="object-contain object-center p-2 sm:p-3"
-              sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 22vw"
-            />
+          <div className="flex w-full justify-center px-2 pt-2 sm:px-3 sm:pt-3">
+            <div
+              className={`${OFFER_BONUS_FRAME_CLASS} w-full max-w-[11.5rem] sm:max-w-[12.25rem]`}
+            >
+              <Image
+                src={asset(bonus.imageFile)}
+                alt={bonus.imageAlt}
+                fill
+                className={OFFER_BONUS_IMAGE_CLASS}
+                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 12rem"
+              />
+            </div>
           </div>
           <div className="flex min-h-0 flex-1 flex-col justify-start border-t border-brand-ink/8 bg-brand-card px-3 pb-4 pt-3 sm:px-3.5 sm:pb-5">
             <p className="text-xs font-bold leading-snug text-brand-ink sm:text-sm">

@@ -1,25 +1,14 @@
 import Image from "next/image";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
-import {
-  HERO_HEADLINE_STARS_INTRINSIC,
-  IMAGE_SLOTS,
-} from "../ebookLandingConstants";
-import {
-  OFFER_EBOOK_FILE,
-  OFFER_EBOOK_INTRINSIC,
-} from "../offer/offerImageSlots";
+import { HERO_HEADLINE_STARS_INTRINSIC, IMAGE_SLOTS } from "../ebookLandingConstants";
+import { OFFER_EBOOK_FILE } from "../offer/offerImageSlots";
+import OfferEbookMockup from "../offer/OfferEbookMockup";
 import CheckoutLink from "../CheckoutLink";
 import {
   ScrollReveal,
   ScrollRevealItem,
   ScrollRevealStagger,
 } from "../ScrollReveal";
-
-const MOCKUP_IMAGE_QUALITY = 96;
-
-/** Floor shadow under the 3D book — same pattern as `ProductHero` (shadow below opaque PNG). */
-const GROUND_SHADOW =
-  "pointer-events-none h-2.5 w-[72%] max-w-[220px] shrink-0 rounded-[100%] bg-brand-ink/14 shadow-[0_0_24px_rgb(var(--brand-ink-rgb)/0.12)] blur-[12px] sm:h-3 sm:w-[68%] sm:blur-[14px]";
 
 export type EbookHeroMockupSectionProps = {
   hero: EbookLandingCopy["hero"];
@@ -72,24 +61,12 @@ export default function EbookHeroMockupSection({
             </div>
           </ScrollRevealItem>
 
-          <ScrollRevealItem className="relative z-10 col-span-full mx-auto w-full max-w-[min(380px,92vw)] max-md:-mt-1 max-md:-mb-[min(10vw,3rem)] md:hidden">
-            <figure className="flex w-full flex-col items-center">
-              <div className="relative h-[min(17.5rem,52vw)] w-full max-w-[min(300px,88vw)]">
-                <Image
-                  src={asset(OFFER_EBOOK_FILE)}
-                  alt={hero.decorativeAlt}
-                  fill
-                  className="object-contain object-center px-2 pt-2 pb-0 drop-shadow-[0_12px_40px_rgb(var(--brand-ink-rgb)/0.08)]"
-                  sizes="min(300px,88vw)"
-                  quality={MOCKUP_IMAGE_QUALITY}
-                  priority
-                />
-              </div>
-              <div className="-mt-5 flex shrink-0 justify-center pb-1 pt-0" aria-hidden>
-                <div className={GROUND_SHADOW} />
-              </div>
-              <figcaption className="sr-only">{hero.imageAlt}</figcaption>
-            </figure>
+          <ScrollRevealItem className="relative z-10 col-span-full mx-auto w-full max-md:-mt-1 max-md:-mb-[min(10vw,3rem)] md:hidden">
+            <OfferEbookMockup
+              src={asset(OFFER_EBOOK_FILE)}
+              alt={hero.decorativeAlt}
+              priority
+            />
           </ScrollRevealItem>
 
           <ScrollRevealItem className="relative z-10 flex min-w-0 flex-col gap-[clamp(0.875rem,2vw,1.125rem)] max-md:mt-8 md:col-start-1 md:row-start-2 md:mt-0 md:max-w-none md:pt-1 md:pl-24 md:-mr-10">
@@ -116,24 +93,12 @@ export default function EbookHeroMockupSection({
           </ScrollRevealItem>
 
           <ScrollRevealItem className="relative z-20 hidden min-h-[240px] md:col-start-2 md:row-start-2 md:flex md:min-h-0 md:items-end md:justify-center md:pb-2 md:pt-4">
-            <figure className="flex w-full max-w-[300px] flex-col items-center">
-              <div className="relative aspect-[421/470] w-full max-w-[280px]">
-                <Image
-                  src={asset(OFFER_EBOOK_FILE)}
-                  alt={hero.decorativeAlt}
-                  width={OFFER_EBOOK_INTRINSIC.width}
-                  height={OFFER_EBOOK_INTRINSIC.height}
-                  className="h-full w-full object-contain object-center drop-shadow-[0_12px_40px_rgb(var(--brand-ink-rgb)/0.08)]"
-                  sizes="(max-width: 768px) 0px, min(280px,30vw)"
-                  quality={MOCKUP_IMAGE_QUALITY}
-                  priority
-                />
-              </div>
-              <div className="-mt-4 flex shrink-0 justify-center pb-1" aria-hidden>
-                <div className={GROUND_SHADOW} />
-              </div>
-              <figcaption className="sr-only">{hero.imageAlt}</figcaption>
-            </figure>
+            <OfferEbookMockup
+              src={asset(OFFER_EBOOK_FILE)}
+              alt={hero.decorativeAlt}
+              priority
+              wrapperClassName="md:items-end"
+            />
           </ScrollRevealItem>
         </ScrollRevealStagger>
       </div>

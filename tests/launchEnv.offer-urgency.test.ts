@@ -43,9 +43,10 @@ describe("launchEnv — offer urgency helpers", () => {
 
   it("getLaunchHeroVisual defaults to portrait when unset", () => {
     expect(getLaunchHeroVisual(SLUG)).toBe("portrait");
+    expect(getLaunchHeroVisual("catch-the-attention")).toBe("portrait");
   });
 
-  it("getLaunchHeroVisual returns mockup when set (case-insensitive)", () => {
+  it("getLaunchHeroVisual returns mockup when per-slug env set (case-insensitive)", () => {
     vi.stubEnv(
       "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_HERO_VISUAL",
       " Mockup ",
@@ -53,11 +54,28 @@ describe("launchEnv — offer urgency helpers", () => {
     expect(getLaunchHeroVisual(SLUG)).toBe("mockup");
   });
 
-  it("getLaunchHeroVisual treats unknown values as portrait", () => {
+  it("getLaunchHeroVisual treats unknown per-slug values as portrait", () => {
     vi.stubEnv(
       "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_HERO_VISUAL",
       "ebook",
     );
     expect(getLaunchHeroVisual(SLUG)).toBe("portrait");
+  });
+
+  it("getLaunchHeroVisual applies global NEXT_PUBLIC_LAUNCH_HERO_VISUAL to all slugs", () => {
+    vi.stubEnv("NEXT_PUBLIC_LAUNCH_HERO_VISUAL", "mockup");
+    expect(getLaunchHeroVisual(SLUG)).toBe("mockup");
+    expect(getLaunchHeroVisual("catch-the-attention")).toBe("mockup");
+    expect(getLaunchHeroVisual("magnetic-creator")).toBe("mockup");
+  });
+
+  it("getLaunchHeroVisual per-slug overrides global default", () => {
+    vi.stubEnv("NEXT_PUBLIC_LAUNCH_HERO_VISUAL", "mockup");
+    vi.stubEnv(
+      "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_HERO_VISUAL",
+      "portrait",
+    );
+    expect(getLaunchHeroVisual(SLUG)).toBe("portrait");
+    expect(getLaunchHeroVisual("catch-the-attention")).toBe("mockup");
   });
 });

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "assets:transparent-offer": "node scripts/generate-transparent-offer-assets.mjs"
+    "assets:transparent-offer": "node scripts/generate-transparent-offer-assets.mjs",
+    "assets:normalize-offer-ebook": "node scripts/normalize-offer-ebook-mockups.mjs"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",

@@ -9,7 +9,8 @@ type EbookHeroSectionProps = {
 
 /**
  * Picks between the portrait hero (Isabella) and the ebook mockup hero.
- * Controlled by `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL` — see `getLaunchHeroVisual`.
+ * Controlled by `NEXT_PUBLIC_LAUNCH_HERO_VISUAL` (all ebooks) or
+ * `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL` (override) — see `getLaunchHeroVisual`.
  */
 export default function EbookHeroSection({ heroVisual, ...rest }: EbookHeroSectionProps) {
   if (heroVisual === LAUNCH_HERO_VISUAL_MOCKUP) {

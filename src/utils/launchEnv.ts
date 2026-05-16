@@ -53,15 +53,30 @@ export type LaunchHeroVisual =
   | typeof LAUNCH_HERO_VISUAL_PORTRAIT
   | typeof LAUNCH_HERO_VISUAL_MOCKUP;
 
-/**
- * Reads `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL`.
- * - `mockup` — `offer_ebook_mockup.png` in the first hero.
- * - Any other value or unset — `hero_done.png` (portrait / Isabella), current default.
- */
-export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
-  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_HERO_VISUAL`;
-  const v = process.env[k]?.trim().toLowerCase();
+/** Default for all ebook landings when no per-slug override is set. */
+export const LAUNCH_HERO_VISUAL_ENV_KEY = "NEXT_PUBLIC_LAUNCH_HERO_VISUAL" as const;
+
+function parseLaunchHeroVisual(raw: string | undefined): LaunchHeroVisual | undefined {
+  const v = raw?.trim().toLowerCase();
+  if (!v) return undefined;
   return v === LAUNCH_HERO_VISUAL_MOCKUP
     ? LAUNCH_HERO_VISUAL_MOCKUP
     : LAUNCH_HERO_VISUAL_PORTRAIT;
+}
+
+/**
+ * Hero visual resolution (first match wins):
+ * 1. `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL` — per ebook
+ * 2. `NEXT_PUBLIC_LAUNCH_HERO_VISUAL` — all ebooks
+ * 3. `portrait` (`hero_done.png` from shared assets)
+ *
+ * Set `mockup` to use each slug's `offer_ebook_mockup.png` in the first hero.
+ */
+export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
+  const perSlugKey = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_HERO_VISUAL`;
+  return (
+    parseLaunchHeroVisual(process.env[perSlugKey]) ??
+    parseLaunchHeroVisual(process.env[LAUNCH_HERO_VISUAL_ENV_KEY]) ??
+    LAUNCH_HERO_VISUAL_PORTRAIT
+  );
 }
