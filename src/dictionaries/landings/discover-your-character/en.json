@@ -183,13 +183,11 @@
       "deadlineLineTemplate": "For this edition, launch bonuses apply through {date}."
     },
     "ctaPrimary": "I want my ebook access now",
-    "supportNote": "Questions? Email us:",
-    "supportEmail": "soporteila@gmail.com",
     "priceHint": "USD price — set via environment."
   },
   "faq": {
     "introTitle": "Frequently asked questions",
-    "introBody": "Quick answers before checkout. Need more detail? Reach out.",
+    "introBody": "Quick answers before checkout.",
     "cta": "Start now",
     "items": [
       {
@@ -198,7 +196,7 @@
       },
       {
         "q": "Where do I buy and how do I get access?",
-        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s email/instructions."
+        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s instructions to access your purchase."
       },
       {
         "q": "Does it work if I have a small audience?",
@@ -209,8 +207,8 @@
         "a": "Refund policy depends on the payment platform and applicable terms. Review it on the checkout page before buying."
       },
       {
-        "q": "Can I contact support?",
-        "a": "Yes — use the support email shown on the site if you need purchase help."
+        "q": "Can I get help with my purchase?",
+        "a": "Yes—purchase support is handled by the payment platform (e.g. Hotmart) from its checkout or help center."
       }
     ]
   },

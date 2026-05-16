@@ -73,8 +73,6 @@ export interface EbookLandingCopy {
       deadlineLineTemplate?: string;
     };
     ctaPrimary: string;
-    supportNote: string;
-    supportEmail: string;
     /** Shown when `priceUsd` env is empty (same behavior as legacy `priceHint`). */
     priceHint: string;
   };

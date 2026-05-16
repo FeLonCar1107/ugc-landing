@@ -93,15 +93,6 @@ export default function OfferSection({
               >
                 {offer.ctaPrimary}
               </CheckoutLink>
-              <p className="text-sm text-brand-ink/65">
-                {offer.supportNote}{" "}
-                <a
-                  href={`mailto:${offer.supportEmail}`}
-                  className="font-semibold text-brand-accent underline"
-                >
-                  {offer.supportEmail}
-                </a>
-              </p>
             </div>
           </div>
         </div>

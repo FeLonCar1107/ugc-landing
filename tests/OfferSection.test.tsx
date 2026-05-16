@@ -47,7 +47,7 @@ describe("OfferSection", () => {
     expect(cta).toHaveAttribute("href", "#offer");
   });
 
-  it("renders value stack price line and support mailto (A4)", () => {
+  it("renders value stack price line (A4)", () => {
     render(
       <OfferSection
         offer={offer}
@@ -59,8 +59,6 @@ describe("OfferSection", () => {
       />,
     );
     expect(screen.getByText("$99 USD")).toBeInTheDocument();
-    const mail = screen.getByRole("link", { name: offer.supportEmail });
-    expect(mail).toHaveAttribute("href", `mailto:${offer.supportEmail}`);
   });
 });
 

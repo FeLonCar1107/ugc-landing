@@ -183,13 +183,11 @@
       "deadlineLineTemplate": "In this edition, launch bonuses apply until {date}."
     },
     "ctaPrimary": "I want ebook access now",
-    "supportNote": "Questions? Email us:",
-    "supportEmail": "soporteila@gmail.com",
     "priceHint": "Price in USD — set per environment."
   },
   "faq": {
     "introTitle": "Frequently asked questions",
-    "introBody": "Quick answers before checkout. If you need something more specific, write us.",
+    "introBody": "Quick answers before checkout.",
     "cta": "Get the ebook",
     "items": [
       {
@@ -198,7 +196,7 @@
       },
       {
         "q": "Where do I buy and how do I get access?",
-        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s email/instructions."
+        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s instructions to access your purchase."
       },
       {
         "q": "What if I already bought another monetization ebook?",
@@ -213,8 +211,8 @@
         "a": "Refund policy depends on the payment platform and applicable law. Review checkout before buying."
       },
       {
-        "q": "Can I contact support?",
-        "a": "Yes—use the support email on this page if you need help with your purchase."
+        "q": "Can I get help with my purchase?",
+        "a": "Yes—purchase support is handled by the payment platform (e.g. Hotmart) from its checkout or help center."
       }
     ]
   },

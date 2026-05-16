@@ -183,13 +183,11 @@
       "deadlineLineTemplate": "En esta edición, los bonuses de lanzamiento aplican hasta el {date}."
     },
     "ctaPrimary": "Quiero mi acceso al ebook ahora",
-    "supportNote": "¿Dudas? Escríbenos:",
-    "supportEmail": "soporteila@gmail.com",
     "priceHint": "Precio en USD — configuración por entorno."
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
-    "introBody": "Respuestas rápidas antes de entrar al checkout. Si necesitas algo más específico, escríbenos.",
+    "introBody": "Respuestas rápidas antes de entrar al checkout.",
     "cta": "Quiero el ebook",
     "items": [
       {
@@ -198,7 +196,7 @@
       },
       {
         "q": "¿Dónde compro y cómo recibo el acceso?",
-        "a": "El checkout se procesa en la plataforma externa configurada para este lanzamiento (por ejemplo Hotmart). Tras pagar, sigue el correo/instrucciones de esa plataforma."
+        "a": "El checkout se procesa en la plataforma externa configurada para este lanzamiento (por ejemplo Hotmart). Tras pagar, sigue las instrucciones de esa plataforma para acceder a tu compra."
       },
       {
         "q": "¿Sirve si ya compré otro ebook de monetización?",
@@ -213,8 +211,8 @@
         "a": "La política de reembolsos depende de la plataforma de pago y del alcance legal aplicable. Revísalo en la página de checkout antes de comprar."
       },
       {
-        "q": "¿Puedo escribirles por soporte?",
-        "a": "Sí: usa el correo de soporte indicado en la página si necesitas ayuda con tu compra."
+        "q": "¿Puedo obtener ayuda con mi compra?",
+        "a": "Sí: el soporte de compra lo gestiona la plataforma de pago (por ejemplo Hotmart) desde su checkout o centro de ayuda."
       }
     ]
   },

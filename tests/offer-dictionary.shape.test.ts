@@ -38,7 +38,6 @@ function assertOfferStackContract(
   expect(offer.urgency.title).toBeTruthy();
   expect(offer.urgency.bullets.length).toBeGreaterThan(0);
   expect(offer.ctaPrimary).toBeTruthy();
-  expect(offer.supportEmail).toMatch(/@/);
   expect(offer.priceHint).toBeTruthy();
 }
 
