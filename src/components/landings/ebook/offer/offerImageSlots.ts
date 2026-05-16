@@ -17,7 +17,7 @@ export const OFFER_EBOOK_IMAGE_QUALITY = 96;
 export const OFFER_EBOOK_SIZES = `(max-width: 768px) min(${OFFER_EBOOK_MAX_WIDTH_PX}px, 88vw), (max-width: 1024px) 42vw, ${OFFER_EBOOK_MAX_WIDTH_PX}px`;
 
 export const OFFER_EBOOK_SLOT_CLASS =
-  `relative mx-auto flex w-full max-w-[min(${OFFER_EBOOK_MAX_WIDTH_PX}px,88vw)] flex-col` as const;
+  `relative mx-auto flex w-full max-w-[min(${OFFER_EBOOK_MAX_WIDTH_PX}px,88vw)] flex-col mt-5 mb-10 md:-mt-14` as const;
 
 export const OFFER_EBOOK_FRAME_CLASS =
   `relative w-full shrink-0 ${OFFER_EBOOK_ASPECT_CLASS}` as const;
