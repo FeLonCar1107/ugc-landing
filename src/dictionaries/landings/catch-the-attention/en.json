@@ -7,8 +7,8 @@
     "eyebrow": "Saga for creators",
     "productTitle": "Command the attention",
     "headline": "Boost your digital presence, look more professional, and open new opportunities",
-    "subhead": "It’s not a talent problem — it’s a structure problem. Stop building without foundations and create a brand people understand, connect with, and buy into — step by step, designed with you in mind.",
-    "cta": "Get the ebook",
+    "subhead": "It’s not a talent problem — it’s a structure problem. Stop building without foundations and create a brand people understand, connect with, remember you for, and buy into, designed with you in mind.",
+    "cta": "Start now",
     "imageAlt": "Isabella — lead visual",
     "decorativeAlt": "Y2K collage style reference"
   },
@@ -18,11 +18,11 @@
     "cards": [
       {
         "title": "You post without pillars or a clear message",
-        "body": "Your content feels scattered: lots of loose ideas, little direction. The algorithm isn’t the only issue — architecture is missing."
+        "body": "Your content feels scattered: lots of loose ideas, little direction. The algorithm isn’t the only issue — you’re posting loose content, not a proposal."
       },
       {
         "title": "Your profile doesn’t signal a professional offer",
-        "body": "Brands look for clarity and trust. If your bio and grid don’t tell the same story, you lose partnerships before you start."
+        "body": "Brands look for clarity and trust. If your bio and feed don’t tell the same story, you lose partnerships before you start."
       },
       {
         "title": "You improvise every week with no system",
@@ -30,7 +30,7 @@
       },
       {
         "title": "Lots of effort, few measurable opportunities",
-        "body": "It’s not a discipline gap — it’s creating without a link between brand, format, and goal. Growth then feels random."
+        "body": "You give it your all and still feel like nothing takes off professionally. When every post stands on its own, the algorithm isn’t the only thing holding you back — you’re missing a goal behind what you publish."
       }
     ],
     "cta": "I want structure"
@@ -50,11 +50,11 @@
       },
       {
         "title": "Profile optimized for brands",
-        "body": "How to look professional and coherent in bio, photo, and grid without overcomplicating."
+        "body": "How to look professional and coherent in your bio, photos, and feed without overcomplicating."
       },
       {
         "title": "Intentional content (not just more posts)",
-        "body": "Planning, scripts, formats, and an idea system so you’re not stuck in improvisation."
+        "body": "Planning, scripts, formats, and an idea system so you’re not improvising."
       },
       {
         "title": "A portfolio that sells your pitch",
@@ -99,11 +99,11 @@
       },
       {
         "year": "2025",
-        "phase": "Presence that starts conversations",
+        "phase": "Recognition and new opportunities",
         "bullets": [
-          "Portfolio and proof aligned with the message",
-          "Less creative chaos, more focused opportunities",
-          "Content as a sales tool, not filler"
+          "New opportunities arrive: partnerships and pitches that fit my brand",
+          "My audience recognizes my content instantly — consistent visual style and message",
+          "A reference in my niche for creators building structure and a professional presence"
         ]
       }
     ]
@@ -111,8 +111,8 @@
   "offer": {
     "sectionTitle": "Everything in your access",
     "hero": {
-      "badges": ["Launch offer", "Ebook + 4 bonuses"],
-      "statement": "Move from improvisation to a presence people understand: ebook + Canva portfolio template, hooks bank, weekly content planner, and brand outreach guide.",
+      "badges": ["Launch offer", "Ebook + 2 bonuses"],
+      "statement": "From creative chaos to a brand with direction: build a presence your audience recognizes instantly and brands understand.",
       "imageAlt": "“Command the attention” ebook mockup"
     },
     "valueStack": {
@@ -150,7 +150,7 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: editable Canva portfolio template",
         "painHeadline": "You don’t know where to start your portfolio",
@@ -171,7 +171,7 @@
         "outcomeBenefit": "Simple template with publish days, content type, and goal per piece — Notion version + downloadable PDF."
       },
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: how to message a brand",
         "painHeadline": "You hesitate or don’t know how to reach out to brands",
@@ -222,7 +222,7 @@
   },
   "close": {
     "headline": "Your presence deserves structure — not just more hours on your phone.",
-    "body": "If you’re ready for your brand to be understood and your content to open opportunities, this ebook is written for you.",
+    "body": "If you’re ready to be seen, for your brand to be understood and your content to open opportunities, this ebook is written for you.",
     "cta": "Get the ebook",
     "footnote": "It’s not luck: clear brand + system + action."
   }

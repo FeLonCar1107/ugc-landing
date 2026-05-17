@@ -7,8 +7,8 @@
     "eyebrow": "Saga para creadoras",
     "productTitle": "Conquista la atención",
     "headline": "Potencia tu presencia digital, luce más profesional y abre nuevas oportunidades",
-    "subhead": "No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte y venda tu propuesta — paso a paso, pensado para ti.",
-    "cta": "Quiero el ebook",
+    "subhead": "No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte, haga que te recuerden y venda tu propuesta, pensado para ti.",
+    "cta": "Empezar ahora",
     "imageAlt": "Isabella — referencia visual protagonista",
     "decorativeAlt": "Referencia estilo collage Y2K"
   },
@@ -18,11 +18,11 @@
     "cards": [
       {
         "title": "Publicas sin pilares ni mensaje ordenado",
-        "body": "Tu contenido se siente disperso: muchas ideas sueltas, poca dirección. El algoritmo no es el único culpable: falta arquitectura."
+        "body": "Tu contenido se siente disperso: muchas ideas sueltas, poca dirección. El algoritmo no es el único culpable: estás subiendo contenido suelto, no una propuesta."
       },
       {
         "title": "Tu perfil no comunica propuesta profesional",
-        "body": "Las marcas buscan claridad y confianza. Si tu bio y grid no cuentan la misma historia, pierdes colaboraciones antes de empezar."
+        "body": "Las marcas buscan claridad y confianza. Si tu bio y feed no cuentan la misma historia, pierdes colaboraciones antes de empezar."
       },
       {
         "title": "Improvisas cada semana sin sistema",
@@ -30,7 +30,7 @@
       },
       {
         "title": "Mucho esfuerzo, pocas oportunidades medibles",
-        "body": "No es falta de disciplina: es crear sin enlace entre marca, formato y objetivo. Sin eso, el crecimiento se siente aleatorio."
+        "body": "Das el 100 % y aun así sientes que nada despega en lo profesional. Si cada post es independiente, el algoritmo no es el único que te frena: te falta una meta detrás de lo que publicas."
       }
     ],
     "cta": "Quiero estructura"
@@ -50,11 +50,11 @@
       },
       {
         "title": "Perfil optimizado para marcas",
-        "body": "Cómo verte profesional y coherente en bio, foto y grid sin complicarte en exceso."
+        "body": "Cómo verte profesional y coherente en tu bio, fotos y feed sin complicarte en exceso."
       },
       {
         "title": "Contenido con intención (no solo más posts)",
-        "body": "Planeación, guiones, formatos y un sistema de ideas para no depender del improviso."
+        "body": "Planeación, guiones, formatos y un sistema de ideas para no improvisar."
       },
       {
         "title": "Portafolio que vende tu propuesta",
@@ -99,11 +99,11 @@
       },
       {
         "year": "2025",
-        "phase": "Presencia que abre conversaciones",
+        "phase": "Reconocimiento y nuevas oportunidades",
         "bullets": [
-          "Portafolio y prueba social alineados al mensaje",
-          "Menos caos creativo, más oportunidades con foco",
-          "Contenido como herramienta de venta, no relleno"
+          "Llegan oportunidades nuevas: colaboraciones y propuestas alineadas a mi marca",
+          "Mi audiencia reconoce mi contenido al instante — estilo visual y mensaje coherentes",
+          "Referente en mi nicho para otras creadoras que buscan estructura y presencia profesional"
         ]
       }
     ]
@@ -111,8 +111,8 @@
   "offer": {
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
-      "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
-      "statement": "Pasa del improviso a una presencia que se entiende: ebook + portafolio en Canva, hooks, planeación semanal y guía para contactar marcas.",
+      "badges": ["Oferta de lanzamiento", "Ebook + 2 bonuses"],
+      "statement": "Del caos creativo a una marca con dirección: construye una presencia que tu audiencia reconozca al instante y que las marcas entiendan.",
       "imageAlt": "Mockup del ebook «Conquista la atención»"
     },
     "valueStack": {
@@ -150,7 +150,7 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: plantilla editable de portafolio en Canva",
         "painHeadline": "No sabes por dónde empezar tu portafolio",
@@ -171,7 +171,7 @@
         "outcomeBenefit": "Plantilla simple con días de publicación, tipo de contenido y objetivo de cada pieza — versión Notion + PDF descargable."
       },
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: cómo escribirle a una marca",
         "painHeadline": "Te da pena o no sabes cómo acercarte a marcas",
@@ -222,7 +222,7 @@
   },
   "close": {
     "headline": "Tu presencia merece estructura, no solo más horas frente al celular.",
-    "body": "Si estás lista para que tu marca se entienda y tu contenido abra oportunidades, este ebook está escrito para ti.",
+    "body": "Si estás lista para ser vista, que tu marca se entienda y tu contenido abra oportunidades, este ebook está escrito para ti.",
     "cta": "Quiero el ebook",
     "footnote": "No es suerte: es marca clara + sistema + acción."
   }

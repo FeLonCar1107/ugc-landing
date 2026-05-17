@@ -6,15 +6,15 @@
   "hero": {
     "eyebrow": "Saga for Creators",
     "productTitle": "Magnetic Creator",
-    "headline": "Attract audience, memorability, and income without losing who you are",
+    "headline": "Attract audience, generate income, and be memorable without losing who you are",
     "subhead": "The key to successful content creation so people remember you and you start monetizing — with brand, system, and data.",
-    "cta": "Get the ebook",
+    "cta": "Start now",
     "imageAlt": "Isabella — lead visual",
     "decorativeAlt": "Warm editorial look: cherry red, vanilla, and columbia blue"
   },
   "problem": {
     "eyebrow": "Sound familiar?",
-    "title": "When you post without brand architecture or a conversion system, effort doesn’t turn into income",
+    "title": "Lots of content, little income: effort doesn’t translate into money",
     "cards": [
       {
         "title": "You feel invisible even though you post",
@@ -42,7 +42,7 @@
       "highlight": "ebook",
       "after": ""
     },
-    "giftHint": "Ebook + 4 tactical bonuses: Notion system, metrics tracker, brand negotiation script, and a safe-zone template for recording.",
+    "giftHint": "Ebook + 3 tactical bonuses: metrics tracker, brand negotiation script, and a safe-zone template for recording.",
     "outcomes": [
       {
         "title": "A brand people remember—not just “more posts”",
@@ -111,8 +111,8 @@
   "offer": {
     "sectionTitle": "Everything included in your access",
     "hero": {
-      "badges": ["Launch offer", "Ebook + 4 bonuses"],
-      "statement": "Move from scattered creator to brand with a system: positioning, conversion, smart revenue, and content that feels pro.",
+      "badges": ["Launch offer", "Ebook + 3 bonuses"],
+      "statement": "Move from posting without direction to a presence that attracts, convinces, and earns — without losing who you are.",
       "imageAlt": "Mockup of the «Magnetic Creator» ebook"
     },
     "valueStack": {
@@ -150,7 +150,7 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: Notion content system template",
         "painHeadline": "You post without a system and run out of ideas",

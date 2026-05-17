@@ -6,15 +6,15 @@
   "hero": {
     "eyebrow": "Saga para creadoras",
     "productTitle": "Creadora Magnética",
-    "headline": "Atrae audiencia, memorabilidad e ingresos sin perder tu esencia",
+    "headline": "Atrae audiencia, genera ingresos y se memorable sin perder tu esencia",
     "subhead": "La clave del éxito en la creación de contenido para que las personas te recuerden y empieces a monetizar — con marca, sistema y datos.",
-    "cta": "Quiero el ebook",
+    "cta": "Empezar ahora",
     "imageAlt": "Isabella — referencia visual protagonista",
     "decorativeAlt": "Estética editorial cálida cherry, vainilla y azul columbia"
   },
   "problem": {
     "eyebrow": "¿Te suena familiar?",
-    "title": "Cuando publicas sin arquitectura de marca ni sistema de conversión, el esfuerzo no se vuelve ingresos",
+    "title": "Mucho contenido, pocos ingresos: el esfuerzo no se traduce en dinero",
     "cards": [
       {
         "title": "Te sientes invisible aunque publiques",
@@ -42,7 +42,7 @@
       "highlight": "ebook",
       "after": ""
     },
-    "giftHint": "Ebook + 4 bonuses tácticos: sistema Notion, tracker de métricas, script con marcas y zona segura para grabar.",
+    "giftHint": "Ebook + 3 bonuses tácticos: tracker de métricas, script con marcas y zona segura para grabar.",
     "outcomes": [
       {
         "title": "Marca que se recuerda, no solo \"más posts\"",
@@ -111,8 +111,8 @@
   "offer": {
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
-      "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
-      "statement": "Pasa de creadora dispersa a marca con sistema: posicionamiento, conversión, ingresos inteligentes y contenido que se siente pro.",
+      "badges": ["Oferta de lanzamiento", "Ebook + 3 bonuses"],
+      "statement": "Pasa de publicar sin rumbo a una presencia que atrae, convence y genera ingresos — sin perder tu esencia.",
       "imageAlt": "Mockup del ebook «Creadora Magnética»"
     },
     "valueStack": {
@@ -150,7 +150,7 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: plantilla de sistema de contenido en Notion",
         "painHeadline": "Publicas sin sistema y se te acaban las ideas",

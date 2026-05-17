@@ -37,7 +37,7 @@ market.compliance.resultsDisclaimer: none
 brand.name: Saga para creadoras
 brand.tone: cercano, empoderador, experto sin intimidar; “bestie experta” que valida el esfuerzo y exige estructura con cariño; lenguaje explícitamente dirigido a mujeres creadoras
 brand.heroClaim: Potencia tu presencia digital, luce más profesional y abre nuevas oportunidades
-brand.subheadline: No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte y venda tu propuesta — paso a paso, pensado para ti.
+brand.subheadline: No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte, haga que te recuerden y venda tu propuesta — paso a paso, pensado para ti.
 brand.primaryColor: #F2619C
 brand.secondaryColor: #EDE986
 brand.tertiaryColor: #242C48
