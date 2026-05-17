@@ -47,6 +47,54 @@ describe("OfferSection", () => {
     expect(cta).toHaveAttribute("href", "#offer");
   });
 
+  it("shows only enabled bonuses and hides section when all disabled", () => {
+    const twoBonuses = {
+      ...offer,
+      bonuses: offer.bonuses.map((b, i) => ({ ...b, enabled: i < 2 })),
+    };
+    const { unmount } = render(
+      <OfferSection
+        offer={twoBonuses}
+        assetBase="/launch-assets/discover-your-character"
+        priceLine="$12 USD"
+        checkoutUrl="#"
+        sectionBandHeading=""
+        locale={Languages.ES}
+      />,
+    );
+    expect(
+      screen.getByText(twoBonuses.bonuses[0]?.painHeadline ?? ""),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(twoBonuses.bonuses[1]?.painHeadline ?? ""),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText(twoBonuses.bonuses[2]?.painHeadline ?? ""),
+    ).toBeNull();
+    unmount();
+
+    const noBonuses = {
+      ...offer,
+      bonuses: offer.bonuses.map((b) => ({ ...b, enabled: false })),
+    };
+    render(
+      <OfferSection
+        offer={noBonuses}
+        assetBase="/launch-assets/discover-your-character"
+        priceLine="$12 USD"
+        checkoutUrl="#"
+        sectionBandHeading=""
+        locale={Languages.ES}
+      />,
+    );
+    expect(
+      screen.queryByRole("heading", { name: offer.bonusesSectionTitle }),
+    ).toBeNull();
+    expect(screen.queryByText(offer.bonuses[0]?.painHeadline ?? "")).toBeNull();
+    expect(screen.getByText(offer.hero.badges[0] ?? "")).toBeInTheDocument();
+    expect(screen.queryByText(offer.hero.badges[1] ?? "")).toBeNull();
+  });
+
   it("renders value stack price line (A4)", () => {
     render(
       <OfferSection

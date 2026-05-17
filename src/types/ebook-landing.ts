@@ -61,6 +61,13 @@ export interface EbookLandingCopy {
     };
     bonusesSectionTitle: string;
     bonuses: Array<{
+      /**
+       * Show this bonus in the grid and include its value-stack row (default: on).
+       * Set `false` to hide without removing copy from the file.
+       */
+      enabled?: boolean;
+      /** Links to `valueStack.lineItems[].id` (default: b1, b2, … by array index). */
+      valueStackId?: string;
       imageFile: string;
       imageAlt: string;
       painHeadline: string;

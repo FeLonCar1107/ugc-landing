@@ -150,24 +150,28 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
+        "enabled": true,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: plantilla editable de portafolio en Canva",
         "painHeadline": "No sabes por dónde empezar tu portafolio",
         "outcomeBenefit": "Estructura ya armada en Canva: presentación, servicios, videos y contacto — diseño alineado a estética femenina/pro."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: banco de hooks para contenido",
         "painHeadline": "Te quedas en blanco al grabar",
         "outcomeBenefit": "50+ hooks reales para usar hoy — no frases genéricas; reduces el bloqueo de “no sé cómo empezar”."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: planeación semanal de contenido",
         "painHeadline": "Publicas sin plan ni objetivo claro",
         "outcomeBenefit": "Plantilla simple con días de publicación, tipo de contenido y objetivo de cada pieza — versión Notion + PDF descargable."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: cómo escribirle a una marca",
         "painHeadline": "Te da pena o no sabes cómo acercarte a marcas",

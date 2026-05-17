@@ -150,24 +150,28 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
+        "enabled": true,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: plantilla de sistema de contenido en Notion",
         "painHeadline": "Publicas sin sistema y se te acaban las ideas",
         "outcomeBenefit": "Tu sistema en Notion: banco de ideas, calendario y tracking de contenido — dejas de improvisar cada semana con la misma base que uso yo."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: tracker de métricas simplificado",
         "painHeadline": "Miras métricas pero no sabes qué hacer después",
         "outcomeBenefit": "Tracker con views, retención, guardados y conclusiones — con espacio dedicado a decisiones (lo clave: qué hacer después con los datos)."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: script de negociación con marcas",
         "painHeadline": "Te escriben marcas y no sabes cómo responder ni cobrar",
         "outcomeBenefit": "Script nivel pro: cómo responder colaboraciones, subir precios con seguridad y decir que no sin quemar relaciones."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: plantilla de zona segura para videos",
         "painHeadline": "Te trabas al grabar o pierdes el hilo en cámara",

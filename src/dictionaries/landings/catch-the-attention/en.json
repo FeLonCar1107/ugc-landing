@@ -150,24 +150,28 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
+        "enabled": true,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: editable Canva portfolio template",
         "painHeadline": "You don’t know where to start your portfolio",
         "outcomeBenefit": "Pre-built Canva structure: intro, services, videos, and contact — feminine/pro design that removes “I don’t know how to begin.”"
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: content hooks bank",
         "painHeadline": "You freeze when it’s time to record",
         "outcomeBenefit": "50+ real hooks to use today — not generic lines; cuts the biggest blocker: getting started."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: weekly content planning template",
         "painHeadline": "You post without a plan or clear goal",
         "outcomeBenefit": "Simple template with publish days, content type, and goal per piece — Notion version + downloadable PDF."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: how to message a brand",
         "painHeadline": "You hesitate or don’t know how to reach out to brands",

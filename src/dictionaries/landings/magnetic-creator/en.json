@@ -150,24 +150,28 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
+        "enabled": true,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: Notion content system template",
         "painHeadline": "You post without a system and run out of ideas",
         "outcomeBenefit": "Your Notion system: ideas bank, calendar, and content tracking—the same base I use so you stop winging it every week."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: simplified metrics tracker",
         "painHeadline": "You check metrics but don’t know what to do next",
         "outcomeBenefit": "Tracker for views, retention, saves, and takeaways—with a dedicated decisions section (the key part: what to do next with the data)."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: brand negotiation script",
         "painHeadline": "Brands reach out and you’re unsure how to reply or price",
         "outcomeBenefit": "Pro-level script: how to reply to collabs, raise rates with confidence, and say no without burning bridges."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: safe-zone template for videos",
         "painHeadline": "You freeze on camera or lose the thread while recording",

@@ -4,12 +4,15 @@ import type { EbookLandingCopy } from "@/types/ebook-landing";
 import CheckoutLink from "../CheckoutLink";
 import GrainOverlay from "../GrainOverlay";
 import SolutionSectionHeading from "../SolutionSectionHeading";
-import { IMAGE_SLOTS, SOLUTION_TROPHY_INTRINSIC } from "../ebookLandingConstants";
+import {
+  IMAGE_SLOTS,
+  SOLUTION_TROPHY_INTRINSIC,
+} from "../ebookLandingConstants";
+import { hasActiveBonuses } from "@/utils/offerBonuses";
 import {
   ScrollReveal,
   ScrollRevealLi,
   ScrollRevealStaggerUl,
-  ScrollRevealStagger,
 } from "../ScrollReveal";
 
 const timelineMaskStyle = {
@@ -91,19 +94,26 @@ export default function EbookSolutionSection({
                 />
               </div>
             </div>
-            <p className="mt-5 text-center text-xs font-medium text-brand-accent">
-              {solution.giftHint}
-            </p>
+            {hasActiveBonuses(copy.offer) && solution.giftHint ? (
+              <p className="mt-5 text-center text-xs font-medium text-brand-accent">
+                {solution.giftHint}
+              </p>
+            ) : null}
           </ScrollReveal>
           <div className="flex-1 space-y-4">
             <ScrollRevealStaggerUl className="space-y-7 md:space-y-8">
               {solution.outcomes.map((outcome, index) => (
-                <ScrollRevealLi key={`${outcome.title}-${index}`} className="flex gap-4 md:gap-5">
+                <ScrollRevealLi
+                  key={`${outcome.title}-${index}`}
+                  className="flex gap-4 md:gap-5"
+                >
                   <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-accent/15 text-sm font-bold text-brand-accent">
                     ✓
                   </span>
                   <div className="min-w-0">
-                    <p className="font-semibold leading-snug">{outcome.title}</p>
+                    <p className="font-semibold leading-snug">
+                      {outcome.title}
+                    </p>
                     <p className="mt-1 text-sm leading-relaxed text-brand-ink/80">
                       {outcome.body}
                     </p>

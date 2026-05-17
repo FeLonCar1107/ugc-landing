@@ -75,7 +75,6 @@ export default function EbookLanding({
   const heroVisual = getLaunchHeroVisual(launchSlug);
   const offerPhaseLabel = getLaunchOfferPhaseLabel(launchSlug);
   const offerDeadlineIso = getLaunchBonusBundleDeadlineIso(launchSlug);
-
   return (
     <div
       data-landing-slug={slug}

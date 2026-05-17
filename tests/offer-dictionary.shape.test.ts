@@ -31,6 +31,10 @@ function assertOfferStackContract(
     "offer_bonus_04.png",
   ]);
   for (const b of offer.bonuses) {
+    expect(
+      typeof b.enabled === "boolean" || b.enabled === undefined,
+      `${label} bonus.enabled must be boolean when set`,
+    ).toBe(true);
     expect(b.imageAlt).toBeTruthy();
     expect(b.painHeadline).toBeTruthy();
     expect(b.outcomeBenefit).toBeTruthy();

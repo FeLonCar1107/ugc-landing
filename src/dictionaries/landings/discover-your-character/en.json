@@ -46,29 +46,29 @@
     "outcomes": [
       {
         "title": "Break limiting beliefs",
-        "body": "See the strategic mistakes keeping you stuck and how to exit autopilot."
+        "body": "See the mistakes keeping you stuck and how to exit autopilot."
       },
       {
         "title": "Define visual identity with intent",
         "body": "Clear steps so your content looks coherent and recognizable."
       },
       {
-        "title": "Content structures + retention",
-        "body": "Mental templates so every piece has a goal and direction."
+        "title": "Content structure and retention",
+        "body": "Guidelines so every piece you publish has a goal and direction."
       },
       {
         "title": "A realistic monetization mindset",
         "body": "From improvisation to a system you can repeat without relying only on \"motivation\"."
       }
     ],
-    "ctaTop": "See the offer",
+    "ctaTop": "See offer",
     "ctaBottom": "Start now",
     "imageAlt": "Isabella — method applied in real content"
   },
   "proof": {
     "badge": "My story",
     "headline": "This system didn’t come from theory — it came from years of real content.",
-    "intro": "Before teaching it, I lived it: mistakes, pivots, and a method that finally organized my message and results.",
+    "intro": "Before teaching it, I lived it firsthand: years of trial and error that led me to a method that organized my message and results.",
     "timeline": [
       {
         "year": "2022",
@@ -112,7 +112,7 @@
     "sectionTitle": "Everything in your access",
     "hero": {
       "badges": ["Launch offer", "Ebook + 4 bonuses"],
-      "statement": "Move from improvising to a clear identity system: ebook + resources you can execute with this week.",
+      "statement": "Stop improvising and start creating content with clear identity: ebook + resources you can execute today.",
       "imageAlt": "“Discover your character” ebook mockup"
     },
     "valueStack": {
@@ -150,24 +150,28 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
+        "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: weekly content structure template",
         "painHeadline": "You post without a through-line",
         "outcomeBenefit": "A weekly template so every piece has intent, tone, and a slot on your calendar."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: content idea bank",
         "painHeadline": "You freeze in front of the camera",
         "outcomeBenefit": "30–50 prompts to start in minutes without relying only on trends."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: visual identity moodboard",
         "painHeadline": "Your feed looks inconsistent",
         "outcomeBenefit": "A moodboard guide to align palette, type, and references with your voice."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: consistency routine",
         "painHeadline": "Consistency depends on motivation",
@@ -214,7 +218,7 @@
   },
   "close": {
     "headline": "Your personal brand needs direction — not more lost hours scrolling.",
-    "body": "If you’re ready to move from improvisation to a repeatable system, this ebook is written for you.",
+    "body": "If you’re ready to move from creating without structure to a repeatable system, this ebook is written for you.",
     "cta": "Start now",
     "footnote": "It’s not magic: focus + structure + action."
   }

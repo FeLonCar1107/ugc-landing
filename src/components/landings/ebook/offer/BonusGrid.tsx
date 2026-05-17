@@ -5,6 +5,14 @@ import {
   OFFER_BONUS_IMAGE_CLASS,
 } from "./offerImageSlots";
 
+/** Column count matches active bonuses so each row shares equal cell height. */
+function bonusGridColumnClass(count: number): string {
+  if (count <= 1) return "grid-cols-1";
+  if (count === 2) return "grid-cols-1 sm:grid-cols-2";
+  if (count === 3) return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+  return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+}
+
 export default function BonusGrid({
   bonuses,
   asset,
@@ -13,13 +21,15 @@ export default function BonusGrid({
   asset: (filename: string) => string;
 }) {
   return (
-    <div className="grid w-full min-w-0 grid-cols-1 items-stretch gap-3 sm:grid-cols-2 sm:gap-3 md:gap-4 lg:grid-cols-4 lg:gap-3">
+    <div
+      className={`mx-auto grid w-full min-w-0 max-w-5xl items-stretch justify-items-center gap-3 sm:gap-3 md:gap-4 ${bonusGridColumnClass(bonuses.length)}`}
+    >
       {bonuses.map((bonus, i) => (
         <div
           key={`${bonus.imageFile}-${i}`}
-          className="flex h-full min-h-0 min-w-0 flex-col overflow-hidden rounded-xl border border-brand-ink/10 bg-brand-card shadow-sm"
+          className="flex h-full w-full max-w-[17.5rem] flex-col overflow-hidden rounded-xl border border-brand-ink/10 bg-brand-card shadow-sm lg:max-w-none"
         >
-          <div className="flex w-full justify-center px-2 pt-2 sm:px-3 sm:pt-3">
+          <div className="flex w-full shrink-0 justify-center px-2 pt-2 sm:px-3 sm:pt-3">
             <div
               className={`${OFFER_BONUS_FRAME_CLASS} w-full max-w-[11.5rem] sm:max-w-[12.25rem]`}
             >

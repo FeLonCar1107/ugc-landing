@@ -45,30 +45,30 @@
     "giftHint": "Incluye bonuses tácticos para ejecutar rápido.",
     "outcomes": [
       {
-        "title": "Romper creencias que te frenan",
-        "body": "Verás qué errores estratégicos te mantienen estancada y cómo salir del modo automático."
+        "title": "Romper creencias limitantes",
+        "body": "Verás qué errores te mantienen estancada y cómo salir del modo automático."
       },
       {
         "title": "Definir identidad visual con intención",
         "body": "Pasos claros para que tu contenido se vea coherente y reconocible."
       },
       {
-        "title": "Estructuras de contenido + retención",
-        "body": "Plantillas mentales para que cada pieza tenga objetivo y dirección."
+        "title": "Estructura de contenido y retención",
+        "body": "Pautas para que cada pieza que publiques tenga objetivo y dirección."
       },
       {
         "title": "Enfoque de monetización realista",
         "body": "De la improvisación a un sistema que puedes repetir sin depender solo del \"ánimo\"."
       }
     ],
-    "ctaTop": "Ver la oferta",
+    "ctaTop": "Ver oferta",
     "ctaBottom": "Empezar ahora",
     "imageAlt": "Isabella — método aplicado en contenido real"
   },
   "proof": {
     "badge": "Mi historia",
     "headline": "Este sistema no salió de teoría: salió de años creando contenido real.",
-    "intro": "Antes de enseñarlo, lo viví en primera persona: errores, vueltas y un método que ordenó mi mensaje y mis resultados.",
+    "intro": "Antes de enseñarlo, lo viví en primera persona: años de prueba y error que me llevaron a un método que ordenó mi mensaje y mis resultados.",
     "timeline": [
       {
         "year": "2022",
@@ -112,7 +112,7 @@
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
       "badges": ["Oferta de lanzamiento", "Ebook + 4 bonuses"],
-      "statement": "Pasa de improvisar a un sistema con identidad clara: ebook + recursos para ejecutar esta semana.",
+      "statement": "Deja de improvisar y comienza a crear contenido con identidad clara: ebook + recursos para ejecutar hoy mismo.",
       "imageAlt": "Mockup del ebook «Descubre tu personaje»"
     },
     "valueStack": {
@@ -150,24 +150,28 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
+        "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: plantilla de estructura de contenido",
         "painHeadline": "Publicas sin un hilo conductor",
         "outcomeBenefit": "Plantilla semanal para que cada pieza tenga objetivo, tono y lugar en tu calendario."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: banco de ideas de contenido",
         "painHeadline": "Te quedas en blanco frente a la cámara",
         "outcomeBenefit": "Banco de 30–50 ideas para arrancar en minutos sin depender solo del algoritmo."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: moodboard de identidad visual",
         "painHeadline": "Tu feed se ve inconsistente",
         "outcomeBenefit": "Guía de moodboard para alinear paleta, tipografías y referencias visuales con tu voz."
       },
       {
+        "enabled": true,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: rutina de constancia",
         "painHeadline": "La constancia depende del ánimo",
@@ -214,7 +218,7 @@
   },
   "close": {
     "headline": "Tu marca personal necesita dirección, no más horas perdidas en el feed.",
-    "body": "Si estás lista para pasar del improviso a un sistema que puedes repetir, este ebook está escrito para ti.",
+    "body": "Si estás lista para pasar de crear sin estructura a un sistema que puedes repetir, este ebook está escrito para ti.",
     "cta": "Empezar ahora",
     "footnote": "No es magia: es enfoque + estructura + acción."
   }
