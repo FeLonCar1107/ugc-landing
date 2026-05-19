@@ -42,11 +42,9 @@
   --carousel-radius-md: 1.125rem;
   --carousel-radius-lg: 1.25rem;
   --carousel-tile-shadow:
-    0 12px 40px -18px rgba(83, 4, 36, 0.16),
-    0 0 0 1px rgba(156, 17, 75, 0.06);
+    0 12px 40px -18px rgba(83, 4, 36, 0.16), 0 0 0 1px rgba(156, 17, 75, 0.06);
   --carousel-tile-shadow-active:
-    0 20px 48px -20px rgba(83, 4, 36, 0.22),
-    0 0 0 1px rgba(156, 17, 75, 0.08);
+    0 20px 48px -20px rgba(83, 4, 36, 0.22), 0 0 0 1px rgba(156, 17, 75, 0.08);
   --carousel-tile-placeholder: rgba(252, 228, 236, 0.5);
 }
 
@@ -118,7 +116,9 @@ html.launch-scroll-document body {
   z-index: 10000;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s, opacity 0.1s;
+  transition:
+    transform 0.1s,
+    opacity 0.1s;
 }
 
 @media screen and (max-width: 640px) {
@@ -677,7 +677,9 @@ textarea:focus {
     left: 0;
     right: 0;
     margin: auto;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+    transition:
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.45s ease;
     cursor: pointer;
     border-radius: 12px;
     padding: 3px;
@@ -691,21 +693,27 @@ textarea:focus {
     transform: translateX(0) scale(1);
     opacity: 1;
     z-index: 6;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+    transition:
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.45s ease;
   }
 
   .prev {
     transform: translateX(-62%) scale(0.86) rotate(-5deg);
     opacity: 0.55;
     z-index: 4;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+    transition:
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.45s ease;
   }
 
   .next {
     transform: translateX(62%) scale(0.86) rotate(5deg);
     opacity: 0.55;
     z-index: 4;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+    transition:
+      transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.45s ease;
   }
 
   /* Extra-narrow phones: keep deck inside viewport */
@@ -1152,7 +1160,9 @@ textarea:focus {
   height: 2px;
   background-color: #f3419c;
   opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  transition:
+    opacity 300ms,
+    transform 300ms;
 }
 
 .animate-underline:hover::after,
@@ -1321,19 +1331,27 @@ textarea:focus {
 
 @keyframes l5 {
   0% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
+    box-shadow:
+      20px 0 #000,
+      -20px 0 #0002;
     background: #000;
   }
   33% {
-    box-shadow: 20px 0 #000, -20px 0 #0002;
+    box-shadow:
+      20px 0 #000,
+      -20px 0 #0002;
     background: #0002;
   }
   66% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
+    box-shadow:
+      20px 0 #0002,
+      -20px 0 #000;
     background: #0002;
   }
   100% {
-    box-shadow: 20px 0 #0002, -20px 0 #000;
+    box-shadow:
+      20px 0 #0002,
+      -20px 0 #000;
     background: #000;
   }
 }
@@ -1354,12 +1372,16 @@ textarea:focus {
   top: -25px;
   height: 40px;
   width: 40px;
-  background-image: linear-gradient(#fff 45px, transparent 0),
+  background-image:
+    linear-gradient(#fff 45px, transparent 0),
     linear-gradient(#fdf2f8 30px, transparent 0),
     linear-gradient(#fdf2f8 30px, transparent 0);
   background-repeat: no-repeat;
   background-size: 30px 4px;
-  background-position: 0px 11px, 8px 35px, 0px 60px;
+  background-position:
+    0px 11px,
+    8px 35px,
+    0px 60px;
   animation: envDropping 0.75s linear infinite;
 }
 
@@ -1374,18 +1396,30 @@ textarea:focus {
 
 @keyframes envDropping {
   0% {
-    background-position: 100px 11px, 115px 35px, 105px 60px;
+    background-position:
+      100px 11px,
+      115px 35px,
+      105px 60px;
     opacity: 1;
   }
   50% {
-    background-position: 0px 11px, 20px 35px, 5px 60px;
+    background-position:
+      0px 11px,
+      20px 35px,
+      5px 60px;
   }
   60% {
-    background-position: -30px 11px, 0px 35px, -10px 60px;
+    background-position:
+      -30px 11px,
+      0px 35px,
+      -10px 60px;
   }
   75%,
   100% {
-    background-position: -30px 11px, -30px 35px, -30px 60px;
+    background-position:
+      -30px 11px,
+      -30px 35px,
+      -30px 60px;
     opacity: 0;
   }
 }
@@ -1408,7 +1442,8 @@ textarea:focus {
   top: 15px;
   left: 15px;
   position: absolute;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       100deg,
       transparent,
       rgba(255, 255, 255, 0.5) 50%,
@@ -1419,18 +1454,38 @@ textarea:focus {
     linear-gradient(#fde6f3 18px, transparent 0),
     linear-gradient(#fde6f3 66px, transparent 0);
   background-repeat: no-repeat;
-  background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px, 290px 56px;
-  background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  background-size:
+    75px 130px,
+    55px 56px,
+    160px 30px,
+    260px 20px,
+    290px 56px;
+  background-position:
+    0% 0,
+    0 0,
+    70px 5px,
+    70px 38px,
+    0px 66px;
   box-sizing: border-box;
   animation: animLoader 1s linear infinite;
 }
 
 @keyframes animLoader {
   0% {
-    background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+    background-position:
+      0% 0,
+      0 0,
+      70px 5px,
+      70px 38px,
+      0px 66px;
   }
   100% {
-    background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+    background-position:
+      150% 0,
+      0 0,
+      70px 5px,
+      70px 38px,
+      0px 66px;
   }
 }
 
@@ -1441,11 +1496,11 @@ textarea:focus {
  *
  * discover-your-character — Saga “Descubre tu personaje” (matches historical `:root` brand row).
  *
- * catch-the-attention — @DESIGNERLAMB palette + section bands
- * (Powdered Lime #D0FFA4, Night Skies #000181, Violet #E8A0FF,
- *  Blue Raspberry #006EE9, Sunny Skies #83E7FF).
+ * catch-the-attention — Frambuesa Editorial: Raspberry #D4005A · Rose Blush #FFDCF0
+ * · Plum-Black #1A0812 · Rosa Saga #FF62B4. Bold, attention-catching.
  *
- * magnetic-creator — Pinterest / warm editorial palette + section bands.
+ * magnetic-creator — Rosa Dorada Premium: Deep Rose #C6286C · Champagne Gold #C49828
+ * · Ivory #FEF9F0 · Bordeaux Rose #910C46. The premium saga finale.
  *
  * Section hooks: `.ebook-catch-surface--{hero|problem|...}` wraps every section (`display:contents`).
  * Mobile sticky: every slug uses `.ebook-catch-sticky-bar` (rules per slug below).
@@ -1481,93 +1536,121 @@ textarea:focus {
   box-shadow: 0 10px 26px rgb(var(--brand-accent-deep-rgb) / 0.28) !important;
 }
 
-[data-landing-slug="discover-your-character"] .ebook-catch-sticky-bar a[href]:hover {
+[data-landing-slug="discover-your-character"]
+  .ebook-catch-sticky-bar
+  a[href]:hover {
   background-color: rgb(var(--brand-accent-deep-rgb)) !important;
   color: rgb(var(--brand-card-rgb)) !important;
 }
 
 [data-landing-slug="catch-the-attention"] {
-  /* Default page wash — warm cream (palette card ground), distinct from Saga */
-  --brand-ink-rgb: 0 1 129; /* Night Skies */
-  --brand-surface-rgb: 253 251 247;
+  /*
+   * Frambuesa Editorial — Vol. 2 "Capta la Atención"
+   * El ADN de la saga (rosa #FF62B4 / gold #D4AF37 / cream) amplificado hacia
+   * un raspberry profundo y dramático. Energía editorial bold, confiada,
+   * capaz de detener el scroll. Cohesiona con la portada del ebook.
+   *
+   * Progressión narrativa de la saga:
+   *   Vol 1 — discover-your-character: Rosa Saga pura (descubrimiento)
+   *   Vol 2 — catch-the-attention:    Frambuesa Editorial (boldness)
+   *   Vol 3 — magnetic-creator:       Rosa Dorada Premium (culminación)
+   */
+  --brand-ink-rgb: 26 8 18; /* Tinta plum-black  #1A0812 */
+  --brand-surface-rgb: 253 247 250; /* Crema rosada      #FDF7FA */
   --brand-card-rgb: 255 255 255;
-  --brand-accent-rgb: 0 110 233; /* Blue Raspberry */
-  --brand-accent-mid-rgb: 131 231 255; /* Sunny Skies */
-  --brand-accent-deep-rgb: 0 72 188; /* Blue Raspberry (hover) */
-  --brand-blush-rgb: 232 160 255; /* Violet */
-  --brand-rose-rgb: 238 184 255; /* Violet (lifted for tints) */
-  --brand-warm-rgb: 24 48 120;
-  --brand-cutout-from-rgb: 255 254 252;
-  --brand-cutout-via-rgb: 245 252 255;
-  --brand-cutout-to-rgb: 232 245 255;
-  --brand-shadow-tint-rgb: 0 90 200;
+  --brand-accent-rgb: 212 0 90; /* Raspberry         #D4005A */
+  --brand-accent-mid-rgb: 255 98 180; /* Rosa saga         #FF62B4 */
+  --brand-accent-deep-rgb: 158 0 68; /* Fuchsia profundo  #9E0044 */
+  --brand-blush-rgb: 255 220 240; /* Rose blush        #FFDCF0 */
+  --brand-rose-rgb: 255 185 225; /* Rosa brillante    #FFB9E1 */
+  --brand-warm-rgb: 156 88 116; /* Mauve polvoriento #9C5874 */
+  --brand-cutout-from-rgb: 255 253 255;
+  --brand-cutout-via-rgb: 252 244 251;
+  --brand-cutout-to-rgb: 248 234 246;
+  --brand-shadow-tint-rgb: 158 0 68;
 }
 
-/* —— Hero: Violet → Blue Raspberry → Powdered Lime mist; title in Blue Raspberry —— */
+/* —— Hero: crema rosada → rose blush → raspberry mist —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section {
   background-image: linear-gradient(
     168deg,
-    rgb(232 160 255 / 0.96) 0%,
-    rgb(0 110 233 / 0.58) 52%,
-    rgb(208 255 164 / 0.44) 100%
+    rgb(253 247 250 / 0.98) 0%,
+    rgb(255 220 240 / 0.7) 55%,
+    rgb(212 0 90 / 0.08) 100%
   ) !important;
   background-color: transparent !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section h1 {
-  color: rgb(0 110 233) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--hero
+  > section
+  h1 {
+  color: rgb(212 0 90) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section h2 {
-  color: rgb(0 1 129) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--hero
+  > section
+  h2 {
+  color: rgb(26 8 18) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--hero > section a[href] {
-  background-color: rgb(0 110 233) !important;
-  border-color: rgb(208 255 164) !important;
-  color: rgb(208 255 164) !important;
-  box-shadow: 0 10px 28px rgb(0 1 129 / 0.2) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--hero
+  > section
+  a[href] {
+  background-color: rgb(212 0 90) !important;
+  border-color: rgb(255 185 225) !important;
+  color: rgb(255 255 255) !important;
+  box-shadow: 0 10px 28px rgb(158 0 68 / 0.28) !important;
 }
 
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--hero
   > section
   a[href]:hover {
-  background-color: rgb(0 72 188) !important;
-  color: rgb(255 255 252) !important;
+  background-color: rgb(158 0 68) !important;
+  color: rgb(255 255 255) !important;
 }
 
-/* —— Problem: Powdered Lime field + Night Skies / Blue Raspberry accents —— */
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--problem > section {
-  background-color: rgb(208 255 164 / 0.88) !important;
-  border-color: rgb(0 110 233 / 0.22) !important;
+/* —— Problem: rose blush field + plum/raspberry accents —— */
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--problem
+  > section {
+  background-color: rgb(255 220 240 / 0.58) !important;
+  border-color: rgb(212 0 90 / 0.15) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--problem > section a[href] {
-  background-color: rgb(0 1 129) !important;
-  color: rgb(208 255 164) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--problem
+  > section
+  a[href] {
+  background-color: rgb(26 8 18) !important;
+  color: rgb(255 185 225) !important;
 }
 
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--problem
   > section
   a[href]:hover {
-  background-color: rgb(0 110 233) !important;
-  color: rgb(208 255 164) !important;
+  background-color: rgb(212 0 90) !important;
+  color: rgb(255 255 255) !important;
 }
 
-/* —— Solution: Sunny Skies wash —— */
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--solution > section {
-  background-color: rgb(131 231 255 / 0.4) !important;
+/* —— Solution: rose petal wash —— */
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--solution
+  > section {
+  background-color: rgb(255 235 248 / 0.38) !important;
 }
 
-/* Top CTA: outline / ghost on sunny wash */
+/* Top CTA: outline / ghost sobre rose wash */
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--solution
   > section
   a[href].border-2 {
-  border-color: rgb(0 110 233 / 0.95) !important;
-  color: rgb(0 110 233) !important;
+  border-color: rgb(212 0 90 / 0.88) !important;
+  color: rgb(212 0 90) !important;
   background-color: rgb(255 255 255 / 0.92) !important;
 }
 
@@ -1575,152 +1658,190 @@ textarea:focus {
   .ebook-catch-surface--solution
   > section
   a[href].border-2:hover {
-  background-color: rgb(0 110 233) !important;
-  color: rgb(208 255 164) !important;
+  background-color: rgb(212 0 90) !important;
+  color: rgb(255 255 255) !important;
 }
 
-/* Bottom CTA: Blue Raspberry + Powdered Lime (palette pairing) */
+/* Bottom CTA: raspberry sólido */
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--solution
   > section
   a[href]:not(.border-2) {
-  background-color: rgb(0 110 233) !important;
-  color: rgb(208 255 164) !important;
-  box-shadow: 0 10px 24px rgb(0 1 129 / 0.22) !important;
+  background-color: rgb(212 0 90) !important;
+  color: rgb(255 255 255) !important;
+  box-shadow: 0 10px 24px rgb(158 0 68 / 0.26) !important;
 }
 
 [data-landing-slug="catch-the-attention"]
   .ebook-catch-surface--solution
   > section
   a[href]:not(.border-2):hover {
-  background-color: rgb(0 72 188) !important;
-  color: rgb(255 255 252) !important;
+  background-color: rgb(158 0 68) !important;
+  color: rgb(255 255 255) !important;
 }
 
-/* —— Proof: Violet ↔ Sunny Skies ↔ Blue Raspberry diagonal —— */
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--proof > section {
+/* —— Proof: crema rosada → rose blush → raspberry diagonal —— */
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--proof
+  > section {
   background-image: linear-gradient(
     128deg,
-    rgb(232 160 255 / 0.92) 0%,
-    rgb(131 231 255 / 0.52) 45%,
-    rgb(0 110 233 / 0.28) 100%
+    rgb(253 247 250 / 0.98) 0%,
+    rgb(255 220 240 / 0.62) 48%,
+    rgb(212 0 90 / 0.1) 100%
   ) !important;
   background-color: transparent !important;
 }
 
-/* —— Offer: outer band Violet → Sunny Skies; inner card stays white —— */
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--offer > section {
+/* —— Offer: rose blush → crema rosada; card con borde raspberry —— */
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--offer
+  > section {
   background: linear-gradient(
     180deg,
-    rgb(232 160 255 / 0.52) 0%,
-    rgb(131 231 255 / 0.28) 100%
+    rgb(255 220 240 / 0.38) 0%,
+    rgb(253 247 250 / 0.88) 100%
   ) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--offer .rounded-3xl.border {
-  border-color: rgb(0 110 233 / 0.35) !important;
-  box-shadow: 0 24px 50px -22px rgb(0 1 129 / 0.18) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--offer
+  .rounded-3xl.border {
+  border-color: rgb(212 0 90 / 0.26) !important;
+  box-shadow: 0 24px 50px -22px rgb(26 8 18 / 0.13) !important;
 }
 
-/* —— FAQ: Sunny Skies panel + Powdered Lime / Blue Raspberry CTA —— */
+/* —— FAQ: rose blush panel —— */
 [data-landing-slug="catch-the-attention"] .ebook-catch-surface--faq > section {
-  background-color: rgb(131 231 255 / 0.44) !important;
+  background-color: rgb(255 220 240 / 0.4) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--faq > section a[href] {
-  background-color: rgb(208 255 164) !important;
-  color: rgb(0 1 129) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--faq
+  > section
+  a[href] {
+  background-color: rgb(255 185 225) !important;
+  color: rgb(26 8 18) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--faq > section a[href]:hover {
-  background-color: rgb(0 110 233) !important;
-  color: rgb(208 255 164) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--faq
+  > section
+  a[href]:hover {
+  background-color: rgb(212 0 90) !important;
+  color: rgb(255 255 255) !important;
 }
 
-/* —— Close: Night Skies → Blue Raspberry → Violet; Powdered Lime copy —— */
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section {
-  background: linear-gradient(125deg, rgb(0 1 129) 0%, rgb(0 110 233) 52%, rgb(232 160 255) 100%) !important;
-  color: rgb(208 255 164) !important;
+/* —— Close: plum-black → fuchsia → raspberry; texto crema rosada —— */
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--close
+  > section {
+  background: linear-gradient(
+    125deg,
+    rgb(26 8 18) 0%,
+    rgb(158 0 68) 48%,
+    rgb(212 0 90) 100%
+  ) !important;
+  color: rgb(255 235 248) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section h2,
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section p {
-  color: rgb(208 255 164) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--close
+  > section
+  h2,
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--close
+  > section
+  p {
+  color: rgb(255 235 248) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section a[href] {
-  background-color: rgb(208 255 164) !important;
-  color: rgb(0 110 233) !important;
-  box-shadow: 0 12px 32px rgb(0 1 129 / 0.28) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--close
+  > section
+  a[href] {
+  background-color: rgb(255 185 225) !important;
+  color: rgb(26 8 18) !important;
+  box-shadow: 0 12px 32px rgb(26 8 18 / 0.32) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-surface--close > section a[href]:hover {
-  background-color: rgb(131 231 255) !important;
-  color: rgb(0 1 129) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-surface--close
+  > section
+  a[href]:hover {
+  background-color: rgb(255 220 240) !important;
+  color: rgb(26 8 18) !important;
 }
 
-/* Mobile sticky bar — Violet glass + Blue Raspberry / Lime CTA */
+/* Mobile sticky bar — crema rosada + raspberry CTA */
 [data-landing-slug="catch-the-attention"] .ebook-catch-sticky-bar {
-  background-color: rgb(232 160 255 / 0.92) !important;
-  border-color: rgb(0 110 233 / 0.3) !important;
+  background-color: rgb(253 247 250 / 0.96) !important;
+  border-color: rgb(212 0 90 / 0.18) !important;
 }
 
 [data-landing-slug="catch-the-attention"] .ebook-catch-sticky-bar a[href] {
-  background-color: rgb(0 110 233) !important;
-  color: rgb(208 255 164) !important;
-  box-shadow: 0 10px 26px rgb(0 1 129 / 0.22) !important;
+  background-color: rgb(212 0 90) !important;
+  color: rgb(255 255 255) !important;
+  box-shadow: 0 10px 26px rgb(158 0 68 / 0.28) !important;
 }
 
-[data-landing-slug="catch-the-attention"] .ebook-catch-sticky-bar a[href]:hover {
-  background-color: rgb(0 72 188) !important;
-  color: rgb(255 255 252) !important;
+[data-landing-slug="catch-the-attention"]
+  .ebook-catch-sticky-bar
+  a[href]:hover {
+  background-color: rgb(158 0 68) !important;
+  color: rgb(255 255 255) !important;
 }
 
 /*
- * magnetic-creator — Pinterest Palette 2025 (mood board):
- * Cherry #74070E, Butter #FFEDA8, Vanilla #FFEEBC, Columbia #D2E8FF,
- * earth terracotta (velvet grounding), chrome highlight on cards / glossy cherry CTAs.
+ * magnetic-creator — Rosa Dorada Premium — Vol. 3 "Creadora Magnética"
+ * El ADN de la saga (rosa #FF62B4 / gold #D4AF37) elevado a su versión más
+ * opulenta: ivory cálido, champagne dorado y deep rose bordeaux. El volumen
+ * culminante de la saga: premium, editorial, magnético. Cohesiona con la
+ * portada fotográfica oscura del ebook y refuerza el concepto de autoridad.
  *
- * Reuses `.ebook-catch-surface--*` hooks from `EbookLanding.tsx` when slug is magnetic-creator.
+ * Progressión narrativa de la saga:
+ *   Vol 1 — discover-your-character: Rosa Saga pura (descubrimiento)
+ *   Vol 2 — catch-the-attention:    Frambuesa Editorial (boldness)
+ *   Vol 3 — magnetic-creator:       Rosa Dorada Premium (culminación)
  */
 [data-landing-slug="magnetic-creator"] {
-  --mc-cherry-rgb: 116 7 14;
-  --mc-cherry-deep-rgb: 72 4 9;
-  --mc-cherry-highlight-rgb: 154 28 38;
-  --mc-butter-rgb: 255 237 168;
-  --mc-vanilla-rgb: 255 238 188;
-  --mc-columbia-rgb: 210 232 255;
-  --mc-columbia-deep-rgb: 176 214 245;
-  --mc-cream-text-rgb: 255 252 248;
-  --mc-earth-rgb: 132 78 58;
-  --mc-ink-rgb: 26 18 16;
-  /* Tailwind `brand-*` tokens used across sections */
-  --brand-ink-rgb: var(--mc-ink-rgb);
-  --brand-surface-rgb: var(--mc-vanilla-rgb);
+  --mg-gold-rgb: 196 152 40; /* Champagne Gold   #C49828 */
+  --mg-gold-deep-rgb: 144 108 18; /* Antique Gold     #906C12 */
+  --mg-gold-light-rgb: 230 196 100; /* Champagne claro  #E6C464 */
+  --mg-rose-rgb: 198 40 108; /* Deep Rose        #C6286C */
+  --mg-rose-deep-rgb: 145 12 70; /* Bordeaux Rose    #910C46 */
+  --mg-ivory-rgb: 254 249 240; /* Ivory cálido     #FEF9F0 */
+  --mg-parchment-rgb: 250 240 218; /* Pergamino        #FAF0DA */
+  --mg-caramel-rgb: 234 210 172; /* Caramel dorado   #EAD2AC */
+  --mg-ink-rgb: 26 14 6; /* Espresso cálido  #1A0E06 */
+  --mg-cream-text-rgb: 255 252 244; /* Crema marfil     #FFFCF4 */
+  /* Tailwind brand tokens */
+  --brand-ink-rgb: var(--mg-ink-rgb);
+  --brand-surface-rgb: var(--mg-ivory-rgb);
   --brand-card-rgb: 255 255 255;
-  --brand-accent-rgb: var(--mc-cherry-rgb);
-  --brand-accent-mid-rgb: var(--mc-columbia-rgb);
-  --brand-accent-deep-rgb: var(--mc-cherry-deep-rgb);
-  --brand-blush-rgb: var(--mc-butter-rgb);
-  --brand-rose-rgb: 238 220 208;
-  --brand-warm-rgb: var(--mc-earth-rgb);
-  --brand-cutout-from-rgb: var(--mc-vanilla-rgb);
-  --brand-cutout-via-rgb: var(--mc-butter-rgb);
-  --brand-cutout-to-rgb: var(--mc-columbia-rgb);
-  --brand-shadow-tint-rgb: var(--mc-cherry-rgb);
-  --mc-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.5'/%3E%3C/svg%3E");
+  --brand-accent-rgb: var(--mg-rose-rgb);
+  --brand-accent-mid-rgb: 255 98 180; /* Rosa saga #FF62B4 */
+  --brand-accent-deep-rgb: var(--mg-rose-deep-rgb);
+  --brand-blush-rgb: var(--mg-parchment-rgb);
+  --brand-rose-rgb: var(--mg-caramel-rgb);
+  --brand-warm-rgb: 148 102 52;
+  --brand-cutout-from-rgb: var(--mg-ivory-rgb);
+  --brand-cutout-via-rgb: var(--mg-parchment-rgb);
+  --brand-cutout-to-rgb: var(--mg-caramel-rgb);
+  --brand-shadow-tint-rgb: var(--mg-rose-deep-rgb);
+  --mg-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.5'/%3E%3C/svg%3E");
 }
 
-/* Subtle paper / matte grain over the whole landing (mood board creams) */
+/* Grain de papel premium sobre todo el landing */
 [data-landing-slug="magnetic-creator"]::before {
   content: "";
   pointer-events: none;
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.045;
+  opacity: 0.042;
   mix-blend-mode: multiply;
-  background-image: var(--mc-noise);
+  background-image: var(--mg-noise);
   background-size: 180px 180px;
 }
 
@@ -1729,83 +1850,133 @@ textarea:focus {
   z-index: 1;
 }
 
-/* Glossy cherry primary buttons (specular strip + depth) */
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--hero > section a[href],
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--problem > section a[href],
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--solution > section a[href]:not(.border-2),
+/* Botones CTA primarios: deep rose glossy con brillo especular */
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--hero
+  > section
+  a[href],
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--problem
+  > section
+  a[href],
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--solution
+  > section
+  a[href]:not(.border-2),
 [data-landing-slug="magnetic-creator"] .ebook-catch-sticky-bar a[href] {
   background-image: linear-gradient(
     175deg,
-    rgb(var(--mc-cherry-highlight-rgb)) 0%,
-    rgb(var(--mc-cherry-rgb)) 38%,
-    rgb(var(--mc-cherry-deep-rgb)) 100%
+    rgb(var(--mg-rose-rgb) / 0.9) 0%,
+    rgb(var(--mg-rose-rgb)) 42%,
+    rgb(var(--mg-rose-deep-rgb)) 100%
   ) !important;
   background-color: transparent !important;
-  border-color: rgb(255 255 255 / 0.14) !important;
-  color: rgb(var(--mc-cream-text-rgb)) !important;
+  border-color: rgb(255 255 255 / 0.18) !important;
+  color: rgb(var(--mg-cream-text-rgb)) !important;
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.22),
-    0 10px 28px rgb(var(--mc-ink-rgb) / 0.22) !important;
+    0 10px 28px rgb(var(--mg-ink-rgb) / 0.2) !important;
 }
 
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--hero > section a[href]:hover,
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--problem > section a[href]:hover,
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--solution > section a[href]:not(.border-2):hover,
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--hero
+  > section
+  a[href]:hover,
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--problem
+  > section
+  a[href]:hover,
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--solution
+  > section
+  a[href]:not(.border-2):hover,
 [data-landing-slug="magnetic-creator"] .ebook-catch-sticky-bar a[href]:hover {
   background-image: linear-gradient(
     175deg,
-    rgb(var(--mc-cherry-rgb)) 0%,
-    rgb(var(--mc-cherry-deep-rgb)) 55%,
-    rgb(52 3 6) 100%
+    rgb(var(--mg-rose-deep-rgb)) 0%,
+    rgb(100 8 52) 100%
   ) !important;
-  color: rgb(var(--mc-cream-text-rgb)) !important;
+  color: rgb(var(--mg-cream-text-rgb)) !important;
 }
 
+/* —— Hero: ivory → champagne radial + grain de papel —— */
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--hero > section {
   background-image:
-    var(--mc-noise),
-    radial-gradient(120% 80% at 100% 0%, rgb(var(--mc-columbia-rgb) / 0.55) 0%, transparent 55%),
+    var(--mg-noise),
+    radial-gradient(
+      110% 70% at 95% 8%,
+      rgb(var(--mg-gold-light-rgb) / 0.38) 0%,
+      transparent 55%
+    ),
     linear-gradient(
       168deg,
-      rgb(var(--mc-vanilla-rgb) / 0.99) 0%,
-      rgb(var(--mc-butter-rgb) / 0.94) 42%,
-      rgb(var(--mc-vanilla-rgb) / 0.92) 100%
+      rgb(var(--mg-ivory-rgb) / 0.99) 0%,
+      rgb(var(--mg-parchment-rgb) / 0.9) 50%,
+      rgb(var(--mg-ivory-rgb) / 0.96) 100%
     ) !important;
-  background-size: 200px 200px, auto, auto !important;
+  background-size:
+    200px 200px,
+    auto,
+    auto !important;
   background-color: transparent !important;
 }
 
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--hero > section h1 {
-  color: rgb(var(--mc-cherry-rgb)) !important;
-  text-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
+  color: rgb(var(--mg-rose-rgb)) !important;
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.4);
 }
 
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--hero > section h2 {
-  color: rgb(var(--mc-earth-rgb)) !important;
+  color: rgb(var(--mg-ink-rgb)) !important;
 }
 
+/* —— Problem: pergamino cálido + borde champagne gold —— */
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--problem > section {
-  background-image: var(--mc-noise), linear-gradient(180deg, rgb(var(--mc-butter-rgb) / 0.97) 0%, rgb(var(--mc-vanilla-rgb) / 0.88) 100%) !important;
-  background-size: 200px 200px, auto !important;
-  border-color: rgb(var(--mc-earth-rgb) / 0.22) !important;
+  background-image:
+    var(--mg-noise),
+    linear-gradient(
+      180deg,
+      rgb(var(--mg-parchment-rgb) / 0.9) 0%,
+      rgb(var(--mg-ivory-rgb) / 0.88) 100%
+    ) !important;
+  background-size:
+    200px 200px,
+    auto !important;
+  border-color: rgb(var(--mg-gold-rgb) / 0.28) !important;
 }
 
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--solution > section {
-  background-image: var(--mc-noise), linear-gradient(165deg, rgb(var(--mc-columbia-rgb) / 0.62) 0%, rgb(var(--mc-columbia-deep-rgb) / 0.35) 100%) !important;
-  background-size: 200px 200px, auto !important;
+/* —— Solution: caramel dorado suave —— */
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--solution
+  > section {
+  background-image:
+    var(--mg-noise),
+    linear-gradient(
+      165deg,
+      rgb(var(--mg-caramel-rgb) / 0.4) 0%,
+      rgb(var(--mg-parchment-rgb) / 0.28) 100%
+    ) !important;
+  background-size:
+    200px 200px,
+    auto !important;
 }
 
+/* Solution ghost CTA */
 [data-landing-slug="magnetic-creator"]
   .ebook-catch-surface--solution
   > section
   a[href].border-2 {
-  border-color: rgb(var(--mc-cherry-rgb) / 0.88) !important;
-  color: rgb(var(--mc-cherry-rgb)) !important;
-  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.98) 0%, rgb(var(--mc-columbia-rgb) / 0.35) 100%) !important;
+  border-color: rgb(var(--mg-rose-rgb) / 0.85) !important;
+  color: rgb(var(--mg-rose-rgb)) !important;
+  background-image: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0.98) 0%,
+    rgb(var(--mg-caramel-rgb) / 0.26) 100%
+  ) !important;
   background-color: transparent !important;
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.85),
-    0 6px 20px rgb(var(--mc-cherry-rgb) / 0.12) !important;
+    0 6px 20px rgb(var(--mg-rose-rgb) / 0.1) !important;
 }
 
 [data-landing-slug="magnetic-creator"]
@@ -1814,108 +1985,168 @@ textarea:focus {
   a[href].border-2:hover {
   background-image: linear-gradient(
     175deg,
-    rgb(var(--mc-cherry-highlight-rgb)) 0%,
-    rgb(var(--mc-cherry-rgb)) 45%,
-    rgb(var(--mc-cherry-deep-rgb)) 100%
+    rgb(var(--mg-rose-rgb) / 0.9) 0%,
+    rgb(var(--mg-rose-rgb)) 42%,
+    rgb(var(--mg-rose-deep-rgb)) 100%
   ) !important;
-  color: rgb(var(--mc-cream-text-rgb)) !important;
+  color: rgb(var(--mg-cream-text-rgb)) !important;
   border-color: rgb(255 255 255 / 0.2) !important;
 }
 
+/* —— Proof: ivory → pergamino → caramel diagonal —— */
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--proof > section {
   background-image:
-    var(--mc-noise),
+    var(--mg-noise),
     linear-gradient(
       128deg,
-      rgb(var(--mc-vanilla-rgb) / 0.97) 0%,
-      rgb(var(--mc-butter-rgb) / 0.5) 38%,
-      rgb(var(--mc-columbia-rgb) / 0.42) 100%
+      rgb(var(--mg-ivory-rgb) / 0.97) 0%,
+      rgb(var(--mg-parchment-rgb) / 0.55) 40%,
+      rgb(var(--mg-caramel-rgb) / 0.38) 100%
     ) !important;
-  background-size: 200px 200px, auto !important;
+  background-size:
+    200px 200px,
+    auto !important;
   background-color: transparent !important;
 }
 
+/* —— Offer: pergamino/ivory + card con borde gold cromado —— */
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--offer > section {
-  background-image: var(--mc-noise), linear-gradient(185deg, rgb(var(--mc-butter-rgb) / 0.65) 0%, rgb(var(--mc-vanilla-rgb) / 0.92) 100%) !important;
-  background-size: 200px 200px, auto !important;
+  background-image:
+    var(--mg-noise),
+    linear-gradient(
+      185deg,
+      rgb(var(--mg-parchment-rgb) / 0.62) 0%,
+      rgb(var(--mg-ivory-rgb) / 0.9) 100%
+    ) !important;
+  background-size:
+    200px 200px,
+    auto !important;
 }
 
-/* Offer card: chrome edge + soft lift (metallic accent from mood board) */
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--offer .rounded-3xl.border {
-  border-color: rgb(255 255 255 / 0.55) !important;
+/* Offer card: borde champagne gold + lift editorial */
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--offer
+  .rounded-3xl.border {
+  border-color: rgb(var(--mg-gold-rgb) / 0.4) !important;
   box-shadow:
-    0 0 0 1px rgb(var(--mc-cherry-rgb) / 0.12),
-    inset 0 1px 0 rgb(255 255 255 / 0.75),
-    0 24px 50px -22px rgb(var(--mc-ink-rgb) / 0.14) !important;
+    0 0 0 1px rgb(var(--mg-gold-rgb) / 0.14),
+    inset 0 1px 0 rgb(255 255 255 / 0.7),
+    0 24px 50px -22px rgb(var(--mg-ink-rgb) / 0.12) !important;
 }
 
+/* —— FAQ: caramel dorado cálido —— */
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--faq > section {
-  background-image: var(--mc-noise), linear-gradient(180deg, rgb(var(--mc-columbia-rgb) / 0.72) 0%, rgb(var(--mc-columbia-deep-rgb) / 0.4) 100%) !important;
-  background-size: 200px 200px, auto !important;
+  background-image:
+    var(--mg-noise),
+    linear-gradient(
+      180deg,
+      rgb(var(--mg-caramel-rgb) / 0.52) 0%,
+      rgb(var(--mg-parchment-rgb) / 0.38) 100%
+    ) !important;
+  background-size:
+    200px 200px,
+    auto !important;
 }
 
-/* FAQ: Columbia as secondary CTA (cool accent vs warm bands) */
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--faq > section a[href] {
-  background-image: linear-gradient(180deg, rgb(228 242 255) 0%, rgb(var(--mc-columbia-rgb)) 100%) !important;
+/* FAQ CTA: caramel dorado con texto bordeaux */
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--faq
+  > section
+  a[href] {
+  background-image: linear-gradient(
+    180deg,
+    rgb(242 226 192) 0%,
+    rgb(var(--mg-caramel-rgb)) 100%
+  ) !important;
   background-color: transparent !important;
-  color: rgb(var(--mc-cherry-rgb)) !important;
-  border-color: rgb(var(--mc-cherry-rgb) / 0.22) !important;
+  color: rgb(var(--mg-rose-deep-rgb)) !important;
+  border-color: rgb(var(--mg-rose-rgb) / 0.22) !important;
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.75),
-    0 8px 22px rgb(var(--mc-cherry-rgb) / 0.12) !important;
+    0 8px 22px rgb(var(--mg-rose-rgb) / 0.1) !important;
 }
 
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--faq > section a[href]:hover {
-  background-image: linear-gradient(180deg, rgb(var(--mc-butter-rgb)) 0%, rgb(var(--mc-vanilla-rgb)) 100%) !important;
-  color: rgb(var(--mc-cherry-deep-rgb)) !important;
-  border-color: rgb(var(--mc-cherry-rgb) / 0.28) !important;
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--faq
+  > section
+  a[href]:hover {
+  background-image: linear-gradient(
+    175deg,
+    rgb(var(--mg-rose-rgb) / 0.9) 0%,
+    rgb(var(--mg-rose-rgb)) 42%,
+    rgb(var(--mg-rose-deep-rgb)) 100%
+  ) !important;
+  color: rgb(var(--mg-cream-text-rgb)) !important;
+  border-color: rgb(255 255 255 / 0.2) !important;
 }
 
+/* —— Close: bordeaux → deep rose + halo champagne; texto crema marfil —— */
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--close > section {
   background-image:
-    radial-gradient(80% 120% at 90% 10%, rgb(var(--mc-columbia-rgb) / 0.18) 0%, transparent 45%),
+    radial-gradient(
+      75% 110% at 88% 8%,
+      rgb(var(--mg-gold-light-rgb) / 0.22) 0%,
+      transparent 50%
+    ),
     linear-gradient(
       125deg,
-      rgb(var(--mc-cherry-deep-rgb)) 0%,
-      rgb(var(--mc-cherry-rgb)) 42%,
-      rgb(var(--mc-ink-rgb)) 100%
+      rgb(var(--mg-rose-deep-rgb)) 0%,
+      rgb(var(--mg-rose-rgb)) 45%,
+      rgb(var(--mg-ink-rgb)) 100%
     ) !important;
-  color: rgb(var(--mc-cream-text-rgb)) !important;
+  color: rgb(var(--mg-cream-text-rgb)) !important;
 }
 
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--close > section h2,
 [data-landing-slug="magnetic-creator"] .ebook-catch-surface--close > section p {
-  color: rgb(var(--mc-cream-text-rgb)) !important;
+  color: rgb(var(--mg-cream-text-rgb)) !important;
 }
 
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--close > section a[href] {
-  background-image: linear-gradient(180deg, rgb(var(--mc-butter-rgb)) 0%, rgb(var(--mc-vanilla-rgb)) 100%) !important;
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--close
+  > section
+  a[href] {
+  background-image: linear-gradient(
+    180deg,
+    rgb(var(--mg-parchment-rgb)) 0%,
+    rgb(var(--mg-caramel-rgb)) 100%
+  ) !important;
   background-color: transparent !important;
-  color: rgb(var(--mc-cherry-rgb)) !important;
-  border-color: rgb(255 255 255 / 0.35) !important;
+  color: rgb(var(--mg-rose-deep-rgb)) !important;
+  border-color: rgb(255 255 255 / 0.3) !important;
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.65),
-    0 12px 32px rgb(var(--mc-ink-rgb) / 0.35) !important;
+    0 12px 32px rgb(var(--mg-ink-rgb) / 0.32) !important;
 }
 
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--close > section a[href]:hover {
-  background-image: linear-gradient(180deg, rgb(255 255 255) 0%, rgb(var(--mc-butter-rgb)) 100%) !important;
-  color: rgb(var(--mc-cherry-deep-rgb)) !important;
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--close
+  > section
+  a[href]:hover {
+  background-image: linear-gradient(
+    180deg,
+    rgb(255 255 255) 0%,
+    rgb(var(--mg-parchment-rgb)) 100%
+  ) !important;
+  color: rgb(var(--mg-rose-deep-rgb)) !important;
 }
 
+/* Mobile sticky bar — ivory cálido + deep rose CTA */
 [data-landing-slug="magnetic-creator"] .ebook-catch-sticky-bar {
-  background-color: rgb(var(--mc-vanilla-rgb) / 0.92) !important;
+  background-color: rgb(var(--mg-ivory-rgb) / 0.94) !important;
   backdrop-filter: blur(10px);
-  border-color: rgb(var(--mc-cherry-rgb) / 0.2) !important;
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5) !important;
+  border-color: rgb(var(--mg-rose-rgb) / 0.22) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.55) !important;
 }
 
-/* Softer editorial body copy (earth, not pure black) */
+/* Copy corporal: espresso cálido (editorial, no negro puro) */
 [data-landing-slug="magnetic-creator"] section .text-brand-ink {
-  color: rgb(var(--mc-earth-rgb) / 0.92) !important;
+  color: rgb(var(--mg-ink-rgb) / 0.88) !important;
 }
 
-[data-landing-slug="magnetic-creator"] .ebook-catch-surface--close > section .text-brand-ink {
-  color: rgb(var(--mc-cream-text-rgb)) !important;
+[data-landing-slug="magnetic-creator"]
+  .ebook-catch-surface--close
+  > section
+  .text-brand-ink {
+  color: rgb(var(--mg-cream-text-rgb)) !important;
 }
-
