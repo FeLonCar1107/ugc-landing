@@ -26,12 +26,12 @@ export default function EbookProblemSection({
           </span>
           <h2 className={`mt-6 ${sectionBandHeading}`}>{problem.title}</h2>
         </ScrollReveal>
-        <ScrollRevealStagger className="grid gap-6 md:grid-cols-2">
+        <ScrollRevealStagger className="grid items-stretch gap-6 md:grid-cols-2">
           {problem.cards.map((card, index) => (
-            <ScrollRevealItem key={`${card.title}-${index}`}>
-              <div className="rounded-2xl border border-brand-ink/10 bg-brand-surface p-6 shadow-sm">
+            <ScrollRevealItem key={`${card.title}-${index}`} className="h-full">
+              <div className="flex h-full min-h-full flex-col rounded-2xl border border-brand-ink/10 bg-brand-surface p-6 shadow-sm">
                 <h3 className="text-lg font-semibold text-brand-accent">{card.title}</h3>
-                <p className="mt-2 whitespace-pre-line text-brand-ink/85">{card.body}</p>
+                <p className="mt-2 flex-1 whitespace-pre-line text-brand-ink/85">{card.body}</p>
               </div>
             </ScrollRevealItem>
           ))}
