@@ -1,8 +1,8 @@
 import Image from "next/image";
 import {
   EBOOK_OFFER_MOCKUP,
+  OFFER_CARD_EBOOK_SIZES,
   OFFER_EBOOK_IMAGE_QUALITY,
-  OFFER_EBOOK_SIZES,
 } from "./offerImageSlots";
 
 export type OfferEbookMockupProps = {
@@ -28,7 +28,7 @@ export default function OfferEbookMockup({
             alt={alt}
             fill
             className={EBOOK_OFFER_MOCKUP.image}
-            sizes={OFFER_EBOOK_SIZES}
+            sizes={OFFER_CARD_EBOOK_SIZES}
             quality={OFFER_EBOOK_IMAGE_QUALITY}
             priority={priority}
           />

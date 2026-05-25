@@ -46,8 +46,8 @@ export default function OfferSection({
               </h2>
             </div>
 
-            <div className="grid min-w-0 grid-cols-1 items-start gap-6 md:grid-cols-2 md:gap-8 lg:gap-10">
-              <div className="min-w-0">
+            <div className="grid min-w-0 grid-cols-1 items-start gap-6 md:grid-cols-[minmax(220px,min(40%,280px))_minmax(0,1fr)] md:gap-5 lg:gap-6">
+              <div className="flex min-w-0 w-full justify-center md:justify-end">
                 <ProductHero hero={offer.hero} asset={asset} />
               </div>
               <div className="min-w-0 md:pt-1">

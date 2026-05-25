@@ -11,11 +11,18 @@ export const OFFER_EBOOK_ASPECT_CLASS = "aspect-[421/470]" as const;
 
 export const OFFER_EBOOK_MAX_WIDTH_PX = 300;
 
+/** Offer card grid — smaller than hero so the value stack gets more room. */
+export const OFFER_CARD_EBOOK_MAX_WIDTH_PX = 220;
+
 export const OFFER_EBOOK_IMAGE_QUALITY = 96;
 
 export const OFFER_EBOOK_SIZES = `(max-width: 768px) min(${OFFER_EBOOK_MAX_WIDTH_PX}px, 88vw), (max-width: 1024px) 42vw, ${OFFER_EBOOK_MAX_WIDTH_PX}px`;
 
+export const OFFER_CARD_EBOOK_SIZES = `(max-width: 768px) min(${OFFER_CARD_EBOOK_MAX_WIDTH_PX}px, 78vw), (max-width: 1024px) 28vw, ${OFFER_CARD_EBOOK_MAX_WIDTH_PX}px`;
+
 const EBOOK_MOCKUP_MAX_W = `max-w-[min(${OFFER_EBOOK_MAX_WIDTH_PX}px,88vw)]`;
+
+const OFFER_CARD_MOCKUP_MAX_W = `max-w-[min(${OFFER_CARD_EBOOK_MAX_WIDTH_PX}px,78vw)]`;
 
 /** Hero mockup — override in `globals.css` via `.ebook-hero-mockup__*`. */
 export const EBOOK_HERO_MOCKUP = {
@@ -32,7 +39,7 @@ export const EBOOK_HERO_MOCKUP = {
 /** Offer card mockup — override in `globals.css` via `.ebook-offer-mockup__*`. */
 export const EBOOK_OFFER_MOCKUP = {
   root: "ebook-offer-mockup",
-  slot: `ebook-offer-mockup__slot relative mx-auto flex w-full ${EBOOK_MOCKUP_MAX_W} flex-col`,
+  slot: `ebook-offer-mockup__slot relative mx-auto flex w-full ${OFFER_CARD_MOCKUP_MAX_W} flex-col`,
   frame: `ebook-offer-mockup__frame relative w-full shrink-0 ${OFFER_EBOOK_ASPECT_CLASS}`,
   image:
     "ebook-offer-mockup__image object-contain object-bottom p-0 drop-shadow-[0_12px_40px_rgb(var(--brand-ink-rgb)/0.08)]",
