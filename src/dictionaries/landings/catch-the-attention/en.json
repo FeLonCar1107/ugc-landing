@@ -1,125 +1,128 @@
 {
   "meta": {
-    "title": "Command the attention — Saga for creators",
-    "description": "Ebook to strengthen your digital presence, look more professional, and create opportunities. Brand, profile, intentional content, and portfolio."
+    "title": "Catch the Attention — Saga for Creators Vol. 2 | Isabella Lizarralde",
+    "description": "Turn your identity into a clear message, a profile that converts, and a sustainable content system. The ebook that puts what you already are into motion."
   },
   "hero": {
-    "eyebrow": "Saga for creators",
-    "productTitle": "Command the attention",
-    "headline": "Boost your digital presence, look more professional, and open new opportunities",
-    "subhead": "It’s not a talent problem — it’s a structure problem. Stop building without foundations and create a brand people understand, connect with, remember you for, and buy into, designed with you in mind.",
-    "cta": "Start now",
-    "imageAlt": "Isabella — lead visual",
+    "eyebrow": "Saga for Creators · Vol. 2",
+    "productTitle": "Catch the Attention",
+    "headline": "Identity without a message is dormant potential. It's time for the world to know.",
+    "subhead": "Turn who you already are into a digital presence that speaks for you before you open your mouth — with a clear message, a profile that converts, and a content system that holds up week after week.",
+    "cta": "I want to build my presence",
+    "imageAlt": "Isabella — lead visual reference",
     "decorativeAlt": "Y2K collage style reference"
   },
   "problem": {
     "eyebrow": "Sound familiar?",
-    "title": "When you post without a clear foundation, effort doesn’t turn into opportunities",
+    "title": "You already feel you have something important to say. The problem is nobody knows it yet.",
     "cards": [
       {
-        "title": "You post without pillars or a clear message",
-        "body": "Your content feels scattered: lots of loose ideas, little direction. The algorithm isn’t the only issue — you’re posting loose content, not a proposal."
+        "title": "Your profile doesn't turn visits into followers",
+        "body": "Someone lands, reads your bio... and leaves. Not because they don't care — but because in 3 seconds they don't understand who you are, what you do, or what they gain by staying."
       },
       {
-        "title": "Your profile doesn’t signal a professional offer",
-        "body": "Brands look for clarity and trust. If your bio and feed don’t tell the same story, you lose partnerships before you start."
+        "title": "You record without structure and depend on inspiration",
+        "body": "Without a script or system, every video depends on having the right words that day. Sometimes you do. Usually you don't. And that uncertainty drains you."
       },
       {
-        "title": "You improvise every week with no system",
-        "body": "You go blank or copy trends without a script. Creating this way drains you and doesn’t build a portfolio that backs you up."
+        "title": "You watch the wrong numbers and don't understand what works",
+        "body": "You count followers and likes. But the metrics that actually build — retention, saves, shares — you're not even tracking. So you don't know what to improve."
       },
       {
-        "title": "Lots of effort, few measurable opportunities",
-        "body": "You give it your all and still feel like nothing takes off professionally. When every post stands on its own, the algorithm isn’t the only thing holding you back — you’re missing a goal behind what you publish."
+        "title": "No system: you post on impulse or you don't post at all",
+        "body": "Some days you upload three things. Other weeks you disappear. Without a weekly ritual, consistency depends on mood. And mood isn't a strategy."
       }
     ],
-    "cta": "I want structure"
+    "cta": "I want a system"
   },
   "solution": {
-    "title": "What you’ll build with this ebook",
+    "title": "By the end of this ebook, you'll post with intention. Not to see what happens — so something specific happens.",
     "titleHighlight": {
-      "before": "What you’ll build with this ",
-      "highlight": "ebook",
-      "after": ""
+      "before": "By the end of this ebook, you'll post with ",
+      "highlight": "intention",
+      "after": ". Not to see what happens — so something specific happens."
     },
-    "giftHint": "Includes Canva portfolio, hooks, weekly planner, and brand outreach guide.",
+    "giftHint": "Includes a hooks bank, weekly planning, and brand outreach guide.",
     "outcomes": [
       {
-        "title": "Personal brand + message architecture",
-        "body": "Who you are, how you want to be perceived, mission, pillars, and a thread for everything you publish."
+        "title": "Write your Mission Statement and value proposition",
+        "body": "The two lines that turn a generic profile into a brand understood in 10 seconds — with a template and examples for 5 different niches."
       },
       {
-        "title": "Profile optimized for brands",
-        "body": "How to look professional and coherent in your bio, photos, and feed without overcomplicating."
+        "title": "Optimize your profile to turn visits into followers",
+        "body": "The 4-line bio, the photo, and the highlights: each element with a strategic purpose so your first digital impression works for you."
       },
       {
-        "title": "Intentional content (not just more posts)",
-        "body": "Planning, scripts, formats, and an idea system so you’re not improvising."
+        "title": "Master the Hook–Context–Value–CTA structure",
+        "body": "The creative and technical script so every video holds attention from the first 3 seconds — without depending on having the right words that day."
       },
       {
-        "title": "A portfolio that sells your pitch",
-        "body": "Turn what you already create into clear proof of value — content as a sales tool."
+        "title": "Build your weekly production system",
+        "body": "The calendar, the 3 idea sources, and the Create–Optimize–Connect ritual to post consistently without burning out in the process."
       }
     ],
     "ctaTop": "See the offer",
-    "ctaBottom": "Get the ebook",
+    "ctaBottom": "I want my access now",
     "imageAlt": "Isabella — method applied in real content"
   },
   "proof": {
-    "badge": "My story",
-    "headline": "This didn’t come from theory — it came from years of real content and learning what actually sustains a brand.",
-    "intro": "Before teaching it, I lived it: noisy seasons, pivots, and a path where structure started opening doors that effort alone couldn’t.",
+    "badge": "The story behind the method",
+    "headline": "I built it for myself first. When I saw it worked, I turned it into a system for you.",
+    "intro": "I had the exact moment when my profile stopped being noise and started being a proposition. It wasn't a viral video — it was the day I understood that message clarity does more than posting frequency. This ebook is that learning, organized.",
     "timeline": [
       {
         "year": "2022",
         "phase": "Content without foundations",
         "bullets": [
-          "Posting without clear brand pillars",
+          "Posting without pillars or a clear message",
           "Mix of trends without my own narrative",
-          "Hard to explain my offer in one sentence"
+          "Couldn't explain my proposition in one sentence"
         ]
       },
       {
         "year": "2023",
         "phase": "Sorting the message",
         "bullets": [
-          "Early versions of mission and pillars",
+          "Early versions of Mission Statement and pillars",
           "More focus on who my real audience was",
-          "Still missing a steady production system"
+          "Still no steady production system"
         ]
       },
       {
         "year": "2024",
         "phase": "System + visual quality",
         "bullets": [
-          "Scripts and formats with intent",
-          "Better set and lighting to lift perception",
-          "My profile started “closing” the story on its own"
+          "Scripts and formats with clear intent",
+          "Set and lighting that raised perception",
+          "My profile started closing its own story"
         ]
       },
       {
         "year": "2025",
-        "phase": "Recognition and new opportunities",
+        "phase": "Presence with direction",
         "bullets": [
-          "New opportunities arrive: partnerships and pitches that fit my brand",
-          "My audience recognizes my content instantly — consistent visual style and message",
-          "A reference in my niche for creators building structure and a professional presence"
+          "100+ collaborations with aligned brands",
+          "Content recognizable instantly — consistent style and message",
+          "The system in this ebook already works for other creators"
         ]
       }
     ]
   },
   "offer": {
-    "sectionTitle": "Everything in your access",
+    "sectionTitle": "Everything included in your access",
     "hero": {
-      "badges": ["Launch offer", "Ebook + 2 bonuses"],
-      "statement": "From creative chaos to a brand with direction: build a presence your audience recognizes instantly and brands understand.",
-      "imageAlt": "“Command the attention” ebook mockup"
+      "badges": [
+        "Launch offer",
+        "Ebook + 2 bonuses"
+      ],
+      "statement": "It's not just an ebook. It's the full system to go from posting without direction to having a clear message, a profile that converts, and a week of content produced with intention.",
+      "imageAlt": "“Catch the Attention” ebook mockup"
     },
     "valueStack": {
       "lineItems": [
         {
           "id": "ebook",
-          "label": "Ebook “Command the attention”",
+          "label": "Ebook “Catch the Attention” — 13 chapters + exercises",
           "anchorValueLabel": "USD 27"
         },
         {
@@ -129,7 +132,7 @@
         },
         {
           "id": "b2",
-          "label": "Ready-to-use hooks bank (50+ real ideas)",
+          "label": "Bank of 50+ ready-to-use hooks — real, not generic",
           "anchorValueLabel": "USD 18"
         },
         {
@@ -143,7 +146,7 @@
           "anchorValueLabel": "USD 12"
         }
       ],
-      "totalLabel": "Estimated bundle value",
+      "totalLabel": "Reference bundle value",
       "totalAnchorLabel": "USD 93",
       "youPayLabel": "Your investment today"
     },
@@ -153,77 +156,77 @@
         "enabled": false,
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: editable Canva portfolio template",
-        "painHeadline": "You don’t know where to start your portfolio",
-        "outcomeBenefit": "Pre-built Canva structure: intro, services, videos, and contact — feminine/pro design that removes “I don’t know how to begin.”"
+        "painHeadline": "You don't know where to start your portfolio",
+        "outcomeBenefit": "Pre-built Canva structure: intro, services, videos, and contact — so brands understand your proposition before they message you."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: content hooks bank",
-        "painHeadline": "You freeze when it’s time to record",
-        "outcomeBenefit": "50+ real hooks to use today — not generic lines; cuts the biggest blocker: getting started."
+        "painHeadline": "You go blank when you open the camera",
+        "outcomeBenefit": "50+ real hooks ready to use today — the first 3 seconds that retain, organized by content type and goal."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: weekly content planning template",
+        "imageAlt": "Bonus: weekly content planning",
         "painHeadline": "You post without a plan or clear goal",
-        "outcomeBenefit": "Simple template with publish days, content type, and goal per piece — Notion version + downloadable PDF."
+        "outcomeBenefit": "Template with days, formats, pillars, and goal per piece — in Notion and PDF — so your content week exists before it starts."
       },
       {
         "enabled": false,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: how to message a brand",
-        "painHeadline": "You hesitate or don’t know how to reach out to brands",
-        "outcomeBenefit": "Mini guide with a DM example, email example, and what to say (and avoid) to open conversations."
+        "painHeadline": "You don't know how to approach brands professionally",
+        "outcomeBenefit": "Mini guide with a DM example, email example, and what to say — and what to avoid — so the first impression opens doors, not closes them."
       }
     ],
     "urgency": {
-      "title": "Why deciding now helps",
+      "title": "Every week you post without a system is effort that doesn't build.",
       "bullets": [
-        "Launch window: the bundle is built to organize presence and content without pushing clarity to “someday.”",
-        "No fake scarcity: the real cost is your time if you keep posting without structure."
+        "No fake inventory or artificial counters. The real cost is keeping on posting without a clear message, without a profile that converts, without knowing which metrics matter.",
+        "Launch bonuses are available in this opening window. When the period closes, the price goes up and the bonuses are removed from the bundle."
       ],
-      "deadlineLineTemplate": "For this edition, launch bonuses apply through {date}."
+      "deadlineLineTemplate": "Bonuses available through {date}."
     },
-    "ctaPrimary": "I want my ebook access now",
-    "priceHint": "USD price — set via environment."
+    "ctaPrimary": "Yes, I want my access now",
+    "priceHint": "USD price — shown at checkout."
   },
   "faq": {
     "introTitle": "Frequently asked questions",
-    "introBody": "Quick answers before checkout.",
-    "cta": "Get the ebook",
+    "introBody": "Before something stops you, here are the most common doubts.",
+    "cta": "I want my access now",
     "items": [
       {
+        "q": "Do I need to have read Vol. 1 to get the most from this ebook?",
+        "a": "It's not required, but this volume assumes you already have a sense of who you are as a creator. If that's still unclear, Vol. 1 is the first step. If you already have identity defined — even intuitively — this ebook takes you to the next level."
+      },
+      {
+        "q": "Is it for me if I've been posting for a while without results?",
+        "a": "Especially for you. Most creators who post without results don't have a quantity problem — they have a structure problem: undefined message, profile that doesn't convert, content without a script. This ebook targets exactly that."
+      },
+      {
+        "q": "Do I need expensive gear or a professional studio?",
+        "a": "No. The ebook includes a full chapter on production with what you have: natural lighting, CapCut as your editing tool, and how to set up a corner of your home. Quality isn't hardware — it's intention."
+      },
+      {
+        "q": "Does it work for TikTok, Instagram, or both?",
+        "a": "Both. There's a chapter on platform strategy that explains algorithm differences, what content works on each, and how to adapt the same material without just copy-pasting."
+      },
+      {
         "q": "What format is the ebook?",
-        "a": "It’s a digital product (PDF or the format defined by the purchase platform). You’ll get download instructions after payment."
-      },
-      {
-        "q": "Where do I buy and how do I get access?",
-        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s instructions to access your purchase."
-      },
-      {
-        "q": "Does it work if I don’t have expensive gear or a studio?",
-        "a": "Yes — the ebook includes practical set and lighting guidance you can apply with what you have today."
-      },
-      {
-        "q": "Is this just another long course?",
-        "a": "It’s an ebook to read and apply by modules (brand → profile → content → portfolio). You go at your own pace — the key is to execute as you go."
+        "a": "It's a PDF designed to read and work through. It has 13 chapters with practical exercises at the end of each — so you don't only read, you apply and build your system as you go."
       },
       {
         "q": "Is there a guarantee?",
-        "a": "Refund policy depends on the payment platform and applicable terms. Review it on the checkout page before buying."
-      },
-      {
-        "q": "Can I get help with my purchase?",
-        "a": "Yes—purchase support is handled by the payment platform (e.g. Hotmart) from its checkout or help center."
+        "a": "Refund policy applies per the payment platform — you can review it before buying at checkout. What I do promise is that the content is the same system I built for myself: not theory, but real structure that's been tested."
       }
     ]
   },
   "close": {
-    "headline": "Your presence deserves structure — not just more hours on your phone.",
-    "body": "If you’re ready to be seen, for your brand to be understood and your content to open opportunities, this ebook is written for you.",
-    "cta": "Get the ebook",
-    "footnote": "It’s not luck: clear brand + system + action."
+    "headline": "You're no longer posting to see what happens. You're posting with intention, with a system, and with clarity about why.",
+    "body": "That's what this ebook gives you. No more posting blind, no more depending on inspiration, no more watching numbers that tell you nothing. Just a clear message, a system that holds up, and a presence that works for you.",
+    "cta": "I want my access now",
+    "footnote": "Consistency isn't talent. It's a system that works even on days you don't feel like it."
   }
 }

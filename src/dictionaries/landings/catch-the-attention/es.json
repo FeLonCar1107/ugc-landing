@@ -1,109 +1,109 @@
 {
   "meta": {
-    "title": "Conquista la atención — Saga para creadoras",
-    "description": "Ebook para potenciar tu presencia digital, verte más profesional y generar oportunidades. Marca, perfil, contenido con intención y portafolio."
+    "title": "Conquista la Atención — Saga para Creadoras Vol. 2 | Isabella Lizarralde",
+    "description": "Convierte tu identidad en mensaje claro, perfil que convierte y un sistema de contenido sostenible. El ebook que pone en marcha lo que ya eres."
   },
   "hero": {
-    "eyebrow": "Saga para creadoras",
-    "productTitle": "Conquista la atención",
-    "headline": "Potencia tu presencia digital, luce más profesional y abre nuevas oportunidades",
-    "subhead": "No es falta de talento: es falta de estructura. Deja de crear sin cimientos y construye una marca que se entienda, conecte, haga que te recuerden y venda tu propuesta, pensado para ti.",
-    "cta": "Empezar ahora",
+    "eyebrow": "Saga para Creadoras · Vol. 2",
+    "productTitle": "Conquista la Atención",
+    "headline": "La identidad sin mensaje es potencial dormido. Es hora de que el mundo lo sepa.",
+    "subhead": "Convierte lo que ya eres en una presencia digital que habla por ti antes de que abras la boca — con mensaje claro, perfil que convierte y un sistema de contenido que se sostiene semana tras semana.",
+    "cta": "Quiero construir mi presencia",
     "imageAlt": "Isabella — referencia visual protagonista",
     "decorativeAlt": "Referencia estilo collage Y2K"
   },
   "problem": {
     "eyebrow": "¿Te suena familiar?",
-    "title": "Cuando publicas sin una base clara, el esfuerzo no se convierte en oportunidades",
+    "title": "Ya sientes que tienes algo importante que comunicar. El problema es que nadie lo sabe todavía.",
     "cards": [
       {
-        "title": "Publicas sin pilares ni mensaje ordenado",
-        "body": "Tu contenido se siente disperso: muchas ideas sueltas, poca dirección. El algoritmo no es el único culpable: estás subiendo contenido suelto, no una propuesta."
+        "title": "Tu perfil no convierte visitas en seguidores",
+        "body": "Alguien llega, lee tu bio... y se va. No porque no les importes — sino porque en 3 segundos no entienden quién eres, qué haces ni qué ganan si se quedan."
       },
       {
-        "title": "Tu perfil no comunica propuesta profesional",
-        "body": "Las marcas buscan claridad y confianza. Si tu bio y feed no cuentan la misma historia, pierdes colaboraciones antes de empezar."
+        "title": "Grabas sin estructura y dependes de la inspiración",
+        "body": "Sin guion ni sistema, cada video depende de que ese día tengas las palabras correctas. A veces las tienes. Generalmente no. Y esa incertidumbre agota."
       },
       {
-        "title": "Improvisas cada semana sin sistema",
-        "body": "Te quedas en blanco o copias tendencias sin guion. Crear así agota y no construye un portafolio que te respalde."
+        "title": "Miras los números equivocados y no entiendes qué funciona",
+        "body": "Cuentas seguidores y likes. Pero las métricas que de verdad construyen — retención, guardados, compartidos — ni las estás midiendo. Y por eso no sabes qué mejorar."
       },
       {
-        "title": "Mucho esfuerzo, pocas oportunidades medibles",
-        "body": "Das el 100 % y aun así sientes que nada despega en lo profesional. Si cada post es independiente, el algoritmo no es el único que te frena: te falta una meta detrás de lo que publicas."
+        "title": "Sin sistema: publicas por impulso o no publicas",
+        "body": "Algunos días subes tres cosas. Otras semanas desapareces. Sin un ritual semanal, la consistencia depende del ánimo. Y el ánimo no es una estrategia."
       }
     ],
-    "cta": "Quiero estructura"
+    "cta": "Quiero un sistema"
   },
   "solution": {
-    "title": "Lo que vas a construir con este ebook",
+    "title": "Al terminar este ebook, vas a publicar con intención. No para ver qué pasa — para que pase algo específico.",
     "titleHighlight": {
-      "before": "Lo que vas a construir con este ",
-      "highlight": "ebook",
-      "after": ""
+      "before": "Al terminar este ebook, vas a publicar con ",
+      "highlight": "intención",
+      "after": ". No para ver qué pasa — para que pase algo específico."
     },
-    "giftHint": "Incluye portafolio en Canva, hooks, planeación semanal y guía para marcas.",
+    "giftHint": "Incluye banco de hooks, planeación semanal y guía para marcas.",
     "outcomes": [
       {
-        "title": "Marca personal y arquitectura de mensaje",
-        "body": "Quién eres, cómo quieres ser percibida, misión, pilares y un hilo conductor para todo lo que publicas."
+        "title": "Escribir tu Mission Statement y propuesta de valor",
+        "body": "Las dos frases que convierten un perfil genérico en una marca que se entiende en 10 segundos — con plantilla y ejemplos para 5 nichos distintos."
       },
       {
-        "title": "Perfil optimizado para marcas",
-        "body": "Cómo verte profesional y coherente en tu bio, fotos y feed sin complicarte en exceso."
+        "title": "Optimizar tu perfil para convertir visitas en seguidores",
+        "body": "La bio de 4 líneas, la foto y los highlights: cada elemento con un propósito estratégico para que tu primera impresión digital trabaje por ti."
       },
       {
-        "title": "Contenido con intención (no solo más posts)",
-        "body": "Planeación, guiones, formatos y un sistema de ideas para no improvisar."
+        "title": "Dominar la estructura Hook–Contexto–Valor–CTA",
+        "body": "El guion literario y técnico para que cada video retenga desde los primeros 3 segundos — sin depender de que ese día tengas las palabras correctas."
       },
       {
-        "title": "Portafolio que vende tu propuesta",
-        "body": "Traducir lo que ya creas en prueba clara de valor: tu contenido como herramienta de venta."
+        "title": "Construir tu sistema semanal de producción",
+        "body": "El calendario, las 3 fuentes de ideas y el ritual Crear–Optimizar–Contactar para publicar de forma consistente sin quemarte en el intento."
       }
     ],
     "ctaTop": "Ver la oferta",
-    "ctaBottom": "Quiero el ebook",
+    "ctaBottom": "Quiero mi acceso ahora",
     "imageAlt": "Isabella — método aplicado en contenido real"
   },
   "proof": {
-    "badge": "Mi historia",
-    "headline": "Esto no salió de teoría: salió de años creando contenido real y probando qué sostiene una marca.",
-    "intro": "Antes de enseñarlo, lo viví: épocas de ruido, vueltas y un camino donde la estructura empezó a abrir puertas que el solo esfuerzo no abría.",
+    "badge": "La historia detrás del método",
+    "headline": "Lo construí primero para mí. Cuando vi que funcionaba, lo convertí en sistema para ti.",
+    "intro": "Tuve el momento exacto en que mi perfil dejó de ser ruido y empezó a ser propuesta. No fue un video viral — fue el día que entendí que la claridad de mensaje hace más que la frecuencia de publicación. Este ebook es ese aprendizaje ordenado.",
     "timeline": [
       {
         "year": "2022",
         "phase": "Contenido sin cimientos",
         "bullets": [
-          "Publicaba sin pilares claros de marca",
+          "Publicaba sin pilares ni mensaje claro",
           "Mezcla de tendencias sin narrativa propia",
-          "Dificultad para explicar mi propuesta en una frase"
+          "No podía explicar mi propuesta en una frase"
         ]
       },
       {
         "year": "2023",
         "phase": "Ordenando el mensaje",
         "bullets": [
-          "Primeras versiones de misión y pilares",
+          "Primeras versiones de Mission Statement y pilares",
           "Más foco en quién era mi audiencia real",
-          "Aún faltaba sistema de producción constante"
+          "Aún sin sistema de producción constante"
         ]
       },
       {
         "year": "2024",
         "phase": "Sistema + calidad visual",
         "bullets": [
-          "Guiones y formatos con intención",
-          "Mejor set e iluminación para elevar la percepción",
-          "El perfil empezó a “cerrar” la historia sola"
+          "Guiones y formatos con intención definida",
+          "Set e iluminación que elevaron la percepción",
+          "El perfil empezó a cerrar su propia historia"
         ]
       },
       {
         "year": "2025",
-        "phase": "Reconocimiento y nuevas oportunidades",
+        "phase": "Presencia con dirección",
         "bullets": [
-          "Llegan oportunidades nuevas: colaboraciones y propuestas alineadas a mi marca",
-          "Mi audiencia reconoce mi contenido al instante — estilo visual y mensaje coherentes",
-          "Referente en mi nicho para otras creadoras que buscan estructura y presencia profesional"
+          "100+ colaboraciones con marcas alineadas",
+          "Contenido reconocible al instante — estilo y mensaje coherentes",
+          "El sistema de este ebook ya funciona para otras creadoras"
         ]
       }
     ]
@@ -111,15 +111,18 @@
   "offer": {
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
-      "badges": ["Oferta de lanzamiento", "Ebook + 2 bonuses"],
-      "statement": "Del caos creativo a una marca con dirección: construye una presencia que tu audiencia reconozca al instante y que las marcas entiendan.",
-      "imageAlt": "Mockup del ebook «Conquista la atención»"
+      "badges": [
+        "Oferta de lanzamiento",
+        "Ebook + 2 bonuses"
+      ],
+      "statement": "No es solo un ebook. Es el sistema completo para pasar de publicar sin rumbo a tener mensaje claro, perfil que convierte y una semana de contenido producida con intención.",
+      "imageAlt": "Mockup del ebook «Conquista la Atención»"
     },
     "valueStack": {
       "lineItems": [
         {
           "id": "ebook",
-          "label": "Ebook «Conquista la atención»",
+          "label": "Ebook «Conquista la Atención» — 13 capítulos + ejercicios",
           "anchorValueLabel": "USD 27"
         },
         {
@@ -129,7 +132,7 @@
         },
         {
           "id": "b2",
-          "label": "Banco de hooks listos para usar (50+ ideas reales)",
+          "label": "Banco de 50+ hooks listos para usar — reales, no genéricos",
           "anchorValueLabel": "USD 18"
         },
         {
@@ -154,76 +157,76 @@
         "imageFile": "offer_bonus_01.png",
         "imageAlt": "Bonus: plantilla editable de portafolio en Canva",
         "painHeadline": "No sabes por dónde empezar tu portafolio",
-        "outcomeBenefit": "Estructura ya armada en Canva: presentación, servicios, videos y contacto — diseño alineado a estética femenina/pro."
+        "outcomeBenefit": "Estructura ya armada en Canva: presentación, servicios, videos y contacto — para que las marcas entiendan tu propuesta antes de escribirte."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: banco de hooks para contenido",
-        "painHeadline": "Te quedas en blanco al grabar",
-        "outcomeBenefit": "50+ hooks reales para usar hoy — no frases genéricas; reduces el bloqueo de “no sé cómo empezar”."
+        "painHeadline": "Te quedas en blanco al abrir la cámara",
+        "outcomeBenefit": "50+ hooks reales y listos para usar hoy — los primeros 3 segundos que retienen, organizados por tipo de contenido y objetivo."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: planeación semanal de contenido",
         "painHeadline": "Publicas sin plan ni objetivo claro",
-        "outcomeBenefit": "Plantilla simple con días de publicación, tipo de contenido y objetivo de cada pieza — versión Notion + PDF descargable."
+        "outcomeBenefit": "Plantilla con días, formatos, pilares y objetivo de cada pieza — en Notion y PDF — para que tu semana de contenido exista antes de que empiece."
       },
       {
         "enabled": false,
         "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: cómo escribirle a una marca",
-        "painHeadline": "Te da pena o no sabes cómo acercarte a marcas",
-        "outcomeBenefit": "Mini guía con ejemplo de DM, ejemplo de correo y qué decir (y qué evitar) para abrir conversaciones."
+        "imageAlt": "Bonus: guía cómo escribirle a una marca",
+        "painHeadline": "No sabes cómo acercarte a marcas profesionalmente",
+        "outcomeBenefit": "Mini guía con ejemplo de DM, ejemplo de correo y qué decir — y qué evitar — para que la primera impresión abra puertas, no las cierre."
       }
     ],
     "urgency": {
-      "title": "Por qué conviene decidir ahora",
+      "title": "Cada semana que publicas sin sistema es esfuerzo que no construye.",
       "bullets": [
-        "Ventana de lanzamiento: el paquete está armado para ordenar presencia y contenido sin seguir posponiendo claridad.",
-        "Sin inventarios falsos: el costo real es tu tiempo si sigues publicando sin estructura."
+        "No hay inventarios falsos ni contadores artificiales. El costo real es seguir publicando sin mensaje claro, sin perfil que convierta, sin saber qué métricas importan.",
+        "Los bonuses de lanzamiento están disponibles en esta ventana de apertura. Cuando el período cierre, el precio sube y los bonuses se retiran del paquete."
       ],
-      "deadlineLineTemplate": "En esta edición, los bonuses de lanzamiento aplican hasta el {date}."
+      "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
-    "ctaPrimary": "Quiero mi acceso al ebook ahora",
-    "priceHint": "Precio en USD — configuración por entorno."
+    "ctaPrimary": "Sí, quiero mi acceso ahora",
+    "priceHint": "Precio en USD — se muestra en el checkout."
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
-    "introBody": "Respuestas rápidas antes de entrar al checkout.",
-    "cta": "Quiero el ebook",
+    "introBody": "Antes de que algo te detenga, aquí están las dudas más comunes.",
+    "cta": "Quiero mi acceso ahora",
     "items": [
       {
-        "q": "¿Qué formato tiene el ebook?",
-        "a": "Es un producto digital (PDF u formato definido por la plataforma de compra). Recibirás instrucciones de descarga después del pago."
+        "q": "¿Necesito haber leído el Vol. 1 para aprovechar este ebook?",
+        "a": "No es obligatorio, pero este volumen asume que ya tienes una idea de quién eres como creadora. Si aún no lo tienes claro, el Vol. 1 es el primer paso. Si ya tienes identidad definida — aunque sea de forma intuitiva — este ebook te da el siguiente nivel."
       },
       {
-        "q": "¿Dónde compro y cómo recibo el acceso?",
-        "a": "El checkout se procesa en la plataforma externa configurada para este lanzamiento (por ejemplo Hotmart). Tras pagar, sigue las instrucciones de esa plataforma para acceder a tu compra."
+        "q": "¿Me sirve si llevo tiempo publicando pero sin resultados?",
+        "a": "Especialmente para ti. La mayoría de creadoras que publican sin resultados no tienen un problema de cantidad — tienen un problema de estructura: mensaje sin definir, perfil que no convierte, contenido sin guion. Este ebook ataca exactamente eso."
       },
       {
-        "q": "¿Sirve si no tengo equipo caro ni estudio?",
-        "a": "Sí: el ebook incluye enfoque práctico de set e iluminación accesible y herramientas para crear con lo que tienes hoy."
+        "q": "¿Necesito equipo caro o un estudio profesional?",
+        "a": "No. El ebook incluye un capítulo entero sobre producción con lo que tienes: iluminación natural, CapCut como herramienta de edición, y cómo montar un set con cualquier rincón de tu casa. La calidad no es hardware — es intención."
       },
       {
-        "q": "¿No es solo otro curso largo?",
-        "a": "Es un ebook para leer y aplicar por módulos (marca → perfil → contenido → portafolio). Vas a tu ritmo; la clave es ejecutar mientras avanzas."
+        "q": "¿Funciona para TikTok, Instagram o las dos?",
+        "a": "Para las dos. Hay un capítulo dedicado a estrategia por plataforma que explica las diferencias del algoritmo, qué tipo de contenido funciona en cada una y cómo adaptar el mismo material sin simplemente copiar y pegar."
+      },
+      {
+        "q": "¿En qué formato está el ebook?",
+        "a": "Es un PDF diseñado para leer y trabajar. Tiene 13 capítulos con ejercicios prácticos al final de cada uno — para que no solo leas, sino que apliques y construyas tu sistema mientras avanzas."
       },
       {
         "q": "¿Hay garantía?",
-        "a": "La política de reembolsos depende de la plataforma de pago y del alcance legal aplicable. Revísalo en la página de checkout antes de comprar."
-      },
-      {
-        "q": "¿Puedo obtener ayuda con mi compra?",
-        "a": "Sí: el soporte de compra lo gestiona la plataforma de pago (por ejemplo Hotmart) desde su checkout o centro de ayuda."
+        "a": "La política de reembolsos aplica según la plataforma de pago — puedes revisarla antes de comprar en el checkout. Lo que sí te prometo es que el contenido es el mismo sistema que construí para mí: no teoría, sino estructura real probada."
       }
     ]
   },
   "close": {
-    "headline": "Tu presencia merece estructura, no solo más horas frente al celular.",
-    "body": "Si estás lista para ser vista, que tu marca se entienda y tu contenido abra oportunidades, este ebook está escrito para ti.",
-    "cta": "Quiero el ebook",
-    "footnote": "No es suerte: es marca clara + sistema + acción."
+    "headline": "Ya no estás publicando para ver qué pasa. Estás publicando con intención, con sistema y con claridad de para qué.",
+    "body": "Eso es lo que este ebook te da. No más publicar a ciegas, no más depender de la inspiración, no más mirar números que no te dicen nada. Solo mensaje claro, sistema que se sostiene y presencia que trabaja para ti.",
+    "cta": "Quiero mi acceso ahora",
+    "footnote": "La consistencia no es talento. Es un sistema que funciona aunque ese día no tengas ganas."
   }
 }
