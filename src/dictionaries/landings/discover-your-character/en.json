@@ -1,149 +1,149 @@
 {
   "meta": {
-    "title": "Discover your character — Saga for creators",
-    "description": "Ebook to define your visual identity and intentional content. Stop posting without direction."
+    "title": "Discover Your Character — Saga for Creators Vol. 1 | Isabella Lizarralde",
+    "description": "Discover who you are as a creator before you think about strategy. Define your voice, your real niche, and your ideal audience with a method rooted in your essence—not trends."
   },
   "hero": {
-    "eyebrow": "Saga for creators",
-    "productTitle": "Discover your character",
-    "headline": "Build your identity and become the protagonist of your content",
-    "subhead": "Stop creating without direction and start building content with intention and clarity. Give people a reason to remember you.",
-    "cta": "Start now",
-    "imageAlt": "Isabella — lead visual placeholder",
+    "eyebrow": "Saga for Creators · Vol. 1",
+    "productTitle": "Discover Your Character",
+    "headline": "When you know who you are, you create from a real place. And what's real always connects.",
+    "subhead": "This ebook guides you to discover your essence, define your voice, and know exactly who you're talking to—before algorithms, trends, or strategy.",
+    "cta": "I want to find my identity",
+    "imageAlt": "Isabella — lead visual reference",
     "decorativeAlt": "Y2K collage style reference"
   },
   "problem": {
     "eyebrow": "Sound familiar?",
-    "title": "When you post without a clear identity, effort doesn’t turn into outcomes",
+    "title": "You post, you try hard, you follow trends. And still something doesn't fit.",
     "cards": [
       {
-        "title": "You feel you don’t have enough followers",
-        "body": "Reach matters, but often the real issue is a message that doesn’t stand out."
+        "title": "You post often, but nothing connects deeply",
+        "body": "You follow trends, show up consistently... and the numbers don't move. It's not the camera. Your profile still doesn't have a soul."
       },
       {
-        "title": "You don’t know what to post",
-        "body": "You spend hours scrolling for inspiration — you get overwhelmed, never land on a clear idea, and time slips away."
+        "title": "You don't know what to post without copying others",
+        "body": "You scroll TikTok for other people's ideas because when you try to create from yourself, your mind goes blank. And that's more exhausting than any edit."
       },
       {
-        "title": "Everything feels saturated",
-        "body": "Different trends with no clear goal and your feed turns into a patchwork. Comparison freezes you and your content loses personality."
+        "title": "Your profile looks generic even when you try",
+        "body": "You look at your feed and it could be anyone's: no through-line, nothing that makes you recognizable, no clear reason to follow you instead of someone else."
       },
       {
-        "title": "You’re unsure this is for you",
-        "body": "You want clarity without expensive courses or wasting hours on generic tutorials chasing a magic formula for what to post."
+        "title": "You think you need something special to start",
+        "body": "Followers, a team, the right camera, the perfect moment... The truth is the only thing missing is knowing who you are. That you can build."
       }
     ],
-    "cta": "I want clarity"
+    "cta": "I want that clarity"
   },
   "solution": {
-    "title": "What you’ll achieve with this ebook",
+    "title": "By the end of this ebook, you'll know exactly who you are as a creator.",
     "titleHighlight": {
-      "before": "What you’ll achieve with this ",
-      "highlight": "ebook",
-      "after": ""
+      "before": "By the end of this ebook, you'll know exactly ",
+      "highlight": "who you are",
+      "after": " as a creator."
     },
-    "giftHint": "Includes tactical bonuses to ship faster.",
+    "giftHint": "Includes bonuses so you can apply it starting today.",
     "outcomes": [
       {
-        "title": "Break limiting beliefs",
-        "body": "See the mistakes keeping you stuck and how to exit autopilot."
+        "title": "Find your real niche with Ikigai",
+        "body": "The intersection of what you love, what you're good at, and what the world needs—so your niche comes from inside you, not from what's trending."
       },
       {
-        "title": "Define visual identity with intent",
-        "body": "Clear steps so your content looks coherent and recognizable."
+        "title": "Identify your creator archetype",
+        "body": "You'll discover which of the 6 archetypes defines you naturally and how to use it to stand out in your niche without copying anyone."
       },
       {
-        "title": "Content structure and retention",
-        "body": "Guidelines so every piece you publish has a goal and direction."
+        "title": "Build your brand voice in 4 dimensions",
+        "body": "Tone, energy, vocabulary, and perspective—so anything you publish sounds unmistakably like you, not a generic trend."
       },
       {
-        "title": "A realistic monetization mindset",
-        "body": "From improvisation to a system you can repeat without relying only on \"motivation\"."
+        "title": "Sketch the exact portrait of your ideal audience",
+        "body": "You'll stop creating for \"everyone\" and start speaking to the person who needs you specifically—and they'll feel it."
       }
     ],
-    "ctaTop": "See offer",
-    "ctaBottom": "Start now",
+    "ctaTop": "See the offer",
+    "ctaBottom": "I want access now",
     "imageAlt": "Isabella — method applied in real content"
   },
   "proof": {
-    "badge": "My story",
-    "headline": "This system didn’t come from theory — it came from years of real content.",
-    "intro": "Before teaching it, I lived it firsthand: years of trial and error that led me to a method that organized my message and results.",
+    "badge": "The story behind the method",
+    "headline": "I started scared, with no followers and no team. Two days later I had my first paid collaboration.",
+    "intro": "I kept my creative dream in a drawer for years. Until one day I took photos with what I had at home, put together a basic portfolio, and sent it with no expectations. Two days later, my first collaboration. Today, more than two years and 100+ brands later, I turned that path into the method in this ebook—so you can walk it with more clarity than I had.",
     "timeline": [
       {
         "year": "2022",
-        "phase": "No direction",
+        "phase": "The leap into the unknown",
         "bullets": [
-          "Posting without a clear strategy",
-          "Copying trends without my own narrative",
-          "Feeling invisible in the feed"
+          "First photos with what I had at home",
+          "Basic portfolio sent with no expectations",
+          "First paid collaboration in 48 hours"
         ]
       },
       {
         "year": "2023",
-        "phase": "Finding my style",
+        "phase": "Finding my voice",
         "bullets": [
-          "Testing formats and tones",
-          "Starting to hear my voice",
-          "Still missing full clarity"
+          "Tried formats, niches, and tones",
+          "Learned what connects and what doesn't",
+          "Started to understand my real archetype"
         ]
       },
       {
         "year": "2024",
         "phase": "Building the system",
         "bullets": [
-          "Aligned mindset + identity + retention",
-          "More consistent output",
-          "Community began to reconnect"
+          "Organized identity + voice + ideal audience",
+          "Content started to feel recognizable",
+          "The community started reaching out"
         ]
       },
       {
         "year": "2025",
-        "phase": "Intentional content",
+        "phase": "The full map",
         "bullets": [
-          "Clearer, more memorable message",
-          "Content aligned with conversion",
-          "More strategic decisions"
+          "100+ brand collaborations",
+          "System distilled into this saga",
+          "The method I wish I'd had"
         ]
       }
     ]
   },
   "offer": {
-    "sectionTitle": "Everything in your access",
+    "sectionTitle": "Everything included in your access",
     "hero": {
       "badges": ["Launch offer", "Ebook + 3 bonuses"],
-      "statement": "Stop improvising and start creating content with clear identity: ebook + resources you can execute today.",
-      "imageAlt": "“Discover your character” ebook mockup"
+      "statement": "It's not just an ebook. It's the full map of your identity as a creator—with the resources to apply it starting today.",
+      "imageAlt": "“Discover Your Character” ebook mockup"
     },
     "valueStack": {
       "lineItems": [
         {
           "id": "ebook",
-          "label": "Ebook “Discover your character”",
+          "label": "Ebook “Discover Your Character” — 11 chapters + exercises",
           "anchorValueLabel": "USD 27"
         },
         {
           "id": "b1",
-          "label": "Weekly content structure template",
+          "label": "Content structure template",
           "anchorValueLabel": "USD 15"
         },
         {
           "id": "b2",
-          "label": "Content idea bank (30–50 ideas)",
+          "label": "Bank of 30–50 content ideas from your essence",
           "anchorValueLabel": "USD 15"
         },
         {
           "id": "b3",
-          "label": "Visual identity moodboard guide",
+          "label": "Moodboard guide for your visual identity",
           "anchorValueLabel": "USD 12"
         },
         {
           "id": "b4",
-          "label": "Simple routine to stay consistent",
+          "label": "Minimum consistency system — the routine that sticks",
           "anchorValueLabel": "USD 12"
         }
       ],
-      "totalLabel": "Estimated bundle value",
+      "totalLabel": "Reference bundle value",
       "totalAnchorLabel": "USD 81",
       "youPayLabel": "Your investment today"
     },
@@ -152,74 +152,78 @@
       {
         "enabled": false,
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: weekly content structure template",
+        "imageAlt": "Bonus: content structure template",
         "painHeadline": "You post without a through-line",
-        "outcomeBenefit": "A weekly template so every piece has intent, tone, and a slot on your calendar."
+        "outcomeBenefit": "Weekly template so every piece has a goal, tone, and place on your calendar."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Bonus: content idea bank",
-        "painHeadline": "You freeze in front of the camera",
-        "outcomeBenefit": "30–50 prompts to start in minutes without relying only on trends."
+        "imageAlt": "Bonus: idea bank from your essence",
+        "painHeadline": "You go blank in front of the camera",
+        "outcomeBenefit": "30–50 concrete ideas aligned with your niche so you never depend on someone else's scroll or the mood of the moment again."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: visual identity moodboard",
-        "painHeadline": "Your feed looks inconsistent",
-        "outcomeBenefit": "A moodboard guide to align palette, type, and references with your voice."
+        "imageAlt": "Bonus: visual identity moodboard guide",
+        "painHeadline": "Your feed doesn't reflect who you are",
+        "outcomeBenefit": "Step-by-step guide to build your visual reference: colors, type, and aesthetic that represent you before you say a single word."
       },
       {
         "enabled": true,
         "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: consistency routine",
-        "painHeadline": "Consistency depends on motivation",
-        "outcomeBenefit": "A simple, realistic routine to publish with focus without burning out."
+        "imageAlt": "Bonus: minimum consistency system",
+        "painHeadline": "Your consistency depends on your mood",
+        "outcomeBenefit": "The minimum viable system to publish with focus even on days you don't feel like it—without burning out or falling into the start-and-stop cycle."
       }
     ],
     "urgency": {
-      "title": "Why it helps to decide now",
+      "title": "Every day you post without a clear identity is effort that doesn't build.",
       "bullets": [
-        "Launch window: the bundle is built for creators who want identity + content clarity now—not “someday.”",
-        "No fake scarcity: we don’t invent stock counts; the real cost is your time if clarity keeps waiting."
+        "No fake slots or countdown timers. The real cost is the time you keep creating without direction—not knowing who you are or who you're talking to.",
+        "Launch bonuses are available in this opening window. When the period ends, the price goes up and the bonuses are removed from the bundle."
       ],
-      "deadlineLineTemplate": "For this edition, launch bonuses apply through {date}."
+      "deadlineLineTemplate": "Bonuses available through {date}."
     },
-    "ctaPrimary": "I want my ebook access now",
-    "priceHint": "USD price — set via environment."
+    "ctaPrimary": "Yes, I want access now",
+    "priceHint": "Price in USD — shown at checkout."
   },
   "faq": {
     "introTitle": "Frequently asked questions",
-    "introBody": "Quick answers before checkout.",
-    "cta": "Start now",
+    "introBody": "Before something holds you back, here are the most common doubts.",
+    "cta": "I want access now",
     "items": [
       {
+        "q": "Do I need a lot of followers for this to work?",
+        "a": "No. Identity is built before growth, not after. If you're just starting, this ebook saves you months of creating without direction. If you've been at it a while and something still feels off, it gives you the clarity you may have missed from the start."
+      },
+      {
+        "q": "Does this help if I've been creating content for months (or years)?",
+        "a": "Especially for you. Many experienced creators post, have a community, but something doesn't fully connect. The reason is almost always undefined identity. This ebook gives you that clarity at any stage."
+      },
+      {
+        "q": "What if there are already lots of creators doing the same thing as me?",
+        "a": "No one has your story, your perspective, and your way of explaining things. Competition isn't a sign of saturation—it's a sign there's a market. The difference is you. This ebook helps you find and communicate exactly that."
+      },
+      {
         "q": "What format is the ebook?",
-        "a": "It’s a digital product (PDF or the format defined by the purchase platform). You’ll get download instructions after payment."
+        "a": "It's a PDF designed to read and work through. It has 11 chapters with practical exercises at the end of each—so you don't just read, you build your identity as you go."
       },
       {
         "q": "Where do I buy and how do I get access?",
-        "a": "Checkout runs on the external platform configured for this launch (e.g. Hotmart). After paying, follow that platform’s instructions to access your purchase."
-      },
-      {
-        "q": "Does it work if I have a small audience?",
-        "a": "Yes — the focus is identity clarity and content structure; that helps even with small audiences."
+        "a": "Checkout is processed on the external platform configured for this launch. After payment you'll get access instructions directly from there."
       },
       {
         "q": "Is there a guarantee?",
-        "a": "Refund policy depends on the payment platform and applicable terms. Review it on the checkout page before buying."
-      },
-      {
-        "q": "Can I get help with my purchase?",
-        "a": "Yes—purchase support is handled by the payment platform (e.g. Hotmart) from its checkout or help center."
+        "a": "Refund policy applies per the payment platform—you can review it before buying at checkout. What I can promise is that the content is the same system I used: not theory, but the real path, distilled for you."
       }
     ]
   },
   "close": {
-    "headline": "Your personal brand needs direction — not more lost hours scrolling.",
-    "body": "If you’re ready to move from creating without structure to a repeatable system, this ebook is written for you.",
-    "cta": "Start now",
-    "footnote": "It’s not magic: focus + structure + action."
+    "headline": "You're the creator someone is waiting to find. The only step left is to start.",
+    "body": "Identity doesn't arrive while you wait. It arrives by doing. This ebook is the first step to create from a real place, with clarity and intention—not from copying or fear.",
+    "cta": "I want access now",
+    "footnote": "Imperfect action always beats endless preparation."
   }
 }
