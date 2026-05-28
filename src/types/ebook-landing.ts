@@ -8,6 +8,8 @@ export interface EbookLandingCopy {
     headline: string;
     subhead: string;
     cta: string;
+    /** Short trust-signal line rendered below the hero CTA (e.g. "Acceso inmediato · Pago seguro"). */
+    ctaMicrocopy?: string;
     imageAlt: string;
     decorativeAlt: string;
   };
@@ -20,8 +22,8 @@ export interface EbookLandingCopy {
   solution: {
     title: string;
     /**
-     * Optional split title: draws `highlight` with a scribble oval asset behind it.
-     * When omitted, render plain `title`.
+     * Optional split title: draws highlight with a scribble oval asset behind it.
+     * When omitted, render plain title.
      */
     titleHighlight?: {
       before: string;
@@ -63,10 +65,10 @@ export interface EbookLandingCopy {
     bonuses: Array<{
       /**
        * Show this bonus in the grid and include its value-stack row (default: on).
-       * Set `false` to hide without removing copy from the file.
+       * Set false to hide without removing copy from the file.
        */
       enabled?: boolean;
-      /** Links to `valueStack.lineItems[].id` (default: b1, b2, … by array index). */
+      /** Links to valueStack.lineItems[].id (default: b1, b2, by array index). */
       valueStackId?: string;
       imageFile: string;
       imageAlt: string;
@@ -76,12 +78,18 @@ export interface EbookLandingCopy {
     urgency: {
       title: string;
       bullets: string[];
-      /** When set and `NEXT_PUBLIC_LAUNCH_*_BONUS_BUNDLE_DEADLINE_ISO` is valid, `{date}` is replaced. */
+      /** When set and NEXT_PUBLIC_LAUNCH_*_BONUS_BUNDLE_DEADLINE_ISO is valid, {date} is replaced. */
       deadlineLineTemplate?: string;
     };
     ctaPrimary: string;
-    /** Shown when `priceUsd` env is empty (same behavior as legacy `priceHint`). */
+    /** Shown when priceUsd env is empty (same behavior as legacy priceHint). */
     priceHint: string;
+    /** Short risk-reversal line shown near the price (e.g. refund policy hint). */
+    guaranteeHint?: string;
+    /** Short trust-signal line rendered below the offer CTA. */
+    ctaMicrocopy?: string;
+    /** 3-step post-purchase micro-flow rendered below the offer CTA. */
+    postPurchaseSteps?: string[];
   };
   faq: {
     introTitle: string;
@@ -93,6 +101,22 @@ export interface EbookLandingCopy {
     headline: string;
     body: string;
     cta: string;
+    /** Short trust-signal line rendered below the close CTA. */
+    ctaMicrocopy?: string;
     footnote: string;
+  };
+  /** Optional narrative bridges rendered between sections. */
+  transitions?: {
+    /** Italic sentence between Problem and Solution sections. */
+    problemToSolution?: string;
+    /** Italic sentence between Proof and Offer sections. */
+    proofToOffer?: string;
+  };
+  /** When present, an exit-intent overlay is enabled for this landing. */
+  exitIntent?: {
+    headline: string;
+    body: string;
+    cta: string;
+    dismiss: string;
   };
 }

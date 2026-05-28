@@ -10,7 +10,8 @@
     "subhead": "Turn who you already are into a digital presence that speaks for you before you open your mouth — with a clear message, a profile that converts, and a content system that holds up week after week.",
     "cta": "I want to build my presence",
     "imageAlt": "Isabella — lead visual reference",
-    "decorativeAlt": "Y2K collage style reference"
+    "decorativeAlt": "Y2K collage style reference",
+    "ctaMicrocopy": "Instant access · Secure payment · No subscription"
   },
   "problem": {
     "eyebrow": "Sound familiar?",
@@ -190,7 +191,14 @@
       "deadlineLineTemplate": "Bonuses available through {date}."
     },
     "ctaPrimary": "Yes, I want my access now",
-    "priceHint": "USD price — shown at checkout."
+    "priceHint": "USD price — shown at checkout.",
+    "guaranteeHint": "Refund policy available at checkout before paying.",
+    "postPurchaseSteps": [
+      "Complete payment",
+      "Instant access",
+      "Start today"
+    ],
+    "ctaMicrocopy": "Instant access · Secure payment · No subscription"
   },
   "faq": {
     "introTitle": "Frequently asked questions",
@@ -227,6 +235,17 @@
     "headline": "You're no longer posting to see what happens. You're posting with intention, with a system, and with clarity about why.",
     "body": "That's what this ebook gives you. No more posting blind, no more depending on inspiration, no more watching numbers that tell you nothing. Just a clear message, a system that holds up, and a presence that works for you.",
     "cta": "I want my access now",
-    "footnote": "Consistency isn't talent. It's a system that works even on days you don't feel like it."
+    "footnote": "Consistency isn't talent. It's a system that works even on days you don't feel like it.",
+    "ctaMicrocopy": "Instant access · Secure payment"
+  },
+  "transitions": {
+    "problemToSolution": "What if you had a system that solves this once and for all?",
+    "proofToOffer": "That system exists. And it is available for you now."
+  },
+  "exitIntent": {
+    "headline": "Before you go...",
+    "body": "Publishing with a system means publishing with intention. This ebook gives you exactly that.",
+    "cta": "Yes, I want access",
+    "dismiss": "Not now"
   }
 }

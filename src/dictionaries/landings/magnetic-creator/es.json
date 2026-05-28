@@ -10,7 +10,8 @@
     "subhead": "El sistema completo para pasar de la visibilidad al ingreso: 8 modelos de monetización, precios reales para LATAM y USA, negociación sin miedo y un perfil que trabaja para ti antes de que digas una palabra.",
     "cta": "Quiero el sistema completo",
     "imageAlt": "Isabella — referencia visual protagonista",
-    "decorativeAlt": "Estética editorial cálida cherry, vainilla y azul columbia"
+    "decorativeAlt": "Estética editorial cálida cherry, vainilla y azul columbia",
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro · Sin suscripción"
   },
   "problem": {
     "eyebrow": "¿Te suena familiar?",
@@ -190,7 +191,14 @@
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero mi acceso ahora",
-    "priceHint": "Precio en USD — se muestra en el checkout."
+    "priceHint": "Precio en USD — se muestra en el checkout.",
+    "guaranteeHint": "Política de reembolsos disponible en el checkout antes de pagar.",
+    "postPurchaseSteps": [
+      "Completas el pago",
+      "Acceso inmediato",
+      "Empiezas hoy"
+    ],
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro · Sin suscripción"
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
@@ -227,6 +235,17 @@
     "headline": "Tú eres el Main Character. Y las protagonistas no esperan que alguien les diga 'acción' — se la dan ellas mismas.",
     "body": "Tienes el sistema de conversión. Tienes los 8 modelos. Tienes los precios, los scripts y las métricas. Ahora hay una sola variable: tú — eligiendo salir del modo espectadora y entrar al modo protagonista. La vida que quieres construir como creadora no está esperando en algún punto lejano. Se construye con lo que haces hoy.",
     "cta": "Quiero mi acceso ahora",
-    "footnote": "El único requisito para vivir de lo que creas es decidir que eso es exactamente lo que vas a hacer."
+    "footnote": "El único requisito para vivir de lo que creas es decidir que eso es exactamente lo que vas a hacer.",
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro"
+  },
+  "transitions": {
+    "problemToSolution": "¿Y si el sistema de conversión ya existe y solo falta que lo apliques?",
+    "proofToOffer": "Ese es el sistema. Ya probado. Y está disponible ahora."
+  },
+  "exitIntent": {
+    "headline": "Antes de que te vayas...",
+    "body": "La diferencia entre visibilidad e ingresos reales es un sistema. Este ebook es ese sistema.",
+    "cta": "Sí, quiero el sistema",
+    "dismiss": "Ahora no"
   }
 }

@@ -9,6 +9,7 @@
     "headline": "Cuando sabes quién eres, creas desde un lugar real. Y lo real siempre conecta.",
     "subhead": "Este ebook te guía a descubrir tu esencia, definir tu voz y saber exactamente a quién le hablas — antes de pensar en algoritmos, tendencias o estrategia.",
     "cta": "Quiero encontrar mi identidad",
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro · Sin suscripción",
     "imageAlt": "Isabella — referencia visual protagonista",
     "decorativeAlt": "Referencia estilo collage Y2K"
   },
@@ -111,7 +112,10 @@
   "offer": {
     "sectionTitle": "Todo lo que incluye tu acceso",
     "hero": {
-      "badges": ["Oferta de lanzamiento", "Ebook + 3 bonuses"],
+      "badges": [
+        "Oferta de lanzamiento",
+        "Ebook + 3 bonuses"
+      ],
       "statement": "No es solo un ebook. Es el mapa completo de tu identidad como creadora — con los recursos para que lo apliques desde hoy.",
       "imageAlt": "Mockup del ebook «Descubre tu Personaje»"
     },
@@ -187,7 +191,14 @@
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero mi acceso ahora",
-    "priceHint": "Precio en USD — se muestra en el checkout."
+    "priceHint": "Precio en USD — se muestra en el checkout.",
+    "guaranteeHint": "Política de reembolso disponible en el checkout — revísala antes de comprar.",
+    "ctaMicrocopy": "Acceso inmediato · PDF descargable · Sin suscripción",
+    "postPurchaseSteps": [
+      "Completas el pago",
+      "Acceso inmediato",
+      "Empiezas hoy"
+    ]
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
@@ -224,6 +235,17 @@
     "headline": "Eres la creadora que alguien está esperando encontrar. El único paso que falta es empezar.",
     "body": "La identidad no llega esperando. Llega haciendo. Este ebook es el primer paso para crear desde un lugar real, con claridad y con intención — no desde la copia ni desde el miedo.",
     "cta": "Quiero mi acceso ahora",
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro",
     "footnote": "La acción imperfecta siempre gana a la preparación infinita."
+  },
+  "transitions": {
+    "problemToSolution": "¿Y si no tienes que seguir creando sin dirección?",
+    "proofToOffer": "Ese mismo camino, ahora destilado en un sistema para ti."
+  },
+  "exitIntent": {
+    "headline": "Espera — antes de irte.",
+    "body": "Llevas tiempo creando sin saber bien quién eres como creadora. Este ebook es el mapa que te falta. Una vez lo tengas, todo lo demás tiene más sentido.",
+    "cta": "Sí, quiero mi acceso",
+    "dismiss": "Ahora no"
   }
 }

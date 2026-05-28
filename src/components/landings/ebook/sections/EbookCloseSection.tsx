@@ -22,12 +22,12 @@ export default function EbookCloseSection({
           {close.headline}
         </h2>
         <p className="mt-4 text-lg text-brand-surface/85">{close.body}</p>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-col items-center gap-2">
           <div className="relative">
             <CheckoutLink
               href={checkoutUrl}
               placement="close"
-              className="inline-flex rounded-full bg-brand-accent px-10 py-4 text-lg font-semibold text-brand-card"
+              className="inline-flex rounded-full bg-brand-accent px-10 py-4 text-lg font-semibold text-brand-card shadow-md shadow-brand-accent/30 transition-opacity hover:opacity-90"
             >
               {close.cta}
             </CheckoutLink>
@@ -42,8 +42,11 @@ export default function EbookCloseSection({
               aria-hidden
             />
           </div>
+          {close.ctaMicrocopy ? (
+            <p className="text-xs text-brand-surface/50">{close.ctaMicrocopy}</p>
+          ) : null}
         </div>
-        <p className="mt-10 text-sm text-brand-surface/55">{close.footnote}</p>
+        <p className="mt-10 text-sm text-brand-surface/80">{close.footnote}</p>
       </ScrollReveal>
     </section>
   );

@@ -10,7 +10,8 @@
     "subhead": "This ebook guides you to discover your essence, define your voice, and know exactly who you're talking to—before algorithms, trends, or strategy.",
     "cta": "I want to find my identity",
     "imageAlt": "Isabella — lead visual reference",
-    "decorativeAlt": "Y2K collage style reference"
+    "decorativeAlt": "Y2K collage style reference",
+    "ctaMicrocopy": "Instant access · Secure payment · No subscription"
   },
   "problem": {
     "eyebrow": "Sound familiar?",
@@ -111,7 +112,10 @@
   "offer": {
     "sectionTitle": "Everything included in your access",
     "hero": {
-      "badges": ["Launch offer", "Ebook + 3 bonuses"],
+      "badges": [
+        "Launch offer",
+        "Ebook + 3 bonuses"
+      ],
       "statement": "It's not just an ebook. It's the full map of your identity as a creator—with the resources to apply it starting today.",
       "imageAlt": "“Discover Your Character” ebook mockup"
     },
@@ -187,7 +191,14 @@
       "deadlineLineTemplate": "Bonuses available through {date}."
     },
     "ctaPrimary": "Yes, I want access now",
-    "priceHint": "Price in USD — shown at checkout."
+    "priceHint": "Price in USD — shown at checkout.",
+    "guaranteeHint": "Refund policy available at checkout before paying.",
+    "postPurchaseSteps": [
+      "Complete payment",
+      "Instant access",
+      "Start today"
+    ],
+    "ctaMicrocopy": "Instant access · Secure payment · No subscription"
   },
   "faq": {
     "introTitle": "Frequently asked questions",
@@ -224,6 +235,17 @@
     "headline": "You're the creator someone is waiting to find. The only step left is to start.",
     "body": "Identity doesn't arrive while you wait. It arrives by doing. This ebook is the first step to create from a real place, with clarity and intention—not from copying or fear.",
     "cta": "I want access now",
-    "footnote": "Imperfect action always beats endless preparation."
+    "footnote": "Imperfect action always beats endless preparation.",
+    "ctaMicrocopy": "Instant access · Secure payment"
+  },
+  "transitions": {
+    "problemToSolution": "What if you don't have to keep creating without direction?",
+    "proofToOffer": "That same journey — now distilled into a system for you."
+  },
+  "exitIntent": {
+    "headline": "Before you go...",
+    "body": "Your identity as a creator already exists. You just need the system to activate it — and that is exactly what this ebook is.",
+    "cta": "Yes, I want access",
+    "dismiss": "Not now"
   }
 }

@@ -27,7 +27,7 @@ export default function BonusGrid({
       {bonuses.map((bonus, i) => (
         <div
           key={`${bonus.imageFile}-${i}`}
-          className="flex h-full w-full max-w-[17.5rem] flex-col overflow-hidden rounded-xl border border-brand-ink/10 bg-brand-card shadow-sm lg:max-w-none"
+          className="flex h-full w-full max-w-[17.5rem] flex-col overflow-hidden rounded-xl border border-brand-ink/10 bg-brand-card shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-accent/25 hover:shadow-md lg:max-w-none"
         >
           <div className="flex w-full shrink-0 justify-center px-2 pt-2 sm:px-3 sm:pt-3">
             <div

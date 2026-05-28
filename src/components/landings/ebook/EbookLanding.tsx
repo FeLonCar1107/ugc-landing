@@ -10,6 +10,8 @@ import {
   getLaunchOfferPhaseLabel,
 } from "@/utils/launchEnv";
 import { sectionBandHeading } from "./ebookLandingConstants";
+import ExitIntentModal from "./ExitIntentModal";
+import ReadingProgressBar from "./ReadingProgressBar";
 import OfferSection from "./offer/OfferSection";
 import EbookCloseSection from "./sections/EbookCloseSection";
 import EbookFaqSection from "./sections/EbookFaqSection";
@@ -27,6 +29,8 @@ export type EbookLandingProps = {
   checkoutUrl: string;
   priceUsd: string;
   timeToResult: string;
+  /** Optional social proof count string (e.g. "247") to show in the hero. */
+  socialCount?: string;
   locale?: Locale;
 };
 
@@ -63,6 +67,7 @@ export default function EbookLanding({
   checkoutUrl,
   priceUsd,
   timeToResult,
+  socialCount,
   locale = i18n.defaultLocale,
 }: EbookLandingProps) {
   const base = normalizeAssetBase(assetBase);
@@ -75,11 +80,25 @@ export default function EbookLanding({
   const heroVisual = getLaunchHeroVisual(launchSlug);
   const offerPhaseLabel = getLaunchOfferPhaseLabel(launchSlug);
   const offerDeadlineIso = getLaunchBonusBundleDeadlineIso(launchSlug);
+
+  const showProblemToSolutionBridge =
+    (copy.transitions?.problemToSolution?.trim().length ?? 0) > 0;
+  const showProofToOfferBridge =
+    (copy.transitions?.proofToOffer?.trim().length ?? 0) > 0;
+
   return (
     <div
       data-landing-slug={slug}
       className={`relative min-h-screen tracking-tight bg-brand-surface text-brand-ink ${montserrat.className}`}
     >
+      {/* Reading progress bar — fixed, top of viewport */}
+      <ReadingProgressBar />
+
+      {/* Exit intent modal — rendered once per session */}
+      {copy.exitIntent ? (
+        <ExitIntentModal copy={copy.exitIntent} checkoutUrl={checkoutUrl} />
+      ) : null}
+
       <StickyLaunchCta
         label={copy.hero.cta}
         href={checkoutUrl}
@@ -93,6 +112,7 @@ export default function EbookLanding({
           hero={copy.hero}
           checkoutUrl={checkoutUrl}
           timeToResult={timeToResult}
+          socialCount={socialCount}
           asset={asset}
         />
       </EbookCatchSurface>
@@ -104,6 +124,15 @@ export default function EbookLanding({
           sectionBandHeading={sectionBandHeading}
         />
       </EbookCatchSurface>
+
+      {/* Transition bridge: Problem → Solution */}
+      {showProblemToSolutionBridge ? (
+        <div className="flex justify-center px-4 py-6 md:py-8">
+          <p className="text-center text-base font-semibold italic text-brand-accent-mid md:text-lg">
+            {copy.transitions!.problemToSolution}
+          </p>
+        </div>
+      ) : null}
 
       <EbookCatchSurface slot="solution">
         <EbookSolutionSection
@@ -121,6 +150,15 @@ export default function EbookLanding({
           asset={asset}
         />
       </EbookCatchSurface>
+
+      {/* Transition bridge: Proof → Offer */}
+      {showProofToOfferBridge ? (
+        <div className="flex justify-center px-4 py-6 md:py-8">
+          <p className="text-center text-base font-semibold italic text-brand-accent-mid md:text-lg">
+            {copy.transitions!.proofToOffer}
+          </p>
+        </div>
+      ) : null}
 
       <EbookCatchSurface slot="offer">
         <OfferSection

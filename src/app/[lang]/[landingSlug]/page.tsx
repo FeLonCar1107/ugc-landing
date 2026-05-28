@@ -13,6 +13,7 @@ import LaunchAnalyticsRoot from "@/components/landings/ebook/analytics/LaunchAna
 import {
   getLaunchCheckoutUrl,
   getLaunchPriceUsd,
+  getLaunchSocialCount,
   getLaunchTimeToResult,
   launchAssetBase,
 } from "@/utils/launchEnv";
@@ -59,6 +60,7 @@ export default async function LandingBySlugPage({
   const checkoutUrl = getLaunchCheckoutUrl(slug);
   const priceUsd = getLaunchPriceUsd(slug);
   const timeToResult = getLaunchTimeToResult(slug);
+  const socialCount = getLaunchSocialCount(slug);
 
   return (
     <LaunchAnalyticsRoot slug={slug} locale={params.lang}>
@@ -69,6 +71,7 @@ export default async function LandingBySlugPage({
         checkoutUrl={checkoutUrl}
         priceUsd={priceUsd}
         timeToResult={timeToResult}
+        socialCount={socialCount || undefined}
         locale={params.lang}
       />
     </LaunchAnalyticsRoot>

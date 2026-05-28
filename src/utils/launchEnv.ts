@@ -66,11 +66,11 @@ function parseLaunchHeroVisual(raw: string | undefined): LaunchHeroVisual | unde
 
 /**
  * Hero visual resolution (first match wins):
- * 1. `NEXT_PUBLIC_LAUNCH_<SLUG>_HERO_VISUAL` — per ebook
- * 2. `NEXT_PUBLIC_LAUNCH_HERO_VISUAL` — all ebooks
- * 3. `portrait` (`hero_done.png` from shared assets)
+ * 1. NEXT_PUBLIC_LAUNCH_SLUG_HERO_VISUAL — per ebook
+ * 2. NEXT_PUBLIC_LAUNCH_HERO_VISUAL — all ebooks
+ * 3. portrait (hero_done.png from shared assets)
  *
- * Set `mockup` to use each slug's `offer_ebook_mockup.png` in the first hero.
+ * Set mockup to use each slug's offer_ebook_mockup.png in the first hero.
  */
 export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
   const perSlugKey = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_HERO_VISUAL`;
@@ -81,3 +81,12 @@ export function getLaunchHeroVisual(slug: string): LaunchHeroVisual {
   );
 }
 
+/**
+ * Optional social proof count string shown in the hero
+ * (e.g. "247" renders as "247 creadoras ya tienen acceso").
+ * Read from NEXT_PUBLIC_LAUNCH_SLUG_SOCIAL_COUNT.
+ */
+export function getLaunchSocialCount(slug: string): string {
+  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_SOCIAL_COUNT`;
+  return process.env[k]?.trim() ?? "";
+}

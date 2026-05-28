@@ -29,7 +29,7 @@ export default function EbookProblemSection({
         <ScrollRevealStagger className="grid items-stretch gap-6 md:grid-cols-2">
           {problem.cards.map((card, index) => (
             <ScrollRevealItem key={`${card.title}-${index}`} className="h-full">
-              <div className="flex h-full min-h-full flex-col rounded-2xl border border-brand-ink/10 bg-brand-surface p-6 shadow-sm">
+              <div className="flex h-full min-h-full flex-col rounded-2xl border border-brand-ink/10 bg-brand-surface p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-accent/30 hover:shadow-md">
                 <h3 className="text-lg font-semibold text-brand-accent">{card.title}</h3>
                 <p className="mt-2 flex-1 whitespace-pre-line text-brand-ink/85">{card.body}</p>
               </div>
@@ -40,7 +40,7 @@ export default function EbookProblemSection({
           <CheckoutLink
             href={checkoutUrl}
             placement="problem"
-            className="rounded-full bg-brand-ink px-8 py-3 font-semibold text-brand-card hover:bg-brand-ink/85"
+            className="rounded-full bg-brand-accent px-8 py-3 font-semibold text-brand-card shadow-sm shadow-brand-accent/25 transition-opacity hover:opacity-90"
           >
             {problem.cta}
           </CheckoutLink>

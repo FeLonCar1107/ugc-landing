@@ -39,7 +39,7 @@ export default function EbookFaqSection({
             <CheckoutLink
               href={checkoutUrl}
               placement="faq"
-              className="inline-flex rounded-full bg-brand-ink px-8 py-3 font-semibold text-brand-card"
+              className="inline-flex rounded-full bg-brand-accent px-8 py-3 font-semibold text-brand-card shadow-sm shadow-brand-accent/25 transition-opacity hover:opacity-90"
             >
               {faq.cta}
             </CheckoutLink>

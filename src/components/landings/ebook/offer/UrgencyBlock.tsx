@@ -1,5 +1,6 @@
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import type { Locale } from "@/i18n/config";
+import CountdownTimer from "../CountdownTimer";
 
 function formatDeadlineLine(iso: string, locale: Locale): string {
   const tag = locale === "es" ? "es-ES" : "en-US";
@@ -34,6 +35,11 @@ export default function UrgencyBlock({
     bullets.push(urgency.deadlineLineTemplate.replace("{date}", dateStr));
   }
 
+  const showTimer =
+    deadlineIso !== undefined &&
+    !Number.isNaN(Date.parse(deadlineIso)) &&
+    Date.parse(deadlineIso) > Date.now();
+
   return (
     <div className="w-full min-w-0 space-y-2.5 rounded-xl border border-brand-accent/25 bg-brand-accent/8 p-3 sm:p-4">
       {phaseLabel ? (
@@ -48,6 +54,11 @@ export default function UrgencyBlock({
           {urgency.title}
         </h3>
       </div>
+      {showTimer && deadlineIso ? (
+        <div className="py-1">
+          <CountdownTimer deadlineIso={deadlineIso} />
+        </div>
+      ) : null}
       <ul className="space-y-1.5 text-left text-[0.8125rem] leading-relaxed text-brand-ink/90 sm:text-sm">
         {bullets.map((line, i) => (
           <li key={i} className="flex gap-2">

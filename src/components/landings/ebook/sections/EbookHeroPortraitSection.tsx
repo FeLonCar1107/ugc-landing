@@ -21,6 +21,8 @@ export type EbookHeroPortraitSectionProps = {
   hero: EbookLandingCopy["hero"];
   checkoutUrl: string;
   timeToResult: string;
+  /** Optional social proof count (e.g. "247") — rendered as "★ 247 creadoras ya tienen acceso". */
+  socialCount?: string;
   asset: (filename: string) => string;
 };
 
@@ -29,10 +31,12 @@ export default function EbookHeroPortraitSection({
   hero,
   checkoutUrl,
   timeToResult,
+  socialCount,
   asset,
 }: EbookHeroPortraitSectionProps) {
   const showEyebrow = hero.eyebrow.trim().length > 0;
   const showTimeToResult = timeToResult.trim().length > 0;
+  const showSocialCount = socialCount && socialCount.trim().length > 0;
 
   return (
     <section className="relative overflow-x-clip overflow-y-visible bg-gradient-to-b from-brand-blush/40 to-brand-surface py-[clamp(3rem,8vw,5.5rem)] px-[clamp(1.25rem,8vw,6rem)] text-brand-ink">
@@ -105,18 +109,28 @@ export default function EbookHeroPortraitSection({
               {hero.subhead}
             </p>
             {showTimeToResult ? (
-              <p className="text-sm text-brand-ink/65">
-                <span className="font-semibold text-brand-accent-mid">{timeToResult}</span>
+              <span className="inline-flex items-center gap-1.5 self-start rounded-full bg-brand-accent/12 px-3 py-1 text-xs font-bold text-brand-accent-mid">
+                <span aria-hidden>⚡</span>
+                {timeToResult}
+              </span>
+            ) : null}
+            {showSocialCount ? (
+              <p className="text-xs font-semibold text-brand-ink/60">
+                <span className="text-brand-accent" aria-hidden>★</span>{" "}
+                {socialCount} creadoras ya tienen acceso
               </p>
             ) : null}
-            <div className="flex justify-start pt-1">
+            <div className="flex flex-col items-start gap-1.5 pt-1">
               <CheckoutLink
                 href={checkoutUrl}
                 placement="hero"
-                className="inline-flex items-center justify-center rounded-full border border-brand-accent-mid bg-brand-accent-mid/[0.07] px-[1.75rem] py-3.5 text-base font-bold leading-tight text-brand-accent-mid no-underline transition-colors duration-200 hover:bg-brand-accent-mid hover:text-brand-card md:px-[2rem] md:py-4 md:text-[1.0625rem]"
+                className="inline-flex items-center justify-center rounded-full bg-brand-accent px-[1.75rem] py-3.5 text-base font-bold leading-tight text-brand-card shadow-md shadow-brand-accent/30 no-underline transition-opacity duration-200 hover:opacity-90 md:px-[2rem] md:py-4 md:text-[1.0625rem]"
               >
                 {hero.cta}
               </CheckoutLink>
+              {hero.ctaMicrocopy ? (
+                <p className="text-xs text-brand-ink/45">{hero.ctaMicrocopy}</p>
+              ) : null}
             </div>
           </ScrollRevealItem>
 

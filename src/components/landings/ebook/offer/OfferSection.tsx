@@ -93,6 +93,13 @@ export default function OfferSection({
               />
             </div>
 
+            {/* Guarantee hint -- risk reversal near the price */}
+            {offer.guaranteeHint ? (
+              <p className="w-full text-center text-xs leading-relaxed text-brand-ink/55">
+                🔒 {offer.guaranteeHint}
+              </p>
+            ) : null}
+
             <div className="flex w-full min-w-0 flex-col items-center gap-3 text-center">
               <CheckoutLink
                 href={checkoutUrl}
@@ -101,6 +108,34 @@ export default function OfferSection({
               >
                 {offer.ctaPrimary}
               </CheckoutLink>
+
+              {/* Micro-copy: trust signals below CTA */}
+              {offer.ctaMicrocopy ? (
+                <p className="text-xs text-brand-ink/45">{offer.ctaMicrocopy}</p>
+              ) : null}
+
+              {/* Post-purchase micro-flow: 3 steps */}
+              {offer.postPurchaseSteps && offer.postPurchaseSteps.length > 0 ? (
+                <div className="mt-1 flex w-full max-w-xs items-center justify-center gap-0">
+                  {offer.postPurchaseSteps.map((step, i) => (
+                    <div key={i} className="flex items-center">
+                      <div className="flex flex-col items-center gap-1">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-accent/15 text-[0.6rem] font-black text-brand-accent">
+                          {i + 1}
+                        </span>
+                        <span className="text-center text-[0.6rem] font-semibold leading-tight text-brand-ink/55">
+                          {step}
+                        </span>
+                      </div>
+                      {i < offer.postPurchaseSteps!.length - 1 ? (
+                        <span className="mx-1.5 mb-4 text-[0.6rem] text-brand-ink/25" aria-hidden>
+                          →
+                        </span>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
         </div>

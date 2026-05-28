@@ -10,7 +10,8 @@
     "subhead": "Convierte lo que ya eres en una presencia digital que habla por ti antes de que abras la boca — con mensaje claro, perfil que convierte y un sistema de contenido que se sostiene semana tras semana.",
     "cta": "Quiero construir mi presencia",
     "imageAlt": "Isabella — referencia visual protagonista",
-    "decorativeAlt": "Referencia estilo collage Y2K"
+    "decorativeAlt": "Referencia estilo collage Y2K",
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro · Sin suscripción"
   },
   "problem": {
     "eyebrow": "¿Te suena familiar?",
@@ -190,7 +191,14 @@
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero mi acceso ahora",
-    "priceHint": "Precio en USD — se muestra en el checkout."
+    "priceHint": "Precio en USD — se muestra en el checkout.",
+    "guaranteeHint": "Política de reembolsos disponible en el checkout antes de pagar.",
+    "postPurchaseSteps": [
+      "Completas el pago",
+      "Acceso inmediato",
+      "Empiezas hoy"
+    ],
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro · Sin suscripción"
   },
   "faq": {
     "introTitle": "Preguntas frecuentes",
@@ -227,6 +235,17 @@
     "headline": "Ya no estás publicando para ver qué pasa. Estás publicando con intención, con sistema y con claridad de para qué.",
     "body": "Eso es lo que este ebook te da. No más publicar a ciegas, no más depender de la inspiración, no más mirar números que no te dicen nada. Solo mensaje claro, sistema que se sostiene y presencia que trabaja para ti.",
     "cta": "Quiero mi acceso ahora",
-    "footnote": "La consistencia no es talento. Es un sistema que funciona aunque ese día no tengas ganas."
+    "footnote": "La consistencia no es talento. Es un sistema que funciona aunque ese día no tengas ganas.",
+    "ctaMicrocopy": "Acceso inmediato · Pago seguro"
+  },
+  "transitions": {
+    "problemToSolution": "¿Y si tuvieras un sistema que resuelve esto de una vez?",
+    "proofToOffer": "Ese sistema existe. Y ahora está disponible para ti."
+  },
+  "exitIntent": {
+    "headline": "Antes de que te vayas...",
+    "body": "Publicar con sistema es publicar con intención. Este ebook te da exactamente eso.",
+    "cta": "Sí, quiero mi acceso",
+    "dismiss": "Ahora no"
   }
 }
