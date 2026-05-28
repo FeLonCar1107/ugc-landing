@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "title": "Saga for Creators — Complete Collection | Isabella Lizarralde",
+    "description": "The three ebooks that take you from creator without direction to creator who lives from what she creates. Identity, strategy and monetization in one complete package."
+  },
+  "hero": {
+    "eyebrow": "Vol. 1 · 2 · 3",
+    "productTitle": "Saga for Creators",
+    "headline": "From creator with potential to creator who lives from what she creates. The complete journey, in three volumes.",
+    "subhead": "Identity that connects. Content that retains. Income that arrives. The three ebooks that cover the full path — so you don't have to discover alone what already exists as a system.",
+    "cta": "I want the complete saga",
+    "ctaMicrocopy": "Immediate access · Downloadable PDF · No subscription",
+    "imageAlt": "Isabella — protagonist of the saga",
+    "decorativeAlt": "Editorial trilogy Saga for Creators"
+  },
+  "problem": {
+    "eyebrow": "Where are you right now?",
+    "title": "You post. You put in effort. You consume content about content. And the income still hasn't arrived.",
+    "cards": [
+      {
+        "title": "You create, but you don't really know who you are as a creator",
+        "body": "You follow other people's trends because when you try to create from yourself, your mind goes blank. It's not lack of talent — it's lack of defined identity. And without that, everything you publish feels borrowed."
+      },
+      {
+        "title": "Your content reaches people, but no one stays",
+        "body": "Views exist, likes appear, but followers don't grow and brands don't write. The reason is almost always the same: without a clear message or content system, the algorithm has nothing to anchor."
+      },
+      {
+        "title": "You see other creators monetizing and can't figure out what they have that you don't",
+        "body": "It's not magic or luck or more followers. It's a system: they know how to charge, how to approach brands, and how to make their profile work before they say a word. That can be learned."
+      },
+      {
+        "title": "You're learning everything in pieces — and nothing connects",
+        "body": "A tips reel here, a tutorial there, a standalone course you don't finish. The problem isn't lack of information — it's that no one has given you the complete map, ordered and built for your reality."
+      }
+    ],
+    "cta": "I want the complete map"
+  },
+  "solution": {
+    "title": "This saga is the journey you wish you'd had from day one.",
+    "titleHighlight": {
+      "before": "This saga is the journey you ",
+      "highlight": "wish you'd had",
+      "after": " from day one."
+    },
+    "giftHint": "Includes all bonuses from all three volumes.",
+    "outcomes": [
+      {
+        "title": "Vol. 1 — Discover Your Character: find who you are",
+        "body": "Your real niche with the Ikigai method, your creator archetype, your voice in 4 dimensions and the exact portrait of your ideal audience. The foundation that makes everything else work."
+      },
+      {
+        "title": "Vol. 2 — Conquer Attention: build how you show up",
+        "body": "Your Mission Statement and value proposition, the profile that converts visits into followers, the Hook–Context–Value–CTA structure and the weekly production system that sustains itself without burning you out."
+      },
+      {
+        "title": "Vol. 3 — Magnetic Creator: convert into real income",
+        "body": "8 monetization models with estimated income for LATAM and USA, real prices by collaboration type, a 3-stage conversion system and your profile as a commercial asset that attracts brands before you say anything."
+      },
+      {
+        "title": "The complete system — ordered, connected and ready to apply",
+        "body": "Each volume builds on the previous one. These aren't three independent ebooks — they're three phases of the same transformation. By the time you finish all three, you don't just know more: you're a different creator."
+      }
+    ],
+    "ctaTop": "See the full offer",
+    "ctaBottom": "I want my access now",
+    "imageAlt": "Isabella — system applied across all three volumes"
+  },
+  "proof": {
+    "badge": "The story behind the saga",
+    "headline": "I started scared, with no followers and no team. Today I have over 100 collaborations and the system distilled in these three books.",
+    "intro": "I didn't build this all at once. I built it phase by phase — first finding who I was, then learning to communicate it, finally understanding how to convert it into real money. I made the mistakes you make when you don't have a map. This saga is that map. So you can walk it with more clarity than I had.",
+    "timeline": [
+      {
+        "year": "2022",
+        "phase": "The leap without a net",
+        "bullets": [
+          "First photos with what I had at home",
+          "No defined identity or clear message",
+          "First paid collaboration in 48 hours — by luck, not by system"
+        ]
+      },
+      {
+        "year": "2023",
+        "phase": "Building identity",
+        "bullets": [
+          "Found my real niche and my voice",
+          "Content started becoming recognizable",
+          "First followers arrived because they connected — not because of trends"
+        ]
+      },
+      {
+        "year": "2024",
+        "phase": "System + conversion",
+        "bullets": [
+          "Message, profile and weekly production system aligned",
+          "First consistent income from UGC, brand deals and ambassadorships",
+          "Profile started working before I even opened my mouth"
+        ]
+      },
+      {
+        "year": "2025",
+        "phase": "The saga documented",
+        "bullets": [
+          "Over 100 collaborations with aligned brands",
+          "The complete system distilled in three volumes",
+          "The map I wish someone had given me on day one"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "sectionTitle": "Everything included in the complete saga",
+    "hero": {
+      "badges": [
+        "Launch offer",
+        "3 ebooks + 7 bonuses"
+      ],
+      "statement": "This isn't a bundle of PDFs. It's the complete transformation system for creators — identity, strategy and monetization in a single journey designed for you to advance phase by phase.",
+      "imageAlt": "Complete trilogy — Saga for Creators"
+    },
+    "valueStack": {
+      "lineItems": [
+        {
+          "id": "ebook1",
+          "label": "Ebook Vol. 1 «Discover Your Character» — 11 chapters + exercises",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "ebook2",
+          "label": "Ebook Vol. 2 «Conquer Attention» — 13 chapters + exercises",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "ebook3",
+          "label": "Ebook Vol. 3 «Magnetic Creator» — 8 chapters + exercises",
+          "anchorValueLabel": "USD 27"
+        },
+        {
+          "id": "b1",
+          "label": "Bank of 30–50 content ideas from your essence (Vol. 1)",
+          "anchorValueLabel": "USD 15"
+        },
+        {
+          "id": "b2",
+          "label": "Moodboard guide for your visual identity (Vol. 1)",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b3",
+          "label": "Minimum consistency system (Vol. 1)",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b4",
+          "label": "Bank of 50+ hooks ready to use (Vol. 2)",
+          "anchorValueLabel": "USD 18"
+        },
+        {
+          "id": "b5",
+          "label": "Weekly content planning template — Notion + PDF (Vol. 2)",
+          "anchorValueLabel": "USD 12"
+        },
+        {
+          "id": "b6",
+          "label": "Simplified metrics tracker with actionable decisions (Vol. 3)",
+          "anchorValueLabel": "USD 15"
+        },
+        {
+          "id": "b7",
+          "label": "Brand negotiation script — DM, email and call (Vol. 3)",
+          "anchorValueLabel": "USD 18"
+        }
+      ],
+      "totalLabel": "Reference value of the complete package",
+      "totalAnchorLabel": "USD 183",
+      "youPayLabel": "Your investment today"
+    },
+    "bonusesSectionTitle": "Bonuses included in the saga",
+    "bonuses": [
+      {
+        "enabled": true,
+        "valueStackId": "b1",
+        "imageFile": "offer_bonus_01.png",
+        "imageAlt": "Content ideas bank from your essence",
+        "painHeadline": "You go blank in front of the camera",
+        "outcomeBenefit": "30–50 concrete ideas aligned with your niche — so you never again depend on scrolling through other people's content or waiting for inspiration."
+      },
+      {
+        "enabled": true,
+        "valueStackId": "b2",
+        "imageFile": "offer_bonus_02.png",
+        "imageAlt": "Visual identity moodboard guide",
+        "painHeadline": "Your feed doesn't reflect who you are",
+        "outcomeBenefit": "Step-by-step guide to build your visual reference: colors, typography and aesthetic that represent you before you say a single word."
+      },
+      {
+        "enabled": true,
+        "valueStackId": "b4",
+        "imageFile": "offer_bonus_03.png",
+        "imageAlt": "Content hooks bank",
+        "painHeadline": "You lose attention in the first 3 seconds",
+        "outcomeBenefit": "50+ real hooks ready to use today — organized by content type and objective — so every video retains from the very first instant."
+      },
+      {
+        "enabled": true,
+        "valueStackId": "b7",
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Brand negotiation script",
+        "painHeadline": "A brand reaches out and you don't know how to respond or what to charge",
+        "outcomeBenefit": "Pro-level script: how to respond to a proposal, raise your prices with confidence and say no without burning the relationship — in DM, email and on a call."
+      }
+    ],
+    "urgency": {
+      "title": "Every month you create without a complete system is effort that doesn't accumulate.",
+      "bullets": [
+        "No fake caps or artificial timers. The real cost is continuing to create without clear identity, without a content system and without knowing how to convert your work into income — while other creators with less talent than you are already building it.",
+        "Launch bonuses are available during this opening window. When the period closes, the price goes up and the bonuses are removed from the package."
+      ],
+      "deadlineLineTemplate": "Bonuses available until {date}."
+    },
+    "ctaPrimary": "Yes, I want the complete saga",
+    "priceHint": "Price in USD — shown at checkout.",
+    "guaranteeHint": "Refund policy available at checkout — review before purchasing.",
+    "ctaMicrocopy": "Immediate access · 3 downloadable PDFs · No subscription",
+    "postPurchaseSteps": [
+      "Complete your payment",
+      "Immediate access to all 3 ebooks",
+      "Start today"
+    ]
+  },
+  "faq": {
+    "introTitle": "Frequently asked questions",
+    "introBody": "Before anything stops you, here are the most common questions about the complete saga.",
+    "cta": "I want the complete saga",
+    "items": [
+      {
+        "q": "Who is this saga for?",
+        "a": "For content creators on Instagram, TikTok or YouTube who want to grow, monetize and create from their identity — not from what's trending. It doesn't matter if you're just starting or have been posting for months without seeing the results you expected. The saga gives you the complete system, ordered by phases."
+      },
+      {
+        "q": "Do I need to read them in order?",
+        "a": "Yes, and there's a strategic reason: each volume builds on the previous one. Vol. 1 gives you identity. Vol. 2 teaches you to communicate it. Vol. 3 shows you how to monetize it. Trying to monetize without clear identity is building on sand — the order matters."
+      },
+      {
+        "q": "Does it work if I have few followers or I'm just starting?",
+        "a": "Especially if you're starting. This is the system you wish you'd had from day one — so you don't waste months creating without direction. And if you've been posting for a while without the results you expected, the saga gives you the clarity you probably lacked from the beginning."
+      },
+      {
+        "q": "What if I've been creating for a while and have some audience?",
+        "a": "It still works for you. Many creators with a community feel something doesn't quite fit: they post, they have followers, but income doesn't arrive or isn't consistent. The problem almost always is undefined identity, unstructured message or a conversion system that doesn't exist. The saga resolves exactly that."
+      },
+      {
+        "q": "What format are the ebooks?",
+        "a": "Three PDFs designed to read and work with. Vol. 1 has 11 chapters, Vol. 2 has 13 and Vol. 3 has 8 — all with practical exercises at the end of each one so you build while you advance, not just read."
+      },
+      {
+        "q": "Do the bonuses come separately or with each ebook?",
+        "a": "You receive access to all bonuses together with the three ebooks. The bonuses are organized by volume, but you receive them all at once when you complete the payment."
+      },
+      {
+        "q": "Is there a guarantee?",
+        "a": "The refund policy applies according to the payment platform — you can review it before purchasing at checkout. What I do promise is that the content is the same system I built for myself: not generic theory, but the real map I used to go from not knowing who I was as a creator to over 100 brand collaborations."
+      }
+    ]
+  },
+  "close": {
+    "headline": "You already have enough to start. The only thing missing is deciding that you already have enough to start.",
+    "body": "You don't need more followers. You don't need the right equipment. You don't need the perfect moment. You need the complete system — to create from your identity, publish with intention and convert your content into real income. That's exactly what this saga gives you.",
+    "cta": "I want the complete saga",
+    "ctaMicrocopy": "Immediate access · Secure payment",
+    "footnote": "The only requirement for living from what you create is deciding that's exactly what you're going to do."
+  },
+  "transitions": {
+    "problemToSolution": "What if the complete system already exists and all that's missing is you applying it?",
+    "proofToOffer": "That's the journey. Documented, ordered and available now for you."
+  },
+  "exitIntent": {
+    "headline": "Before you go — this is for you.",
+    "body": "If you've been creating for a while without seeing the results you deserve, it's not lack of talent. It's lack of system. This saga is that system — complete, in three phases, ready to apply.",
+    "cta": "Yes, I want the complete saga",
+    "dismiss": "Not now"
+  }
+}

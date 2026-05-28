@@ -24,6 +24,10 @@ export const ebookLandingCopyLoaders: Record<
     en: () => import("@/dictionaries/landings/magnetic-creator/en.json"),
     es: () => import("@/dictionaries/landings/magnetic-creator/es.json"),
   },
+  "complete-saga": {
+    en: () => import("@/dictionaries/landings/complete-saga/en.json"),
+    es: () => import("@/dictionaries/landings/complete-saga/es.json"),
+  },
 };
 
 export async function getEbookLandingCopy(

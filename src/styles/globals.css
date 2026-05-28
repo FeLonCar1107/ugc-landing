@@ -2150,3 +2150,251 @@ textarea:focus {
   .text-brand-ink {
   color: rgb(var(--mg-cream-text-rgb)) !important;
 }
+
+
+/*
+ * complete-saga — Crema Editorial · Colección Completa
+ *
+ * Fondo crema cálido #FBF8F4, tinta profunda #1A1015, acento único
+ * Raspberry #D4005A. Minimalista: una sola voz de color. Close section
+ * con fondo Raspberry profundo para contraste máximo de cierre.
+ *
+ * Tokens:
+ *   bg       #FBF8F4  surface  #F3EDEA  border   #E8DDD8
+ *   ink      #1A1015  rasp     #D4005A  rasp-deep #9E0044
+ *   blush    #F8EAF2  muted    #9A7D88
+ */
+[data-landing-slug="complete-saga"] {
+  --ce-bg-rgb:        251 248 244;
+  --ce-surface-rgb:   243 237 234;
+  --ce-border-rgb:    232 221 216;
+  --ce-ink-rgb:        26  16  21;
+  --ce-rasp-rgb:      212   0  90;
+  --ce-rasp-deep-rgb: 158   0  68;
+  --ce-blush-rgb:     248 234 242;
+  --ce-muted-rgb:     154 125 136;
+  --brand-ink-rgb:         var(--ce-ink-rgb);
+  --brand-surface-rgb:     var(--ce-bg-rgb);
+  --brand-card-rgb:        var(--ce-surface-rgb);
+  --brand-accent-rgb:      var(--ce-rasp-rgb);
+  --brand-accent-mid-rgb:  var(--ce-rasp-rgb);
+  --brand-accent-deep-rgb: var(--ce-rasp-deep-rgb);
+  --brand-blush-rgb:       var(--ce-blush-rgb);
+  --brand-rose-rgb:        var(--ce-border-rgb);
+  --brand-warm-rgb:        var(--ce-muted-rgb);
+  --brand-cutout-from-rgb: var(--ce-bg-rgb);
+  --brand-cutout-via-rgb:  var(--ce-surface-rgb);
+  --brand-cutout-to-rgb:   var(--ce-border-rgb);
+  --brand-shadow-tint-rgb: var(--ce-rasp-rgb);
+  background-color: rgb(var(--ce-bg-rgb));
+  color: rgb(var(--ce-ink-rgb));
+}
+
+/* CTA primarios: raspberry sólido */
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--hero
+  > section
+  a[href],
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--problem
+  > section
+  a[href],
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--solution
+  > section
+  a[href]:not(.border-2),
+[data-landing-slug="complete-saga"] .ebook-catch-sticky-bar a[href] {
+  background-color: rgb(var(--ce-rasp-rgb)) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 24px rgb(var(--ce-rasp-rgb) / 0.28) !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--hero
+  > section
+  a[href]:hover,
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--problem
+  > section
+  a[href]:hover,
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--solution
+  > section
+  a[href]:not(.border-2):hover,
+[data-landing-slug="complete-saga"] .ebook-catch-sticky-bar a[href]:hover {
+  background-color: rgb(var(--ce-rasp-deep-rgb)) !important;
+  box-shadow: 0 10px 28px rgb(var(--ce-rasp-deep-rgb) / 0.32) !important;
+}
+
+/* Hero: crema puro */
+[data-landing-slug="complete-saga"] .ebook-catch-surface--hero > section {
+  background-color: rgb(var(--ce-bg-rgb)) !important;
+  background-image: none !important;
+}
+
+[data-landing-slug="complete-saga"] .ebook-catch-surface--hero > section h1 {
+  color: rgb(var(--ce-rasp-rgb)) !important;
+}
+
+[data-landing-slug="complete-saga"] .ebook-catch-surface--hero > section h2 {
+  color: rgb(var(--ce-ink-rgb)) !important;
+}
+
+/* Problem: surface crema oscura + borde sutil */
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--problem
+  > section {
+  background-color: rgb(var(--ce-surface-rgb)) !important;
+  background-image: none !important;
+  border-color: rgb(var(--ce-border-rgb)) !important;
+}
+
+/* Problem: CTA dentro del panel surface */
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--problem
+  > section
+  a[href] {
+  background-color: rgb(var(--ce-ink-rgb)) !important;
+  color: rgb(var(--ce-bg-rgb)) !important;
+  box-shadow: none !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--problem
+  > section
+  a[href]:hover {
+  background-color: rgb(var(--ce-rasp-rgb)) !important;
+  color: #fff !important;
+}
+
+/* Solution: blush suave */
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--solution
+  > section {
+  background-color: rgb(var(--ce-blush-rgb)) !important;
+  background-image: none !important;
+}
+
+/* Solution ghost CTA */
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--solution
+  > section
+  a[href].border-2 {
+  border-color: rgb(var(--ce-rasp-rgb) / 0.65) !important;
+  color: rgb(var(--ce-rasp-rgb)) !important;
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--solution
+  > section
+  a[href].border-2:hover {
+  background-color: rgb(var(--ce-rasp-rgb)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* Proof: crema puro */
+[data-landing-slug="complete-saga"] .ebook-catch-surface--proof > section {
+  background-color: rgb(var(--ce-bg-rgb)) !important;
+  background-image: none !important;
+}
+
+/* Offer: surface con card blanca + borde raspberry sutil */
+[data-landing-slug="complete-saga"] .ebook-catch-surface--offer > section {
+  background-color: rgb(var(--ce-surface-rgb)) !important;
+  background-image: none !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--offer
+  .rounded-3xl.border {
+  border-color: rgb(var(--ce-rasp-rgb) / 0.18) !important;
+  box-shadow: 0 20px 44px -18px rgb(var(--ce-ink-rgb) / 0.08) !important;
+  background-color: #fff !important;
+}
+
+/* FAQ: blush */
+[data-landing-slug="complete-saga"] .ebook-catch-surface--faq > section {
+  background-color: rgb(var(--ce-blush-rgb)) !important;
+  background-image: none !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--faq
+  > section
+  a[href] {
+  background-color: #fff !important;
+  background-image: none !important;
+  color: rgb(var(--ce-rasp-rgb)) !important;
+  border-color: rgb(var(--ce-rasp-rgb) / 0.3) !important;
+  box-shadow: none !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--faq
+  > section
+  a[href]:hover {
+  background-color: rgb(var(--ce-rasp-rgb)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* Close: raspberry profundo, texto blanco */
+[data-landing-slug="complete-saga"] .ebook-catch-surface--close > section {
+  background-color: rgb(var(--ce-rasp-deep-rgb)) !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--close
+  > section
+  h2,
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--close
+  > section
+  p {
+  color: #fff !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--close
+  > section
+  a[href] {
+  background-color: #fff !important;
+  background-image: none !important;
+  color: rgb(var(--ce-rasp-deep-rgb)) !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.16) !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--close
+  > section
+  a[href]:hover {
+  background-color: rgb(var(--ce-bg-rgb)) !important;
+  color: rgb(var(--ce-rasp-deep-rgb)) !important;
+}
+
+/* Sticky bar: crema + raspberry CTA */
+[data-landing-slug="complete-saga"] .ebook-catch-sticky-bar {
+  background-color: rgb(var(--ce-bg-rgb) / 0.96) !important;
+  border-color: rgb(var(--ce-border-rgb)) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Tinta corporal */
+[data-landing-slug="complete-saga"] section .text-brand-ink {
+  color: rgb(var(--ce-ink-rgb) / 0.84) !important;
+}
+
+[data-landing-slug="complete-saga"]
+  .ebook-catch-surface--close
+  > section
+  .text-brand-ink {
+  color: #fff !important;
+}
