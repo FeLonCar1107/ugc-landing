@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import {
   GA_MEASUREMENT_ID,
   trackCtaCheckoutClick,
@@ -12,23 +12,27 @@ export default function CheckoutLink({
   children,
   className,
   placement = "unknown",
+  onClick,
 }: {
   href: string;
   children: ReactNode;
   className?: string;
   /** Identifies which block sent the click (GA parameter `cta_placement`). */
   placement?: string;
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 }) {
   const safe = href || "#offer";
   const ctx = useLaunchAnalytics();
 
-  const handleClick = () => {
-    if (!href || !ctx || !GA_MEASUREMENT_ID) return;
-    trackCtaCheckoutClick({
-      landing_slug: ctx.slug,
-      locale: ctx.locale,
-      placement,
-    });
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    if (href && ctx && GA_MEASUREMENT_ID) {
+      trackCtaCheckoutClick({
+        landing_slug: ctx.slug,
+        locale: ctx.locale,
+        placement,
+      });
+    }
+    onClick?.(e);
   };
 
   return (

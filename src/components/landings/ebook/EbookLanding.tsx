@@ -96,7 +96,7 @@ export default function EbookLanding({
 
       {/* Exit intent modal — rendered once per session */}
       {copy.exitIntent ? (
-        <ExitIntentModal copy={copy.exitIntent} checkoutUrl={checkoutUrl} />
+        <ExitIntentModal copy={copy.exitIntent} />
       ) : null}
 
       <StickyLaunchCta

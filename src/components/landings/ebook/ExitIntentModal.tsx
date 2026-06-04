@@ -11,31 +11,65 @@ type ExitIntentCopy = {
 };
 
 const SESSION_KEY = "ebook_exit_intent_shown";
+/** In-page offer / payment block (`OfferSection`). */
+const OFFER_SECTION_ID = "offer";
 
 /** Ignore exit signals until the user has been on the page this long. */
-const MIN_DWELL_MS = 5_000;
-/** User must have scrolled at least this far before scroll-based exit intent. */
-const MIN_SCROLL_DEPTH_PX = 120;
+const MIN_DWELL_MS = 8_000;
+/** Minimum pixels scrolled before any exit signal (also scaled by viewport / page). */
+const MIN_SCROLL_DEPTH_PX = 320;
+/** Fraction of viewport height the user must have reached while scrolling down. */
+const MIN_SCROLL_DEPTH_VIEWPORT_RATIO = 0.35;
+/** Cursor must leave through this band at the top of the viewport (desktop). */
+const TOP_LEAVE_ZONE_PX = 8;
+/** Mobile: scroll position must be within this distance of the top. */
+const SCROLL_EXIT_NEAR_TOP_PX = 48;
+/** Mobile: minimum upward scroll accumulated within the burst window. */
+const SCROLL_EXIT_UPWARD_ACCUM_PX = 100;
+/** Mobile: burst window for accumulated upward scroll (ms). */
+const SCROLL_EXIT_BURST_MS = 450;
+/** Mobile: minimum instantaneous upward velocity (px/ms). */
+const SCROLL_EXIT_MIN_VELOCITY = 0.9;
+/**
+ * Desktop without deep scroll: only allow tab-exit mouse gesture after this dwell
+ * (avoids firing when the user barely landed and moves toward the browser chrome).
+ */
+const DESKTOP_SHALLOW_EXIT_MIN_DWELL_MS = 45_000;
 
 /**
- * Exit-intent modal — triggered by:
- *   - Desktop: `mouseleave` when the cursor moves above the viewport.
- *   - Mobile: rapid upward scroll (velocity > threshold).
+ * Exit-intent modal — triggered only on strong leave signals:
+ *   - Desktop: pointer leaves the document upward (toward tabs / close), after engagement.
+ *   - Mobile / coarse pointer: fast upward scroll back to the top after meaningful depth.
  *
  * Shown at most once per browser session (`sessionStorage` flag).
  */
 export default function ExitIntentModal({
   copy,
-  checkoutUrl,
 }: {
   copy: ExitIntentCopy;
-  checkoutUrl: string;
 }) {
   const [visible, setVisible] = useState(false);
   const firedRef = useRef(false);
   const mountedAtRef = useRef(0);
   const maxScrollYRef = useRef(0);
   const pointerEngagedRef = useRef(false);
+
+  function minScrollDepthRequired() {
+    if (typeof window === "undefined") return MIN_SCROLL_DEPTH_PX;
+    return Math.max(
+      MIN_SCROLL_DEPTH_PX,
+      Math.round(window.innerHeight * MIN_SCROLL_DEPTH_VIEWPORT_RATIO),
+    );
+  }
+
+  function hasMeaningfulScrollDepth() {
+    return maxScrollYRef.current >= minScrollDepthRequired();
+  }
+
+  function isCoarsePointerDevice() {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(pointer: coarse)").matches;
+  }
 
   function canShowExitIntent() {
     if (firedRef.current) return false;
@@ -64,6 +98,20 @@ export default function ExitIntentModal({
     }
   }
 
+  function goToOfferSection() {
+    dismiss();
+    document.getElementById(OFFER_SECTION_ID)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  function canDesktopMouseExitFire() {
+    const dwell = Date.now() - mountedAtRef.current;
+    if (hasMeaningfulScrollDepth()) return true;
+    return dwell >= DESKTOP_SHALLOW_EXIT_MIN_DWELL_MS;
+  }
+
   // Record mount time (client-only) and track max scroll depth
   useEffect(() => {
     mountedAtRef.current = Date.now();
@@ -77,46 +125,74 @@ export default function ExitIntentModal({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Desktop: mouse leaves viewport through the top (after real pointer use)
+  // Desktop: pointer leaves the document through the top edge
   useEffect(() => {
     function onPointerMove() {
       pointerEngagedRef.current = true;
     }
 
-    function onMouseLeave(e: MouseEvent) {
+    function onDocumentMouseOut(e: MouseEvent) {
       if (!pointerEngagedRef.current) return;
-      if (e.clientY > 0) return;
+      if (isCoarsePointerDevice()) return;
+
+      const related = e.relatedTarget as Node | null;
+      if (related && document.documentElement.contains(related)) return;
+      if (e.clientY > TOP_LEAVE_ZONE_PX) return;
+      if (!canDesktopMouseExitFire()) return;
+
       show();
     }
 
     document.addEventListener("pointermove", onPointerMove, { passive: true });
-    document.addEventListener("mouseleave", onMouseLeave);
+    document.documentElement.addEventListener("mouseout", onDocumentMouseOut);
     return () => {
       document.removeEventListener("pointermove", onPointerMove);
-      document.removeEventListener("mouseleave", onMouseLeave);
+      document.documentElement.removeEventListener(
+        "mouseout",
+        onDocumentMouseOut,
+      );
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Mobile: rapid upward scroll near top after user scrolled down first
+  // Mobile / coarse pointer: rapid upward scroll back to the top after real depth
   useEffect(() => {
+    if (!isCoarsePointerDevice()) return;
+
     let lastY = window.scrollY;
     let lastTime = Date.now();
+    let upwardAccum = 0;
+    let upwardBurstStart = 0;
 
     function onScroll() {
       const y = window.scrollY;
       maxScrollYRef.current = Math.max(maxScrollYRef.current, y);
 
       const now = Date.now();
-      const delta = lastY - y; // positive = scrolling up
-      const dt = now - lastTime;
+      const delta = lastY - y;
+      const dt = Math.max(now - lastTime, 1);
+
+      if (delta > 0) {
+        if (upwardBurstStart === 0 || now - upwardBurstStart > SCROLL_EXIT_BURST_MS) {
+          upwardAccum = 0;
+          upwardBurstStart = now;
+        }
+        upwardAccum += delta;
+      } else {
+        upwardAccum = 0;
+        upwardBurstStart = 0;
+      }
+
+      const velocity = delta / dt;
+      const minDepth = minScrollDepthRequired();
 
       if (
-        dt > 0 &&
+        maxScrollYRef.current >= minDepth &&
+        y <= SCROLL_EXIT_NEAR_TOP_PX &&
+        upwardAccum >= SCROLL_EXIT_UPWARD_ACCUM_PX &&
         delta > 0 &&
-        maxScrollYRef.current >= MIN_SCROLL_DEPTH_PX
+        velocity >= SCROLL_EXIT_MIN_VELOCITY
       ) {
-        const velocity = delta / dt; // px/ms
-        if (velocity > 0.4 && y < 300) show();
+        show();
       }
 
       lastY = y;
@@ -163,7 +239,9 @@ export default function ExitIntentModal({
           ✕
         </button>
 
-        <div className="mb-1 text-2xl" aria-hidden>✦</div>
+        <div className="mb-1 text-2xl" aria-hidden>
+          ✦
+        </div>
 
         <h2
           id="exit-intent-headline"
@@ -178,9 +256,13 @@ export default function ExitIntentModal({
 
         <div className="mt-6 flex flex-col gap-3">
           <CheckoutLink
-            href={checkoutUrl}
+            href={`#${OFFER_SECTION_ID}`}
             placement="exit_intent"
             className="flex w-full items-center justify-center rounded-full bg-brand-accent px-7 py-3.5 text-center text-base font-semibold text-brand-card shadow-md shadow-brand-accent/25"
+            onClick={(e) => {
+              e.preventDefault();
+              goToOfferSection();
+            }}
           >
             {copy.cta}
           </CheckoutLink>
