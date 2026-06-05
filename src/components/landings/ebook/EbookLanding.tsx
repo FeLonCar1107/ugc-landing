@@ -30,7 +30,6 @@ export type EbookLandingProps = {
   copy: EbookLandingCopy;
   assetBase: string;
   checkoutUrl: string;
-  priceUsd: string;
   timeToResult: string;
   /** Optional social proof count string (e.g. "247") to show in the hero. */
   socialCount?: string;
@@ -68,16 +67,12 @@ export default function EbookLanding({
   copy,
   assetBase,
   checkoutUrl,
-  priceUsd,
   timeToResult,
   socialCount,
   locale = i18n.defaultLocale,
 }: EbookLandingProps) {
   const base = normalizeAssetBase(assetBase);
   const asset = buildLaunchAssetResolver(base);
-
-  const priceLine =
-    priceUsd.trim().length > 0 ? `$${priceUsd} USD` : copy.offer.priceHint;
 
   const launchSlug = launchSlugFromAssetBase(assetBase);
   const heroVisual = getLaunchHeroVisual(launchSlug);
@@ -167,12 +162,12 @@ export default function EbookLanding({
         <OfferSection
           offer={copy.offer}
           assetBase={base}
-          priceLine={priceLine}
           checkoutUrl={checkoutUrl}
           sectionBandHeading={sectionBandHeading}
           locale={locale}
           phaseLabel={offerPhaseLabel}
           deadlineIso={offerDeadlineIso}
+          slug={slug}
         />
       </EbookCatchSurface>
 

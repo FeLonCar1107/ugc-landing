@@ -12,7 +12,6 @@ import {
 import LaunchAnalyticsRoot from "@/components/landings/ebook/analytics/LaunchAnalyticsRoot";
 import {
   getLaunchCheckoutUrl,
-  getLaunchPriceUsd,
   getLaunchSocialCount,
   getLaunchTimeToResult,
   launchAssetBase,
@@ -58,7 +57,6 @@ export default async function LandingBySlugPage({
   const slug = params.landingSlug as AllowedLandingSlug;
   const copy = await getEbookLandingCopy(slug, params.lang);
   const checkoutUrl = getLaunchCheckoutUrl(slug);
-  const priceUsd = getLaunchPriceUsd(slug);
   const timeToResult = getLaunchTimeToResult(slug);
   const socialCount = getLaunchSocialCount(slug);
 
@@ -69,7 +67,6 @@ export default async function LandingBySlugPage({
         copy={copy}
         assetBase={launchAssetBase(slug)}
         checkoutUrl={checkoutUrl}
-        priceUsd={priceUsd}
         timeToResult={timeToResult}
         socialCount={socialCount || undefined}
         locale={params.lang}

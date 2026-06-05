@@ -36,10 +36,6 @@ describe("buildOfferView", () => {
   });
 
   function discoverOffer(): EbookLandingCopy["offer"] {
-    vi.stubEnv(
-      "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_EBOOK_ANCHOR_PRICE_USD",
-      "27",
-    );
     vi.stubEnv("NEXT_PUBLIC_LAUNCH_BONUS_ANCHOR_PRICE_USD", "3.9");
     return applyLaunchOfferEnv(
       es as EbookLandingCopy,

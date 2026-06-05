@@ -9,18 +9,6 @@ import { applyLaunchOfferEnv } from "@/utils/launchOfferEnv";
 import { buildOfferView } from "@/utils/offerBonuses";
 
 function withLaunchEnv() {
-  vi.stubEnv(
-    "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_EBOOK_ANCHOR_PRICE_USD",
-    "27",
-  );
-  vi.stubEnv(
-    "NEXT_PUBLIC_LAUNCH_CATCH_THE_ATTENTION_EBOOK_ANCHOR_PRICE_USD",
-    "27",
-  );
-  vi.stubEnv(
-    "NEXT_PUBLIC_LAUNCH_MAGNETIC_CREATOR_EBOOK_ANCHOR_PRICE_USD",
-    "27",
-  );
   vi.stubEnv("NEXT_PUBLIC_LAUNCH_BONUS_ANCHOR_PRICE_USD", "3.9");
 }
 
@@ -84,7 +72,8 @@ describe("mergeCompleteSagaOffer", () => {
     expect(view.valueStack.lineItems[3]?.label).toContain("(Vol. 1)");
     expect(view.valueStack.lineItems[7]?.label).toContain("Brand hunting");
     expect(view.valueStack.lineItems[7]?.label).toContain("(Vol. 3)");
-    expect(view.valueStack.totalAnchorLabel).toBe("USD 108.30");
+    // ebook anchors from pricing.ts anglo normal: 27+37+39 = 103; 7 bonuses × 3.9 = 27.30
+    expect(view.valueStack.totalAnchorLabel).toBe("USD 130.30");
   });
 
   it("reflects volume bonus toggles without editing complete-saga JSON", () => {

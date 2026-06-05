@@ -1,11 +1,14 @@
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import GeoPriceLine from "./GeoPriceLine";
 
 export default function ValueStack({
   valueStack,
-  priceLine,
+  slug,
+  deadlineIso,
 }: {
   valueStack: EbookLandingCopy["offer"]["valueStack"];
-  priceLine: string;
+  slug: string;
+  deadlineIso?: string;
 }) {
   return (
     <div className="w-full min-w-0 space-y-2 rounded-2xl border border-brand-ink/10 bg-brand-card/90 p-3 shadow-sm sm:p-4">
@@ -30,13 +33,11 @@ export default function ValueStack({
           {valueStack.totalAnchorLabel}
         </span>
       </div>
-      <div className="flex min-w-0 flex-col gap-0.5 rounded-lg bg-brand-surface px-3 py-2.5 sm:flex-row sm:items-baseline sm:justify-between">
+      <div className="flex min-w-0 flex-col gap-0.5 rounded-lg bg-brand-surface px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between">
         <span className="text-[0.6875rem] font-bold uppercase tracking-wide text-brand-ink/70 sm:text-xs">
           {valueStack.youPayLabel}
         </span>
-        <span className="text-xl font-black tabular-nums text-brand-accent sm:text-2xl md:text-3xl">
-          {priceLine}
-        </span>
+        <GeoPriceLine slug={slug} deadlineIso={deadlineIso} />
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import type { AllowedLandingSlug } from "@/lib/allowedLandings";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import { getReference } from "@/lib/pricing";
 import {
   formatUsdAnchorLabel,
   getLaunchBonusAnchorPriceUsd,
-  getLaunchEbookAnchorPriceUsd,
 } from "@/utils/launchEnv";
 import { isBonusLineItemId, isEbookLineItemId } from "@/utils/offerBonuses";
 
@@ -31,13 +31,8 @@ function resolveAnchorValueLabel(
   landingSlug: AllowedLandingSlug,
 ): string {
   if (isEbookLineItemId(row.id)) {
-    const anchorUsd = getLaunchEbookAnchorPriceUsd(
-      ebookAnchorSlugForLineItem(row.id, landingSlug),
-    );
-    if (anchorUsd) return formatUsdAnchorLabel(anchorUsd);
-    return row.anchorValueLabel === EBOOK_ANCHOR_ENV_SENTINEL
-      ? ""
-      : row.anchorValueLabel;
+    const ref = getReference(ebookAnchorSlugForLineItem(row.id, landingSlug));
+    return formatUsdAnchorLabel(String(ref));
   }
 
   if (isBonusLineItemId(row.id)) {

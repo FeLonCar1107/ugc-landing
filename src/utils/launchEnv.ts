@@ -13,41 +13,11 @@ export function getLaunchCheckoutUrl(slug: string): string {
   return process.env[k]?.trim() ?? "";
 }
 
-export function getLaunchPriceUsd(slug: string): string {
-  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_PRICE_USD`;
-  return process.env[k] ?? "";
-}
-
-/** Struck-through reference price for ebook rows in the offer value stack (all landings). */
-export const LAUNCH_EBOOK_ANCHOR_PRICE_USD_ENV_KEY =
-  "NEXT_PUBLIC_LAUNCH_EBOOK_ANCHOR_PRICE_USD" as const;
-
 /** Struck-through reference price for bonus rows in every landing value stack. */
 export const LAUNCH_BONUS_ANCHOR_PRICE_USD_ENV_KEY =
   "NEXT_PUBLIC_LAUNCH_BONUS_ANCHOR_PRICE_USD" as const;
 
-/** Fallback when anchor env is unset — matches `.env.example`. */
-export const DEFAULT_LAUNCH_EBOOK_ANCHOR_PRICE_USD = "27" as const;
 export const DEFAULT_LAUNCH_BONUS_ANCHOR_PRICE_USD = "3.9" as const;
-
-/**
- * Reference anchor price for ebook line items in the value stack.
- * Resolution (first match wins):
- * 1. `NEXT_PUBLIC_LAUNCH_<SLUG>_EBOOK_ANCHOR_PRICE_USD` — one per ebook volume
- * 2. `NEXT_PUBLIC_LAUNCH_EBOOK_ANCHOR_PRICE_USD` — optional global fallback
- * 3. hardcoded default `27`
- *
- * In complete-saga, `ebook1` / `ebook2` / `ebook3` use discover / catch / magnetic slugs.
- */
-export function getLaunchEbookAnchorPriceUsd(slug: string): string {
-  const perSlugKey = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_EBOOK_ANCHOR_PRICE_USD`;
-  const perSlug = process.env[perSlugKey]?.trim();
-  if (perSlug) return perSlug;
-  return (
-    process.env[LAUNCH_EBOOK_ANCHOR_PRICE_USD_ENV_KEY]?.trim() ??
-    DEFAULT_LAUNCH_EBOOK_ANCHOR_PRICE_USD
-  );
-}
 
 /** Reference anchor price for bonus line items (`b1`, `b2`, …) in the value stack. */
 export function getLaunchBonusAnchorPriceUsd(): string {

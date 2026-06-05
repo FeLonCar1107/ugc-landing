@@ -19,10 +19,10 @@ describe("OfferSection", () => {
       <OfferSection
         offer={offer}
         assetBase="/launch-assets/discover-your-character"
-        priceLine="$12 USD"
         checkoutUrl={checkout}
         sectionBandHeading="font-semibold"
         locale={Languages.ES}
+        slug="discover-your-character"
       />,
     );
 
@@ -37,10 +37,10 @@ describe("OfferSection", () => {
       <OfferSection
         offer={offer}
         assetBase="/launch-assets/discover-your-character"
-        priceLine="$12 USD"
         checkoutUrl=""
         sectionBandHeading=""
         locale={Languages.ES}
+        slug="discover-your-character"
       />,
     );
     const cta = screen.getByRole("link", { name: offer.ctaPrimary });
@@ -56,10 +56,10 @@ describe("OfferSection", () => {
       <OfferSection
         offer={twoBonuses}
         assetBase="/launch-assets/discover-your-character"
-        priceLine="$12 USD"
         checkoutUrl="#"
         sectionBandHeading=""
         locale={Languages.ES}
+        slug="discover-your-character"
       />,
     );
     expect(
@@ -81,10 +81,10 @@ describe("OfferSection", () => {
       <OfferSection
         offer={noBonuses}
         assetBase="/launch-assets/discover-your-character"
-        priceLine="$12 USD"
         checkoutUrl="#"
         sectionBandHeading=""
         locale={Languages.ES}
+        slug="discover-your-character"
       />,
     );
     expect(
@@ -100,13 +100,14 @@ describe("OfferSection", () => {
       <OfferSection
         offer={offer}
         assetBase="/launch-assets/discover-your-character"
-        priceLine="$99 USD"
         checkoutUrl="#"
         sectionBandHeading=""
         locale={Languages.ES}
+        slug="discover-your-character"
       />,
     );
-    expect(screen.getByText("$99 USD")).toBeInTheDocument();
+    // latam normal price for discover-your-character (no deadline → launch inactive)
+    expect(screen.getByText("$22 USD")).toBeInTheDocument();
   });
 });
 

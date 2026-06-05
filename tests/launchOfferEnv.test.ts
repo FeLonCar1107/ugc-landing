@@ -9,39 +9,10 @@ import {
 import {
   formatUsdAnchorLabel,
   getLaunchBonusAnchorPriceUsd,
-  getLaunchEbookAnchorPriceUsd,
 } from "@/utils/launchEnv";
 
-const SLUG = "discover-your-character";
-
-describe("launchEnv — ebook anchor price", () => {
-  afterEach(() => {
-    vi.unstubAllEnvs();
-  });
-
-  it("getLaunchEbookAnchorPriceUsd uses per-slug env", () => {
-    vi.stubEnv(
-      "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_EBOOK_ANCHOR_PRICE_USD",
-      "27",
-    );
-    expect(getLaunchEbookAnchorPriceUsd(SLUG)).toBe("27");
-  });
-
-  it("getLaunchEbookAnchorPriceUsd prefers per-slug over global fallback", () => {
-    vi.stubEnv("NEXT_PUBLIC_LAUNCH_EBOOK_ANCHOR_PRICE_USD", "25");
-    vi.stubEnv(
-      "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_EBOOK_ANCHOR_PRICE_USD",
-      "29",
-    );
-    expect(getLaunchEbookAnchorPriceUsd(SLUG)).toBe("29");
-  });
-
-  it("getLaunchEbookAnchorPriceUsd falls back to global env", () => {
-    vi.stubEnv("NEXT_PUBLIC_LAUNCH_EBOOK_ANCHOR_PRICE_USD", "25");
-    expect(getLaunchEbookAnchorPriceUsd(SLUG)).toBe("25");
-  });
-
-  it("formatUsdAnchorLabel normalizes numeric and USD-prefixed values", () => {
+describe("launchEnv — formatUsdAnchorLabel", () => {
+  it("normalizes numeric and USD-prefixed values", () => {
     expect(formatUsdAnchorLabel("27")).toBe("USD 27");
     expect(formatUsdAnchorLabel("USD 27")).toBe("USD 27");
     expect(formatUsdAnchorLabel("3.9")).toBe("USD 3.9");
@@ -64,11 +35,7 @@ describe("applyLaunchOfferEnv", () => {
     vi.unstubAllEnvs();
   });
 
-  it("replaces env sentinel on ebook rows from per-slug anchor env", () => {
-    vi.stubEnv(
-      "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_EBOOK_ANCHOR_PRICE_USD",
-      "27",
-    );
+  it("replaces ebook sentinel with anglo normal price from pricing.ts and bonus sentinel from env", () => {
     vi.stubEnv("NEXT_PUBLIC_LAUNCH_BONUS_ANCHOR_PRICE_USD", "3.9");
     const offer = es.offer as EbookLandingCopy["offer"];
     expect(offer.valueStack.lineItems[0]?.anchorValueLabel).toBe(
@@ -82,6 +49,7 @@ describe("applyLaunchOfferEnv", () => {
       { ...es, offer } as EbookLandingCopy,
       "discover-your-character",
     );
+    // discover-your-character anglo normal = 27
     expect(resolved.offer.valueStack.lineItems[0]?.anchorValueLabel).toBe(
       "USD 27",
     );

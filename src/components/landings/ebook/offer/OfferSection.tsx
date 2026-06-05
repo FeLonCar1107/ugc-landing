@@ -12,22 +12,22 @@ import ValueStack from "./ValueStack";
 export default function OfferSection({
   offer,
   assetBase,
-  priceLine,
   checkoutUrl,
   sectionBandHeading,
   locale,
   phaseLabel,
   deadlineIso,
+  slug,
 }: {
   offer: EbookLandingCopy["offer"];
   /** Per-launch folder, e.g. `/launch-assets/discover-your-character` (offer mockup + bonuses only). */
   assetBase: string;
-  priceLine: string;
   checkoutUrl: string;
   sectionBandHeading: string;
   locale: Locale;
   phaseLabel?: string;
   deadlineIso?: string;
+  slug: string;
 }) {
   const asset = (filename: string) => resolveLaunchAssetUrl(assetBase, filename);
   const offerView = buildOfferView(offer);
@@ -52,7 +52,11 @@ export default function OfferSection({
                 <ProductHero hero={offer.hero} asset={asset} />
               </div>
               <div className="min-w-0 md:pt-1">
-                <ValueStack valueStack={offerView.valueStack} priceLine={priceLine} />
+                <ValueStack
+                  valueStack={offerView.valueStack}
+                  slug={slug}
+                  deadlineIso={deadlineIso}
+                />
               </div>
             </div>
 
