@@ -46,7 +46,7 @@ function TimelineFigure({
   className = "relative aspect-video",
 }: TimelineFigureProps) {
   return (
-    <CutoutPlate className={className}>
+    <CutoutPlate className={className} elevation="flat">
       <Image
         src={asset(proofTimelineImageForYear(year))}
         alt={phase}
