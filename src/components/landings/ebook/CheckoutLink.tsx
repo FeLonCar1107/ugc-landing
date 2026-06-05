@@ -21,11 +21,13 @@ export default function CheckoutLink({
   placement?: string;
   onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 }) {
-  const safe = href || "#offer";
+  const trimmed = href?.trim() ?? "";
+  const isExternalCheckout = /^https?:\/\//i.test(trimmed);
+  const safe = trimmed.length > 0 ? trimmed : "#offer";
   const ctx = useLaunchAnalytics();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (href && ctx && GA_MEASUREMENT_ID) {
+    if (isExternalCheckout && ctx && GA_MEASUREMENT_ID) {
       trackCtaCheckoutClick({
         landing_slug: ctx.slug,
         locale: ctx.locale,
@@ -36,12 +38,7 @@ export default function CheckoutLink({
   };
 
   return (
-    <a
-      href={safe}
-      className={className}
-      onClick={handleClick}
-      {...(!href ? { "aria-disabled": true } : {})}
-    >
+    <a href={safe} className={className} onClick={handleClick}>
       {children}
     </a>
   );

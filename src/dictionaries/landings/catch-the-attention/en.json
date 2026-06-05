@@ -43,7 +43,7 @@
       "highlight": "intention",
       "after": ". Not to see what happens — so something specific happens."
     },
-    "giftHint": "Includes a hooks bank, weekly planning, and brand outreach guide.",
+    "giftHint": "Includes a consistency routine, ideas bank, and weekly planning.",
     "outcomes": [
       {
         "title": "Write your Mission Statement and value proposition",
@@ -114,7 +114,7 @@
     "hero": {
       "badges": [
         "Launch offer",
-        "Ebook + 2 bonuses"
+        "Ebook + 3 bonuses"
       ],
       "statement": "It's not just an ebook. It's the full system to go from posting without direction to having a clear message, a profile that converts, and a week of content produced with intention.",
       "imageAlt": "“Catch the Attention” ebook mockup"
@@ -124,27 +124,27 @@
         {
           "id": "ebook",
           "label": "Ebook “Catch the Attention” — 13 chapters + exercises",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "b1",
-          "label": "Editable Canva portfolio template (intro, services, videos, contact)",
-          "anchorValueLabel": "USD 24"
+          "label": "Consistency routine — the minimum system that sticks",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b2",
           "label": "Bank of 50+ ready-to-use hooks — real, not generic",
-          "anchorValueLabel": "USD 18"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b3",
-          "label": "Weekly content planning template (Notion + PDF)",
-          "anchorValueLabel": "USD 12"
+          "label": "Bank of 30–50 content ideas from your message and pillars",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b4",
-          "label": "Mini guide “How to message a brand” (DM + email)",
-          "anchorValueLabel": "USD 12"
+          "label": "Weekly content planning template",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         }
       ],
       "totalLabel": "Reference bundle value",
@@ -154,32 +154,36 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
-        "enabled": false,
+        "enabled": true,
+        "valueStackId": "b1",
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: editable Canva portfolio template",
-        "painHeadline": "You don't know where to start your portfolio",
-        "outcomeBenefit": "Pre-built Canva structure: intro, services, videos, and contact — so brands understand your proposition before they message you."
+        "imageAlt": "Bonus: consistency routine",
+        "painHeadline": "Your consistency depends on your mood",
+        "outcomeBenefit": "The minimum routine to publish with focus even on days you don't feel like it — without burning out or falling into the start-and-stop cycle."
       },
       {
-        "enabled": true,
+        "enabled": false,
+        "valueStackId": "b2",
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: content hooks bank",
-        "painHeadline": "You go blank when you open the camera",
-        "outcomeBenefit": "50+ real hooks ready to use today — the first 3 seconds that retain, organized by content type and goal."
+        "painHeadline": "You lose attention in the first 3 seconds",
+        "outcomeBenefit": "50+ real hooks ready to use today — organized by content type and goal — so every video retains from the very first instant."
       },
       {
         "enabled": true,
+        "valueStackId": "b3",
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: content ideas bank",
+        "painHeadline": "You go blank in front of the camera",
+        "outcomeBenefit": "30–50 concrete ideas aligned with your message and pillars — so you never depend on someone else's scroll or the mood of the moment again."
+      },
+      {
+        "enabled": true,
+        "valueStackId": "b4",
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: weekly content planning",
         "painHeadline": "You post without a plan or clear goal",
-        "outcomeBenefit": "Template with days, formats, pillars, and goal per piece — in Notion and PDF — so your content week exists before it starts."
-      },
-      {
-        "enabled": false,
-        "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: how to message a brand",
-        "painHeadline": "You don't know how to approach brands professionally",
-        "outcomeBenefit": "Mini guide with a DM example, email example, and what to say — and what to avoid — so the first impression opens doors, not closes them."
+        "outcomeBenefit": "Template with days, formats, pillars, and goal per piece — so your content week exists before it starts."
       }
     ],
     "urgency": {

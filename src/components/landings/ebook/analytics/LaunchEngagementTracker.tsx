@@ -6,6 +6,7 @@ import {
   trackLandingScrollDepth,
   trackOfferSectionView,
 } from "@/lib/analytics/launchGa";
+import { LANDING_OFFER_SECTION_ID } from "../ebookLandingConstants";
 import { useLaunchAnalytics } from "./launchAnalyticsContext";
 
 const SCROLL_MILESTONES = [25, 50, 75, 100] as const;
@@ -53,7 +54,7 @@ export default function LaunchEngagementTracker() {
   useEffect(() => {
     if (!ctx || !GA_MEASUREMENT_ID) return;
     const { slug, locale } = ctx;
-    const el = document.getElementById("offer");
+    const el = document.getElementById(LANDING_OFFER_SECTION_ID);
     if (!el) return;
 
     const obs = new IntersectionObserver(

@@ -70,6 +70,8 @@ export interface EbookLandingCopy {
       enabled?: boolean;
       /** Links to valueStack.lineItems[].id (default: b1, b2, by array index). */
       valueStackId?: string;
+      /** Override asset folder (e.g. bundle pulls images from each volume slug). */
+      imageAssetBase?: string;
       imageFile: string;
       imageAlt: string;
       painHeadline: string;
@@ -78,7 +80,7 @@ export interface EbookLandingCopy {
     urgency: {
       title: string;
       bullets: string[];
-      /** When set and NEXT_PUBLIC_LAUNCH_*_BONUS_BUNDLE_DEADLINE_ISO is valid, {date} is replaced. */
+      /** When set and NEXT_PUBLIC_LAUNCH_*_BONUS_BUNDLE_DEADLINE_ISO is valid, {date} is replaced (locale TZ). */
       deadlineLineTemplate?: string;
     };
     ctaPrimary: string;

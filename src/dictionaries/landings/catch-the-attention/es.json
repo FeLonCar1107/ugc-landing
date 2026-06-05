@@ -43,7 +43,7 @@
       "highlight": "intención",
       "after": ". No para ver qué pasa — para que pase algo específico."
     },
-    "giftHint": "Incluye banco de hooks, planeación semanal y guía para marcas.",
+    "giftHint": "Incluye rutina de constancia, banco de ideas y planeación semanal.",
     "outcomes": [
       {
         "title": "Escribir tu Mission Statement y propuesta de valor",
@@ -114,7 +114,7 @@
     "hero": {
       "badges": [
         "Oferta de lanzamiento",
-        "Ebook + 2 bonuses"
+        "Ebook + 3 bonuses"
       ],
       "statement": "No es solo un ebook. Es el sistema completo para pasar de publicar sin rumbo a tener mensaje claro, perfil que convierte y una semana de contenido producida con intención.",
       "imageAlt": "Mockup del ebook «Conquista la Atención»"
@@ -124,27 +124,27 @@
         {
           "id": "ebook",
           "label": "Ebook «Conquista la Atención» — 13 capítulos + ejercicios",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "b1",
-          "label": "Plantilla editable de portafolio en Canva (presentación, servicios, videos, contacto)",
-          "anchorValueLabel": "USD 24"
+          "label": "Rutina de constancia — el sistema mínimo que se sostiene",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b2",
           "label": "Banco de 50+ hooks listos para usar — reales, no genéricos",
-          "anchorValueLabel": "USD 18"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b3",
-          "label": "Plantilla de planeación semanal de contenido (Notion + PDF)",
-          "anchorValueLabel": "USD 12"
+          "label": "Banco de 30–50 ideas de contenido desde tu mensaje y pilares",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b4",
-          "label": "Mini guía «Cómo escribirle a una marca» (DM + correo)",
-          "anchorValueLabel": "USD 12"
+          "label": "Plantilla de planeación semanal de contenido",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         }
       ],
       "totalLabel": "Valor referencial del paquete",
@@ -154,32 +154,36 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
-        "enabled": false,
+        "enabled": true,
+        "valueStackId": "b1",
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: plantilla editable de portafolio en Canva",
-        "painHeadline": "No sabes por dónde empezar tu portafolio",
-        "outcomeBenefit": "Estructura ya armada en Canva: presentación, servicios, videos y contacto — para que las marcas entiendan tu propuesta antes de escribirte."
+        "imageAlt": "Bonus: rutina de constancia",
+        "painHeadline": "Tu constancia depende del ánimo",
+        "outcomeBenefit": "La rutina mínima para publicar con foco incluso los días que no tienes ganas — sin quemarte ni caer en el ciclo de empezar y parar."
       },
       {
-        "enabled": true,
+        "enabled": false,
+        "valueStackId": "b2",
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: banco de hooks para contenido",
-        "painHeadline": "Te quedas en blanco al abrir la cámara",
-        "outcomeBenefit": "50+ hooks reales y listos para usar hoy — los primeros 3 segundos que retienen, organizados por tipo de contenido y objetivo."
+        "painHeadline": "Pierdes la atención en los primeros 3 segundos",
+        "outcomeBenefit": "50+ hooks reales y listos para usar hoy — organizados por tipo de contenido y objetivo — para que cada video retenga desde el primer instante."
       },
       {
         "enabled": true,
+        "valueStackId": "b3",
+        "imageFile": "offer_bonus_04.png",
+        "imageAlt": "Bonus: banco de ideas de contenido",
+        "painHeadline": "Te quedas en blanco frente a la cámara",
+        "outcomeBenefit": "30–50 ideas concretas alineadas con tu mensaje y pilares — para que nunca más dependas del scroll ajeno ni de la inspiración del momento."
+      },
+      {
+        "enabled": true,
+        "valueStackId": "b4",
         "imageFile": "offer_bonus_03.png",
         "imageAlt": "Bonus: planeación semanal de contenido",
         "painHeadline": "Publicas sin plan ni objetivo claro",
-        "outcomeBenefit": "Plantilla con días, formatos, pilares y objetivo de cada pieza — en Notion y PDF — para que tu semana de contenido exista antes de que empiece."
-      },
-      {
-        "enabled": false,
-        "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: guía cómo escribirle a una marca",
-        "painHeadline": "No sabes cómo acercarte a marcas profesionalmente",
-        "outcomeBenefit": "Mini guía con ejemplo de DM, ejemplo de correo y qué decir — y qué evitar — para que la primera impresión abra puertas, no las cierre."
+        "outcomeBenefit": "Plantilla con días, formatos, pilares y objetivo de cada pieza — para que tu semana de contenido exista antes de que empiece."
       }
     ],
     "urgency": {

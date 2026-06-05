@@ -114,7 +114,7 @@
     "hero": {
       "badges": [
         "Oferta de lanzamiento",
-        "3 ebooks + 7 bonuses"
+        "3 ebooks + bonuses"
       ],
       "statement": "No es un paquete de PDFs. Es el sistema completo de transformación para creadoras — identidad, estrategia y monetización en un solo recorrido diseñado para que avances fase por fase.",
       "imageAlt": "Trilogía completa — Saga para Creadoras"
@@ -124,93 +124,25 @@
         {
           "id": "ebook1",
           "label": "Ebook Vol. 1 «Descubre tu Personaje» — 11 capítulos + ejercicios",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "ebook2",
           "label": "Ebook Vol. 2 «Conquista la Atención» — 13 capítulos + ejercicios",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "ebook3",
           "label": "Ebook Vol. 3 «Creadora Magnética» — 8 capítulos + ejercicios",
-          "anchorValueLabel": "USD 27"
-        },
-        {
-          "id": "b1",
-          "label": "Banco de 30–50 ideas de contenido desde tu esencia (Vol. 1)",
-          "anchorValueLabel": "USD 15"
-        },
-        {
-          "id": "b2",
-          "label": "Guía de moodboard para tu identidad visual (Vol. 1)",
-          "anchorValueLabel": "USD 12"
-        },
-        {
-          "id": "b3",
-          "label": "Sistema mínimo de constancia (Vol. 1)",
-          "anchorValueLabel": "USD 12"
-        },
-        {
-          "id": "b4",
-          "label": "Banco de 50+ hooks listos para usar (Vol. 2)",
-          "anchorValueLabel": "USD 18"
-        },
-        {
-          "id": "b5",
-          "label": "Plantilla de planeación semanal de contenido — Notion + PDF (Vol. 2)",
-          "anchorValueLabel": "USD 12"
-        },
-        {
-          "id": "b6",
-          "label": "Tracker de métricas simplificado con decisiones accionables (Vol. 3)",
-          "anchorValueLabel": "USD 15"
-        },
-        {
-          "id": "b7",
-          "label": "Script de negociación con marcas — DM, correo y llamada (Vol. 3)",
-          "anchorValueLabel": "USD 18"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         }
       ],
       "totalLabel": "Valor referencial del paquete completo",
-      "totalAnchorLabel": "USD 183",
+      "totalAnchorLabel": "USD 108.30",
       "youPayLabel": "Tu inversión hoy"
     },
     "bonusesSectionTitle": "Bonuses incluidos en la saga",
-    "bonuses": [
-      {
-        "enabled": true,
-        "valueStackId": "b1",
-        "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Banco de ideas desde tu esencia",
-        "painHeadline": "Te quedas en blanco frente a la cámara",
-        "outcomeBenefit": "30–50 ideas concretas y alineadas con tu nicho — para que nunca más dependas del scroll ajeno ni de la inspiración del momento."
-      },
-      {
-        "enabled": true,
-        "valueStackId": "b2",
-        "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Guía de moodboard de identidad visual",
-        "painHeadline": "Tu feed no refleja quién eres",
-        "outcomeBenefit": "Guía paso a paso para construir tu referencia visual: colores, tipografías y estética que te representen antes de que digas una sola palabra."
-      },
-      {
-        "enabled": true,
-        "valueStackId": "b4",
-        "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Banco de hooks para contenido",
-        "painHeadline": "Pierdes la atención en los primeros 3 segundos",
-        "outcomeBenefit": "50+ hooks reales y listos para usar hoy — organizados por tipo de contenido y objetivo — para que cada video retenga desde el primer instante."
-      },
-      {
-        "enabled": true,
-        "valueStackId": "b7",
-        "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Script de negociación con marcas",
-        "painHeadline": "Te proponen una colaboración y no sabes qué responder ni cuánto cobrar",
-        "outcomeBenefit": "Script nivel pro: cómo responder una propuesta, subir tus precios con seguridad y decir que no sin quemar la relación — en DM, en correo y en llamada."
-      }
-    ],
+    "bonuses": [],
     "urgency": {
       "title": "Cada mes que publicas sin sistema completo es esfuerzo que no se acumula.",
       "bullets": [

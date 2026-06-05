@@ -2,6 +2,7 @@ import type { EbookLandingCopy } from "@/types/ebook-landing";
 import type { Locale } from "@/i18n/config";
 import { resolveLaunchAssetUrl } from "@/utils/launchAssets";
 import { buildOfferView, hasActiveBonuses } from "@/utils/offerBonuses";
+import { LANDING_OFFER_SECTION_ID } from "../ebookLandingConstants";
 import CheckoutLink from "../CheckoutLink";
 import BonusGrid from "./BonusGrid";
 import ProductHero from "./ProductHero";
@@ -36,7 +37,7 @@ export default function OfferSection({
     : offer.hero.badges.slice(0, 1);
 
   return (
-    <section id="offer" className="scroll-mt-24 py-10 md:py-14">
+    <section id={LANDING_OFFER_SECTION_ID} className="scroll-mt-24 py-10 md:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
         <div className="rounded-3xl border border-brand-ink/10 bg-brand-card p-4 shadow-xl sm:p-5 md:p-7 lg:p-8">
           <div className="flex w-full min-w-0 flex-col gap-6 md:gap-7">
@@ -80,7 +81,7 @@ export default function OfferSection({
                 <h3 className="text-center text-base tracking-wide font-semibold text-brand-accent sm:text-lg">
                   {offerView.bonusesSectionTitle}
                 </h3>
-                <BonusGrid bonuses={offerView.bonuses} asset={asset} />
+                <BonusGrid bonuses={offerView.bonuses} assetBase={assetBase} />
               </div>
             ) : null}
 

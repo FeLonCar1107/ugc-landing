@@ -43,7 +43,7 @@
       "highlight": "turn",
       "after": " your content into real income."
     },
-    "giftHint": "Includes metrics tracker, brand negotiation script, and safe-zone template.",
+    "giftHint": "Includes Brand hunting, metrics tracker, and Signature Series bank.",
     "outcomes": [
       {
         "title": "Build your complete conversion system",
@@ -124,27 +124,22 @@
         {
           "id": "ebook",
           "label": "Ebook «Magnetic Creator» — 8 chapters + practical exercises",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "b1",
-          "label": "Notion content system template (ideas, calendar, and tracking)",
-          "anchorValueLabel": "USD 24"
+          "label": "Brand hunting — strategy to find and attract brands",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b2",
           "label": "Simplified metrics tracker (retention, saves, shares, and actionable decisions)",
-          "anchorValueLabel": "USD 15"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b3",
-          "label": "Brand negotiation script (reply, raise rates, and say no without burning bridges)",
-          "anchorValueLabel": "USD 18"
-        },
-        {
-          "id": "b4",
-          "label": "Safe-zone template to structure hook, message, and CTA before recording",
-          "anchorValueLabel": "USD 12"
+          "label": "Signature Series bank — recurring ideas with sponsorship potential",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         }
       ],
       "totalLabel": "Reference package value",
@@ -154,14 +149,16 @@
     "bonusesSectionTitle": "Included bonuses",
     "bonuses": [
       {
-        "enabled": false,
+        "enabled": true,
+        "valueStackId": "b1",
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: Notion content system template",
-        "painHeadline": "You post without a system and run out of ideas",
-        "outcomeBenefit": "Your Notion system: ideas bank, calendar, and content tracking—you stop winging it every week with the same base I use."
+        "imageAlt": "Bonus: Brand hunting",
+        "painHeadline": "You wait for brands to reach out on their own",
+        "outcomeBenefit": "Inbound + outbound strategy to identify aligned brands, reach out with a clear offer, and stop relying on luck—the same map I use to land collaborations."
       },
       {
         "enabled": true,
+        "valueStackId": "b2",
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: simplified metrics tracker",
         "painHeadline": "You check metrics but don’t know what to do next",
@@ -169,17 +166,11 @@
       },
       {
         "enabled": true,
+        "valueStackId": "b3",
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: brand negotiation script",
-        "painHeadline": "A brand reaches out and you don’t know how to reply or what to charge",
-        "outcomeBenefit": "Pro-level script: how to reply to a proposal, raise your rates with confidence, and say no without burning the relationship—in DM, email, and on a call."
-      },
-      {
-        "enabled": true,
-        "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: safe-zone template for videos",
-        "painHeadline": "You freeze on camera or lose the thread while recording",
-        "outcomeBenefit": "Safe-zone template to structure hook, core message, and CTA before you hit record—film with more clarity, more confidence, and more brand coherence."
+        "imageAlt": "Bonus: Signature Series bank",
+        "painHeadline": "Your content has no recurring format brands can sponsor",
+        "outcomeBenefit": "Ideas bank to build Signature Series with recurring sponsorship potential—the format that turns your profile into a commercial asset before you say a word."
       }
     ],
     "urgency": {

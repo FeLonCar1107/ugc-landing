@@ -114,7 +114,7 @@
     "hero": {
       "badges": [
         "Launch offer",
-        "Ebook + 3 bonuses"
+        "Ebook + 1 bonus"
       ],
       "statement": "It's not just an ebook. It's the full map of your identity as a creator—with the resources to apply it starting today.",
       "imageAlt": "“Discover Your Character” ebook mockup"
@@ -124,27 +124,27 @@
         {
           "id": "ebook",
           "label": "Ebook “Discover Your Character” — 11 chapters + exercises",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "b1",
           "label": "Content structure template",
-          "anchorValueLabel": "USD 15"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b2",
           "label": "Bank of 30–50 content ideas from your essence",
-          "anchorValueLabel": "USD 15"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b3",
           "label": "Moodboard guide for your visual identity",
-          "anchorValueLabel": "USD 12"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b4",
           "label": "Minimum consistency system — the routine that sticks",
-          "anchorValueLabel": "USD 12"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         }
       ],
       "totalLabel": "Reference bundle value",
@@ -161,7 +161,7 @@
         "outcomeBenefit": "Weekly template so every piece has a goal, tone, and place on your calendar."
       },
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: idea bank from your essence",
         "painHeadline": "You go blank in front of the camera",
@@ -175,7 +175,7 @@
         "outcomeBenefit": "Step-by-step guide to build your visual reference: colors, type, and aesthetic that represent you before you say a single word."
       },
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: minimum consistency system",
         "painHeadline": "Your consistency depends on your mood",

@@ -1,6 +1,11 @@
 import type { Locale } from "@/i18n/config";
 import type { AllowedLandingSlug } from "@/lib/allowedLandings";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import {
+  COMPLETE_SAGA_VOLUME_SLUGS,
+  mergeCompleteSagaOffer,
+} from "@/utils/completeSagaOffer";
+import { applyLaunchOfferEnv } from "@/utils/launchOfferEnv";
 
 type LocaleCopyLoader = () => Promise<{ default: EbookLandingCopy }>;
 
@@ -34,6 +39,25 @@ export async function getEbookLandingCopy(
   slug: AllowedLandingSlug,
   locale: Locale,
 ): Promise<EbookLandingCopy> {
+  if (slug === "complete-saga") {
+    const [bundleMod, ...volumeMods] = await Promise.all([
+      ebookLandingCopyLoaders["complete-saga"][locale](),
+      ...COMPLETE_SAGA_VOLUME_SLUGS.map((volumeSlug) =>
+        ebookLandingCopyLoaders[volumeSlug][locale](),
+      ),
+    ]);
+
+    const bundleWithEnv = applyLaunchOfferEnv(
+      bundleMod.default,
+      "complete-saga",
+    );
+    const volumesWithEnv = volumeMods.map((mod, index) =>
+      applyLaunchOfferEnv(mod.default, COMPLETE_SAGA_VOLUME_SLUGS[index]),
+    );
+
+    return mergeCompleteSagaOffer(bundleWithEnv, volumesWithEnv, locale);
+  }
+
   const mod = await ebookLandingCopyLoaders[slug][locale]();
-  return mod.default;
+  return applyLaunchOfferEnv(mod.default, slug);
 }

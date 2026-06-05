@@ -9,7 +9,10 @@ import {
   getLaunchHeroVisual,
   getLaunchOfferPhaseLabel,
 } from "@/utils/launchEnv";
-import { sectionBandHeading } from "./ebookLandingConstants";
+import {
+  LANDING_OFFER_SECTION_HREF,
+  sectionBandHeading,
+} from "./ebookLandingConstants";
 import ExitIntentModal from "./ExitIntentModal";
 import ReadingProgressBar from "./ReadingProgressBar";
 import OfferSection from "./offer/OfferSection";
@@ -94,9 +97,9 @@ export default function EbookLanding({
       {/* Reading progress bar — fixed, top of viewport */}
       <ReadingProgressBar />
 
-      {/* Exit intent modal — rendered once per session */}
+      {/* Exit intent modal — once per session per landing slug */}
       {copy.exitIntent ? (
-        <ExitIntentModal copy={copy.exitIntent} />
+        <ExitIntentModal slug={slug} copy={copy.exitIntent} />
       ) : null}
 
       <StickyLaunchCta
@@ -110,7 +113,7 @@ export default function EbookLanding({
         <EbookHeroSection
           heroVisual={heroVisual}
           hero={copy.hero}
-          checkoutUrl={checkoutUrl}
+          checkoutUrl={LANDING_OFFER_SECTION_HREF}
           timeToResult={timeToResult}
           socialCount={socialCount}
           asset={asset}
@@ -120,7 +123,7 @@ export default function EbookLanding({
       <EbookCatchSurface slot="problem">
         <EbookProblemSection
           problem={copy.problem}
-          checkoutUrl={checkoutUrl}
+          checkoutUrl={LANDING_OFFER_SECTION_HREF}
           sectionBandHeading={sectionBandHeading}
         />
       </EbookCatchSurface>
@@ -137,7 +140,7 @@ export default function EbookLanding({
       <EbookCatchSurface slot="solution">
         <EbookSolutionSection
           copy={copy}
-          checkoutUrl={checkoutUrl}
+          checkoutUrl={LANDING_OFFER_SECTION_HREF}
           sectionBandHeading={sectionBandHeading}
           asset={asset}
         />
@@ -176,7 +179,7 @@ export default function EbookLanding({
       <EbookCatchSurface slot="faq">
         <EbookFaqSection
           faq={copy.faq}
-          checkoutUrl={checkoutUrl}
+          checkoutUrl={LANDING_OFFER_SECTION_HREF}
           sectionBandHeading={sectionBandHeading}
           asset={asset}
         />

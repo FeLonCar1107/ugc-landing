@@ -1,8 +1,16 @@
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 
-const EBOOK_LINE_ITEM_ID = "ebook";
-
 export type OfferBonus = EbookLandingCopy["offer"]["bonuses"][number];
+
+/** Single-ebook landings use `ebook`; bundle landings use `ebook1`, `ebook2`, … */
+export function isEbookLineItemId(id: string): boolean {
+  return id === "ebook" || /^ebook\d+$/.test(id);
+}
+
+/** Bonus rows in the value stack use `b1`, `b2`, … */
+export function isBonusLineItemId(id: string): boolean {
+  return /^b\d+$/.test(id);
+}
 
 /** Default `valueStack` row id for bonus at index (0 → b1, 1 → b2, …). */
 export function defaultBonusValueStackId(index: number): string {
@@ -31,7 +39,9 @@ function parseUsdAmount(anchorValueLabel: string): number {
 }
 
 function formatUsdTotal(amount: number): string {
-  return `USD ${amount}`;
+  const rounded = Math.round(amount * 100) / 100;
+  const hasCents = Math.abs(rounded % 1) > 0;
+  return hasCents ? `USD ${rounded.toFixed(2)}` : `USD ${rounded}`;
 }
 
 /**
@@ -53,8 +63,7 @@ export function buildOfferView(
   );
 
   const lineItems = offer.valueStack.lineItems.filter(
-    (row) =>
-      row.id === EBOOK_LINE_ITEM_ID || activeStackIds.has(row.id),
+    (row) => isEbookLineItemId(row.id) || activeStackIds.has(row.id),
   );
 
   const totalAnchorLabel =

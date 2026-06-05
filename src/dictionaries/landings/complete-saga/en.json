@@ -114,7 +114,7 @@
     "hero": {
       "badges": [
         "Launch offer",
-        "3 ebooks + 7 bonuses"
+        "3 ebooks + bonuses"
       ],
       "statement": "This isn't a bundle of PDFs. It's the complete transformation system for creators — identity, strategy and monetization in a single journey designed for you to advance phase by phase.",
       "imageAlt": "Complete trilogy — Saga for Creators"
@@ -124,93 +124,25 @@
         {
           "id": "ebook1",
           "label": "Ebook Vol. 1 «Discover Your Character» — 11 chapters + exercises",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "ebook2",
           "label": "Ebook Vol. 2 «Conquer Attention» — 13 chapters + exercises",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "ebook3",
           "label": "Ebook Vol. 3 «Magnetic Creator» — 8 chapters + exercises",
-          "anchorValueLabel": "USD 27"
-        },
-        {
-          "id": "b1",
-          "label": "Bank of 30–50 content ideas from your essence (Vol. 1)",
-          "anchorValueLabel": "USD 15"
-        },
-        {
-          "id": "b2",
-          "label": "Moodboard guide for your visual identity (Vol. 1)",
-          "anchorValueLabel": "USD 12"
-        },
-        {
-          "id": "b3",
-          "label": "Minimum consistency system (Vol. 1)",
-          "anchorValueLabel": "USD 12"
-        },
-        {
-          "id": "b4",
-          "label": "Bank of 50+ hooks ready to use (Vol. 2)",
-          "anchorValueLabel": "USD 18"
-        },
-        {
-          "id": "b5",
-          "label": "Weekly content planning template — Notion + PDF (Vol. 2)",
-          "anchorValueLabel": "USD 12"
-        },
-        {
-          "id": "b6",
-          "label": "Simplified metrics tracker with actionable decisions (Vol. 3)",
-          "anchorValueLabel": "USD 15"
-        },
-        {
-          "id": "b7",
-          "label": "Brand negotiation script — DM, email and call (Vol. 3)",
-          "anchorValueLabel": "USD 18"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         }
       ],
       "totalLabel": "Reference value of the complete package",
-      "totalAnchorLabel": "USD 183",
+      "totalAnchorLabel": "USD 108.30",
       "youPayLabel": "Your investment today"
     },
     "bonusesSectionTitle": "Bonuses included in the saga",
-    "bonuses": [
-      {
-        "enabled": true,
-        "valueStackId": "b1",
-        "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Content ideas bank from your essence",
-        "painHeadline": "You go blank in front of the camera",
-        "outcomeBenefit": "30–50 concrete ideas aligned with your niche — so you never again depend on scrolling through other people's content or waiting for inspiration."
-      },
-      {
-        "enabled": true,
-        "valueStackId": "b2",
-        "imageFile": "offer_bonus_02.png",
-        "imageAlt": "Visual identity moodboard guide",
-        "painHeadline": "Your feed doesn't reflect who you are",
-        "outcomeBenefit": "Step-by-step guide to build your visual reference: colors, typography and aesthetic that represent you before you say a single word."
-      },
-      {
-        "enabled": true,
-        "valueStackId": "b4",
-        "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Content hooks bank",
-        "painHeadline": "You lose attention in the first 3 seconds",
-        "outcomeBenefit": "50+ real hooks ready to use today — organized by content type and objective — so every video retains from the very first instant."
-      },
-      {
-        "enabled": true,
-        "valueStackId": "b7",
-        "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Brand negotiation script",
-        "painHeadline": "A brand reaches out and you don't know how to respond or what to charge",
-        "outcomeBenefit": "Pro-level script: how to respond to a proposal, raise your prices with confidence and say no without burning the relationship — in DM, email and on a call."
-      }
-    ],
+    "bonuses": [],
     "urgency": {
       "title": "Every month you create without a complete system is effort that doesn't accumulate.",
       "bullets": [

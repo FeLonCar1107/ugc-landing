@@ -43,7 +43,7 @@
       "highlight": "convertir",
       "after": " tu contenido en ingresos reales."
     },
-    "giftHint": "Incluye tracker de métricas, script de negociación con marcas y plantilla de zona segura.",
+    "giftHint": "Incluye Brand hunting, tracker de métricas y banco de Signature Series.",
     "outcomes": [
       {
         "title": "Construir tu sistema de conversión completo",
@@ -124,27 +124,22 @@
         {
           "id": "ebook",
           "label": "Ebook «Creadora Magnética» — 8 capítulos + ejercicios prácticos",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "b1",
-          "label": "Plantilla de sistema de contenido en Notion (ideas, calendario y tracking)",
-          "anchorValueLabel": "USD 24"
+          "label": "Brand hunting — estrategia para encontrar y atraer marcas",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b2",
           "label": "Tracker de métricas simplificado (retención, guardados, compartidos y decisiones accionables)",
-          "anchorValueLabel": "USD 15"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b3",
-          "label": "Script de negociación con marcas (responder, subir precios y decir no sin quemar relaciones)",
-          "anchorValueLabel": "USD 18"
-        },
-        {
-          "id": "b4",
-          "label": "Plantilla de zona segura para estructurar hook, mensaje y CTA antes de grabar",
-          "anchorValueLabel": "USD 12"
+          "label": "Banco de Signature Series — ideas recurrentes con potencial de patrocinio",
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         }
       ],
       "totalLabel": "Valor referencial del paquete",
@@ -154,14 +149,16 @@
     "bonusesSectionTitle": "Bonuses incluidos",
     "bonuses": [
       {
-        "enabled": false,
+        "enabled": true,
+        "valueStackId": "b1",
         "imageFile": "offer_bonus_01.png",
-        "imageAlt": "Bonus: plantilla de sistema de contenido en Notion",
-        "painHeadline": "Publicas sin sistema y se te acaban las ideas",
-        "outcomeBenefit": "Tu sistema en Notion: banco de ideas, calendario y tracking de contenido — dejas de improvisar cada semana con la misma base que uso yo."
+        "imageAlt": "Bonus: Brand hunting",
+        "painHeadline": "Esperas que las marcas te escriban solas",
+        "outcomeBenefit": "Estrategia inbound + outbound para identificar marcas alineadas, contactarlas con propuesta clara y dejar de depender de la suerte — el mismo mapa que uso para conseguir colaboraciones."
       },
       {
         "enabled": true,
+        "valueStackId": "b2",
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: tracker de métricas simplificado",
         "painHeadline": "Miras métricas pero no sabes qué hacer después",
@@ -169,17 +166,11 @@
       },
       {
         "enabled": true,
+        "valueStackId": "b3",
         "imageFile": "offer_bonus_03.png",
-        "imageAlt": "Bonus: script de negociación con marcas",
-        "painHeadline": "Te proponen una colaboración y no sabes cómo responder ni cuánto cobrar",
-        "outcomeBenefit": "Script nivel pro: cómo responder una propuesta, subir tus precios con seguridad y decir que no sin quemar la relación — en DM, en correo y en llamada."
-      },
-      {
-        "enabled": true,
-        "imageFile": "offer_bonus_04.png",
-        "imageAlt": "Bonus: plantilla de zona segura para videos",
-        "painHeadline": "Te trabas al grabar o pierdes el hilo frente a la cámara",
-        "outcomeBenefit": "Plantilla de zona segura para estructurar hook, mensaje central y CTA antes de encender la cámara — grabas con más claridad, más confianza y más coherencia de marca."
+        "imageAlt": "Bonus: banco de Signature Series",
+        "painHeadline": "Tu contenido no tiene un formato recurrente que las marcas puedan patrocinar",
+        "outcomeBenefit": "Banco de ideas para construir Signature Series con potencial de patrocinio recurrente — el formato que convierte tu perfil en activo comercial antes de que digas una palabra."
       }
     ],
     "urgency": {

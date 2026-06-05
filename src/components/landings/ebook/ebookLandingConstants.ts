@@ -1,5 +1,9 @@
 import type { CSSProperties } from "react";
 
+/** In-page offer / checkout block (`OfferSection`). */
+export const LANDING_OFFER_SECTION_ID = "offer" as const;
+export const LANDING_OFFER_SECTION_HREF = `#${LANDING_OFFER_SECTION_ID}` as const;
+
 /** Section titles: weight + tracking; copy casing comes from JSON. */
 export const sectionBandHeading =
   "font-semibold tracking-tighter text-[clamp(1.125rem,3.5vw,1.875rem)] leading-tight text-brand-ink md:text-[clamp(1.375rem,3vw,2.375rem)]";

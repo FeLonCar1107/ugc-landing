@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { EbookLandingCopy } from "@/types/ebook-landing";
+import { resolveLaunchAssetUrl } from "@/utils/launchAssets";
 import {
   OFFER_BONUS_FRAME_CLASS,
   OFFER_BONUS_IMAGE_CLASS,
@@ -10,15 +11,17 @@ function bonusGridColumnClass(count: number): string {
   if (count <= 1) return "grid-cols-1";
   if (count === 2) return "grid-cols-1 sm:grid-cols-2";
   if (count === 3) return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
-  return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+  if (count <= 6) return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+  return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4";
 }
 
 export default function BonusGrid({
   bonuses,
-  asset,
+  assetBase,
 }: {
   bonuses: EbookLandingCopy["offer"]["bonuses"];
-  asset: (filename: string) => string;
+  /** Default launch-assets folder for bonus images. */
+  assetBase: string;
 }) {
   return (
     <div
@@ -34,7 +37,10 @@ export default function BonusGrid({
               className={`${OFFER_BONUS_FRAME_CLASS} w-full max-w-[11.5rem] sm:max-w-[12.25rem]`}
             >
               <Image
-                src={asset(bonus.imageFile)}
+                src={resolveLaunchAssetUrl(
+                  bonus.imageAssetBase ?? assetBase,
+                  bonus.imageFile,
+                )}
                 alt={bonus.imageAlt}
                 fill
                 className={OFFER_BONUS_IMAGE_CLASS}

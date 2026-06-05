@@ -1,16 +1,10 @@
 import type { EbookLandingCopy } from "@/types/ebook-landing";
 import type { Locale } from "@/i18n/config";
+import {
+  formatBonusBundleDeadlineLineFromEndMs,
+  resolveBonusBundleDeadlineEndMs,
+} from "@/utils/launchDeadline";
 import CountdownTimer from "../CountdownTimer";
-
-function formatDeadlineLine(iso: string, locale: Locale): string {
-  const tag = locale === "es" ? "es-ES" : "en-US";
-  return new Date(iso).toLocaleDateString(tag, {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
 
 export default function UrgencyBlock({
   urgency,
@@ -24,21 +18,21 @@ export default function UrgencyBlock({
   locale: Locale;
 }) {
   const bullets = [...urgency.bullets];
-  const deadlineMs = deadlineIso ? Date.parse(deadlineIso) : NaN;
+  const deadlineEndMs = deadlineIso
+    ? resolveBonusBundleDeadlineEndMs(deadlineIso, locale)
+    : null;
+
   if (
     deadlineIso &&
-    !Number.isNaN(deadlineMs) &&
+    deadlineEndMs !== null &&
     urgency.deadlineLineTemplate &&
     urgency.deadlineLineTemplate.includes("{date}")
   ) {
-    const dateStr = formatDeadlineLine(deadlineIso, locale);
+    const dateStr = formatBonusBundleDeadlineLineFromEndMs(deadlineEndMs, locale);
     bullets.push(urgency.deadlineLineTemplate.replace("{date}", dateStr));
   }
 
-  const showTimer =
-    deadlineIso !== undefined &&
-    !Number.isNaN(Date.parse(deadlineIso)) &&
-    Date.parse(deadlineIso) > Date.now();
+  const showTimer = deadlineEndMs !== null && deadlineEndMs > Date.now();
 
   return (
     <div className="w-full min-w-0 space-y-2.5 rounded-xl border border-brand-accent/25 bg-brand-accent/8 p-3 sm:p-4">
@@ -54,9 +48,9 @@ export default function UrgencyBlock({
           {urgency.title}
         </h3>
       </div>
-      {showTimer && deadlineIso ? (
+      {showTimer && deadlineEndMs !== null ? (
         <div className="py-1">
-          <CountdownTimer deadlineIso={deadlineIso} />
+          <CountdownTimer deadlineMs={deadlineEndMs} locale={locale} />
         </div>
       ) : null}
       <ul className="space-y-1.5 text-left text-[0.8125rem] leading-relaxed text-brand-ink/90 sm:text-sm">

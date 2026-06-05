@@ -114,7 +114,7 @@
     "hero": {
       "badges": [
         "Oferta de lanzamiento",
-        "Ebook + 3 bonuses"
+        "Ebook + 1 bonus"
       ],
       "statement": "No es solo un ebook. Es el mapa completo de tu identidad como creadora — con los recursos para que lo apliques desde hoy.",
       "imageAlt": "Mockup del ebook «Descubre tu Personaje»"
@@ -124,27 +124,27 @@
         {
           "id": "ebook",
           "label": "Ebook «Descubre tu Personaje» — 11 capítulos + ejercicios",
-          "anchorValueLabel": "USD 27"
+          "anchorValueLabel": "env:EBOOK_ANCHOR"
         },
         {
           "id": "b1",
           "label": "Plantilla de estructura de contenido",
-          "anchorValueLabel": "USD 15"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b2",
           "label": "Banco de 30–50 ideas de contenido desde tu esencia",
-          "anchorValueLabel": "USD 15"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b3",
           "label": "Guía de moodboard para tu identidad visual",
-          "anchorValueLabel": "USD 12"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         },
         {
           "id": "b4",
           "label": "Sistema mínimo de constancia — la rutina que se sostiene",
-          "anchorValueLabel": "USD 12"
+          "anchorValueLabel": "env:BONUS_ANCHOR"
         }
       ],
       "totalLabel": "Valor referencial del paquete",
@@ -161,7 +161,7 @@
         "outcomeBenefit": "Plantilla semanal para que cada pieza tenga objetivo, tono y lugar en tu calendario."
       },
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_02.png",
         "imageAlt": "Bonus: banco de ideas desde tu esencia",
         "painHeadline": "Te quedas en blanco frente a la cámara",
@@ -175,7 +175,7 @@
         "outcomeBenefit": "Guía paso a paso para construir tu referencia visual: colores, tipografías y estética que te representen antes de que digas una sola palabra."
       },
       {
-        "enabled": true,
+        "enabled": false,
         "imageFile": "offer_bonus_04.png",
         "imageAlt": "Bonus: sistema mínimo de constancia",
         "painHeadline": "Tu constancia depende del ánimo",

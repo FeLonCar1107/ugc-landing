@@ -1,6 +1,11 @@
 "use client";
 
+import type { AllowedLandingSlug } from "@/lib/allowedLandings";
 import { useEffect, useRef, useState } from "react";
+import {
+  LANDING_OFFER_SECTION_HREF,
+  LANDING_OFFER_SECTION_ID,
+} from "./ebookLandingConstants";
 import CheckoutLink from "./CheckoutLink";
 
 type ExitIntentCopy = {
@@ -10,9 +15,11 @@ type ExitIntentCopy = {
   dismiss: string;
 };
 
-const SESSION_KEY = "ebook_exit_intent_shown";
-/** In-page offer / payment block (`OfferSection`). */
-const OFFER_SECTION_ID = "offer";
+const SESSION_KEY_PREFIX = "ebook_exit_intent_shown";
+
+function exitIntentSessionKey(slug: AllowedLandingSlug) {
+  return `${SESSION_KEY_PREFIX}:${slug}`;
+}
 
 /** Ignore exit signals until the user has been on the page this long. */
 const MIN_DWELL_MS = 8_000;
@@ -41,13 +48,16 @@ const DESKTOP_SHALLOW_EXIT_MIN_DWELL_MS = 45_000;
  *   - Desktop: pointer leaves the document upward (toward tabs / close), after engagement.
  *   - Mobile / coarse pointer: fast upward scroll back to the top after meaningful depth.
  *
- * Shown at most once per browser session (`sessionStorage` flag).
+ * Shown at most once per browser session per landing slug (`sessionStorage` flag).
  */
 export default function ExitIntentModal({
+  slug,
   copy,
 }: {
+  slug: AllowedLandingSlug;
   copy: ExitIntentCopy;
 }) {
+  const sessionKey = exitIntentSessionKey(slug);
   const [visible, setVisible] = useState(false);
   const firedRef = useRef(false);
   const mountedAtRef = useRef(0);
@@ -76,7 +86,7 @@ export default function ExitIntentModal({
     if (mountedAtRef.current === 0) return false;
     if (Date.now() - mountedAtRef.current < MIN_DWELL_MS) return false;
     try {
-      if (sessionStorage.getItem(SESSION_KEY)) return false;
+      if (sessionStorage.getItem(sessionKey)) return false;
     } catch {
       // sessionStorage unavailable — still show once per mount
     }
@@ -92,7 +102,7 @@ export default function ExitIntentModal({
   function dismiss() {
     setVisible(false);
     try {
-      sessionStorage.setItem(SESSION_KEY, "1");
+      sessionStorage.setItem(sessionKey, "1");
     } catch {
       // ignore
     }
@@ -100,7 +110,7 @@ export default function ExitIntentModal({
 
   function goToOfferSection() {
     dismiss();
-    document.getElementById(OFFER_SECTION_ID)?.scrollIntoView({
+    document.getElementById(LANDING_OFFER_SECTION_ID)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
@@ -256,7 +266,7 @@ export default function ExitIntentModal({
 
         <div className="mt-6 flex flex-col gap-3">
           <CheckoutLink
-            href={`#${OFFER_SECTION_ID}`}
+            href={LANDING_OFFER_SECTION_HREF}
             placement="exit_intent"
             className="flex w-full items-center justify-center rounded-full bg-brand-accent px-7 py-3.5 text-center text-base font-semibold text-brand-card shadow-md shadow-brand-accent/25"
             onClick={(e) => {
