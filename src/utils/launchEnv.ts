@@ -47,19 +47,38 @@ export function getLaunchOfferPhaseLabel(slug: string): string | undefined {
   return v && v.length > 0 ? v : undefined;
 }
 
-/**
- * Optional deadline date (`YYYY-MM-DD` or ISO string). The calendar day is interpreted per locale:
- * end of day 23:59:59.999 in Colombia (`es`) or US Eastern (`en`). Invalid values are omitted.
- */
-export function getLaunchBonusBundleDeadlineIso(
-  slug: string,
+/** Shared bonus-bundle deadline for all ebook landings (saga creadoras). */
+export const LAUNCH_BONUS_BUNDLE_DEADLINE_ISO_ENV_KEY =
+  "NEXT_PUBLIC_LAUNCH_BONUS_BUNDLE_DEADLINE_ISO" as const;
+
+function parseLaunchBonusBundleDeadlineIso(
+  raw: string | undefined,
 ): string | undefined {
-  const k = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_BONUS_BUNDLE_DEADLINE_ISO`;
-  const v = process.env[k]?.trim();
+  const v = raw?.trim();
   if (!v) return undefined;
   const ms = Date.parse(v);
   if (Number.isNaN(ms)) return undefined;
   return v;
+}
+
+/**
+ * Optional deadline date (`YYYY-MM-DD` or ISO string). The calendar day is interpreted per locale:
+ * end of day 23:59:59.999 in Colombia (`es`) or US Eastern (`en`). Invalid values are omitted.
+ *
+ * Resolution (first match wins):
+ * 1. NEXT_PUBLIC_LAUNCH_{SLUG}_BONUS_BUNDLE_DEADLINE_ISO — per ebook override
+ * 2. NEXT_PUBLIC_LAUNCH_BONUS_BUNDLE_DEADLINE_ISO — all saga landings
+ */
+export function getLaunchBonusBundleDeadlineIso(
+  slug: string,
+): string | undefined {
+  const perSlugKey = `NEXT_PUBLIC_LAUNCH_${slugToEnvSuffix(slug)}_BONUS_BUNDLE_DEADLINE_ISO`;
+  return (
+    parseLaunchBonusBundleDeadlineIso(process.env[perSlugKey]) ??
+    parseLaunchBonusBundleDeadlineIso(
+      process.env[LAUNCH_BONUS_BUNDLE_DEADLINE_ISO_ENV_KEY],
+    )
+  );
 }
 
 /** Top-of-page landing hero image — Isabella portrait vs ebook mockup (conversion A/B). */

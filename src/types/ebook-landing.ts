@@ -80,7 +80,7 @@ export interface EbookLandingCopy {
     urgency: {
       title: string;
       bullets: string[];
-      /** When set and NEXT_PUBLIC_LAUNCH_*_BONUS_BUNDLE_DEADLINE_ISO is valid, {date} is replaced (locale TZ). */
+      /** When set and NEXT_PUBLIC_LAUNCH_BONUS_BUNDLE_DEADLINE_ISO (or per-slug override) is valid, {date} is replaced (locale TZ). */
       deadlineLineTemplate?: string;
     };
     ctaPrimary: string;

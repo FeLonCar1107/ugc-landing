@@ -26,19 +26,29 @@ describe("launchEnv — offer urgency helpers", () => {
 
   it("getLaunchBonusBundleDeadlineIso returns undefined for invalid ISO (honest urgency)", () => {
     vi.stubEnv(
-      "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_BONUS_BUNDLE_DEADLINE_ISO",
+      "NEXT_PUBLIC_LAUNCH_BONUS_BUNDLE_DEADLINE_ISO",
       "not-a-date",
     );
     expect(getLaunchBonusBundleDeadlineIso(SLUG)).toBeUndefined();
   });
 
-  it("getLaunchBonusBundleDeadlineIso returns value when ISO parses", () => {
+  it("getLaunchBonusBundleDeadlineIso returns value when global ISO parses", () => {
     const iso = "2026-12-31T23:59:59.000Z";
+    vi.stubEnv("NEXT_PUBLIC_LAUNCH_BONUS_BUNDLE_DEADLINE_ISO", iso);
+    expect(getLaunchBonusBundleDeadlineIso(SLUG)).toBe(iso);
+    expect(getLaunchBonusBundleDeadlineIso("complete-saga")).toBe(iso);
+  });
+
+  it("getLaunchBonusBundleDeadlineIso per-slug overrides global", () => {
+    vi.stubEnv("NEXT_PUBLIC_LAUNCH_BONUS_BUNDLE_DEADLINE_ISO", "2026-12-31");
     vi.stubEnv(
       "NEXT_PUBLIC_LAUNCH_DISCOVER_YOUR_CHARACTER_BONUS_BUNDLE_DEADLINE_ISO",
-      iso,
+      "2026-06-15",
     );
-    expect(getLaunchBonusBundleDeadlineIso(SLUG)).toBe(iso);
+    expect(getLaunchBonusBundleDeadlineIso(SLUG)).toBe("2026-06-15");
+    expect(getLaunchBonusBundleDeadlineIso("catch-the-attention")).toBe(
+      "2026-12-31",
+    );
   });
 
   it("getLaunchHeroVisual defaults to portrait when unset", () => {
