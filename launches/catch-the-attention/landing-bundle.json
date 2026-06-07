@@ -11,9 +11,9 @@
         "type": "hero",
         "order": 0,
         "content": {
-          "headline": "Potencia tu presencia digital, luce más profesional y abre nuevas oportunidades",
-          "subheadline": "No es falta de talento: es falta de estructura. Construye una marca que se entienda y abra oportunidades.",
-          "primaryCtaLabel": "Quiero el ebook",
+          "headline": "No es falta de talento. Es falta de estructura.",
+          "subheadline": "Tu perfil habla antes de que tú lo hagas. Si no controlas ese mensaje, la marca que buscabas ya siguió de largo.",
+          "primaryCtaLabel": "Quiero construir mi presencia",
           "primaryCtaHref": "env:NEXT_PUBLIC_LAUNCH_CATCH_THE_ATTENTION_CHECKOUT_URL",
           "eyebrow": "Saga para creadoras"
         }
@@ -26,7 +26,7 @@
           "title": "Cuando publicas sin una base clara, el esfuerzo no se convierte en oportunidades",
           "bullets": [
             "Publicas sin pilares ni mensaje ordenado",
-            "Tu perfil no comunica propuesta profesional",
+            "Cuando una marca entra a tu perfil, no entiende qué puedes hacer por ella",
             "Improvisas cada semana sin sistema",
             "Mucho esfuerzo, pocas oportunidades medibles"
           ]
@@ -55,7 +55,7 @@
           "items": [
             "Trayectoria 2022–2025",
             "Enfoque estructura + presencia profesional",
-            "Misma UI reusable que otros ebooks Saga"
+            "Antes/después de perfil con y sin arquitectura de mensaje"
           ]
         }
       },
@@ -79,7 +79,7 @@
         "type": "faq",
         "order": 5,
         "content": {
-          "intro": "Respuestas rápidas antes de entrar al checkout."
+          "intro": "Si todavía estás aquí, algo resonó. Estas son las últimas dudas antes del siguiente paso."
         }
       },
       {
@@ -87,8 +87,8 @@
         "type": "cta_band",
         "order": 6,
         "content": {
-          "headline": "Tu presencia merece estructura",
-          "ctaLabel": "Quiero el ebook",
+          "headline": "Una marca que se entiende en 30 segundos no se improvisa. Se construye.",
+          "ctaLabel": "Quiero construir mi presencia",
           "ctaHref": "env:NEXT_PUBLIC_LAUNCH_CATCH_THE_ATTENTION_CHECKOUT_URL"
         }
       }
@@ -165,7 +165,7 @@
     "notes": "Checkout-url-only funnel"
   },
   "offer": {
-    "mainCta": "Quiero el ebook",
+    "mainCta": "Quiero construir mi presencia",
     "checkoutUrl": "env:NEXT_PUBLIC_LAUNCH_CATCH_THE_ATTENTION_CHECKOUT_URL",
     "currency": "USD",
     "price": "env:NEXT_PUBLIC_LAUNCH_CATCH_THE_ATTENTION_PRICE_USD"
