@@ -62,7 +62,7 @@
         "body": "Cada volumen construye sobre el anterior. No son tres ebooks independientes — son tres fases de una misma transformación. Al terminar los tres, no solo sabes más: eres otra creadora."
       }
     ],
-    "ctaTop": "Ver la oferta completa",
+    "ctaTop": "Ver precio y acceso",
     "ctaBottom": "Quiero mi acceso ahora",
     "imageAlt": "Isabella — sistema aplicado en los tres volúmenes"
   },
@@ -116,7 +116,7 @@
         "Oferta de lanzamiento",
         "3 ebooks + bonuses"
       ],
-      "statement": "No es un paquete de PDFs. Es el sistema completo de transformación para creadoras — identidad, estrategia y monetización en un solo recorrido diseñado para que avances fase por fase.",
+      "statement": "No es un paquete de PDFs. Es el sistema completo de transformación para creadoras — identidad, estrategia y monetización en un solo recorrido diseñado para que avances fase por fase. Y acceder a los tres juntos cuesta menos que comprarlos por separado.",
       "imageAlt": "Trilogía completa — Saga para Creadoras"
     },
     "valueStack": {
@@ -146,14 +146,14 @@
     "urgency": {
       "title": "Cada mes que publicas sin sistema completo es esfuerzo que no se acumula.",
       "bullets": [
-        "No hay cupos inventados ni contadores falsos. El costo real es seguir creando sin identidad clara, sin sistema de contenido y sin saber cómo convertir tu trabajo en ingresos — mientras otras creadoras con menos talento que tú sí lo están construyendo.",
+        "El costo real no es el precio de la saga — son los meses que seguís aprendiendo por partes lo que ya existe como sistema completo, mientras el esfuerzo que pusiste en contenido no se acumula en ninguna dirección.",
         "Los bonuses de lanzamiento están disponibles en esta ventana de apertura. Cuando el período cierre, el precio sube y los bonuses se retiran del paquete."
       ],
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero la saga completa",
     "priceHint": "Precio en USD — se muestra en el checkout.",
-    "guaranteeHint": "Política de reembolso disponible en el checkout — revísala antes de comprar.",
+    "guaranteeHint": "El contenido es el sistema completo que construí fase por fase — no teoría genérica, el mapa real. Si no es lo que esperabas, la política de reembolso está disponible en el checkout.",
     "ctaMicrocopy": "Acceso inmediato · 3 PDFs descargables · Sin suscripción",
     "postPurchaseSteps": [
       "Completas el pago",
@@ -208,7 +208,7 @@
     "proofToOffer": "Ese es el recorrido. Documentado, ordenado y disponible ahora para ti."
   },
   "exitIntent": {
-    "headline": "Antes de irte — esto es para ti.",
+    "headline": "Seguir aprendiendo por partes no ha funcionado. El sistema completo está aquí.",
     "body": "Si llevas tiempo creando sin ver los resultados que mereces, no es falta de talento. Es falta de sistema. Esta saga es ese sistema — completo, en tres fases, listo para aplicar.",
     "cta": "Sí, quiero la saga completa",
     "dismiss": "Ahora no"

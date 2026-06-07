@@ -62,7 +62,7 @@
         "body": "Bio que atrae marcas en 10 segundos, Signature Series con potencial de patrocinio recurrente, media kit profesional y métricas que te dicen qué funciona — y qué acción tomar con esos datos."
       }
     ],
-    "ctaTop": "Ver la oferta",
+    "ctaTop": "Ver precio y acceso",
     "ctaBottom": "Quiero mi acceso ahora",
     "imageAlt": "Isabella — método aplicado en contenido real"
   },
@@ -176,14 +176,14 @@
     "urgency": {
       "title": "Cada semana que publicas sin sistema de conversión es visibilidad que no se convierte en ingreso.",
       "bullets": [
-        "No hay cupos inventados ni contadores falsos. El costo real es seguir publicando sin saber cómo cobrar, sin estrategia para conseguir marcas, sin las métricas correctas — mientras otras creadoras sí lo están construyendo.",
+        "El costo real no es el precio del ebook — es otro mes publicando sin saber cuánto cobrar, sin estrategia para conseguir marcas, mientras creadoras con menos experiencia que tú ya generan ingresos porque tienen el sistema.",
         "Los bonuses de lanzamiento están disponibles en esta ventana de apertura. Cuando el período cierre, el precio sube y los bonuses se retiran del paquete."
       ],
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero mi acceso ahora",
     "priceHint": "Precio en USD — se muestra en el checkout.",
-    "guaranteeHint": "Política de reembolsos disponible en el checkout antes de pagar.",
+    "guaranteeHint": "El contenido es el mapa real que usé para pasar de no saber cuánto cobrar a más de 100 colaboraciones. Si no es lo que esperabas, la política de reembolso está disponible en el checkout.",
     "postPurchaseSteps": [
       "Completas el pago",
       "Acceso inmediato",
@@ -234,8 +234,8 @@
     "proofToOffer": "Ese es el sistema. Ya probado. Y está disponible ahora."
   },
   "exitIntent": {
-    "headline": "Antes de que te vayas...",
-    "body": "La diferencia entre visibilidad e ingresos reales es un sistema. Este ebook es ese sistema.",
+    "headline": "Las marcas no esperan que tengas más seguidores. Esperan que sepas cómo acercarte a ellas.",
+    "body": "Ese sistema — precios, negociación, conversión — está en este ebook.",
     "cta": "Sí, quiero el sistema",
     "dismiss": "Ahora no"
   }

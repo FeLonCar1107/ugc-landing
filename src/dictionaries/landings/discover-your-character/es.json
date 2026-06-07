@@ -62,7 +62,7 @@
         "body": "Dejarás de crear para 'todo el mundo' y empezarás a hablarle a la persona que te necesita a ti específicamente — y ella lo va a sentir."
       }
     ],
-    "ctaTop": "Ver oferta",
+    "ctaTop": "Ver precio y acceso",
     "ctaBottom": "Quiero mi acceso ahora",
     "imageAlt": "Isabella — método aplicado en contenido real"
   },
@@ -185,14 +185,14 @@
     "urgency": {
       "title": "Cada día que publicas sin identidad clara es esfuerzo que no construye.",
       "bullets": [
-        "No hay cupos inventados ni contadores falsos. El costo real es el tiempo que sigues creando sin dirección — sin saber quién eres ni a quién le hablas.",
+        "El costo real no es el precio del ebook — es otra semana publicando sin saber quién eres ni a quién le hablas, copiando tendencias porque desde ti misma la mente se queda en blanco.",
         "Los bonuses de lanzamiento están disponibles en esta ventana de apertura. Cuando el período termine, el precio sube y los bonuses se retiran del paquete."
       ],
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero mi acceso ahora",
     "priceHint": "Precio en USD — se muestra en el checkout.",
-    "guaranteeHint": "Política de reembolso disponible en el checkout — revísala antes de comprar.",
+    "guaranteeHint": "El contenido es el mismo sistema que usé para construir mi identidad como creadora. Si no es lo que esperabas, la política de reembolso está disponible en el checkout.",
     "ctaMicrocopy": "Acceso inmediato · PDF descargable · Sin suscripción",
     "postPurchaseSteps": [
       "Completas el pago",

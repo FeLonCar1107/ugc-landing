@@ -62,7 +62,7 @@
         "body": "El calendario, las 3 fuentes de ideas y el ritual Crear–Optimizar–Contactar para publicar de forma consistente sin quemarte en el intento."
       }
     ],
-    "ctaTop": "Ver la oferta",
+    "ctaTop": "Ver precio y acceso",
     "ctaBottom": "Quiero mi acceso ahora",
     "imageAlt": "Isabella — método aplicado en contenido real"
   },
@@ -189,14 +189,14 @@
     "urgency": {
       "title": "Cada semana que publicas sin sistema es esfuerzo que no construye.",
       "bullets": [
-        "No hay inventarios falsos ni contadores artificiales. El costo real es seguir publicando sin mensaje claro, sin perfil que convierta, sin saber qué métricas importan.",
+        "El costo real no es el precio del ebook — es otra semana publicando sin mensaje claro, sin perfil que convierta, sin entender qué métricas te dicen qué mejorar.",
         "Los bonuses de lanzamiento están disponibles en esta ventana de apertura. Cuando el período cierre, el precio sube y los bonuses se retiran del paquete."
       ],
       "deadlineLineTemplate": "Bonuses disponibles hasta el {date}."
     },
     "ctaPrimary": "Sí, quiero mi acceso ahora",
     "priceHint": "Precio en USD — se muestra en el checkout.",
-    "guaranteeHint": "Política de reembolsos disponible en el checkout antes de pagar.",
+    "guaranteeHint": "El contenido es el mismo sistema que construí para mí — no teoría, estructura real probada. Si no es lo que esperabas, la política de reembolso está disponible en el checkout.",
     "postPurchaseSteps": [
       "Completas el pago",
       "Acceso inmediato",
@@ -247,8 +247,8 @@
     "proofToOffer": "Ese sistema existe. Y ahora está disponible para ti."
   },
   "exitIntent": {
-    "headline": "Antes de que te vayas...",
-    "body": "Publicar con sistema es publicar con intención. Este ebook te da exactamente eso.",
+    "headline": "Llevas semanas publicando sin sistema — y eso se siente.",
+    "body": "Perfil que no convierte, contenido sin guion, semanas que desaparecen. Este ebook resuelve exactamente eso.",
     "cta": "Sí, quiero mi acceso",
     "dismiss": "Ahora no"
   }
