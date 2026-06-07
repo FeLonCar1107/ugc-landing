@@ -11,6 +11,7 @@ import {
 } from "@/utils/launchEnv";
 import {
   LANDING_OFFER_SECTION_HREF,
+  LANDING_OFFER_SECTION_ID,
   sectionBandHeading,
 } from "./ebookLandingConstants";
 import ExitIntentModal from "./ExitIntentModal";
