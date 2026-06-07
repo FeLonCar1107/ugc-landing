@@ -40,9 +40,9 @@ export default function EbookSolutionSection({
     : {};
 
   return (
-    <section className="relative py-16 md:py-20">
+    <section className="relative overflow-x-clip py-16 md:py-20">
       <GrainOverlay />
-      <div className="relative mx-auto max-w-6xl px-12">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-8 md:px-12">
         <ScrollReveal className="mb-10 flex flex-col items-center gap-4 md:flex-row md:justify-between">
           <h2
             className={`text-center md:text-left ${sectionBandHeading}`}

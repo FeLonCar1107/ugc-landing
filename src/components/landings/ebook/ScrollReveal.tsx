@@ -1,7 +1,13 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import type { ComponentProps, ReactNode } from "react";
+import { useEffect, useState, type ComponentProps, type ReactNode } from "react";
+
+function useIsMounted() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  return mounted;
+}
 
 /** Smooth deceleration — similar feel to typical Framer marketing pages */
 const easeEditorial = [0.16, 1, 0.3, 1] as const;
@@ -27,11 +33,9 @@ function ReducedMotionDiv({
   children: ReactNode;
   motionProps: Omit<MotionDivProps, "children" | "className">;
 }) {
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  const mounted = useIsMounted();
   return (
-    <motion.div className={className} {...motionProps}>
+    <motion.div className={className} {...(mounted && !reduceMotion ? motionProps : {})}>
       {children}
     </motion.div>
   );
@@ -48,11 +52,9 @@ function ReducedMotionUl({
   children: ReactNode;
   motionProps: Omit<MotionUlProps, "children" | "className">;
 }) {
-  if (reduceMotion) {
-    return <ul className={className}>{children}</ul>;
-  }
+  const mounted = useIsMounted();
   return (
-    <motion.ul className={className} {...motionProps}>
+    <motion.ul className={className} {...(mounted && !reduceMotion ? motionProps : {})}>
       {children}
     </motion.ul>
   );
@@ -69,11 +71,9 @@ function ReducedMotionLi({
   children: ReactNode;
   motionProps: Omit<MotionLiProps, "children" | "className">;
 }) {
-  if (reduceMotion) {
-    return <li className={className}>{children}</li>;
-  }
+  const mounted = useIsMounted();
   return (
-    <motion.li className={className} {...motionProps}>
+    <motion.li className={className} {...(mounted && !reduceMotion ? motionProps : {})}>
       {children}
     </motion.li>
   );

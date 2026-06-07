@@ -19,7 +19,7 @@ export default function EbookProblemSection({
 }: EbookProblemSectionProps) {
   return (
     <section className="relative border-y border-brand-ink/10 bg-brand-card/60 py-16">
-      <div className="mx-auto max-w-6xl px-12">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8 md:px-12">
         <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center">
           <span className="rounded-full bg-brand-rose/35 px-4 py-1 text-xs tracking-wide font-semibold uppercase text-brand-ink">
             {problem.eyebrow}
@@ -28,7 +28,10 @@ export default function EbookProblemSection({
         </ScrollReveal>
         <ScrollRevealStagger className="grid items-stretch gap-6 md:grid-cols-2">
           {problem.cards.map((card, index) => (
-            <ScrollRevealItem key={`${card.title}-${index}`} className="h-full">
+            <ScrollRevealItem
+              key={`${card.title}-${index}`}
+              className={`h-full${problem.cards.length % 2 !== 0 && index === problem.cards.length - 1 ? " md:col-span-2" : ""}`}
+            >
               <div className="flex h-full min-h-full flex-col rounded-2xl border border-brand-ink/10 bg-brand-surface p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-accent/30 hover:shadow-md">
                 <h3 className="text-lg font-semibold text-brand-accent">{card.title}</h3>
                 <p className="mt-2 flex-1 whitespace-pre-line text-brand-ink/85">{card.body}</p>

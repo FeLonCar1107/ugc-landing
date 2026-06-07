@@ -71,7 +71,7 @@ export default function EbookProofSection({
 }: EbookProofSectionProps) {
   return (
     <section className="border-y border-brand-ink/10 bg-gradient-to-b from-brand-blush/40 to-brand-surface py-16">
-      <div className="mx-auto max-w-6xl px-12">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8 md:px-12">
         <ScrollReveal className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-xs tracking-wide font-bold uppercase text-brand-accent">
             ★ {proof.badge}

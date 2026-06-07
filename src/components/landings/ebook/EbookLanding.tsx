@@ -99,6 +99,7 @@ export default function EbookLanding({
 
       <StickyLaunchCta
         label={copy.hero.cta}
+        contextLabel={copy.hero.eyebrow}
         href={checkoutUrl}
         hideWhenIntersectingId="landing-close"
         barClassName="ebook-catch-sticky-bar"

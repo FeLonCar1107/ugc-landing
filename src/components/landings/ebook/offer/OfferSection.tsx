@@ -75,7 +75,7 @@ export default function OfferSection({
                   </span>
                 ))}
               </div>
-              <p className="w-full max-w-none text-pretty text-[clamp(1.05rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-tight text-brand-ink">
+              <p className="w-full max-w-none text-pretty text-[clamp(1.2rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-tight text-brand-ink">
                 {offerView.hero.statement}
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function OfferSection({
               </p>
             ) : null}
 
-            <div className="flex w-full min-w-0 flex-col items-center gap-3 text-center">
+            <div className="flex w-full min-w-0 flex-col items-center gap-3 border-t border-brand-ink/10 pt-5 text-center">
               <CheckoutLink
                 href={checkoutUrl}
                 placement="offer"

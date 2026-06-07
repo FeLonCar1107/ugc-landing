@@ -5,11 +5,14 @@ import CheckoutLink from "./CheckoutLink";
 
 export default function StickyLaunchCta({
   label,
+  contextLabel,
   href,
   hideWhenIntersectingId,
   barClassName,
 }: {
   label: string;
+  /** Short product/section context shown as text on the desktop bar (left of the CTA pill). Falls back to `label` if omitted. */
+  contextLabel?: string;
   href: string;
   /** When this element intersects the viewport, the bar is hidden (e.g. final section already has the same CTA). */
   hideWhenIntersectingId?: string;
@@ -51,7 +54,7 @@ export default function StickyLaunchCta({
 
   // Desktop: slim top bar (label + compact CTA pill side by side)
   const desktopBarClasses = [
-    "fixed inset-x-0 top-0 z-40 hidden border-b border-brand-ink/8 bg-brand-surface/95 backdrop-blur-md md:flex md:items-center md:justify-center md:gap-4 md:px-6 md:py-2",
+    "fixed inset-x-0 top-[2px] z-40 hidden border-b border-brand-ink/8 bg-brand-surface/95 backdrop-blur-md md:flex md:items-center md:justify-center md:gap-4 md:px-6 md:py-2",
     barClassName,
   ]
     .filter(Boolean)
@@ -72,7 +75,7 @@ export default function StickyLaunchCta({
 
       {/* Desktop sticky top bar */}
       <div className={desktopBarClasses}>
-        <span className="text-sm font-semibold text-brand-ink/70">{label}</span>
+        <span className="text-sm font-semibold text-brand-ink/70">{contextLabel ?? label}</span>
         <CheckoutLink
           href={href}
           placement="sticky_desktop"

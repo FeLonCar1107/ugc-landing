@@ -16,8 +16,8 @@ export default function EbookCloseSection({
   asset,
 }: EbookCloseSectionProps) {
   return (
-    <section id="landing-close" className="bg-brand-ink py-16 text-brand-surface">
-      <ScrollReveal className="mx-auto max-w-3xl px-12 text-center" y={22}>
+    <section id="landing-close" className="overflow-x-clip bg-brand-ink py-16 text-brand-surface">
+      <ScrollReveal className="mx-auto max-w-3xl px-4 sm:px-8 md:px-12 text-center" y={22}>
         <h2 className="max-w-[38ch] text-pretty text-3xl font-bold leading-snug md:text-4xl">
           {close.headline}
         </h2>
