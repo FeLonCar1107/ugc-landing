@@ -62,8 +62,8 @@
         "body": "Bio that attracts brands in 10 seconds, Signature Series with recurring sponsorship potential, professional media kit, and metrics that tell you what’s working—and what action to take with that data."
       }
     ],
-    "ctaTop": "See the offer",
-    "ctaBottom": "I want access now",
+    "ctaTop": "See price & access",
+    "ctaBottom": "I want the complete system",
     "imageAlt": "Isabella — method applied to real content"
   },
   "proof": {
@@ -176,14 +176,14 @@
     "urgency": {
       "title": "Every week you post without a conversion system is visibility that doesn’t turn into income.",
       "bullets": [
-        "No fake caps or countdown timers. The real cost is keeping posting without knowing how to charge, without a strategy to land brands, without the right metrics—while other creators are building it.",
+        "The real cost isn't the price of the ebook — it's another month posting while creators with less experience than you are already earning income because they have the system.",
         "Launch bonuses are available in this opening window. When the period closes, the price goes up and the bonuses are removed from the package."
       ],
       "deadlineLineTemplate": "Bonuses available until {date}."
     },
     "ctaPrimary": "Yes, I want access now",
     "priceHint": "Price in USD — shown at checkout.",
-    "guaranteeHint": "Refund policy available at checkout before paying.",
+    "guaranteeHint": "The content is the real map I used to go from not knowing what to charge to over 100 collaborations. If it's not what you expected, the refund policy is available at checkout.",
     "postPurchaseSteps": [
       "Complete payment",
       "Instant access",
@@ -234,8 +234,8 @@
     "proofToOffer": "That is the system. Already proven. Available right now."
   },
   "exitIntent": {
-    "headline": "Before you go...",
-    "body": "The difference between visibility and real income is a system. This ebook is that system.",
+    "headline": "Brands aren't waiting for you to have more followers. They're waiting for you to know how to approach them.",
+    "body": "That system — pricing, negotiation, conversion — is in this ebook.",
     "cta": "Yes, I want the system",
     "dismiss": "Not now"
   }

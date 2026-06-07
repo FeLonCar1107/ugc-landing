@@ -62,8 +62,8 @@
         "body": "The calendar, the 3 idea sources, and the Create–Optimize–Connect ritual to post consistently without burning out in the process."
       }
     ],
-    "ctaTop": "See the offer",
-    "ctaBottom": "I want my access now",
+    "ctaTop": "See price & access",
+    "ctaBottom": "I want the system",
     "imageAlt": "Isabella — method applied in real content"
   },
   "proof": {
@@ -189,14 +189,14 @@
     "urgency": {
       "title": "Every week you post without a system is effort that doesn't build.",
       "bullets": [
-        "No fake inventory or artificial counters. The real cost is keeping on posting without a clear message, without a profile that converts, without knowing which metrics matter.",
+        "The real cost isn't the price of the ebook — it's another week posting without a clear message, without a profile that converts, without understanding which metrics tell you what to improve.",
         "Launch bonuses are available in this opening window. When the period closes, the price goes up and the bonuses are removed from the bundle."
       ],
       "deadlineLineTemplate": "Bonuses available through {date}."
     },
     "ctaPrimary": "Yes, I want my access now",
     "priceHint": "USD price — shown at checkout.",
-    "guaranteeHint": "Refund policy available at checkout before paying.",
+    "guaranteeHint": "The content is the same system I built for myself — not theory, real tested structure. If it's not what you expected, the refund policy is available at checkout.",
     "postPurchaseSteps": [
       "Complete payment",
       "Instant access",
@@ -247,8 +247,8 @@
     "proofToOffer": "That system exists. And it is available for you now."
   },
   "exitIntent": {
-    "headline": "Before you go...",
-    "body": "Publishing with a system means publishing with intention. This ebook gives you exactly that.",
+    "headline": "You've been posting without a system for weeks — and you can feel it.",
+    "body": "Profile that doesn't convert, content without a script, weeks that disappear. This ebook solves exactly that.",
     "cta": "Yes, I want access",
     "dismiss": "Not now"
   }

@@ -62,8 +62,8 @@
         "body": "You'll stop creating for \"everyone\" and start speaking to the person who needs you specifically—and they'll feel it."
       }
     ],
-    "ctaTop": "See the offer",
-    "ctaBottom": "I want access now",
+    "ctaTop": "See price & access",
+    "ctaBottom": "I want to start today",
     "imageAlt": "Isabella — method applied in real content"
   },
   "proof": {
@@ -185,14 +185,14 @@
     "urgency": {
       "title": "Every day you post without a clear identity is effort that doesn't build.",
       "bullets": [
-        "No fake slots or countdown timers. The real cost is the time you keep creating without direction—not knowing who you are or who you're talking to.",
+        "The real cost isn't the price of the ebook — it's another week posting without knowing who you are or who you're talking to, copying trends because when you try to create from yourself your mind goes blank.",
         "Launch bonuses are available in this opening window. When the period ends, the price goes up and the bonuses are removed from the bundle."
       ],
       "deadlineLineTemplate": "Bonuses available through {date}."
     },
     "ctaPrimary": "Yes, I want access now",
     "priceHint": "Price in USD — shown at checkout.",
-    "guaranteeHint": "Refund policy available at checkout before paying.",
+    "guaranteeHint": "The content is the same system I used to build my identity as a creator. If it's not what you expected, the refund policy is available at checkout.",
     "postPurchaseSteps": [
       "Complete payment",
       "Instant access",
@@ -243,8 +243,8 @@
     "proofToOffer": "That same journey — now distilled into a system for you."
   },
   "exitIntent": {
-    "headline": "Before you go...",
-    "body": "Your identity as a creator already exists. You just need the system to activate it — and that is exactly what this ebook is.",
+    "headline": "Wait — before you go.",
+    "body": "You've been creating for a while without knowing exactly who you are as a creator. This ebook is the map you're missing. Once you have it, everything else makes more sense.",
     "cta": "Yes, I want access",
     "dismiss": "Not now"
   }

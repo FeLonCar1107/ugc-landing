@@ -7,13 +7,20 @@ export default function StickyLaunchCta({
   label,
   contextLabel,
   href,
+  postSectionHref,
+  switchAtSectionId,
   hideWhenIntersectingId,
   barClassName,
 }: {
   label: string;
   /** Short product/section context shown as text on the desktop bar (left of the CTA pill). Falls back to `label` if omitted. */
   contextLabel?: string;
+  /** Default href — used before the user scrolls past `switchAtSectionId` (e.g. `#offer`). */
   href: string;
+  /** Href used after the user has scrolled past `switchAtSectionId` (e.g. direct checkout URL). */
+  postSectionHref?: string;
+  /** ID of the section that triggers the href switch once the user scrolls past it. */
+  switchAtSectionId?: string;
   /** When this element intersects the viewport, the bar is hidden (e.g. final section already has the same CTA). */
   hideWhenIntersectingId?: string;
   /** Optional extra classes on the fixed bar (e.g. per-landing palette hooks). */
@@ -21,6 +28,7 @@ export default function StickyLaunchCta({
 }) {
   const [pastIntro, setPastIntro] = useState(false);
   const [finalSectionVisible, setFinalSectionVisible] = useState(false);
+  const [passedSwitchSection, setPassedSwitchSection] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setPastIntro(window.scrollY > 420);
@@ -42,7 +50,30 @@ export default function StickyLaunchCta({
     return () => observer.disconnect();
   }, [hideWhenIntersectingId]);
 
+  useEffect(() => {
+    if (!switchAtSectionId || !postSectionHref) return;
+    const el = document.getElementById(switchAtSectionId);
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Section scrolled above the viewport → user has passed it going down
+        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+          setPassedSwitchSection(true);
+        } else {
+          setPassedSwitchSection(false);
+        }
+      },
+      { threshold: 0 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [switchAtSectionId, postSectionHref]);
+
   if (!pastIntro || finalSectionVisible) return null;
+
+  const effectiveHref =
+    passedSwitchSection && postSectionHref ? postSectionHref : href;
 
   // Mobile: bottom bar (full-width CTA button)
   const mobileBarClasses = [
@@ -65,7 +96,7 @@ export default function StickyLaunchCta({
       {/* Mobile sticky bottom bar */}
       <div className={mobileBarClasses}>
         <CheckoutLink
-          href={href}
+          href={effectiveHref}
           placement="sticky_mobile"
           className="flex w-full items-center justify-center rounded-full bg-brand-accent px-6 py-3 text-center text-base font-semibold text-brand-card shadow-lg shadow-brand-accent/25"
         >
@@ -77,7 +108,7 @@ export default function StickyLaunchCta({
       <div className={desktopBarClasses}>
         <span className="text-sm font-semibold text-brand-ink/70">{contextLabel ?? label}</span>
         <CheckoutLink
-          href={href}
+          href={effectiveHref}
           placement="sticky_desktop"
           className="inline-flex items-center justify-center rounded-full bg-brand-accent px-5 py-1.5 text-sm font-semibold text-brand-card shadow-sm shadow-brand-accent/30 transition-opacity hover:opacity-90"
         >

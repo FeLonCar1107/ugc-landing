@@ -62,8 +62,8 @@
         "body": "Each volume builds on the previous one. These aren't three independent ebooks — they're three phases of the same transformation. By the time you finish all three, you don't just know more: you're a different creator."
       }
     ],
-    "ctaTop": "See the full offer",
-    "ctaBottom": "I want my access now",
+    "ctaTop": "See price & access",
+    "ctaBottom": "I want the saga",
     "imageAlt": "Isabella — system applied across all three volumes"
   },
   "proof": {
@@ -116,7 +116,7 @@
         "Launch offer",
         "3 ebooks + bonuses"
       ],
-      "statement": "This isn't a bundle of PDFs. It's the complete transformation system for creators — identity, strategy and monetization in a single journey designed for you to advance phase by phase.",
+      "statement": "This isn't a bundle of PDFs. It's the complete transformation system for creators — identity, strategy and monetization in a single journey designed for you to advance phase by phase. And accessing all three together costs less than buying them separately.",
       "imageAlt": "Complete trilogy — Saga for Creators"
     },
     "valueStack": {
@@ -146,14 +146,14 @@
     "urgency": {
       "title": "Every month you create without a complete system is effort that doesn't accumulate.",
       "bullets": [
-        "No fake caps or artificial timers. The real cost is continuing to create without clear identity, without a content system and without knowing how to convert your work into income — while other creators with less talent than you are already building it.",
+        "The real cost isn't the price of the saga — it's the months you keep learning in pieces what already exists as a complete system, while the effort you've put into content doesn't accumulate in any direction.",
         "Launch bonuses are available during this opening window. When the period closes, the price goes up and the bonuses are removed from the package."
       ],
       "deadlineLineTemplate": "Bonuses available until {date}."
     },
     "ctaPrimary": "Yes, I want the complete saga",
     "priceHint": "Price in USD — shown at checkout.",
-    "guaranteeHint": "Refund policy available at checkout — review before purchasing.",
+    "guaranteeHint": "The content is the complete system I built phase by phase — not generic theory, the real map. If it's not what you expected, the refund policy is available at checkout.",
     "ctaMicrocopy": "Immediate access · 3 downloadable PDFs · No subscription",
     "postPurchaseSteps": [
       "Complete your payment",
@@ -208,7 +208,7 @@
     "proofToOffer": "That's the journey. Documented, ordered and available now for you."
   },
   "exitIntent": {
-    "headline": "Before you go — this is for you.",
+    "headline": "Learning in pieces hasn't worked. The complete system is here.",
     "body": "If you've been creating for a while without seeing the results you deserve, it's not lack of talent. It's lack of system. This saga is that system — complete, in three phases, ready to apply.",
     "cta": "Yes, I want the complete saga",
     "dismiss": "Not now"
